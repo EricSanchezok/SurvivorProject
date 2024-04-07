@@ -441,3 +441,7 @@ format = 2
 layer_0/name = "bg1"
 
 [node name="Bob" parent="." instance=ExtResource("3_j63gr")]
+z_as_relative = true
+position = Vector2(189, 105)
+collision_layer = 1
+collision_mask = 1

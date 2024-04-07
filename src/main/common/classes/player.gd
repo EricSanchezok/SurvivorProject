@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 
 @onready var invincible_timer: Timer = $InvincibleTimer
+@onready var weapons_track: Node2D = $WeaponsTrack
+@onready var weapons: WeaponsInstance = $WeaponsInstance
 
 enum Direction {
 	LEFT = -1,

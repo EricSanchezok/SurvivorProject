@@ -29,18 +29,9 @@ var random := RandomNumberGenerator.new()
 
 func _ready() -> void:
 	random.randomize()
-
 	
 func die() -> void:
 	queue_free()
-
-
-func random_direction():
-	var direction_values = Direction.values()
-	var random_index = randi() % direction_values.size()
-	var random_enum = direction_values[random_index]
-	return random_enum
-
 
 func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	pending_damage = Damage.new()

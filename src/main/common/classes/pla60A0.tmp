@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn4p6111oiol3"]
+
+[ext_resource type="Script" path="res://src/main/common/classes/player.gd" id="1_jpkda"]
+[ext_resource type="Texture2D" uid="uid://dfi4aap11phkw" path="res://src/main/assets/texture/role/bob.png" id="2_b3ce5"]
+[ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_hj28x"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_y7wn2"]
+[ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="5_n3ida"]
+[ext_resource type="PackedScene" uid="uid://bprrbvv515u6e" path="res://src/main/component/weapons_track.tscn" id="6_lsui7"]
+[ext_resource type="Script" path="res://src/main/common/classes/weapons_instance.gd" id="7_pvtp6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg6c6"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ldhli"]
+radius = 5.0
+height = 16.0
+
+[node name="player" type="CharacterBody2D"]
+z_index = 100
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_jpkda")
+direction = null
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+position = Vector2(0, -12)
+texture = ExtResource("2_b3ce5")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 24)
+
+[node name="HurtBox" type="Area2D" parent="Graphics"]
+collision_layer = 8
+script = ExtResource("3_hj28x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_rg6c6")
+debug_color = Color(0.866667, 0.176471, 0.752941, 0.419608)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4_y7wn2")
+
+[node name="InvincibleTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="PlayerStats" type="Node" parent="."]
+script = ExtResource("5_n3ida")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_ldhli")
+
+[node name="WeaponsTrack" parent="." instance=ExtResource("6_lsui7")]
+
+[node name="WeaponsInstance" type="Node" parent="."]
+script = ExtResource("7_pvtp6")

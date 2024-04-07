@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bprrbvv515u6e"]
+[gd_scene load_steps=10 format=3 uid="uid://bprrbvv515u6e"]
 
 [ext_resource type="Script" path="res://src/main/component/weapons_track.gd" id="1_wf1eq"]
 
@@ -32,6 +32,140 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Animation" id="Animation_w3gtu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D_1/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D_2/PathFollow2D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Path2D_3/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Path2D_4/PathFollow2D:progress_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Path2D_5/PathFollow2D:progress_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xqlry"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D_1/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D_2/PathFollow2D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.2, 1.0, 0.0, 0.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Path2D_3/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.4, 1.0, 0.0, 0.4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Path2D_4/PathFollow2D:progress_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.6, 1.0, 0.0, 0.6]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Path2D_5/PathFollow2D:progress_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.2, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.8, 1.0, 0.0, 0.8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8651j"]
+_data = {
+"RESET": SubResource("Animation_w3gtu"),
+"idle": SubResource("Animation_xqlry")
+}
+
 [node name="WeaponsTrack" type="Node2D"]
 script = ExtResource("1_wf1eq")
 
@@ -39,7 +173,8 @@ script = ExtResource("1_wf1eq")
 curve = SubResource("Curve2D_ho4cm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_1"]
-position = Vector2(0, -25)
+position = Vector2(0, -24.484)
+progress = 0.6
 rotates = false
 loop = false
 
@@ -50,7 +185,8 @@ remote_path = NodePath("../../../weapon_1")
 curve = SubResource("Curve2D_cg66s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_2"]
-position = Vector2(-10, -23)
+position = Vector2(-10, -22.872)
+progress = 0.2
 rotates = false
 loop = false
 
@@ -61,7 +197,8 @@ remote_path = NodePath("../../../weapon_2")
 curve = SubResource("Curve2D_eanvc")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_3"]
-position = Vector2(10, -23)
+position = Vector2(10, -22.872)
+progress = 0.2
 rotates = false
 loop = false
 
@@ -72,7 +209,8 @@ remote_path = NodePath("../../../weapon_3")
 curve = SubResource("Curve2D_8dqnv")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_4"]
-position = Vector2(-20, -21)
+position = Vector2(-20, -20.484)
+progress = 0.6
 rotates = false
 loop = false
 
@@ -83,7 +221,8 @@ remote_path = NodePath("../../../weapon_4")
 curve = SubResource("Curve2D_2jmqg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_5"]
-position = Vector2(20, -21)
+position = Vector2(20, -20)
+progress = 1.0
 rotates = false
 loop = false
 
@@ -91,19 +230,19 @@ loop = false
 remote_path = NodePath("../../../weapon_5")
 
 [node name="weapon_1" type="Node2D" parent="."]
-position = Vector2(0, -25)
+position = Vector2(0, -24.484)
 
 [node name="weapon_2" type="Node2D" parent="."]
-position = Vector2(-10, -23)
+position = Vector2(-10, -22.872)
 
 [node name="weapon_3" type="Node2D" parent="."]
-position = Vector2(10, -23)
+position = Vector2(10, -22.872)
 
 [node name="weapon_4" type="Node2D" parent="."]
-position = Vector2(-20, -21)
+position = Vector2(-20, -20.484)
 
 [node name="weapon_5" type="Node2D" parent="."]
-position = Vector2(20, -21)
+position = Vector2(20, -20)
 
 [node name="weapon_6" type="Node2D" parent="."]
 
@@ -112,3 +251,10 @@ position = Vector2(20, -21)
 [node name="weapon_8" type="Node2D" parent="."]
 
 [node name="weapon_9" type="Node2D" parent="."]
+
+[node name="weapon_10" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8651j")
+}

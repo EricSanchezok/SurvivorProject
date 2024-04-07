@@ -5,6 +5,7 @@
 
 [node name="Sword" type="Node2D"]
 z_index = 10
+z_as_relative = false
 script = ExtResource("1_xbmnq")
 
 [node name="Graphics" type="Node2D" parent="."]
@@ -12,6 +13,8 @@ script = ExtResource("1_xbmnq")
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
 
 [node name="HitBox" type="Area2D" parent="Graphics"]
+collision_layer = 0
+collision_mask = 16
 script = ExtResource("2_nsfps")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
