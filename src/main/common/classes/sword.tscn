@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://byv6mwfcljgrl"]
+
+[ext_resource type="Script" path="res://src/main/common/classes/sword.gd" id="1_xbmnq"]
+[ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_nsfps"]
+
+[node name="Sword" type="Node2D"]
+z_index = 10
+script = ExtResource("1_xbmnq")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+
+[node name="HitBox" type="Area2D" parent="Graphics"]
+script = ExtResource("2_nsfps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]

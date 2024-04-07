@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1pgw45wy3wv"
+path="res://.godot/imported/OST 3 - Endless Mountains (Loopable).wav-81a2c349be1782ea27fc4e3a781ec212.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack II/OST 3 - Endless Mountains (Loopable).wav"
+dest_files=["res://.godot/imported/OST 3 - Endless Mountains (Loopable).wav-81a2c349be1782ea27fc4e3a781ec212.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

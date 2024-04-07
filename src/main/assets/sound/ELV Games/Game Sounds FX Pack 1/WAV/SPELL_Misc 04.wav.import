@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hx6145cf1ogx"
+path="res://.godot/imported/SPELL_Misc 04.wav-28ee8d1ed984a9c54080faa66a3fdd6e.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Misc 04.wav"
+dest_files=["res://.godot/imported/SPELL_Misc 04.wav-28ee8d1ed984a9c54080faa66a3fdd6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

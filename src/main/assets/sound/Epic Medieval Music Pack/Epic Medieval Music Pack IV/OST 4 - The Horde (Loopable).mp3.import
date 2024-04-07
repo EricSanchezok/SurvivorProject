@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp5kspe6oanm5"
+path="res://.godot/imported/OST 4 - The Horde (Loopable).mp3-6c932d9c54892bc95231bdbdc3a8c773.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack IV/OST 4 - The Horde (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 4 - The Horde (Loopable).mp3-6c932d9c54892bc95231bdbdc3a8c773.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

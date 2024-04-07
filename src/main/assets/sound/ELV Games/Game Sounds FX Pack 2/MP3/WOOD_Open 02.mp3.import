@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5vv7k7h1pmq1"
+path="res://.godot/imported/WOOD_Open 02.mp3-33fb0630f55ba4930e083b7ac248b95e.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/WOOD_Open 02.mp3"
+dest_files=["res://.godot/imported/WOOD_Open 02.mp3-33fb0630f55ba4930e083b7ac248b95e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

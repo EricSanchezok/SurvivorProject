@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2y84yb633ubv"
+path="res://.godot/imported/SCI-FI_Robotic 05.ogg-5a86d5d9e9721c52fd2974a89ec112fe.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Robotic 05.ogg"
+dest_files=["res://.godot/imported/SCI-FI_Robotic 05.ogg-5a86d5d9e9721c52fd2974a89ec112fe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

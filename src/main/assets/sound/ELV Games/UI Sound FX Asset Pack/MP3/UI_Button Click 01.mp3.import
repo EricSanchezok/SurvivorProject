@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhmd2dgm4x4n3"
+path="res://.godot/imported/UI_Button Click 01.mp3-b8509593f59c3056dfbba63f82cc9119.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/MP3/UI_Button Click 01.mp3"
+dest_files=["res://.godot/imported/UI_Button Click 01.mp3-b8509593f59c3056dfbba63f82cc9119.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

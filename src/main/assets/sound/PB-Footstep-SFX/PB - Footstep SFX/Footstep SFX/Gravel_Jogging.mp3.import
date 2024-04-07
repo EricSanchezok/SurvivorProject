@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddewij1p1ibn3"
+path="res://.godot/imported/Gravel_Jogging.mp3-eac8444c4175829626a7bfa3ea962566.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Gravel_Jogging.mp3"
+dest_files=["res://.godot/imported/Gravel_Jogging.mp3-eac8444c4175829626a7bfa3ea962566.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

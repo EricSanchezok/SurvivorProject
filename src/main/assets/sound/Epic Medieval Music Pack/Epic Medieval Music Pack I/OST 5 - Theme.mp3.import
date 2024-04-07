@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c00u2pris8sa1"
+path="res://.godot/imported/OST 5 - Theme.mp3-79e7e873d39c8d3ab19c3acb9ee4f1f5.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 5 - Theme.mp3"
+dest_files=["res://.godot/imported/OST 5 - Theme.mp3-79e7e873d39c8d3ab19c3acb9ee4f1f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8s0wqkf5a0lg"
+path="res://.godot/imported/OST 5 - Theme.ogg-7d7be6179fbcd18a51b85c477d550c12.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 5 - Theme.ogg"
+dest_files=["res://.godot/imported/OST 5 - Theme.ogg-7d7be6179fbcd18a51b85c477d550c12.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

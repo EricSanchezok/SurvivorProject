@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgsike8at7hun"
+path="res://.godot/imported/OST 2 - Business As Usual (Loopable).ogg-b8877ea5ecc403ef46b08da5452d6ce5.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack III/OST 2 - Business As Usual (Loopable).ogg"
+dest_files=["res://.godot/imported/OST 2 - Business As Usual (Loopable).ogg-b8877ea5ecc403ef46b08da5452d6ce5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

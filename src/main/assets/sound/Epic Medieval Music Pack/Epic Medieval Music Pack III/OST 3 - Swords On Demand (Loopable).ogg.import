@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3ujvp7afdwp3"
+path="res://.godot/imported/OST 3 - Swords On Demand (Loopable).ogg-ddd42fc9884229201487e3a521799e52.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack III/OST 3 - Swords On Demand (Loopable).ogg"
+dest_files=["res://.godot/imported/OST 3 - Swords On Demand (Loopable).ogg-ddd42fc9884229201487e3a521799e52.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

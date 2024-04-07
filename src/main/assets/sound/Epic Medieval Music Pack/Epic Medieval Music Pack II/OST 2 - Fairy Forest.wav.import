@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqgke8g3786wq"
+path="res://.godot/imported/OST 2 - Fairy Forest.wav-f1fe3014b5a486f2a224b55257a56a00.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack II/OST 2 - Fairy Forest.wav"
+dest_files=["res://.godot/imported/OST 2 - Fairy Forest.wav-f1fe3014b5a486f2a224b55257a56a00.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

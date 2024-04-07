@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mb6igcttm2sf"
+path="res://.godot/imported/DOOR_Open 01.ogg-65cafee5a30766724ac1b4cc8dc13eea.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/DOOR_Open 01.ogg"
+dest_files=["res://.godot/imported/DOOR_Open 01.ogg-65cafee5a30766724ac1b4cc8dc13eea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

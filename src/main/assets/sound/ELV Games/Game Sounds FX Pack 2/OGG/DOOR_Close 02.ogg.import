@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckw32f1ltlegx"
+path="res://.godot/imported/DOOR_Close 02.ogg-83c239242187365ae0c2a08b3e7fb0fa.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/DOOR_Close 02.ogg"
+dest_files=["res://.godot/imported/DOOR_Close 02.ogg-83c239242187365ae0c2a08b3e7fb0fa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

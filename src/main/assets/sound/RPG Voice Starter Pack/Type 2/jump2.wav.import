@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4mxld1g3r2r0"
+path="res://.godot/imported/jump2.wav-950d3bd9122c83b71da092b879461bab.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 2/jump2.wav"
+dest_files=["res://.godot/imported/jump2.wav-950d3bd9122c83b71da092b879461bab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

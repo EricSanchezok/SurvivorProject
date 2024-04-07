@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjjlifxyw8g0t"
+path="res://.godot/imported/VASES_Breaking 02.wav-83a620a0efc54d9f5f79b30c1719957d.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/VASES_Breaking 02.wav"
+dest_files=["res://.godot/imported/VASES_Breaking 02.wav-83a620a0efc54d9f5f79b30c1719957d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

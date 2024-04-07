@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwakovq30ke80"
+path="res://.godot/imported/OST 5 - Training Grounds (Loopable).mp3-12b310eabba06252f2e6ce0c4924c6b8.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack III/OST 5 - Training Grounds (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 5 - Training Grounds (Loopable).mp3-12b310eabba06252f2e6ce0c4924c6b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

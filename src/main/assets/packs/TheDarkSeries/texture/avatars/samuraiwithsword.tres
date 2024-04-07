@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b1eslracm6w6y"]
+
+[ext_resource type="Texture2D" uid="uid://b8m6rg36tgyq" path="res://src/main/assets/TheDarkSeries/texture/character/DARK - Sci-FI Samurai/Sci-fi Samurai with Sword 95x49.png" id="1_m0b04"]
+
+[resource]
+atlas = ExtResource("1_m0b04")
+region = Rect2(20, 20, 28, 21)

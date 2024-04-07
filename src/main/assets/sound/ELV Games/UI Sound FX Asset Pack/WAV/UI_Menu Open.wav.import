@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b12eh4aaq2pda"
+path="res://.godot/imported/UI_Menu Open.wav-9ce52871f92cd61f1619c79f9b84bc0c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/UI_Menu Open.wav"
+dest_files=["res://.godot/imported/UI_Menu Open.wav-9ce52871f92cd61f1619c79f9b84bc0c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

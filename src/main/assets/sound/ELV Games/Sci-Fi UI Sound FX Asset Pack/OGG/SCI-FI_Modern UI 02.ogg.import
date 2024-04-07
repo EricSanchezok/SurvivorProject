@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://drrbcetmwjt60"
+path="res://.godot/imported/SCI-FI_Modern UI 02.ogg-1915f07e2009b41b0753dd91ec7ac10b.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Modern UI 02.ogg"
+dest_files=["res://.godot/imported/SCI-FI_Modern UI 02.ogg-1915f07e2009b41b0753dd91ec7ac10b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

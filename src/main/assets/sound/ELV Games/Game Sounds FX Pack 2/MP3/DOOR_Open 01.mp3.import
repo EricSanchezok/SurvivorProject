@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnh6oo1lle8th"
+path="res://.godot/imported/DOOR_Open 01.mp3-408ed9a54d292fe01d7cf53820830b68.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/DOOR_Open 01.mp3"
+dest_files=["res://.godot/imported/DOOR_Open 01.mp3-408ed9a54d292fe01d7cf53820830b68.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

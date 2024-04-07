@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3ypaj4qy7pks"
+path="res://.godot/imported/Concrete_Shoes_Running.wav-9599ae362d58d843ad89bc4fafb0172c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Concrete_Shoes_Running.wav"
+dest_files=["res://.godot/imported/Concrete_Shoes_Running.wav-9599ae362d58d843ad89bc4fafb0172c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

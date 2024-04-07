@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c83hnitvhy10f"
+path="res://.godot/imported/UI_Button Enable.mp3-96632116b8ed601a30fc9525394c1409.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/MP3/UI_Button Enable.mp3"
+dest_files=["res://.godot/imported/UI_Button Enable.mp3-96632116b8ed601a30fc9525394c1409.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnmt5ju6vroh"
+path="res://.godot/imported/MONSTER_Scream.ogg-c2e6c46afccd92af569575e84962da22.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/MONSTER_Scream.ogg"
+dest_files=["res://.godot/imported/MONSTER_Scream.ogg-c2e6c46afccd92af569575e84962da22.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

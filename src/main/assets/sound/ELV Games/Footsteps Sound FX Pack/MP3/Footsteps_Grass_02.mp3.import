@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bs3gvorvrh7gj"
+path="res://.godot/imported/Footsteps_Grass_02.mp3-19da21af81533124cd981a01f3eff403.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/MP3/Footsteps_Grass_02.mp3"
+dest_files=["res://.godot/imported/Footsteps_Grass_02.mp3-19da21af81533124cd981a01f3eff403.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

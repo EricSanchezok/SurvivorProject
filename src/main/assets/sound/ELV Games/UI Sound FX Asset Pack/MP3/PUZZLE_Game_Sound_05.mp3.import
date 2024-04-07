@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://epwp5fkx2ijk"
+path="res://.godot/imported/PUZZLE_Game_Sound_05.mp3-3b624e2a4fe476e783e298ace7a7e092.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/MP3/PUZZLE_Game_Sound_05.mp3"
+dest_files=["res://.godot/imported/PUZZLE_Game_Sound_05.mp3-3b624e2a4fe476e783e298ace7a7e092.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

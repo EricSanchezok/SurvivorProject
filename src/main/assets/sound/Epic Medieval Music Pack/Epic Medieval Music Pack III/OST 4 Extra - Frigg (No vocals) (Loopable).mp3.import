@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dns103lv6b4vx"
+path="res://.godot/imported/OST 4 Extra - Frigg (No vocals) (Loopable).mp3-d6f58e70f554b06b07c132d6cb1ff5ba.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack III/OST 4 Extra - Frigg (No vocals) (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 4 Extra - Frigg (No vocals) (Loopable).mp3-d6f58e70f554b06b07c132d6cb1ff5ba.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

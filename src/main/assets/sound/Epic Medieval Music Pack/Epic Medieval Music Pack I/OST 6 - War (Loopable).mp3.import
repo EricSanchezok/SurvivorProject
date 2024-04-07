@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5m3plhsvme48"
+path="res://.godot/imported/OST 6 - War (Loopable).mp3-aab14c5d19b9b68594ed8bf8edd39c0e.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 6 - War (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 6 - War (Loopable).mp3-aab14c5d19b9b68594ed8bf8edd39c0e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

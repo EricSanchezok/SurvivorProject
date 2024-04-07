@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0ow7iiwwr52y"
+path="res://.godot/imported/BAG_Open 01.mp3-26254aedb5b78dd02b9d54388eb3576f.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/BAG_Open 01.mp3"
+dest_files=["res://.godot/imported/BAG_Open 01.mp3-26254aedb5b78dd02b9d54388eb3576f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

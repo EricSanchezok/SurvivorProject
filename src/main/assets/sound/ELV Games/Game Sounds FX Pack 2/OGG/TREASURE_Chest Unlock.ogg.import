@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkdpgsa0x62la"
+path="res://.godot/imported/TREASURE_Chest Unlock.ogg-42f24e382fac2cf24b5b3decc21dac19.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/TREASURE_Chest Unlock.ogg"
+dest_files=["res://.godot/imported/TREASURE_Chest Unlock.ogg-42f24e382fac2cf24b5b3decc21dac19.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

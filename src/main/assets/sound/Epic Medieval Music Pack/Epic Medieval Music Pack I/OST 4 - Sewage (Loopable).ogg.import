@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckdcouwvk87gc"
+path="res://.godot/imported/OST 4 - Sewage (Loopable).ogg-d66abcf14a3f2c47ac8b594d80e74d3f.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 4 - Sewage (Loopable).ogg"
+dest_files=["res://.godot/imported/OST 4 - Sewage (Loopable).ogg-d66abcf14a3f2c47ac8b594d80e74d3f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

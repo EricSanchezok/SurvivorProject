@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwj45fbyn843d"
+path="res://.godot/imported/SCI-FI_Modern UI 02.mp3-764c24b9a62edf0282121d0528f9add6.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Modern UI 02.mp3"
+dest_files=["res://.godot/imported/SCI-FI_Modern UI 02.mp3-764c24b9a62edf0282121d0528f9add6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

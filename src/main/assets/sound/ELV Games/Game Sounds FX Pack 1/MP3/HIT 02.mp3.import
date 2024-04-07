@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk1gql438ux5x"
+path="res://.godot/imported/HIT 02.mp3-23cef753b6b89e4730237eae06f08771.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/HIT 02.mp3"
+dest_files=["res://.godot/imported/HIT 02.mp3-23cef753b6b89e4730237eae06f08771.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

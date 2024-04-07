@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://didwq80rb2pb3"
+path="res://.godot/imported/OST 3 - Fortified (Loopable).wav-5b0f9b7a537cf7c9d40ede76daf3d51b.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 3 - Fortified (Loopable).wav"
+dest_files=["res://.godot/imported/OST 3 - Fortified (Loopable).wav-5b0f9b7a537cf7c9d40ede76daf3d51b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

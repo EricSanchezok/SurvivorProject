@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5gvdbcumifp7"
+path="res://.godot/imported/Footsteps_Stone_Tiles_01.mp3-862d43c327e850a35e98dd82fb3979f3.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/MP3/Footsteps_Stone_Tiles_01.mp3"
+dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_01.mp3-862d43c327e850a35e98dd82fb3979f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

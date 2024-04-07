@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg8xyvjgd1ecl"
+path="res://.godot/imported/OST 4 - Sewage (Loopable).mp3-56b33c48e2affd003058c53720e547dd.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 4 - Sewage (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 4 - Sewage (Loopable).mp3-56b33c48e2affd003058c53720e547dd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

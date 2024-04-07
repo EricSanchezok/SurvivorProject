@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b87e3edcykmvl"
+path="res://.godot/imported/SPELL_Misc 02.ogg-8c47818acc685005dc713b2bea47ee66.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Misc 02.ogg"
+dest_files=["res://.godot/imported/SPELL_Misc 02.ogg-8c47818acc685005dc713b2bea47ee66.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

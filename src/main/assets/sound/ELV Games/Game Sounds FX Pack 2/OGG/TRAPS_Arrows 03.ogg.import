@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnrxf4irtl3hv"
+path="res://.godot/imported/TRAPS_Arrows 03.ogg-184d128983a2e134fd81b9e7d29461d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/TRAPS_Arrows 03.ogg"
+dest_files=["res://.godot/imported/TRAPS_Arrows 03.ogg-184d128983a2e134fd81b9e7d29461d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddd3cv1gq7wom"
+path="res://.godot/imported/OST 2 - Fairy Forest (Loopable).mp3-6712b5fe2822eda3c41d2d55bd27ded1.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack II/OST 2 - Fairy Forest (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 2 - Fairy Forest (Loopable).mp3-6712b5fe2822eda3c41d2d55bd27ded1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

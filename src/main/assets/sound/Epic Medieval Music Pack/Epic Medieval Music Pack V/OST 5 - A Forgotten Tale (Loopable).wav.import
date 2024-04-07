@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cepnmtck24lf2"
+path="res://.godot/imported/OST 5 - A Forgotten Tale (Loopable).wav-56f0f76591a4834a5e77e7387efc2948.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack V/OST 5 - A Forgotten Tale (Loopable).wav"
+dest_files=["res://.godot/imported/OST 5 - A Forgotten Tale (Loopable).wav-56f0f76591a4834a5e77e7387efc2948.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

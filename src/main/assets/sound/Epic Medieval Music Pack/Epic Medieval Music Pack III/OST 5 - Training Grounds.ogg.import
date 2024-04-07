@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://du5lcwverbssv"
+path="res://.godot/imported/OST 5 - Training Grounds.ogg-03f0136a517b968f19c72509505ebceb.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack III/OST 5 - Training Grounds.ogg"
+dest_files=["res://.godot/imported/OST 5 - Training Grounds.ogg-03f0136a517b968f19c72509505ebceb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

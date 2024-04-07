@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yp8ym50a2x44"
+path="res://.godot/imported/ITEM_Aquire 04.mp3-8a64dd7ff75b67b3f75be4089f223b3a.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/ITEM_Aquire 04.mp3"
+dest_files=["res://.godot/imported/ITEM_Aquire 04.mp3-8a64dd7ff75b67b3f75be4089f223b3a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

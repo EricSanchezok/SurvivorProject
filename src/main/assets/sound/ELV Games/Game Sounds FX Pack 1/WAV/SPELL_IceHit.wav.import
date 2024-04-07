@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh3s0w8hutga0"
+path="res://.godot/imported/SPELL_IceHit.wav-69420cebba7076bd0169b17bffb142ff.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_IceHit.wav"
+dest_files=["res://.godot/imported/SPELL_IceHit.wav-69420cebba7076bd0169b17bffb142ff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

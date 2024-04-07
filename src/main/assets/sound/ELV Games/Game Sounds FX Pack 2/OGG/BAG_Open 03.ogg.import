@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bj2uwpclwr48t"
+path="res://.godot/imported/BAG_Open 03.ogg-9b199e279cf8d885dc263e05cc1e34e4.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/BAG_Open 03.ogg"
+dest_files=["res://.godot/imported/BAG_Open 03.ogg-9b199e279cf8d885dc263e05cc1e34e4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

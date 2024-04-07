@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dng6yyrlvcbo7"
+path="res://.godot/imported/OST 2 - Fields Of War.ogg-d9999e023c5041f99b775feb214f9a2e.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack IV/OST 2 - Fields Of War.ogg"
+dest_files=["res://.godot/imported/OST 2 - Fields Of War.ogg-d9999e023c5041f99b775feb214f9a2e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

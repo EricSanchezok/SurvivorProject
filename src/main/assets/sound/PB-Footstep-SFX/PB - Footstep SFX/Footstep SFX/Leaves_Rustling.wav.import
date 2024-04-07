@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://beobd6p4pjtuh"
+path="res://.godot/imported/Leaves_Rustling.wav-aefc80e72e60d3b0c75b77f0ccca86ef.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Leaves_Rustling.wav"
+dest_files=["res://.godot/imported/Leaves_Rustling.wav-aefc80e72e60d3b0c75b77f0ccca86ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

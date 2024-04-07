@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b37evpwm36kji"
+path="res://.godot/imported/UI_Menu Open.mp3-9ae13accda8376285e47f6a0246f9777.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/MP3/UI_Menu Open.mp3"
+dest_files=["res://.godot/imported/UI_Menu Open.mp3-9ae13accda8376285e47f6a0246f9777.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

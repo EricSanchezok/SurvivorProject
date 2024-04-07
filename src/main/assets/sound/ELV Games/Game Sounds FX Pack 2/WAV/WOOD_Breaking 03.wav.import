@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnygsw633ms5q"
+path="res://.godot/imported/WOOD_Breaking 03.wav-ef3a1bde3b0682566ad86ac06c20adcc.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/WOOD_Breaking 03.wav"
+dest_files=["res://.godot/imported/WOOD_Breaking 03.wav-ef3a1bde3b0682566ad86ac06c20adcc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

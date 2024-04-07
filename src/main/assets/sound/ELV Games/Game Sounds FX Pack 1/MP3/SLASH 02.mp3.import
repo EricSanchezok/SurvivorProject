@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbj5d2uygmn1m"
+path="res://.godot/imported/SLASH 02.mp3-d7d80ef27775c165386ee570bbfa039f.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/SLASH 02.mp3"
+dest_files=["res://.godot/imported/SLASH 02.mp3-d7d80ef27775c165386ee570bbfa039f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

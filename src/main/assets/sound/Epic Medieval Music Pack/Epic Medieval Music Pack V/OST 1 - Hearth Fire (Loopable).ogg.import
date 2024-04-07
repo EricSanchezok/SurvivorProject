@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt2r7byqay56k"
+path="res://.godot/imported/OST 1 - Hearth Fire (Loopable).ogg-d6aee1df48d1724c3fd67c3bfbd30e3c.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack V/OST 1 - Hearth Fire (Loopable).ogg"
+dest_files=["res://.godot/imported/OST 1 - Hearth Fire (Loopable).ogg-d6aee1df48d1724c3fd67c3bfbd30e3c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

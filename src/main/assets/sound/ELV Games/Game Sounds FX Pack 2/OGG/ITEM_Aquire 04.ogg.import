@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0tftdnpq01an"
+path="res://.godot/imported/ITEM_Aquire 04.ogg-26eaaa3caadabe46865c9627157139e8.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/ITEM_Aquire 04.ogg"
+dest_files=["res://.godot/imported/ITEM_Aquire 04.ogg-26eaaa3caadabe46865c9627157139e8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

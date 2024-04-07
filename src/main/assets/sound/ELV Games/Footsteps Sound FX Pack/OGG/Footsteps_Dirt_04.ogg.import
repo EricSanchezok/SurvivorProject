@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqbporjw7oupf"
+path="res://.godot/imported/Footsteps_Dirt_04.ogg-d69d622e5497709b4bb888b38eb69aab.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Dirt_04.ogg"
+dest_files=["res://.godot/imported/Footsteps_Dirt_04.ogg-d69d622e5497709b4bb888b38eb69aab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

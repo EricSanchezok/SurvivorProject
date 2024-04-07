@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cllyfl63t1so"
+path="res://.godot/imported/CreakyWood_Boots_Sneaking.wav-4c914be6f7b8e6b4d2e771e4da68e72e.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/CreakyWood_Boots_Sneaking.wav"
+dest_files=["res://.godot/imported/CreakyWood_Boots_Sneaking.wav-4c914be6f7b8e6b4d2e771e4da68e72e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

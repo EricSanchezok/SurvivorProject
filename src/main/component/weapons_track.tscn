@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://bprrbvv515u6e"]
+
+[ext_resource type="Script" path="res://src/main/component/weapons_track.gd" id="1_wf1eq"]
+
+[sub_resource type="Curve2D" id="Curve2D_ho4cm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -25, 0, 0, 0, 0, 0, -23)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_cg66s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -10, -23, 0, 0, 0, 0, -10, -21)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_eanvc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 10, -23, 0, 0, 0, 0, 10, -21)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_8dqnv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -20, -21, 0, 0, 0, 0, -20, -19)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_2jmqg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 20, -21, 0, 0, 0, 0, 20, -19)
+}
+point_count = 2
+
+[node name="WeaponsTrack" type="Node2D"]
+script = ExtResource("1_wf1eq")
+
+[node name="Path2D_1" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ho4cm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D_1"]
+position = Vector2(0, -25)
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D_1/PathFollow2D"]
+remote_path = NodePath("../../../weapon_1")
+
+[node name="Path2D_2" type="Path2D" parent="."]
+curve = SubResource("Curve2D_cg66s")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D_2"]
+position = Vector2(-10, -23)
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D_2/PathFollow2D"]
+remote_path = NodePath("../../../weapon_2")
+
+[node name="Path2D_3" type="Path2D" parent="."]
+curve = SubResource("Curve2D_eanvc")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D_3"]
+position = Vector2(10, -23)
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D_3/PathFollow2D"]
+remote_path = NodePath("../../../weapon_3")
+
+[node name="Path2D_4" type="Path2D" parent="."]
+curve = SubResource("Curve2D_8dqnv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D_4"]
+position = Vector2(-20, -21)
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D_4/PathFollow2D"]
+remote_path = NodePath("../../../weapon_4")
+
+[node name="Path2D_5" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2jmqg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D_5"]
+position = Vector2(20, -21)
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D_5/PathFollow2D"]
+remote_path = NodePath("../../../weapon_5")
+
+[node name="weapon_1" type="Node2D" parent="."]
+position = Vector2(0, -25)
+
+[node name="weapon_2" type="Node2D" parent="."]
+position = Vector2(-10, -23)
+
+[node name="weapon_3" type="Node2D" parent="."]
+position = Vector2(10, -23)
+
+[node name="weapon_4" type="Node2D" parent="."]
+position = Vector2(-20, -21)
+
+[node name="weapon_5" type="Node2D" parent="."]
+position = Vector2(20, -21)
+
+[node name="weapon_6" type="Node2D" parent="."]
+
+[node name="weapon_7" type="Node2D" parent="."]
+
+[node name="weapon_8" type="Node2D" parent="."]
+
+[node name="weapon_9" type="Node2D" parent="."]

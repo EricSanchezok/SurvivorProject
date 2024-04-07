@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc8s72xykqug0"
+path="res://.godot/imported/OST 3 - Reigentanz.mp3-980a488d8a8f13d4b31153809da54323.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack V/OST 3 - Reigentanz.mp3"
+dest_files=["res://.godot/imported/OST 3 - Reigentanz.mp3-980a488d8a8f13d4b31153809da54323.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

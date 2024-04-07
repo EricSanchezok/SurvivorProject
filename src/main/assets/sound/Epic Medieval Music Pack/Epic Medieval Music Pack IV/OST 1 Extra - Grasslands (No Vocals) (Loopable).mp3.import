@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://p6emoem0wan5"
+path="res://.godot/imported/OST 1 Extra - Grasslands (No Vocals) (Loopable).mp3-e2feebc0c2b24fa1a77324e54f259fe3.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack IV/OST 1 Extra - Grasslands (No Vocals) (Loopable).mp3"
+dest_files=["res://.godot/imported/OST 1 Extra - Grasslands (No Vocals) (Loopable).mp3-e2feebc0c2b24fa1a77324e54f259fe3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
