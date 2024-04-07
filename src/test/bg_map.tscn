@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgu0hw8fcbakr"]
+[gd_scene load_steps=7 format=3 uid="uid://dgu0hw8fcbakr"]
 
 [ext_resource type="Texture2D" uid="uid://8h0jk7gq2jo" path="res://src/main/assets/packs/1BitAssets/16x16_tiles_ditherPatterns.png" id="2_autoq"]
 [ext_resource type="Texture2D" uid="uid://deu4csk3rlf87" path="res://src/main/assets/texture/tiles/1bit 16px patterns and tiles.png" id="2_xk6rq"]
 [ext_resource type="PackedScene" uid="uid://bist1b2wqovq7" path="res://src/main/scene/role/player/Yao.tscn" id="3_j63gr"]
-[ext_resource type="PackedScene" uid="uid://2vxl7nby8fiu" path="res://src/main/scene/role/weapons/normal_sword.tscn" id="4_schij"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uign3"]
 texture = ExtResource("2_xk6rq")
@@ -442,30 +441,3 @@ format = 2
 layer_0/name = "bg1"
 
 [node name="Bob" parent="." instance=ExtResource("3_j63gr")]
-
-[node name="NormalSword" parent="." instance=ExtResource("4_schij")]
-position = Vector2(0, -22)
-
-[node name="NormalSword2" parent="." instance=ExtResource("4_schij")]
-position = Vector2(20, -17)
-
-[node name="NormalSword3" parent="." instance=ExtResource("4_schij")]
-position = Vector2(-20, -17)
-
-[node name="NormalSword4" parent="." instance=ExtResource("4_schij")]
-position = Vector2(29, -36)
-
-[node name="NormalSword5" parent="." instance=ExtResource("4_schij")]
-position = Vector2(30, 8)
-
-[node name="NormalSword6" parent="." instance=ExtResource("4_schij")]
-position = Vector2(-27, 9)
-
-[node name="NormalSword7" parent="." instance=ExtResource("4_schij")]
-position = Vector2(-27, -37)
-
-[node name="NormalSword8" parent="." instance=ExtResource("4_schij")]
-position = Vector2(-10, -20)
-
-[node name="NormalSword9" parent="." instance=ExtResource("4_schij")]
-position = Vector2(10, -20)
