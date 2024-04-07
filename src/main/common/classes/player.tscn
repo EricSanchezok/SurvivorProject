@@ -16,23 +16,24 @@ height = 16.0
 radius = 5.0
 height = 16.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 z_index = 100
 z_as_relative = false
 collision_layer = 2
-collision_mask = 7
 script = ExtResource("1_jpkda")
 
 [node name="Graphics" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
-position = Vector2(0, -12)
+position = Vector2(0, -4)
 texture = ExtResource("2_b3ce5")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 24)
 
 [node name="HurtBox" type="Area2D" parent="Graphics"]
+position = Vector2(0, 8)
 collision_layer = 8
+collision_mask = 0
 script = ExtResource("3_hj28x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
@@ -53,10 +54,12 @@ one_shot = true
 script = ExtResource("5_n3ida")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_ldhli")
 
 [node name="WeaponsTrack" parent="." instance=ExtResource("6_lsui7")]
+weapon_radius = 30.0
+angular_velocity = 30.0
+weapon_offsetY = -1.0
 
 [node name="WeaponsInstance" type="Node" parent="."]
 script = ExtResource("7_pvtp6")

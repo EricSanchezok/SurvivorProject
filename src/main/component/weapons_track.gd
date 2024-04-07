@@ -21,9 +21,9 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
-@export var weapon_radius: float = 50.0
+@export var weapon_radius: float = 30.0
 @export var angular_velocity: float = 30.0
-@export var weapon_offsetY: float = -10.0
+@export var weapon_offsetY: float = -1
 
 @onready var initial_angles = {
 	weapon_6: 0.0,
@@ -39,7 +39,6 @@ func _ready() -> void:
 	for weapon in [weapon_6, weapon_7, weapon_8, weapon_9, weapon_10]:
 		var angle = deg_to_rad(initial_angles[weapon])
 		weapon.position = Vector2(cos(angle), sin(angle)) * weapon_radius + Vector2(0, weapon_offsetY)
-		print(weapon.position)
 
 func _process(delta: float) -> void:
 	# 更新每个武器的位置使其围绕中心旋转

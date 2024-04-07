@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://byv6mwfcljgrl"]
+[gd_scene load_steps=4 format=3 uid="uid://byv6mwfcljgrl"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/sword.gd" id="1_xbmnq"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_nsfps"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_adaij"]
 
 [node name="Sword" type="Node2D"]
 z_index = 10
@@ -18,3 +20,16 @@ collision_mask = 16
 script = ExtResource("2_nsfps")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_adaij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -4,31 +4,31 @@
 
 [sub_resource type="Curve2D" id="Curve2D_ho4cm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, -25, 0, 0, 0, 0, 0, -23)
+"points": PackedVector2Array(0, 0, 0, 0, 0, -17, 0, 0, 0, 0, 0, -15)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_cg66s"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -10, -23, 0, 0, 0, 0, -10, -21)
+"points": PackedVector2Array(0, 0, 0, 0, -10, -15, 0, 0, 0, 0, -10, -13)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_eanvc"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 10, -23, 0, 0, 0, 0, 10, -21)
+"points": PackedVector2Array(0, 0, 0, 0, 10, -15, 0, 0, 0, 0, 10, -13)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_8dqnv"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -20, -21, 0, 0, 0, 0, -20, -19)
+"points": PackedVector2Array(0, 0, 0, 0, -20, -13, 0, 0, 0, 0, -20, -11)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_2jmqg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 20, -21, 0, 0, 0, 0, 20, -19)
+"points": PackedVector2Array(0, 0, 0, 0, 20, -13, 0, 0, 0, 0, 20, -11)
 }
 point_count = 2
 
@@ -173,7 +173,7 @@ script = ExtResource("1_wf1eq")
 curve = SubResource("Curve2D_ho4cm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_1"]
-position = Vector2(0, -24.484)
+position = Vector2(0, -16.484)
 progress = 0.6
 rotates = false
 loop = false
@@ -185,7 +185,7 @@ remote_path = NodePath("../../../weapon_1")
 curve = SubResource("Curve2D_cg66s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_2"]
-position = Vector2(-10, -22.872)
+position = Vector2(-10, -14.872)
 progress = 0.2
 rotates = false
 loop = false
@@ -197,7 +197,7 @@ remote_path = NodePath("../../../weapon_2")
 curve = SubResource("Curve2D_eanvc")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_3"]
-position = Vector2(10, -22.872)
+position = Vector2(10, -14.872)
 progress = 0.2
 rotates = false
 loop = false
@@ -209,7 +209,7 @@ remote_path = NodePath("../../../weapon_3")
 curve = SubResource("Curve2D_8dqnv")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_4"]
-position = Vector2(-20, -20.484)
+position = Vector2(-20, -12.484)
 progress = 0.6
 rotates = false
 loop = false
@@ -221,7 +221,7 @@ remote_path = NodePath("../../../weapon_4")
 curve = SubResource("Curve2D_2jmqg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_5"]
-position = Vector2(20, -20)
+position = Vector2(20, -12)
 progress = 1.0
 rotates = false
 loop = false
@@ -230,19 +230,19 @@ loop = false
 remote_path = NodePath("../../../weapon_5")
 
 [node name="weapon_1" type="Node2D" parent="."]
-position = Vector2(0, -24.484)
+position = Vector2(0, -16.484)
 
 [node name="weapon_2" type="Node2D" parent="."]
-position = Vector2(-10, -22.872)
+position = Vector2(-10, -14.872)
 
 [node name="weapon_3" type="Node2D" parent="."]
-position = Vector2(10, -22.872)
+position = Vector2(10, -14.872)
 
 [node name="weapon_4" type="Node2D" parent="."]
-position = Vector2(-20, -20.484)
+position = Vector2(-20, -12.484)
 
 [node name="weapon_5" type="Node2D" parent="."]
-position = Vector2(20, -20)
+position = Vector2(20, -12)
 
 [node name="weapon_6" type="Node2D" parent="."]
 

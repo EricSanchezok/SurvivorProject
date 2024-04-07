@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmlbiem74dvoh"]
+
+[ext_resource type="PackedScene" uid="uid://cewdogq02cht0" path="res://src/main/common/classes/enemy.tscn" id="1_5ndke"]
+[ext_resource type="Script" path="res://src/main/scene/role/enemy/idiot.gd" id="2_15foy"]
+[ext_resource type="Texture2D" uid="uid://crbbrcr2cmfqg" path="res://src/main/assets/packs/Hexany's Roguelike Tiles/Tilesheets/monochrome_16x16_transparent.png" id="2_iu8y3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vieo5"]
+atlas = ExtResource("2_iu8y3")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujkhm"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxww1"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0dg3w"]
+radius = 5.0
+height = 16.0
+
+[node name="Idiot" instance=ExtResource("1_5ndke")]
+script = ExtResource("2_15foy")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+scale = Vector2(-1, 1)
+texture = SubResource("AtlasTexture_vieo5")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CapsuleShape2D_ujkhm")
+
+[node name="CollisionShape2D" parent="Graphics/HurtBox" index="0"]
+shape = SubResource("CapsuleShape2D_sxww1")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_0dg3w")

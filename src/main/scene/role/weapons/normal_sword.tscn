@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://2vxl7nby8fiu"]
+[gd_scene load_steps=6 format=3 uid="uid://2vxl7nby8fiu"]
 
 [ext_resource type="PackedScene" uid="uid://byv6mwfcljgrl" path="res://src/main/common/classes/sword.tscn" id="1_q3v6j"]
 [ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/1BitAssets/16x16_weapons.png" id="2_trwe2"]
@@ -11,6 +11,10 @@ region = Rect2(3, 3, 16, 16)
 radius = 5.0
 height = 26.7607
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7ms8"]
+radius = 5.0
+height = 22.0
+
 [node name="NormalSword" instance=ExtResource("1_q3v6j")]
 
 [node name="Sprite2D" parent="Graphics" index="0"]
@@ -20,3 +24,6 @@ texture = SubResource("AtlasTexture_n5jep")
 [node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
 scale = Vector2(1.05596, 0.815694)
 shape = SubResource("CapsuleShape2D_wvkga")
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CapsuleShape2D_g7ms8")
