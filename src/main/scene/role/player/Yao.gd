@@ -14,3 +14,4 @@ func _ready() -> void:
 	weapons_track.register_weapon(8, weapons.instance_weapon('normal_sword'))
 	weapons_track.register_weapon(9, weapons.instance_weapon('normal_sword'))
 	weapons_track.register_weapon(10, weapons.instance_weapon('normal_sword'))
+	pass

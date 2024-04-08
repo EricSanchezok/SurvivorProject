@@ -8,7 +8,7 @@ signal health_changed
 # 基础生命恢复
 @export var base_health_regeneration: float = 0.0
 # 基础移动速度
-@export var base_movement_speed: float = 40.0
+@export var base_movement_speed: float = 20.0
 # 基础攻击力
 @export var attack_power: float = 1.0
 # 基础击退抗性

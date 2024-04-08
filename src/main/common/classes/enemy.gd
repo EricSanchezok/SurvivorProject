@@ -3,10 +3,12 @@ extends CharacterBody2D
 
 @onready var enemy_stats: EnemyStats = $EnemyStats
 @onready var graphics: Node2D = $Graphics
+@onready var sprite_2d: Sprite2D = $Graphics/Sprite2D
 @onready var state_machine: Node = $StateMachine
 @onready var hit_box: Area2D = $Graphics/HitBox
 @onready var hurt_box: Area2D = $Graphics/HurtBox
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 enum Direction {
 	LEFT = -1,
@@ -27,7 +29,7 @@ var target: Player = null
 		direction = v
 		if not is_node_ready():
 			await  ready
-		graphics.scale.x = direction
+		sprite_2d.scale.x = -direction
 
 var random := RandomNumberGenerator.new()
 
@@ -75,7 +77,7 @@ func tick_physics(state: State, delta: float) -> void:
 		State.APPEAR, State.DIE:
 			pass
 		State.RUN:
-			# move_to_target()
+			move_to_target()
 			pass
 			
 func get_next_state(state: State) -> int:
@@ -93,16 +95,17 @@ func get_next_state(state: State) -> int:
 				
 	return StateMachine.KEEP_CURRENT
 	
-func transition_state(from: State, to: State) -> void:
-	
-	#print("[%s] %s => %s" % [
-		#Engine.get_physics_frames()	,
-		#State.keys()[from] if from != -1 else "<START>",
-		#State.keys()[to],
-	#])
+func transition_state(from: State, to: State) -> void:	
+	# print("[%s] %s => %s" % [
+	# 	Engine.get_physics_frames()	,
+	# 	State.keys()[from] if from != -1 else "<START>",
+	# 	State.keys()[to],
+	# ])
 	
 	match to:
 		State.APPEAR:
+			var dir := (target.global_position - global_position).normalized()
+			direction = Direction.RIGHT if dir.x > 0 else Direction.LEFT
 			animation_player.play("appear")
 		State.RUN:
 			animation_player.play("run")
@@ -111,4 +114,17 @@ func transition_state(from: State, to: State) -> void:
 			hurt_box.monitorable = false
 			
 			die()
+
+
+
+func _on_hurt_box_hurt(hitbox: Variant) -> void:
+	pending_damage = Damage.new()
+	pending_damage.source = hitbox.owner
+	pending_damage.amount = pending_damage.source.damage
+	pending_damage.knockback = pending_damage.source.knockback
+
+	enemy_stats.health -= pending_damage.amount
+	var dir := (pending_damage.source.global_position - global_position).normalized()
+	velocity = -dir * pending_damage.knockback
+	move_and_slide()
 

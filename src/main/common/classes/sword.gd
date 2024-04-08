@@ -2,13 +2,13 @@ class_name Sword
 extends Node2D
 
 # 基础属性
-@export var base_physical_attack_power: float = 3.0
-@export var base_magic_attack_power: float = 0.5
-@export var base_attack_range: float = 50.0
+@export var base_physical_attack_power: float = 2.0
+@export var base_magic_attack_power: float = 0.0
+@export var base_attack_range: float = 60.0
 @export var base_attack_windup_speed: float = 200.0
 @export var base_attack_backswing_speed: float = 100.0
 @export var base_attack_wait_time: float = 0.2
-@export var base_knockback: float = 20.0
+@export var base_knockback: float = 100.0
 
 # 当前属性
 var physical_attack_power: float = base_physical_attack_power
@@ -28,6 +28,9 @@ var knockback: float = base_knockback
 var enemies: Array = []
 var isAttacking: bool = false
 var target: CharacterBody2D = null
+var targetPos: Vector2 = Vector2()
+
+var damage: float = 0.0
 
 # 攻击状态
 var isWindupPhase: bool = false
@@ -58,12 +61,8 @@ func _process(delta: float) -> void:
 	:param delta: float 时间间隔
 	:return: void
 	'''
-
-	# 更新武器的属性
-	_update_parameters()
-
 	# 如果不在攻击状态，且攻击等待计时器已经停止
-	if not isAttacking and attack_wait_timer.is_stopped():
+	if not isAttacking:
 		# 获取最近的敌人
 		target = get_nearest_enemy()
 		if target:
@@ -83,6 +82,8 @@ func start_attack() -> void:
 	isAttacking = true
 	isWindupPhase = true
 	isBackswingPhase = false
+	# 计算伤害
+	damage = physical_attack_power + magic_attack_power
 
 func perform_windup(delta: float) -> void:
 	'''
@@ -91,14 +92,18 @@ func perform_windup(delta: float) -> void:
 	:param delta: float 时间间隔
 	:return: void
 	'''
-	var targetDirection = (target.global_position - global_position).normalized()
+	if not target:
+		pass
+	else:
+		targetPos = target.global_position
+	var targetDirection = (targetPos - global_position).normalized()
 	rotation = lerp_angle(rotation, targetDirection.angle()-PI/2, 0.07)
 
-	var distanceToTarget = global_position.distance_to(target.global_position)
+	var distanceToTarget = global_position.distance_to(targetPos)
 	var totalTime = distanceToTarget / attack_windup_speed
 
 	if totalTime > 0.01:
-		move_toward_target(target.global_position, delta)
+		move_toward_target(targetPos, delta)
 	else:
 		transition_to_backswing()
 
@@ -134,7 +139,7 @@ func move_toward_target(targetPos: Vector2, delta: float) -> void:
 	else:
 		var movementStep = speed * delta
 		var direction = Vector2(cos(rotation + PI/2), sin(rotation + PI/2)) if isWindupPhase else Vector2(cos(rotation), sin(rotation))
-		var startControlPoint = global_position + direction * 1.7
+		var startControlPoint = global_position + direction * 2.0
 		var t = 0.0
 		while true:
 			var nP := global_position.bezier_interpolate(startControlPoint, targetPos, targetPos, t)
@@ -187,13 +192,16 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy") and enemies.has(body):
 		enemies.erase(body)
 
+
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _update_parameters() -> void:
 	'''
 	从玩家的属性节点中获取属性值，并更新武器的属性
 	
 	:return: void
 	'''
-	physical_attack_power = base_attack_backswing_speed * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
+	physical_attack_power = base_physical_attack_power * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
 	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
 	attack_range = base_attack_range * playerStats.attack_range_multiplier
 	attack_windup_speed = base_attack_windup_speed * playerStats.attack_speed_multiplier

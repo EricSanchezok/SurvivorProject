@@ -448,3 +448,35 @@ collision_layer = 1
 
 [node name="Idiot" parent="." instance=ExtResource("4_34g71")]
 position = Vector2(61, 55)
+collision_mask = 1
+platform_floor_layers = 4294967295
+
+[node name="Idiot2" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(114, 24)
+collision_mask = 1
+platform_floor_layers = 4294967295
+
+[node name="Idiot3" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(51, 138)
+collision_mask = 1
+platform_floor_layers = 4294967295
+
+[node name="Idiot4" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(87, 183)
+collision_mask = 1
+platform_floor_layers = 4294967295
+
+[node name="Idiot5" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(172, 193)
+collision_mask = 1
+platform_floor_layers = 4294967295
+
+[node name="Idiot6" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(251, 186)
+collision_mask = 1
+platform_floor_layers = 4294967295
+
+[node name="Idiot7" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(346, 135)
+collision_mask = 1
+platform_floor_layers = 4294967295
