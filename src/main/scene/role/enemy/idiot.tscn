@@ -17,8 +17,8 @@ radius = 5.0
 height = 16.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0dg3w"]
-radius = 5.0
-height = 16.0
+radius = 4.0
+height = 14.0
 
 [node name="Idiot" instance=ExtResource("1_5ndke")]
 script = ExtResource("2_15foy")

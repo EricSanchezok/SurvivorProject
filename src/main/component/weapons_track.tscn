@@ -184,8 +184,7 @@ remote_path = NodePath("../../../weapon_1")
 curve = SubResource("Curve2D_cg66s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_2"]
-position = Vector2(-10, -14.696)
-progress = 0.4
+position = Vector2(-10, -15)
 rotates = false
 loop = false
 
@@ -196,8 +195,7 @@ remote_path = NodePath("../../../weapon_2")
 curve = SubResource("Curve2D_eanvc")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_3"]
-position = Vector2(10, -14.248)
-progress = 0.8
+position = Vector2(10, -15)
 rotates = false
 loop = false
 
@@ -208,8 +206,7 @@ remote_path = NodePath("../../../weapon_3")
 curve = SubResource("Curve2D_8dqnv")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_4"]
-position = Vector2(-20, -11.752)
-progress = 1.2
+position = Vector2(-20, -13)
 rotates = false
 loop = false
 
@@ -220,8 +217,7 @@ remote_path = NodePath("../../../weapon_4")
 curve = SubResource("Curve2D_2jmqg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D_5"]
-position = Vector2(20, -11.304)
-progress = 1.6
+position = Vector2(20, -13)
 rotates = false
 loop = false
 
@@ -232,16 +228,16 @@ remote_path = NodePath("../../../weapon_5")
 position = Vector2(0, -17)
 
 [node name="weapon_2" type="Node2D" parent="."]
-position = Vector2(-10, -14.696)
+position = Vector2(-10, -15)
 
 [node name="weapon_3" type="Node2D" parent="."]
-position = Vector2(10, -14.248)
+position = Vector2(10, -15)
 
 [node name="weapon_4" type="Node2D" parent="."]
-position = Vector2(-20, -11.752)
+position = Vector2(-20, -13)
 
 [node name="weapon_5" type="Node2D" parent="."]
-position = Vector2(20, -11.304)
+position = Vector2(20, -13)
 
 [node name="weapon_6" type="Node2D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cewdogq02cht0"]
+[gd_scene load_steps=11 format=3 uid="uid://cewdogq02cht0"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/enemy.gd" id="1_vb0dh"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_ylk2e"]
@@ -23,7 +23,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Graphics:modulate")
+tracks/1/path = NodePath("Graphics/Sprite2D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -35,14 +35,15 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_4p5ld"]
 resource_name = "appera"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Graphics:modulate")
+tracks/0/path = NodePath("Graphics/Sprite2D:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -65,23 +66,42 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(0.8, 1.2), Vector2(1.2, 0.8), Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_xqqwb"]
+resource_name = "hurt"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q21pf"]
 _data = {
 "RESET": SubResource("Animation_4x68u"),
 "appear": SubResource("Animation_4p5ld"),
+"hurt": SubResource("Animation_xqqwb"),
 "run": SubResource("Animation_nda3w")
 }
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 4
-collision_mask = 5
-platform_floor_layers = 4294967264
+collision_mask = 7
+motion_mode = 1
+platform_on_leave = 2
 script = ExtResource("1_vb0dh")
 
 [node name="Graphics" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+modulate = Color(1, 1, 1, 0)
 
 [node name="HitBox" type="Area2D" parent="Graphics"]
 collision_layer = 0

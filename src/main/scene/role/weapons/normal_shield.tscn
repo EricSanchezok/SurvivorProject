@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://gr47venwri27"]
+
+[ext_resource type="PackedScene" uid="uid://bl8w2d2v4w3t8" path="res://src/main/common/classes/shield.tscn" id="1_2kk0j"]
+[ext_resource type="Texture2D" uid="uid://dvjkufoiali47" path="res://src/main/assets/packs/1BitAssets/16x16_various.png" id="2_7o0qw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iihx"]
+atlas = ExtResource("2_7o0qw")
+region = Rect2(4, 47, 14, 16)
+
+[node name="NormalShield" instance=ExtResource("1_2kk0j")]
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+texture = SubResource("AtlasTexture_8iihx")
+
+[node name="HitBox" parent="Graphics" index="1"]
+collision_layer = 0
+collision_mask = 16
