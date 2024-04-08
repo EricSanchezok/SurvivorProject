@@ -142,3 +142,6 @@ region_rect = Rect2(0, 24, 64, 24)
 libraries = {
 "": SubResource("AnimationLibrary_6snfg")
 }
+
+[node name="PlayerStats" parent="." index="4"]
+attack_range_multiplier = 3.0

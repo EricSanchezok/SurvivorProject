@@ -46,6 +46,11 @@ func _process(delta: float) -> void:
 		var current_angle = (weapon.position - Vector2(0, weapon_offsetY)).angle() + deg_to_rad(angular_velocity * delta)
 		weapon.position = Vector2(cos(current_angle), sin(current_angle)) * weapon_radius + Vector2(0, weapon_offsetY)
 
+	for weapon in [weapon_1, weapon_2, weapon_3, weapon_4, weapon_5, weapon_6, weapon_7, weapon_8, weapon_9, weapon_10]:
+		if weapon.get_child_count() > 0:
+			var weapon_instance = weapon.get_child(0)
+			if not weapon_instance.isAttacking: weapon_instance.global_position = weapon.global_position
+
 func register_weapon(weapon_slot: int, weapon) -> void:
 	'''
 	注册武器到指定的槽位

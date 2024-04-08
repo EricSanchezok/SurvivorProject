@@ -57,9 +57,6 @@ script = ExtResource("5_n3ida")
 shape = SubResource("CapsuleShape2D_ldhli")
 
 [node name="WeaponsTrack" parent="." instance=ExtResource("6_lsui7")]
-weapon_radius = 30.0
-angular_velocity = 30.0
-weapon_offsetY = -1.0
 
 [node name="WeaponsInstance" type="Node" parent="."]
 script = ExtResource("7_pvtp6")

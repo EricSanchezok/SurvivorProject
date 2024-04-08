@@ -75,8 +75,9 @@ func tick_physics(state: State, delta: float) -> void:
 		State.APPEAR, State.DIE:
 			pass
 		State.RUN:
-			move_to_target()
-
+			# move_to_target()
+			pass
+			
 func get_next_state(state: State) -> int:
 	if enemy_stats.health == 0:
 		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
