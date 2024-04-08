@@ -14,9 +14,9 @@ extends Node2D
 @export var base_physical_attack_power: float = 2.0
 @export var base_magic_attack_power: float = 0.0
 @export var base_attack_range: float = 60.0
-@export var base_attack_windup_speed: float = 150.0
-@export var base_attack_backswing_speed: float = 120.0
-@export var base_rotation_speed: float = 8.0
+@export var base_attack_windup_speed: float = 200.0
+@export var base_attack_backswing_speed: float = 100.0
+@export var base_rotation_speed: float = 0.1
 @export var base_attack_wait_time: float = 0.3
 @export var base_knockback: float = 100.0
 
@@ -105,7 +105,7 @@ func perform_windup(delta: float) -> void:
 	else:
 		targetPos = target.global_position
 	var targetDirection = (targetPos - global_position).normalized()
-	rotation = lerp_angle(rotation, targetDirection.angle()-PI/2, rotation_speed*delta)
+	rotation = lerp_angle(rotation, targetDirection.angle()-PI/2, rotation_speed)
 
 	var distanceToTarget = global_position.distance_to(targetPos)
 	var totalTime = distanceToTarget / attack_windup_speed
@@ -122,7 +122,7 @@ func perform_backswing(delta: float) -> void:
 	:param delta: float 时间间隔
 	:return: void
 	'''
-	rotation = lerp_angle(rotation, parentNode.rotation, rotation_speed*delta*1.5)
+	rotation = lerp_angle(rotation, parentNode.rotation, rotation_speed*1.5)
 
 	var distanceToParent = global_position.distance_to(parentNode.global_position)
 	var totalTime = distanceToParent / attack_backswing_speed

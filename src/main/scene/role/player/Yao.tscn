@@ -138,6 +138,9 @@ script = ExtResource("2_kgtja")
 hframes = 4
 region_rect = Rect2(0, 24, 64, 24)
 
+[node name="PlayerStats" parent="." index="2"]
+attack_speed_multiplier = 3.0
+
 [node name="AnimationPlayer" parent="." index="7"]
 libraries = {
 "": SubResource("AnimationLibrary_6snfg")

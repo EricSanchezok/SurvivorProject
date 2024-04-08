@@ -1,3 +1,4 @@
+class_name Shield
 extends Node2D
 
 @onready var state_machine: StateMachine = $StateMachine

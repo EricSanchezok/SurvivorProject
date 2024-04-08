@@ -15,7 +15,7 @@ extends Node2D
 @export var base_attack_range: float = 50.0
 @export var base_attack_speed: float = 100.0
 @export var base_attack_distance: float = 15.0
-@export var base_rotation_speed: float = 10.0
+@export var base_rotation_speed: float = 2.0
 @export var base_attack_wait_time: float = 0.8
 @export var base_knockback: float = 10.0
 
