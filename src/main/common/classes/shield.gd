@@ -40,7 +40,7 @@ enum State {
 
 func _ready() -> void:
 	_update_parameters()
-	playerStats.connect("max_health_multiplier_changed", _on_changed_max_health_multiplier_multiplier)
+	playerStats.connect("max_health_multiplier_changed", _on_changed_max_health_multiplier)
 	playerStats.connect("health_regeneration_multiplier_changed", _on_changed_health_regeneration_multiplier)
 	playerStats.connect("physical_attack_power_multiplier_changed", _on_changed_physical_attack_power_multiplier)
 	playerStats.connect("magic_attack_power_multiplier_changed", _on_changed_magic_attack_power_multiplier)
@@ -153,7 +153,7 @@ func _update_parameters() -> void:
 	damage_reduction_rate = playerStats.damage_reduction_rate
 	damage = physical_attack_power + magic_attack_power 
 
-func _on_changed_max_health_multiplier_multiplier() -> void:
+func _on_changed_max_health_multiplier() -> void:
 	max_health = base_max_health * playerStats.max_health_multiplier
 
 func _on_changed_health_regeneration_multiplier() -> void:

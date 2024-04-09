@@ -3,11 +3,12 @@ extends Node2D
 
 # 节点引用
 @onready var area_2d: Area2D = $Area2D
+@onready var attack_wait_timer: Timer = $AttackWaitTimer
+@onready var hit_box: HitBox = $Graphics/HitBox
+
 @onready var parentNode: Node2D = get_parent()
 @onready var player: CharacterBody2D = get_parent().get_parent().get_parent()
 @onready var playerStats: Node = player.get_node("PlayerStats")
-@onready var attack_wait_timer: Timer = $AttackWaitTimer
-@onready var hit_box: HitBox = $Graphics/HitBox
 
 
 # 基础属性
@@ -30,7 +31,6 @@ var attack_backswing_speed: float = base_attack_backswing_speed
 var rotation_speed: float = base_rotation_speed
 var attack_wait_time: float = base_attack_wait_time
 var knockback: float = base_knockback
-
 
 var enemies: Array = []
 var isAttacking: bool = false
@@ -193,6 +193,7 @@ func _update_parameters() -> void:
 	attack_backswing_speed = base_attack_backswing_speed * playerStats.attack_speed_multiplier
 	attack_wait_time = base_attack_wait_time / playerStats.attack_speed_multiplier
 	rotation_speed = base_rotation_speed * playerStats.attack_speed_multiplier
+	
 	attack_wait_timer.wait_time = attack_wait_time
 	knockback = base_knockback * playerStats.knockback_multiplier
 
