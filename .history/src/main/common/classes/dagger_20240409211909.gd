@@ -16,7 +16,7 @@ extends Node2D
 @export var base_attack_range: float = 50.0
 @export var base_attack_speed: float = 100.0
 @export var base_attack_distance: float = 15.0
-@export var base_rotation_speed: float = 15.0
+@export var base_rotation_speed: float = 10.0
 @export var base_attack_wait_time: float = 0.8
 @export var base_knockback: float = 10.0
 
@@ -50,8 +50,6 @@ enum State {
 	FORWARD,
 	BACKWARD
 }
-
-var non_transferable_states = [State.WAIT]
 
 func _ready() -> void:
 	'''
@@ -139,7 +137,6 @@ func _on_changed_attack_power_multiplier() -> void:
 	damage = physical_attack_power + magic_attack_power
 
 func _on_changed_attack_range_multiplier() -> void:
-	furthest_distance = base_furthest_distance * playerStats.attack_range_multiplier
 	attack_range = base_attack_range * playerStats.attack_range_multiplier
 	attack_distance = base_attack_distance * playerStats.attack_range_multiplier
 	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
@@ -161,10 +158,7 @@ func tick_physics(state: State, delta: float) -> void:
 		State.CALCULATE:
 			pass
 		State.APPEAR:
-			if forward:
-				global_position = appearPos
-			else:
-				global_position = parentNode.global_position
+			pass
 		State.DISAPPEAR:
 			pass
 		State.ATTACK:
@@ -177,15 +171,11 @@ func tick_physics(state: State, delta: float) -> void:
 			pass
 		State.BACKWARD:
 			pass
-
-func beyond_distance() -> bool:
-	return global_position.distance_to(player.global_position) > furthest_distance
-
-
+			
 func get_next_state(state: State) -> int:
-	if (not target or beyond_distance()) and state not in non_transferable_states and forward:
+	if not target and state != State.WAIT and state != State.BACKWARD and forward:
 		finished = false
-		return StateMachine.KEEP_CURRENT if state == State.BACKWARD else State.BACKWARD
+		return State.BACKWARD
 	match state:
 		State.WAIT:
 			target = get_nearest_enemy()
@@ -240,6 +230,7 @@ func transition_state(from: State, to: State) -> void:
 		State.APPEAR:
 			hit_box.monitoring = false
 			animation_player.play("appear")
+			global_position = appearPos
 		State.DISAPPEAR:
 			hit_box.monitoring = false
 			animation_player.play("disappear")
@@ -253,6 +244,7 @@ func transition_state(from: State, to: State) -> void:
 		State.BACKWARD:
 			hit_box.monitoring = false
 			forward = false
+			appearPos = parentNode.global_position
 			finished = true
 
 

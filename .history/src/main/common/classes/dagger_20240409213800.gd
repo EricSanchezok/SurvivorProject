@@ -16,7 +16,7 @@ extends Node2D
 @export var base_attack_range: float = 50.0
 @export var base_attack_speed: float = 100.0
 @export var base_attack_distance: float = 15.0
-@export var base_rotation_speed: float = 15.0
+@export var base_rotation_speed: float = 10.0
 @export var base_attack_wait_time: float = 0.8
 @export var base_knockback: float = 10.0
 
@@ -51,7 +51,7 @@ enum State {
 	BACKWARD
 }
 
-var non_transferable_states = [State.WAIT]
+var non_transferable_states = [State.WAIT, State.CALCULATE, State.APPEAR, State.DISAPPEAR]
 
 func _ready() -> void:
 	'''
@@ -161,10 +161,8 @@ func tick_physics(state: State, delta: float) -> void:
 		State.CALCULATE:
 			pass
 		State.APPEAR:
-			if forward:
-				global_position = appearPos
-			else:
-				global_position = parentNode.global_position
+			# print(global_position.distance_to(appearPos))
+			global_position = appearPos
 		State.DISAPPEAR:
 			pass
 		State.ATTACK:
@@ -202,6 +200,7 @@ func get_next_state(state: State) -> int:
 				if forward:
 					return State.CALCULATE
 				else:
+					global_position = parentNode.global_position
 					return State.WAIT
 		State.DISAPPEAR:
 			if not animation_player.is_playing():
@@ -222,11 +221,11 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	# print("[%s] %s => %s" % [
-	# 	Engine.get_physics_frames()	,
-	# 	State.keys()[from] if from != -1 else "<START>",
-	# 	State.keys()[to],
-	# ])
+	print("[%s] %s => %s" % [
+		Engine.get_physics_frames()	,
+		State.keys()[from] if from != -1 else "<START>",
+		State.keys()[to],
+	])
 
 	match to:
 		State.WAIT:
@@ -253,6 +252,7 @@ func transition_state(from: State, to: State) -> void:
 		State.BACKWARD:
 			hit_box.monitoring = false
 			forward = false
+			appearPos = parentNode.global_position
 			finished = true
 
 

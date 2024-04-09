@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxqfk87p0d5y2"]
+
+[ext_resource type="Script" path="res://src/main/common/classes/bow.gd" id="1_p4jrg"]
+
+[node name="Bow" type="Node2D"]
+script = ExtResource("1_p4jrg")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AttackWaitTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Marker2D" type="Marker2D" parent="."]

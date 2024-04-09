@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://0mn4bedv4es6"]
+
+[ext_resource type="PackedScene" uid="uid://bxqfk87p0d5y2" path="res://src/main/common/classes/bow.tscn" id="1_s7qq6"]
+
+[node name="NormalBow" instance=ExtResource("1_s7qq6")]
