@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://ruv4nbp6d2qk"]
+
+[ext_resource type="PackedScene" uid="uid://62dwxd2wveso" path="res://src/main/common/classes/dagger.tscn" id="1_qee4p"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Dagger/normal_dagger.gd" id="2_4ga7m"]
+[ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/1BitAssets/16x16_weapons.png" id="2_q4ydw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uirxo"]
+atlas = ExtResource("2_q4ydw")
+region = Rect2(293, 72, 9, 10)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24akh"]
+radius = 3.0
+height = 14.0
+
+[node name="NormalDagger" instance=ExtResource("1_qee4p")]
+script = ExtResource("2_4ga7m")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = 3.92699
+texture = SubResource("AtlasTexture_uirxo")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CapsuleShape2D_24akh")

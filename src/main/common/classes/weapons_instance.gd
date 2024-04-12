@@ -4,9 +4,10 @@ extends Node
 
 
 @onready var weapons = {
-	"normal_sword": preload("res://src/main/scene/role/weapons/normal_sword.tscn"),
-	"normal_shield": preload("res://src/main/scene/role/weapons/normal_shield.tscn"),
-	"normal_dagger": preload("res://src/main/scene/role/weapons/normal_dagger.tscn"),
+	"normal_sword": preload("res://src/main/scene/role/weapons/Sword/normal_sword.tscn"),
+	"normal_shield": preload("res://src/main/scene/role/weapons/Shield/normal_shield.tscn"),
+	"normal_dagger": preload("res://src/main/scene/role/weapons/Dagger/normal_dagger.tscn"),
+	"normal_bow": preload("res://src/main/scene/role/weapons/Bow/normal_bow.tscn"),
 }
 
 
