@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://skbowsw78n0u"]
+
+[ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="1_2udt1"]
+[ext_resource type="Script" path="res://src/main/common/classes/boomerang.gd" id="1_vo6k5"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="2_8hk71"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ugeqx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t0824"]
+radius = 44.0114
+
+[sub_resource type="Animation" id="Animation_hpeau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Graphics:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_18nle"]
+resource_name = "appear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Graphics:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mqkj3"]
+_data = {
+"RESET": SubResource("Animation_hpeau"),
+"appear": SubResource("Animation_18nle")
+}
+
+[node name="boomerang" type="Node2D"]
+script = ExtResource("1_vo6k5")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+
+[node name="HitBox" type="Area2D" parent="Graphics"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_2udt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
+shape = SubResource("CapsuleShape2D_ugeqx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_t0824")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_8hk71")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../StateMachine")
+libraries = {
+"": SubResource("AnimationLibrary_mqkj3")
+}
+
+[node name="RecallTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AttackWaitTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
