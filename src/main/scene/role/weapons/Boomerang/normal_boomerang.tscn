@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx8v60jwhcivx"]
+[gd_scene load_steps=4 format=3 uid="uid://bx8v60jwhcivx"]
 
 [ext_resource type="PackedScene" uid="uid://skbowsw78n0u" path="res://src/main/common/classes/boomerang.tscn" id="1_gfw0n"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Boomerang/normal_boomerang.gd" id="2_3oafe"]
-[ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/1BitAssets/16x16_weapons.png" id="3_ql0qw"]
+[ext_resource type="Texture2D" uid="uid://brlga37p8ytd" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Wood/木回旋镖.png" id="3_ye22a"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hwhng"]
-atlas = ExtResource("3_ql0qw")
-region = Rect2(181, 181, 12, 12)
-
-[node name="normal_boomerang" instance=ExtResource("1_gfw0n")]
+[node name="NormalBoomerang" instance=ExtResource("1_gfw0n")]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("2_3oafe")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
-texture = SubResource("AtlasTexture_hwhng")
+position = Vector2(11, -9.53674e-07)
+rotation = 0.815069
+texture = ExtResource("3_ye22a")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+position = Vector2(13, 0)
+rotation = 1.5708
