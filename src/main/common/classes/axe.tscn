@@ -1,124 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://cchgyna0h07kk"]
+[gd_scene load_steps=6 format=3 uid="uid://cchgyna0h07kk"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/axe.gd" id="1_4d6b2"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_x7d3g"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_vr6um"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5d4du"]
+radius = 8.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_da0oj"]
-radius = 26.0768
-
-[sub_resource type="Animation" id="Animation_xaxxw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Graphics:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Graphics:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Graphics:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_ype7e"]
-resource_name = "appear"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Graphics:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_2f7xo"]
-resource_name = "charge"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Graphics:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.785398, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Graphics:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(-10, -10), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_pefa1"]
-resource_name = "dieappear"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Graphics:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
-}
-
-[sub_resource type="Animation" id="Animation_cxwtk"]
-resource_name = "landing"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_am8kd"]
-_data = {
-"RESET": SubResource("Animation_xaxxw"),
-"appear": SubResource("Animation_ype7e"),
-"charge": SubResource("Animation_2f7xo"),
-"dieappear": SubResource("Animation_pefa1"),
-"landing": SubResource("Animation_cxwtk")
-}
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ynd7"]
 
 [node name="Axe" type="Node2D"]
 script = ExtResource("1_4d6b2")
@@ -134,27 +23,31 @@ script = ExtResource("2_x7d3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
 shape = SubResource("CapsuleShape2D_5d4du")
+debug_color = Color(0.835294, 0.27451, 0.682353, 0.419608)
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_da0oj")
+shape = SubResource("CircleShape2D_8ynd7")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_vr6um")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_am8kd")
-}
-
-[node name="RecoveryTimer" type="Timer" parent="."]
-one_shot = true
 
 [node name="AttackWaitTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="AreaPickUp" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPickUp"]
+debug_color = Color(0.478431, 0.588235, 0.0588235, 0.419608)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="AreaPickUp" to="." method="_on_area_pick_up_body_entered"]

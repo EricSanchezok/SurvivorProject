@@ -85,7 +85,25 @@ texture = ExtResource("4_jcjgd")
 position = Vector2(561, -417)
 
 [node name="Orc" parent="." instance=ExtResource("5_ka3fc")]
-position = Vector2(338, -439)
+position = Vector2(235, -684)
+
+[node name="Orc2" parent="." instance=ExtResource("5_ka3fc")]
+position = Vector2(248, -599)
+
+[node name="Orc3" parent="." instance=ExtResource("5_ka3fc")]
+position = Vector2(251, -534)
+
+[node name="Orc4" parent="." instance=ExtResource("5_ka3fc")]
+position = Vector2(328, -641)
+
+[node name="Orc5" parent="." instance=ExtResource("5_ka3fc")]
+position = Vector2(811, -651)
+
+[node name="Orc6" parent="." instance=ExtResource("5_ka3fc")]
+position = Vector2(861, -689)
+
+[node name="Orc7" parent="." instance=ExtResource("5_ka3fc")]
+position = Vector2(927, -590)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_bbfy8")

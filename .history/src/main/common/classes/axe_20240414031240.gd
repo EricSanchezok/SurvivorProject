@@ -9,7 +9,8 @@ var playerStats: Node
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var hit_box = $Graphics/HitBox
 @onready var searching_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
-@onready var area_pick_up: Area2D = $AreaPickUp
+@onready var sprite_2d: Sprite2D = $Graphics/Sprite2D
+
 @onready var state_machine: = $StateMachine
 @onready var animation_player = $AnimationPlayer
 @onready var attack_wait_timer = $AttackWaitTimer
@@ -18,9 +19,9 @@ var playerStats: Node
 @export var base_physical_attack_power: float = 5.0
 @export var base_magic_attack_power: float = 0.0
 @export var base_attack_range: float = 100.0
-@export var base_projectile_speed: float = 450.0
+@export var base_projectile_speed: float = 250.0
 @export var base_rotation_speed: float = 15.0
-@export var base_knockback: float = 300.0
+@export var base_knockback: float = 100.0
 @export var base_attack_wait_time: float = 3.0
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -38,7 +39,6 @@ var isAttacking: bool = false
 var target: CharacterBody2D = null
 var targetPos: Vector2 = Vector2()
 var appearPos: Vector2 = Vector2()
-var picked_up: bool = false
 
 func _ready() -> void:
 	'''
@@ -57,9 +57,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy") and enemies.has(body):
 		enemies.erase(body)
-
-func _on_area_pick_up_body_entered(body: Node2D) -> void:
-	picked_up = true
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 enum State {
@@ -98,10 +95,10 @@ func get_next_state(state: State) -> int:
 			if target:
 				var dir := (target.global_position - position).normalized()
 				targetPos = position + dir * attack_range
-				if dir.x < 0:
-					scale.y = -1
-				else:
-					scale.y = +1
+				# if dir.x < 0:
+				# 	sprite_2d.scale.x = -1
+				# else:
+				# 	sprite_2d.scale.x = +1
 				return State.CHARGE
 		State.CHARGE:
 			if not animation_player.is_playing():
@@ -110,7 +107,7 @@ func get_next_state(state: State) -> int:
 			if position.distance_to(targetPos) < 0.1:
 				return State.LANDING
 		State.LANDING:
-			if attack_wait_timer.is_stopped() or picked_up:
+			if attack_wait_timer.is_stopped():
 				return State.DISAPPEAR
 		State.DISAPPEAR:
 			if not animation_player.is_playing():
@@ -121,6 +118,7 @@ func get_next_state(state: State) -> int:
 
 func transition_state(from: State, to: State) -> void:
 	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+
 	match to:
 		State.APPEAR:
 			animation_player.play("appear")
@@ -129,23 +127,16 @@ func transition_state(from: State, to: State) -> void:
 		State.CHARGE:
 			animation_player.play("charge")
 		State.ATTACK:
-			# 归零 scale position rotation
+			animation_player.play("attack")
 			var total_time = position.distance_to(targetPos) / projectile_speed
-			var tween1 = get_tree().create_tween()
-			tween1.tween_property($Graphics, "scale", Vector2(1.0, 1.0), total_time)		
-			var tween2 = get_tree().create_tween()
-			tween2.tween_property($Graphics, "position", Vector2.ZERO, 0.15)	
-			var tween3 = get_tree().create_tween()
-			tween3.tween_property($Graphics, "rotation", 0.0, 0.15)		
+			var tween = get_tree().create_tween()
+			tween.tween_property($Graphics, "scale", Vector2(1.0, 1.0), total_time)			
 			hit_box.monitoring = true
 		State.LANDING:
 			attack_wait_timer.start()
-			area_pick_up.monitoring = true
 			hit_box.monitoring = false
 			animation_player.play("landing")
 		State.DISAPPEAR:
-			area_pick_up.monitoring = false
-			picked_up = false
 			animation_player.play("disappear")
 		
 		
@@ -171,5 +162,3 @@ func _update_parameters() -> void:
 
 func _on_stats_changed() -> void:
 	_update_parameters()
-
-

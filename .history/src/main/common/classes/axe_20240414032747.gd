@@ -18,7 +18,7 @@ var playerStats: Node
 @export var base_physical_attack_power: float = 5.0
 @export var base_magic_attack_power: float = 0.0
 @export var base_attack_range: float = 100.0
-@export var base_projectile_speed: float = 450.0
+@export var base_projectile_speed: float = 350.0
 @export var base_rotation_speed: float = 15.0
 @export var base_knockback: float = 300.0
 @export var base_attack_wait_time: float = 3.0
@@ -57,6 +57,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy") and enemies.has(body):
 		enemies.erase(body)
+
 
 func _on_area_pick_up_body_entered(body: Node2D) -> void:
 	picked_up = true
