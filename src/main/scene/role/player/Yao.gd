@@ -2,14 +2,14 @@ extends Player
 
 
 func _ready() -> void:
-	#register_weapon.emit(self, "normal_spear", 1)
+	register_weapon.emit(self, "normal_boomerang", 1)
 	register_weapon.emit(self, "normal_boomerang", 2)
-	#register_weapon.emit(self, "normal_bow", 3)
-	#register_weapon.emit(self, "normal_bow", 4)
-	#register_weapon.emit(self, "normal_bow", 5)
-	#register_weapon.emit(self, "normal_shield", 6)
-	#register_weapon.emit(self, "normal_shield", 7)
-	#register_weapon.emit(self, "normal_shield", 8)
-	#register_weapon.emit(self, "normal_shield", 9)
-	#register_weapon.emit(self, "normal_shield", 10)
+	register_weapon.emit(self, "normal_boomerang", 3)
+	register_weapon.emit(self, "normal_boomerang", 4)
+	register_weapon.emit(self, "normal_boomerang", 5)
+	register_weapon.emit(self, "normal_boomerang", 6)
+	register_weapon.emit(self, "normal_boomerang", 7)
+	register_weapon.emit(self, "normal_boomerang", 8)
+	register_weapon.emit(self, "normal_boomerang", 9)
+	register_weapon.emit(self, "normal_boomerang", 10)
 	pass
