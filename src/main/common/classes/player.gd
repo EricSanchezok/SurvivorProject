@@ -8,7 +8,8 @@ extends CharacterBody2D
 @onready var invincible_timer: Timer = $InvincibleTimer
 
 @onready var weapons_track: Node2D = $WeaponsTrack
-@onready var weapons: WeaponsInstance = $WeaponsInstance
+
+signal register_weapon(player: CharacterBody2D, weaponName: String, weapon_slot: int)
 
 enum Direction {
 	LEFT = -1,

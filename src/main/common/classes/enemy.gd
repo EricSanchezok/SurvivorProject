@@ -81,6 +81,7 @@ func tick_physics(state: State, delta: float) -> void:
 			move_and_slide()
 		State.RUN:
 			move_to_target()
+			pass
 			
 func get_next_state(state: State) -> int:
 	if pending_damage:

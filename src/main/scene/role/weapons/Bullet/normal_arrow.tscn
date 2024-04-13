@@ -1,7 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://djeyi1884nnmy"]
+[gd_scene load_steps=7 format=3 uid="uid://djeyi1884nnmy"]
 
 [ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/bullet.tscn" id="1_y0qt5"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Bullet/normal_arrow.gd" id="2_dje7n"]
+[ext_resource type="Texture2D" uid="uid://y0u6ijccr7ge" path="res://src/main/assets/packs/1BitAssets/16x16_misc.png" id="3_chrt0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmf1v"]
+atlas = ExtResource("3_chrt0")
+region = Rect2(245, 223, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7utgd"]
+radius = 4.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o183t"]
+radius = 2.0
+height = 20.0
 
 [node name="NormalArrow" instance=ExtResource("1_y0qt5")]
 script = ExtResource("2_dje7n")
+
+[node name="Graphics" parent="." index="0"]
+scale = Vector2(1, 0.5)
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = -0.785398
+texture = SubResource("AtlasTexture_tmf1v")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7utgd")
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_o183t")

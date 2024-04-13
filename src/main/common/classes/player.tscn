@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cn4p6111oiol3"]
+[gd_scene load_steps=9 format=3 uid="uid://cn4p6111oiol3"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/player.gd" id="1_jpkda"]
 [ext_resource type="Texture2D" uid="uid://dfi4aap11phkw" path="res://src/main/assets/texture/role/bob.png" id="2_b3ce5"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_y7wn2"]
 [ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="5_n3ida"]
 [ext_resource type="PackedScene" uid="uid://bprrbvv515u6e" path="res://src/main/component/weapons_track.tscn" id="6_lsui7"]
-[ext_resource type="Script" path="res://src/main/common/classes/weapons_instance.gd" id="7_pvtp6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg6c6"]
 radius = 5.0
@@ -55,9 +54,6 @@ script = ExtResource("5_n3ida")
 shape = SubResource("CapsuleShape2D_ldhli")
 
 [node name="WeaponsTrack" parent="." instance=ExtResource("6_lsui7")]
-
-[node name="WeaponsInstance" type="Node" parent="."]
-script = ExtResource("7_pvtp6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true

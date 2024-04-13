@@ -1,4 +1,3 @@
-class_name WeaponsInstance
 extends Node
 
 

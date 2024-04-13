@@ -12,9 +12,9 @@ region = Rect2(3, 201, 16, 16)
 script = ExtResource("2_nh4in")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
-position = Vector2(1, 0)
-rotation = -0.785398
+position = Vector2(-1, 0)
+rotation = 2.35619
 texture = SubResource("AtlasTexture_qqb4q")
 
 [node name="Marker2D" parent="." index="3"]
-position = Vector2(-2, 0)
+position = Vector2(3, 0)

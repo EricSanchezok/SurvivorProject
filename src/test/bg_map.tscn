@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgu0hw8fcbakr"]
+[gd_scene load_steps=9 format=3 uid="uid://dgu0hw8fcbakr"]
 
 [ext_resource type="Texture2D" uid="uid://8h0jk7gq2jo" path="res://src/main/assets/packs/1BitAssets/16x16_tiles_ditherPatterns.png" id="2_autoq"]
 [ext_resource type="Texture2D" uid="uid://deu4csk3rlf87" path="res://src/main/assets/texture/tiles/1bit 16px patterns and tiles.png" id="2_xk6rq"]
 [ext_resource type="PackedScene" uid="uid://bist1b2wqovq7" path="res://src/main/scene/role/player/Yao.tscn" id="3_j63gr"]
 [ext_resource type="PackedScene" uid="uid://cmlbiem74dvoh" path="res://src/main/scene/role/enemy/idiot.tscn" id="4_34g71"]
+[ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/component/weapons_manager.tscn" id="5_k0m37"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uign3"]
 texture = ExtResource("2_xk6rq")
@@ -441,53 +442,43 @@ tile_set = SubResource("TileSet_6b8tt")
 format = 2
 layer_0/name = "bg1"
 
-[node name="Idiot" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(61, 55)
-
-[node name="Idiot2" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(35, 155)
-
-[node name="Idiot3" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(96, 179)
-
-[node name="Idiot4" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(175, 200)
-
-[node name="Idiot5" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(166, 22)
-
-[node name="Idiot6" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(263, 32)
-
-[node name="Idiot7" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(314, 83)
-
-[node name="Idiot8" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(301, 156)
+[node name="WeaponsManager" parent="." instance=ExtResource("5_k0m37")]
 
 [node name="Yao" parent="." instance=ExtResource("3_j63gr")]
-position = Vector2(202, 110)
+position = Vector2(5, 9)
+
+[node name="Idiot" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(109, 95)
+
+[node name="Idiot2" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(-128, 79)
+
+[node name="Idiot3" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(-151, 26)
+
+[node name="Idiot4" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(-154, -41)
+
+[node name="Idiot5" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(-138, -80)
+
+[node name="Idiot6" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(-66, -90)
+
+[node name="Idiot7" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(26, -81)
+
+[node name="Idiot8" parent="." instance=ExtResource("4_34g71")]
+position = Vector2(121, -81)
 
 [node name="Idiot9" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(24, 96)
+position = Vector2(153, -25)
 
 [node name="Idiot10" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(67, 12)
+position = Vector2(159, 101)
 
 [node name="Idiot11" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(105, 29)
+position = Vector2(53, 99)
 
 [node name="Idiot12" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(276, 182)
-
-[node name="Idiot13" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(351, 22)
-
-[node name="Idiot14" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(358, 113)
-
-[node name="Idiot15" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(355, 180)
-
-[node name="Idiot16" parent="." instance=ExtResource("4_34g71")]
-position = Vector2(257, 190)
+position = Vector2(-69, 99)

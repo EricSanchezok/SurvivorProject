@@ -34,3 +34,6 @@ shape = SubResource("CapsuleShape2D_sxww1")
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("CapsuleShape2D_0dg3w")
+
+[node name="EnemyStats" parent="." index="3"]
+base_max_health = 100.0
