@@ -1,19 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn4p6111oiol3"]
+[gd_scene load_steps=8 format=3 uid="uid://cn4p6111oiol3"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/player.gd" id="1_jpkda"]
-[ext_resource type="Texture2D" uid="uid://dfi4aap11phkw" path="res://src/main/assets/texture/role/bob.png" id="2_b3ce5"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_hj28x"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_y7wn2"]
 [ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="5_n3ida"]
 [ext_resource type="PackedScene" uid="uid://bprrbvv515u6e" path="res://src/main/component/weapons_track.tscn" id="6_lsui7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg6c6"]
-radius = 5.0
-height = 16.0
+radius = 8.0
+height = 26.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ldhli"]
-radius = 4.0
-height = 14.0
+radius = 6.0
+height = 22.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 z_index = 100
@@ -28,19 +27,15 @@ script = ExtResource("1_jpkda")
 [node name="Graphics" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
-position = Vector2(0, -4)
-texture = ExtResource("2_b3ce5")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 24)
 
 [node name="HurtBox" type="Area2D" parent="Graphics"]
-position = Vector2(0, 8)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("3_hj28x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
-position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_rg6c6")
 debug_color = Color(0.866667, 0.176471, 0.752941, 0.419608)
 

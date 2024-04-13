@@ -30,7 +30,7 @@ var target: Player = null
 		direction = v
 		if not is_node_ready():
 			await  ready
-		sprite_2d.scale.x = -direction
+		sprite_2d.scale.x = direction
 
 var random := RandomNumberGenerator.new()
 

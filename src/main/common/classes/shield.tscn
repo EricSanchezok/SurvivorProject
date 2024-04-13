@@ -92,6 +92,7 @@ _data = {
 }
 
 [node name="Shield" type="Node2D"]
+z_index = 100
 script = ExtResource("1_rss6y")
 
 [node name="Graphics" type="Node2D" parent="."]

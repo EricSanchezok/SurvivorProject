@@ -63,6 +63,7 @@ _data = {
 }
 
 [node name="Dagger" type="Node2D"]
+z_index = 100
 script = ExtResource("1_ino7b")
 
 [node name="Graphics" type="Node2D" parent="."]

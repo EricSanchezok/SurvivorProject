@@ -11,6 +11,7 @@ script = ExtResource("1_hjshi")
 [node name="Graphics" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+z_index = 100
 
 [node name="HitBox" type="Area2D" parent="Graphics"]
 collision_layer = 0
