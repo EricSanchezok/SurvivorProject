@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3rcppup7k0k5"
+path="res://.godot/imported/chest_open_03.ogg-533a141b25abec1c79e4e751948c138b.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/chest_open_03.ogg"
+dest_files=["res://.godot/imported/chest_open_03.ogg-533a141b25abec1c79e4e751948c138b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

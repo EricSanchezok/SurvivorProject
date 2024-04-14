@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4ypg13c68g32"
+path="res://.godot/imported/magic_spell_healing_06.ogg-afd0eda778f09eed1c804f59b618c61d.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_healing_06.ogg"
+dest_files=["res://.godot/imported/magic_spell_healing_06.ogg-afd0eda778f09eed1c804f59b618c61d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

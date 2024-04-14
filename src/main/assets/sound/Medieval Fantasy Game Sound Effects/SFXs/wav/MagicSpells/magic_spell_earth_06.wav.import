@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://p431t3nstjno"
+path="res://.godot/imported/magic_spell_earth_06.wav-93668bd8dfedfc06aa6f3ee76a67cc60.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_earth_06.wav"
+dest_files=["res://.godot/imported/magic_spell_earth_06.wav-93668bd8dfedfc06aa6f3ee76a67cc60.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

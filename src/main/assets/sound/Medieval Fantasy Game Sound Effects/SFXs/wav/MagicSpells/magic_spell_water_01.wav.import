@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xhyds087whia"
+path="res://.godot/imported/magic_spell_water_01.wav-de1a57c76ffbbf866465bfd90284472d.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_water_01.wav"
+dest_files=["res://.godot/imported/magic_spell_water_01.wav-de1a57c76ffbbf866465bfd90284472d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

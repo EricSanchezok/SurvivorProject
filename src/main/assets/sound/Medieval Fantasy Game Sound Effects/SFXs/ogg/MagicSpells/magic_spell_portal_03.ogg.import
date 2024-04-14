@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://vspi7w78khgp"
+path="res://.godot/imported/magic_spell_portal_03.ogg-b8d66ea74511cc06cd78c9ce5b81e329.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_portal_03.ogg"
+dest_files=["res://.godot/imported/magic_spell_portal_03.ogg-b8d66ea74511cc06cd78c9ce5b81e329.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

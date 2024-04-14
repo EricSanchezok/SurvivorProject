@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bg75hd0qaa2nj"
+path="res://.godot/imported/blade_whoosh_med_04.wav-a4de884b4a5471ec3628142d3c6dc774.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_whoosh_med_04.wav"
+dest_files=["res://.godot/imported/blade_whoosh_med_04.wav-a4de884b4a5471ec3628142d3c6dc774.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

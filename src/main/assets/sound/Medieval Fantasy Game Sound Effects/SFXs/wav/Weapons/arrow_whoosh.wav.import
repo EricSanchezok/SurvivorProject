@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dejs036mrg7ld"
+path="res://.godot/imported/arrow_whoosh.wav-7e308a1be3dfb6d1849cf0ca317e46ec.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/arrow_whoosh.wav"
+dest_files=["res://.godot/imported/arrow_whoosh.wav-7e308a1be3dfb6d1849cf0ca317e46ec.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -14,14 +14,12 @@ func _physics_process(delta: float) -> void:
 	self.look_at(velocity+position)
 	move_and_slide()
 
-
 func get_parameters(parent: Node2D) -> void:
 	penetration_rate = parent.penetration_rate
 	attack_speed = parent.attack_speed
 	knockback = parent.knockback
 	damage = parent.damage
 	
-
 func _on_hit_box_hit(hurtbox: Variant) -> void:
 	if not Tools.is_success(penetration_rate):
 		queue_free()

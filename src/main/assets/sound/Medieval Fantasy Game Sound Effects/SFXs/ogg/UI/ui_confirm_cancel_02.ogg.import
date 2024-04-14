@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5445b4k4qn3w"
+path="res://.godot/imported/ui_confirm_cancel_02.ogg-5f6bce9a8f05c6e23b48e1bb15257151.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_confirm_cancel_02.ogg"
+dest_files=["res://.godot/imported/ui_confirm_cancel_02.ogg-5f6bce9a8f05c6e23b48e1bb15257151.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

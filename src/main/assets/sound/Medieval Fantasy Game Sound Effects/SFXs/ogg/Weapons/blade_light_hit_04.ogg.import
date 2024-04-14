@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbcps5hg22g2p"
+path="res://.godot/imported/blade_light_hit_04.ogg-146d47b8ad28bce1d8c3db2d9da90b5c.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_light_hit_04.ogg"
+dest_files=["res://.godot/imported/blade_light_hit_04.ogg-146d47b8ad28bce1d8c3db2d9da90b5c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

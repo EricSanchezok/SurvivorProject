@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://daacu70sss8fn"
+path="res://.godot/imported/blade_whoosh_heavy_03.ogg-58cd51da8d4eaeb3bd66d12a55114f35.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_whoosh_heavy_03.ogg"
+dest_files=["res://.godot/imported/blade_whoosh_heavy_03.ogg-58cd51da8d4eaeb3bd66d12a55114f35.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

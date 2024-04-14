@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ir3b8b5u4i6i"
+path="res://.godot/imported/gems_pickup_shake_01.ogg-95ec7460798ae8fb96e7e539ea8e4a88.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/gems_pickup_shake_01.ogg"
+dest_files=["res://.godot/imported/gems_pickup_shake_01.ogg-95ec7460798ae8fb96e7e539ea8e4a88.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

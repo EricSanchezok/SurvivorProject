@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1vagm8n7tdod"
+path="res://.godot/imported/combat_whoosh_02.ogg-9a1662eb8b8b91fc21639b5f7957627f.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/combat_whoosh_02.ogg"
+dest_files=["res://.godot/imported/combat_whoosh_02.ogg-9a1662eb8b8b91fc21639b5f7957627f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
