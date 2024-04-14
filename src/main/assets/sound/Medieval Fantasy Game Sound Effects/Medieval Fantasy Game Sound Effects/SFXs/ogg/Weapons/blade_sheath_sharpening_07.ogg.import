@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqt8gm08llyot"
+path="res://.godot/imported/blade_sheath_sharpening_07.ogg-57deb7c7ddbfc490d9f5a35797540bff.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_sheath_sharpening_07.ogg"
+dest_files=["res://.godot/imported/blade_sheath_sharpening_07.ogg-57deb7c7ddbfc490d9f5a35797540bff.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

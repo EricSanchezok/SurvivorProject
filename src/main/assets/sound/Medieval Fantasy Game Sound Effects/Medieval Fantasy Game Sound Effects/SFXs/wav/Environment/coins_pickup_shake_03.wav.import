@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drs4wyp3yqhil"
+path="res://.godot/imported/coins_pickup_shake_03.wav-4532a40b8ca29aea32c524eed58fc6f7.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/coins_pickup_shake_03.wav"
+dest_files=["res://.godot/imported/coins_pickup_shake_03.wav-4532a40b8ca29aea32c524eed58fc6f7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

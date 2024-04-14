@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4vq66vs8j3j5"
+path="res://.godot/imported/door_wood_open_02.ogg-e372f02e1eecbcd79090af0807ed778c.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/door_wood_open_02.ogg"
+dest_files=["res://.godot/imported/door_wood_open_02.ogg-e372f02e1eecbcd79090af0807ed778c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

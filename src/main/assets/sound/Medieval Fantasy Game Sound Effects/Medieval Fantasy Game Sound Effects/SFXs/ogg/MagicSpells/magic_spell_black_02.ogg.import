@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6rqkv7gvk7vh"
+path="res://.godot/imported/magic_spell_black_02.ogg-74ad6b9b7747754bde2a09afa527509f.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_black_02.ogg"
+dest_files=["res://.godot/imported/magic_spell_black_02.ogg-74ad6b9b7747754bde2a09afa527509f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

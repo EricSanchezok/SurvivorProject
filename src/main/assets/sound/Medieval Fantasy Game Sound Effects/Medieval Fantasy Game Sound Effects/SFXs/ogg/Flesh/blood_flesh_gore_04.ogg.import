@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dq78hg4blecg7"
+path="res://.godot/imported/blood_flesh_gore_04.ogg-b83a03ed8e9a39dc64b90ea19770e37b.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/blood_flesh_gore_04.ogg"
+dest_files=["res://.godot/imported/blood_flesh_gore_04.ogg-b83a03ed8e9a39dc64b90ea19770e37b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://coe8ho4j5fv26"
+path="res://.godot/imported/blade_hit_bind_01.wav-3171796392d852d59b4b7ccc372e7060.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_hit_bind_01.wav"
+dest_files=["res://.godot/imported/blade_hit_bind_01.wav-3171796392d852d59b4b7ccc372e7060.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

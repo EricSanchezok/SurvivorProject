@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bg6qfaf82gb7m"
+path="res://.godot/imported/ui_select_click_04.wav-eafbe7ae3c366087752c770b98623525.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_select_click_04.wav"
+dest_files=["res://.godot/imported/ui_select_click_04.wav-eafbe7ae3c366087752c770b98623525.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

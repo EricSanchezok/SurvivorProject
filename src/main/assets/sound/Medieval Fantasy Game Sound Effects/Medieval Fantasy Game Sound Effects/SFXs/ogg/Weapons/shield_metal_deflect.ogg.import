@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gtlmochf7arl"
+path="res://.godot/imported/shield_metal_deflect.ogg-e348a8e8deae369926c6fd1d997d6275.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/shield_metal_deflect.ogg"
+dest_files=["res://.godot/imported/shield_metal_deflect.ogg-e348a8e8deae369926c6fd1d997d6275.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0cmu7cdo57ip"
+path="res://.godot/imported/monster_spider_voice_01.ogg-d5eb5ec9847359635b979b6597d0d07e.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_spider_voice_01.ogg"
+dest_files=["res://.godot/imported/monster_spider_voice_01.ogg-d5eb5ec9847359635b979b6597d0d07e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4ttlbdcfi2v0"
+path="res://.godot/imported/blade_hit_scrape_01.wav-0f8b2eb20fc9602711041d8caa5b6a51.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_hit_scrape_01.wav"
+dest_files=["res://.godot/imported/blade_hit_scrape_01.wav-0f8b2eb20fc9602711041d8caa5b6a51.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

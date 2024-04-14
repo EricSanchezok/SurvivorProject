@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dirc8thb8jxvu"
+path="res://.godot/imported/door_metal_close_03.ogg-c61ec2ee58b875d6069a4b433272cb11.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/door_metal_close_03.ogg"
+dest_files=["res://.godot/imported/door_metal_close_03.ogg-c61ec2ee58b875d6069a4b433272cb11.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

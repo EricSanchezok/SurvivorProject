@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fskkutryxpcg"
+path="res://.godot/imported/sword_hit.ogg-e00614ed1bac70a144e0a5f29963b8dc.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/sword_hit.ogg"
+dest_files=["res://.godot/imported/sword_hit.ogg-e00614ed1bac70a144e0a5f29963b8dc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

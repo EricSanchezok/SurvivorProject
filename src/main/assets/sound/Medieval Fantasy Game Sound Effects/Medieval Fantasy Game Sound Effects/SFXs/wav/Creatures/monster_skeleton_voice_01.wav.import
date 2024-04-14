@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt72hgjnlfy1x"
+path="res://.godot/imported/monster_skeleton_voice_01.wav-ac57f0b59b0c1d295b51ef166b6c0c4d.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_skeleton_voice_01.wav"
+dest_files=["res://.godot/imported/monster_skeleton_voice_01.wav-ac57f0b59b0c1d295b51ef166b6c0c4d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

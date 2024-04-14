@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bp6ehieh8jr76"
+path="res://.godot/imported/bone_flesh_crunch_01.wav-ce58cafd266f610792f67d9d687d3c48.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Flesh/bone_flesh_crunch_01.wav"
+dest_files=["res://.godot/imported/bone_flesh_crunch_01.wav-ce58cafd266f610792f67d9d687d3c48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

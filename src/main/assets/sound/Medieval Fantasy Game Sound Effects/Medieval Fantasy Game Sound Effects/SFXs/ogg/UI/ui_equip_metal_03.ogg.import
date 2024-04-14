@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4tf21y8k5xfb"
+path="res://.godot/imported/ui_equip_metal_03.ogg-204f4dbf99a48120e7b4821ad8fac64e.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_equip_metal_03.ogg"
+dest_files=["res://.godot/imported/ui_equip_metal_03.ogg-204f4dbf99a48120e7b4821ad8fac64e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

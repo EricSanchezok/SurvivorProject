@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3vtvhmuyj73"
+path="res://.godot/imported/monster_spider_move_04.wav-477d798c16ad51d878c402a6d5dba59c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_spider_move_04.wav"
+dest_files=["res://.godot/imported/monster_spider_move_04.wav-477d798c16ad51d878c402a6d5dba59c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

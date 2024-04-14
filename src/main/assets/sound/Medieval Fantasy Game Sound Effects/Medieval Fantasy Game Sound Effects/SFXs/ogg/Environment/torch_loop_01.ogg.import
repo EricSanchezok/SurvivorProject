@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cljl7ks1jadck"
+path="res://.godot/imported/torch_loop_01.ogg-c7a248ce1ee6758155063d02ad5b159e.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/torch_loop_01.ogg"
+dest_files=["res://.godot/imported/torch_loop_01.ogg-c7a248ce1ee6758155063d02ad5b159e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

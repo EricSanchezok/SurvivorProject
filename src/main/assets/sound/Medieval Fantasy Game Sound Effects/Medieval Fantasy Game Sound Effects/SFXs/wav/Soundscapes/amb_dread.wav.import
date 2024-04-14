@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddb5tccto1ume"
+path="res://.godot/imported/amb_dread.wav-4197f16c8db2ecd5aca23d09e316c883.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_dread.wav"
+dest_files=["res://.godot/imported/amb_dread.wav-4197f16c8db2ecd5aca23d09e316c883.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

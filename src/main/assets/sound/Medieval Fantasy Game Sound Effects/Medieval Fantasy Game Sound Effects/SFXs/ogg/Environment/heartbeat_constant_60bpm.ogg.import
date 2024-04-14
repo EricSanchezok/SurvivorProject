@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfs2xatx5k0f3"
+path="res://.godot/imported/heartbeat_constant_60bpm.ogg-79186802734979bcc68bb0563c6fe555.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/heartbeat_constant_60bpm.ogg"
+dest_files=["res://.godot/imported/heartbeat_constant_60bpm.ogg-79186802734979bcc68bb0563c6fe555.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

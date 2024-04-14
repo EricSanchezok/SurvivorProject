@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ca3bsoyeln1bx"
+path="res://.godot/imported/amb_creatures_03.wav-06272f8570548a5d2ed9293a4c89275a.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_creatures_03.wav"
+dest_files=["res://.godot/imported/amb_creatures_03.wav-06272f8570548a5d2ed9293a4c89275a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

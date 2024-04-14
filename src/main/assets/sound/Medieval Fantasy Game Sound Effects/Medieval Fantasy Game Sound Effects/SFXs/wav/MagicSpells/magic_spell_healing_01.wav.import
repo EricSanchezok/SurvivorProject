@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cm13r8s72pntv"
+path="res://.godot/imported/magic_spell_healing_01.wav-32a10d46451587abb6109acfce605207.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_healing_01.wav"
+dest_files=["res://.godot/imported/magic_spell_healing_01.wav-32a10d46451587abb6109acfce605207.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

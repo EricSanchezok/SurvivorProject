@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddrk3rhxbx0su"
+path="res://.godot/imported/chest_open_03.wav-dbf9ae4e841413cfc56b0795c61020f2.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/chest_open_03.wav"
+dest_files=["res://.godot/imported/chest_open_03.wav-dbf9ae4e841413cfc56b0795c61020f2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

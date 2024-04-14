@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ct8wccvpfjhey"
+path="res://.godot/imported/monster_skeleton_voice_04.ogg-aee6c196519e11b9273029d8abcb30e4.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_skeleton_voice_04.ogg"
+dest_files=["res://.godot/imported/monster_skeleton_voice_04.ogg-aee6c196519e11b9273029d8abcb30e4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

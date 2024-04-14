@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uxfb3tjbvd3e"
+path="res://.godot/imported/move_slide_stone_03.ogg-98bd7e615d6b0ee4a0a67c4ca5dbb941.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/move_slide_stone_03.ogg"
+dest_files=["res://.godot/imported/move_slide_stone_03.ogg-98bd7e615d6b0ee4a0a67c4ca5dbb941.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

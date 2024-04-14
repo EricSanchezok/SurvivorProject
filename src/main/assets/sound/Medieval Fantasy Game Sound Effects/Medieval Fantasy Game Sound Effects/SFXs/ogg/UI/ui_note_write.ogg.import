@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1eo6d06lyhy"
+path="res://.godot/imported/ui_note_write.ogg-f576e144ef3b965e64d00b1d32123276.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_note_write.ogg"
+dest_files=["res://.godot/imported/ui_note_write.ogg-f576e144ef3b965e64d00b1d32123276.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cp0g3k1fbcqcv"
+path="res://.godot/imported/hit_blood_flesh_gore_02.ogg-c8deaa8671cea34e317d4a5cd1d69455.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/hit_blood_flesh_gore_02.ogg"
+dest_files=["res://.godot/imported/hit_blood_flesh_gore_02.ogg-c8deaa8671cea34e317d4a5cd1d69455.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

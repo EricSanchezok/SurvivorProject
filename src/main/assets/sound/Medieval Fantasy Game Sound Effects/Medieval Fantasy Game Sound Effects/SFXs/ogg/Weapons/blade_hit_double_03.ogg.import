@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f41pfgcktjd7"
+path="res://.godot/imported/blade_hit_double_03.ogg-48b73f63d83882d8c33beb016f1fc105.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_hit_double_03.ogg"
+dest_files=["res://.godot/imported/blade_hit_double_03.ogg-48b73f63d83882d8c33beb016f1fc105.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

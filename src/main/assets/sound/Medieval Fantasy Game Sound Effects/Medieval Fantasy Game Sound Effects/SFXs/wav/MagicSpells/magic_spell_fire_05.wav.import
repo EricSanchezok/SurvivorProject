@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1lg8iyvv6wmo"
+path="res://.godot/imported/magic_spell_fire_05.wav-36f4fb54aaa6a7801ed835f9dafce6e2.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_fire_05.wav"
+dest_files=["res://.godot/imported/magic_spell_fire_05.wav-36f4fb54aaa6a7801ed835f9dafce6e2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

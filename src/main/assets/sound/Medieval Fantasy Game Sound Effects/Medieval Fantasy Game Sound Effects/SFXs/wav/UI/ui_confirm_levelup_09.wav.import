@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csk5bbfx2vkxu"
+path="res://.godot/imported/ui_confirm_levelup_09.wav-03e825e4cadcd3ab75fc23f7db14143c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_confirm_levelup_09.wav"
+dest_files=["res://.godot/imported/ui_confirm_levelup_09.wav-03e825e4cadcd3ab75fc23f7db14143c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

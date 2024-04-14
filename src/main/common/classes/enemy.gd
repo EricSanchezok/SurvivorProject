@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 @onready var enemyStats: EnemyStats = $EnemyStats
 @onready var graphics: Node2D = $Graphics
-@onready var sprite_2d: Sprite2D = $Graphics/Sprite2D
 @onready var state_machine: Node = $StateMachine
 @onready var hit_box: Area2D = $Graphics/HitBox
 @onready var hurt_box: Area2D = $Graphics/HurtBox
@@ -30,7 +29,7 @@ var target: Player = null
 		direction = v
 		if not is_node_ready():
 			await  ready
-		sprite_2d.scale.x = direction
+		graphics.scale.x = direction
 
 var random := RandomNumberGenerator.new()
 
@@ -128,7 +127,7 @@ func transition_state(from: State, to: State) -> void:
 		State.DIE:
 			# 关闭 hurt_box
 			hurt_box.monitorable = false
-			die()
+			animation_player.play("death")
 
 
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://72orjis1gd1b"
+path="res://.godot/imported/firearms_shot.ogg-735a28876e5a64e035f2d72c1fcf2230.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/firearms_shot.ogg"
+dest_files=["res://.godot/imported/firearms_shot.ogg-735a28876e5a64e035f2d72c1fcf2230.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

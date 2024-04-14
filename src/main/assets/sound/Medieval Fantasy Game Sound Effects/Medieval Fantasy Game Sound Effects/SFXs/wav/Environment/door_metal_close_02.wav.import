@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djaipvwnjycmw"
+path="res://.godot/imported/door_metal_close_02.wav-d522781f86f54c5a032877351ee2f536.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/door_metal_close_02.wav"
+dest_files=["res://.godot/imported/door_metal_close_02.wav-d522781f86f54c5a032877351ee2f536.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
