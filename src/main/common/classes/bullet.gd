@@ -4,22 +4,24 @@ extends CharacterBody2D
 var tracking: bool = false
 
 var penetration_rate: float # 穿透率 0-1
-var attack_speed: float
+var projectile_speed: float
 var knockback: float
 var dir: Vector2
 var damage: float
+var explosion_range: float
 
 func _physics_process(delta: float) -> void:
-	velocity = dir * attack_speed
+	velocity = dir * projectile_speed
 	self.look_at(velocity+position)
 	move_and_slide()
 
 
 func get_parameters(parent: Node2D) -> void:
 	penetration_rate = parent.penetration_rate
-	attack_speed = parent.attack_speed
+	projectile_speed = parent.projectile_speed
 	knockback = parent.knockback
 	damage = parent.damage
+	explosion_range = parent.explosion_range
 	
 
 func _on_hit_box_hit(hurtbox: Variant) -> void:

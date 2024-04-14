@@ -10,6 +10,7 @@ extends Node
 	"normal_axe": preload("res://src/main/scene/role/weapons/Axe/normal_axe.tscn"),
 	"normal_spear": preload("res://src/main/scene/role/weapons/Spear/normal_spear.tscn"),
 	"normal_boomerang": preload("res://src/main/scene/role/weapons/Boomerang/normal_boomerang.tscn"),
+	"normal_caser": preload("res://src/main/scene/role/weapons/Caser/normal_caser.tscn"),
 }
 
 

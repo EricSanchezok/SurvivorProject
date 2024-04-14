@@ -21,6 +21,7 @@ var playerStats: Node
 @export var base_rotation_speed: float = 15.0
 @export var base_attack_wait_time: float = 0.5
 @export var base_knockback: float = 30.0
+@export var base_projectile_speed: float = 200.0   #发射物速度
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var physical_attack_power: float
@@ -31,6 +32,7 @@ var rotation_speed: float
 var attack_wait_time: float
 var knockback: float
 var damage: float = 0.0 # 能够造成的总伤害
+var projectile_speed: float
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 特殊属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var penetration_rate: float = 0.3
 
@@ -114,7 +116,7 @@ func transition_state(from: State, to: State) -> void:
 		State.FIRE:
 			animation_player.play("fire")
 			var now_bullet = bullets["normal_arrow"].instantiate()
-			now_bullet.attack_speed = attack_speed
+			now_bullet.projectile_speed = projectile_speed
 			now_bullet.damage = damage
 			now_bullet.knockback = knockback
 			now_bullet.penetration_rate = penetration_rate
@@ -134,7 +136,6 @@ func _update_parameters() -> void:
 	physical_attack_power = base_physical_attack_power * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
 	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
 	attack_range = base_attack_range * playerStats.attack_range_multiplier
-
 	animation_player.speed_scale = playerStats.attack_speed_multiplier
 
 	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
@@ -148,6 +149,7 @@ func _update_parameters() -> void:
 	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
 
 	damage = physical_attack_power + magic_attack_power
+	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier
 
 
 func _on_stats_changed() -> void:
