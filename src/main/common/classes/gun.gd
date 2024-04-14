@@ -1,4 +1,4 @@
-class_name Caser
+class_name  Gun
 extends Node2D
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 武器基类 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -12,7 +12,6 @@ var playerStats: Node
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_wait_timer: Timer = $AttackWaitTimer
 @onready var marker_2d: Marker2D = $Marker2D
-
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var base_physical_attack_power: float = 0.0  #物理攻击力
@@ -42,20 +41,21 @@ var number_of_projectiles: int
 var projectile_speed: float
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 特殊属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@export var base_explosion_range: = 50   #爆炸范围
+@export var base_explosion_range: = 0   #爆炸范围
 @export var base_penetration_rate: = 0  #穿透率
+@export var base_magazine: = 5  #弹匣
 var explosion_range: float 
 var penetration_rate: float = base_penetration_rate
-
+var magazine: float =  base_magazine
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 变量定义 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var bullets = {
-	"normal_spellblast": preload("res://src/main/scene/role/weapons/Bullet/normal_spellblast.tscn"),
+	"normal_bullet": preload("res://src/main/scene/role/weapons/Bullet/normal_bullet.tscn"),
 }
 var enemies: Array = []
+var bullet_count:float = 0 #子弹计数器
 var target: CharacterBody2D = null
 var targetPos: Vector2 = Vector2()
-
 
 func _ready() -> void:
 	'''
@@ -74,6 +74,74 @@ func aim_success() -> bool:
 	'''
 	var dir := (targetPos - global_position).normalized()
 	return Tools.are_angles_close(rotation, dir.angle())
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+enum State {
+	WAIT,
+	AIMNG,
+	FIRE
+}
+
+func tick_physics(state: State, delta: float) -> void:
+	position = slot.global_position
+	if  target:
+		targetPos = target.global_position
+		var dir := (targetPos - global_position).normalized()
+		rotation = lerp_angle(rotation, dir.angle(), rotation_speed*delta)
+	
+	match state:
+		State.WAIT:
+			pass
+		State.AIMNG:
+			pass
+		State.FIRE:
+			animation_player.play("fire")
+			
+func get_next_state(state: State) -> int:
+	match state:
+		State.WAIT:
+			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
+			if target and attack_wait_timer.is_stopped():
+				return State.AIMNG
+		State.AIMNG:
+			if  aim_success() :
+				return State.FIRE
+			if not target:
+				return State.WAIT
+		State.FIRE:
+			if bullet_count== magazine-1:
+				bullet_count =0
+				return State.WAIT
+				
+	return StateMachine.KEEP_CURRENT
+	
+func transition_state(from: State, to: State) -> void:
+	# print("[%s] %s => %s" % [
+	# 	Engine.get_physics_frames()	,
+	# 	State.keys()[from] if from != -1 else "<START>",
+	# 	State.keys()[to],
+	# ])
+	match to:
+		State.WAIT:
+			pass
+		State.AIMNG:
+			pass
+		State.FIRE:
+			pass
+
+func shoot() ->void:
+	var now_bullet = bullets["normal_bullet"].instantiate()
+	now_bullet.projectile_speed = projectile_speed
+	now_bullet.damage = damage
+	now_bullet.knockback = knockback
+	now_bullet.penetration_rate = penetration_rate
+	now_bullet.explosion_range = explosion_range
+	now_bullet.position = marker_2d.global_position
+	now_bullet.dir = (targetPos - now_bullet.position).normalized()
+	get_tree().root.add_child(now_bullet)
+	bullet_count += 1
+	attack_wait_timer.start()
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 参数更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _update_parameters() -> void:
 	'''
@@ -95,9 +163,9 @@ func _update_parameters() -> void:
 	critical_hit_rate=base_critical_hit_rate + playerStats.critical_hit_rate
 	critical_damage = base_critical_damage + playerStats.critical_damage
 	number_of_projectiles=base_number_of_projectiles + playerStats.number_of_projectiles
+	magazine = base_magazine + playerStats.number_of_projectiles
 	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier
 	explosion_range = base_explosion_range * playerStats.attack_range_multiplier
-
 
 
 func _on_stats_changed() -> void:
@@ -113,56 +181,3 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy") and enemies.has(body):
 		enemies.erase(body)
 
-
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-enum State {
-	WAIT,
-	AIMNG,
-	FIRE
-}
-
-func tick_physics(state: State, delta: float) -> void:
-	position = slot.global_position
-	rotation = lerp_angle(rotation, -PI/2, rotation_speed*delta)
-	if target:
-		targetPos = target.global_position
-	
-	match state:
-		State.WAIT:
-			pass
-		State.FIRE:
-			pass
-			
-func get_next_state(state: State) -> int:
-	match state:
-		State.WAIT:
-			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
-			if target and attack_wait_timer.is_stopped():
-				return State.FIRE
-		State.FIRE:
-			if not animation_player.is_playing():
-				return State.WAIT
-				
-	return StateMachine.KEEP_CURRENT
-	
-func transition_state(from: State, to: State) -> void:
-	#print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
-
-	match to:
-		State.WAIT:
-			pass
-		State.FIRE:
-			animation_player.play("charge")
-			
-
-func shoot() ->void:
-	var now_bullet = bullets["normal_spellblast"].instantiate()
-	now_bullet.projectile_speed = projectile_speed
-	now_bullet.damage = damage
-	now_bullet.knockback = knockback
-	now_bullet.penetration_rate = penetration_rate
-	now_bullet.explosion_range = explosion_range
-	now_bullet.position = marker_2d.global_position
-	now_bullet.dir = (targetPos - now_bullet.position).normalized()
-	get_tree().root.add_child(now_bullet)
-	attack_wait_timer.start()

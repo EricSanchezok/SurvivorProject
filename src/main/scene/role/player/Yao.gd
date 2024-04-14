@@ -2,7 +2,7 @@ extends Player
 
 
 func _ready() -> void:
-	register_weapon.emit(self, "normal_caser", 1)
+	register_weapon.emit(self, "normal_gun", 1)
 	#register_weapon.emit(self, "normal_boomerang", 2)
 	#register_weapon.emit(self, "normal_boomerang", 3)
 	#register_weapon.emit(self, "normal_boomerang", 4)
