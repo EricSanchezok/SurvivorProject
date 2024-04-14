@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://0mn4bedv4es6"]
 
-[ext_resource type="PackedScene" uid="uid://bxqfk87p0d5y2" path="res://src/main/common/classes/bow.tscn" id="1_s7qq6"]
+[ext_resource type="PackedScene" uid="uid://bxqfk87p0d5y2" path="res://src/main/common/classes/base_weapons/bow.tscn" id="1_rv276"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Bow/normal_bow.gd" id="2_nh4in"]
 [ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_tlwl1"]
 
@@ -164,6 +164,20 @@ tracks/3/keys = {
 "update": 1,
 "values": [2, 1, 0]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shoot"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gpeyb"]
 _data = {
@@ -172,7 +186,7 @@ _data = {
 "fire": SubResource("Animation_m5bqg")
 }
 
-[node name="NormalBow" instance=ExtResource("1_s7qq6")]
+[node name="NormalBow" instance=ExtResource("1_rv276")]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("2_nh4in")
 

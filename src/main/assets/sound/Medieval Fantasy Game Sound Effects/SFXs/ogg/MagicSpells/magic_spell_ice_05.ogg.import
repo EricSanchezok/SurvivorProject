@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://sxi7kkgr5bpb"
+path="res://.godot/imported/magic_spell_ice_05.ogg-1090bca95bf94fc702df5e62a32222fe.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_ice_05.ogg"
+dest_files=["res://.godot/imported/magic_spell_ice_05.ogg-1090bca95bf94fc702df5e62a32222fe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

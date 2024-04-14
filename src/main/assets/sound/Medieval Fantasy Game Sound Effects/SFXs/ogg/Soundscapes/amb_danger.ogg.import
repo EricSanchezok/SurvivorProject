@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbbpkukkljwt8"
+path="res://.godot/imported/amb_danger.ogg-1836460fb77a953d71c5a8446c13688d.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Soundscapes/amb_danger.ogg"
+dest_files=["res://.godot/imported/amb_danger.ogg-1836460fb77a953d71c5a8446c13688d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

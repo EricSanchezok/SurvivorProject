@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bllqp56rwhain"
+path="res://.godot/imported/bonfire_loop_03.ogg-4b391ea77d078f487ee3cb86f6eda481.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/bonfire_loop_03.ogg"
+dest_files=["res://.godot/imported/bonfire_loop_03.ogg-4b391ea77d078f487ee3cb86f6eda481.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

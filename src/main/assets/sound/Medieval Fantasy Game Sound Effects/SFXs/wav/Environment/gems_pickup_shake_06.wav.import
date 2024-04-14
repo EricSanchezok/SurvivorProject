@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dep8yj5e70e1q"
+path="res://.godot/imported/gems_pickup_shake_06.wav-3da251d08b9ea35f91e7f17a5d1f48f2.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/gems_pickup_shake_06.wav"
+dest_files=["res://.godot/imported/gems_pickup_shake_06.wav-3da251d08b9ea35f91e7f17a5d1f48f2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctxxgeoma60wl"
+path="res://.godot/imported/ui_equip_metal_03.wav-297fb55c5b1e0f1a88c734b6bf75faa0.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_equip_metal_03.wav"
+dest_files=["res://.godot/imported/ui_equip_metal_03.wav-297fb55c5b1e0f1a88c734b6bf75faa0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

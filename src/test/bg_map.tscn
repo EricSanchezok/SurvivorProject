@@ -1,22 +1,44 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgu0hw8fcbakr"]
+[gd_scene load_steps=16 format=3 uid="uid://dgu0hw8fcbakr"]
 
 [ext_resource type="Script" path="res://src/test/bg_map.gd" id="1_d8qjv"]
 [ext_resource type="PackedScene" uid="uid://dgngpu7u70p6s" path="res://src/main/scene/tile_map.tscn" id="1_kvdhd"]
 [ext_resource type="PackedScene" uid="uid://bist1b2wqovq7" path="res://src/main/scene/role/player/Yao.tscn" id="3_j63gr"]
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="4_jcjgd"]
+[ext_resource type="Script" path="res://src/main/common/classes/spawn_shape_2d.gd" id="4_x4s3l"]
 [ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/component/weapons_manager.tscn" id="5_k0m37"]
-[ext_resource type="PackedScene" uid="uid://bpr6e75hueqmq" path="res://src/main/scene/role/enemy/orc.tscn" id="5_ka3fc"]
 [ext_resource type="AudioStream" uid="uid://f284c0p7bk8a" path="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 3 - Fortified (Loopable).mp3" id="6_bbfy8"]
+[ext_resource type="PackedScene" uid="uid://btxc5hfxx24vb" path="res://src/main/component/enemy_generator.tscn" id="8_l45hi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qv45"]
+radius = 121.004
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d66ul"]
+size = Vector2(311, 72)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vew0x"]
+radius = 118.004
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4m0x"]
+size = Vector2(232, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8dih"]
+size = Vector2(565, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsehc"]
+size = Vector2(166, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwhfk"]
+size = Vector2(122, 183)
 
 [node name="bg_map" type="Node2D"]
 script = ExtResource("1_d8qjv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -200
-offset_left = -287.0
-offset_top = -1011.0
-offset_right = 1489.0
-offset_bottom = 215.0
+offset_left = -142.0
+offset_top = -998.0
+offset_right = 1634.0
+offset_bottom = 228.0
 color = Color(0.0784314, 0.0784314, 0.0705882, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -28,6 +50,43 @@ layer_1/tile_data = PackedInt32Array(-3080191, 196608, 5, -3014655, 196608, 5, -
 layer_2/tile_data = PackedInt32Array(-2621407, 262145, 0, -2555871, 262145, 1, -2621406, 327681, 0, -2555870, 327681, 1, -2621408, 589825, 1, -2555872, 1, 1, -2621409, 1, 0, -2555873, 1, 1, -2686944, 589825, 0, -458706, 131073, 1, -458705, 131073, 1, -393170, 131073, 2, -1245117, 65537, 2, -1179581, 65537, 3, -1376192, 1, 2, -1310656, 1, 3, -1441732, 458753, 2, -1376196, 458753, 3, -1441731, 524289, 2, -1376195, 524289, 3, -1441730, 589825, 2, -1376194, 589825, 3, -1376249, 589825, 0, -1310713, 589825, 1, -393169, 458752, 10, -327633, 458752, 11, -393168, 524288, 10, -327632, 524288, 11, -1769437, 458752, 12, -1703901, 458752, 12, -1769438, 458752, 12, -1703902, 458752, 12, -1834975, 458752, 12, -1638364, 458752, 12, -1638367, 458752, 11, -1834972, 458752, 12, -1834974, 458752, 12, -1834973, 458752, 12, -1769439, 458752, 12, -1769436, 458752, 12, -1703900, 458752, 12, -1703903, 458752, 12, -1638366, 458752, 12, -1638365, 458752, 12, -3145709, 524289, 12, -3080173, 524289, 13, -3145708, 589825, 12, -3080172, 589825, 13, -3211248, 589825, 0, -3145712, 589825, 1, -3211254, 655361, 2, -3145718, 655361, 3, -3080182, 655361, 4, -3211253, 720897, 2, -3145717, 720897, 3, -3080181, 720897, 4, -3145720, 786433, 1, -3080184, 786433, 2, -2359292, 65537, 2, -2293756, 65537, 3, -2359293, 65537, 0, -2293757, 65537, 1, -2293758, 65537, 0, -2228222, 65537, 1, -3211208, 393217, 2, -3145672, 393217, 3, -3080136, 393217, 4, -2162621, 720897, 9, -2097085, 196609, 1, -2031549, 196609, 2, -3080190, 655360, 4, -3014654, 655360, 5, -3080189, 720896, 4, -3014653, 720896, 5, -327678, 524289, 8, -262142, 524289, 9, -327677, 589825, 8, -262141, 589825, 9, -3080146, 655360, 4, -3014610, 655360, 5, -3080145, 720896, 4, -3014609, 720896, 5, -2031559, 720896, 1, -2031558, 720896, 1, -2031557, 720896, 1, -2031556, 720896, 1, -2031555, 720896, 1, -2031560, 655360, 1, -2097096, 655360, 0, -2097095, 720896, 0, -2097094, 786432, 0, -2097092, 786432, 0, -2031554, 851968, 1, -2097091, 851968, 0, -2097090, 851968, 0, -2097093, 786432, 0, -3080179, 851968, 4, -3080178, 851968, 4, -3080180, 786432, 4, -3080177, 655360, 4, -3014643, 851968, 5, -3014642, 851968, 6, -3014644, 786432, 4, -2949107, 720896, 4, -3014641, 655360, 4, -3211258, 327681, 11, -3145722, 327681, 12, -2686940, 327681, 11, -2621404, 327681, 12, -3211210, 327681, 11, -3145674, 327681, 12, -1441729, 327681, 11, -1376193, 327681, 12, -1441783, 327681, 11, -1376247, 327681, 12, -2686933, 1, 12, -2621397, 1, 13, -3211243, 1, 12, -3145707, 1, 13, -1441788, 1, 12, -1376252, 1, 13, -1441727, 1, 12, -1376191, 1, 13, -1703881, 393217, 15, -1441750, 327681, 13, -1376214, 327681, 14, -1966053, 1, 12, -1900517, 1, 13, -2424827, 524289, 4, -2490365, 524289, 5, -2490362, 589825, 4, -2949111, 589825, 4, -2949109, 589825, 5, -2424798, 589825, 5, -2490332, 589825, 4, -2621376, 589825, 4, -1245123, 589825, 4, -1114046, 524289, 5, -524240, 524289, 5, -589776, 589825, 5, -1310707, 720897, 12, -2555880, 720897, 12, -3080138, 720897, 12, -1310660, 720897, 12, -1703890, 393217, 10, -2162672, 393217, 10, -2752499, 393217, 10, -2490314, 393217, 10, -917491, 393217, 10, -655352, 393217, 10, -458697, 458753, 9, -982985, 458753, 9, -1114091, 458753, 9, -2359245, 458753, 9, -1966059, 458753, 9, -2162655, 393217, 11, -917482, 393217, 11, -786381, 393217, 11, -1376205, 393217, 11, -1179613, 393217, 11, -2228205, 458753, 11, -851964, 393217, 9, -327669, 393217, 9, -851927, 393217, 9, -720831, 393217, 9, -1966029, 458753, 7, -1900493, 458753, 8, -3014634, 1, 6, -3080126, 327681, 7, -3014590, 327681, 8, -1441780, 65537, 9, -917502, 1, 0, -851966, 1, 1, -917501, 1, 2, -851965, 1, 3, -458750, 524289, 6, -393214, 524289, 7, -458749, 589825, 6, -393213, 589825, 7, -327676, 786433, 3, -262140, 786433, 4, -524284, 524289, 4, -655355, 589825, 4, -327672, 524289, 5, -2359230, 655361, 6, -2293694, 655361, 7, -2228158, 655361, 8, -2162622, 655361, 9, -2359229, 720897, 6, -2293693, 720897, 7, -2228157, 720897, 8, -2621373, 458753, 4, -2555837, 458753, 5, -2490301, 458753, 6)
 
 [node name="WeaponsManager" parent="." instance=ExtResource("5_k0m37")]
+
+[node name="EnemyGenerator" parent="." instance=ExtResource("8_l45hi")]
+
+[node name="SpawnShape2D" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(241, -618)
+shape = SubResource("CircleShape2D_0qv45")
+script = ExtResource("4_x4s3l")
+
+[node name="SpawnShape2D2" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(534.5, -555)
+shape = SubResource("RectangleShape2D_d66ul")
+script = ExtResource("4_x4s3l")
+
+[node name="SpawnShape2D3" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(911, -611)
+shape = SubResource("CircleShape2D_vew0x")
+script = ExtResource("4_x4s3l")
+
+[node name="SpawnShape2D4" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(895, -218.5)
+shape = SubResource("RectangleShape2D_k4m0x")
+script = ExtResource("4_x4s3l")
+
+[node name="SpawnShape2D5" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(411.5, -242.5)
+shape = SubResource("RectangleShape2D_r8dih")
+script = ExtResource("4_x4s3l")
+
+[node name="SpawnShape2D6" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(782, -403)
+shape = SubResource("RectangleShape2D_lsehc")
+script = ExtResource("4_x4s3l")
+
+[node name="SpawnShape2D7" type="CollisionShape2D" parent="EnemyGenerator"]
+position = Vector2(354, -406.5)
+shape = SubResource("RectangleShape2D_iwhfk")
+script = ExtResource("4_x4s3l")
 
 [node name="Lights" type="Node2D" parent="."]
 
@@ -84,9 +143,12 @@ texture = ExtResource("4_jcjgd")
 [node name="Yao" parent="." instance=ExtResource("3_j63gr")]
 position = Vector2(561, -417)
 
-[node name="Orc" parent="." instance=ExtResource("5_ka3fc")]
-position = Vector2(338, -439)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_bbfy8")
-autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

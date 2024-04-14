@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dr8bbaw4wmrmk"
+path="res://.godot/imported/hit_blood_flesh_gore_04.wav-726e395f7a48f5598558d776adde49ef.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Flesh/hit_blood_flesh_gore_04.wav"
+dest_files=["res://.godot/imported/hit_blood_flesh_gore_04.wav-726e395f7a48f5598558d776adde49ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

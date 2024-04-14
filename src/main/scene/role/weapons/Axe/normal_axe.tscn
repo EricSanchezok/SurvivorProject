@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cgajjotfb07jg"]
 
-[ext_resource type="PackedScene" uid="uid://cchgyna0h07kk" path="res://src/main/common/classes/axe.tscn" id="1_we2b8"]
+[ext_resource type="PackedScene" uid="uid://cchgyna0h07kk" path="res://src/main/common/classes/base_weapons/axe.tscn" id="1_jnqfg"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Axe/normal_axe.gd" id="2_wjlfq"]
 [ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_7wyxc"]
 
@@ -148,7 +148,7 @@ _data = {
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y1vs8"]
 
-[node name="NormalAxes" instance=ExtResource("1_we2b8")]
+[node name="NormalAxes" instance=ExtResource("1_jnqfg")]
 script = ExtResource("2_wjlfq")
 base_physical_attack_power = 2.0
 base_projectile_speed = 150.0
@@ -159,8 +159,14 @@ base_knockback = 100.0
 rotation = 1.5708
 texture = SubResource("AtlasTexture_pgfix")
 
+[node name="HitBox" parent="Graphics" index="1"]
+visible = false
+
 [node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
 rotation = 1.5708
+
+[node name="Area2D" parent="." index="1"]
+visible = false
 
 [node name="AnimationPlayer" parent="." index="3"]
 libraries = {

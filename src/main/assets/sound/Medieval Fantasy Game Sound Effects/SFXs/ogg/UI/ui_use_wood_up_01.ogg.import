@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dv223aoycfw02"
+path="res://.godot/imported/ui_use_wood_up_01.ogg-197ca29fd8e1d0c143a4efbccbf5d5e1.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_use_wood_up_01.ogg"
+dest_files=["res://.godot/imported/ui_use_wood_up_01.ogg-197ca29fd8e1d0c143a4efbccbf5d5e1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

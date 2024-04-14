@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ticl4dxi5iq6"
+path="res://.godot/imported/move_slide_metal_03.ogg-4860f5152d525ef58e3bef02afb05dba.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/move_slide_metal_03.ogg"
+dest_files=["res://.godot/imported/move_slide_metal_03.ogg-4860f5152d525ef58e3bef02afb05dba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

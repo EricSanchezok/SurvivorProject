@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://178o1vp2s5wu"
+path="res://.godot/imported/keys_jangling_01.ogg-ea8ec0f26671ef94718f5caaf33ec77b.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/keys_jangling_01.ogg"
+dest_files=["res://.godot/imported/keys_jangling_01.ogg-ea8ec0f26671ef94718f5caaf33ec77b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

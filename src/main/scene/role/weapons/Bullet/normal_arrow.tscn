@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://djeyi1884nnmy"]
 
-[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/bullet.tscn" id="1_y0qt5"]
+[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/base_weapons/bullet.tscn" id="1_y0qt5"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Bullet/normal_arrow.gd" id="2_dje7n"]
 [ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_vhah7"]
 

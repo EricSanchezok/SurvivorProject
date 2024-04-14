@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://h78dtgy1ry1p"
+path="res://.godot/imported/blade_scrape_flesh_13.ogg-7c3b30250f9e45edd483ed5e1629f060.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_scrape_flesh_13.ogg"
+dest_files=["res://.godot/imported/blade_scrape_flesh_13.ogg-7c3b30250f9e45edd483ed5e1629f060.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

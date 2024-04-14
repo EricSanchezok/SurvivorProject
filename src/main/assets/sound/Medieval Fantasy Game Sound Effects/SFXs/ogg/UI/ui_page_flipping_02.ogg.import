@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blpm8kq44yyxw"
+path="res://.godot/imported/ui_page_flipping_02.ogg-1e64d7c14d2cb177a537d5857d1d91b3.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_page_flipping_02.ogg"
+dest_files=["res://.godot/imported/ui_page_flipping_02.ogg-1e64d7c14d2cb177a537d5857d1d91b3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

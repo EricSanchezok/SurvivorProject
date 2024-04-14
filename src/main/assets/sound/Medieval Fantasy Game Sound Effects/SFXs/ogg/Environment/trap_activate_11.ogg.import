@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dr33ni77tojl1"
+path="res://.godot/imported/trap_activate_11.ogg-874fb094237a0131d9ed0414c02e9c81.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/trap_activate_11.ogg"
+dest_files=["res://.godot/imported/trap_activate_11.ogg-874fb094237a0131d9ed0414c02e9c81.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

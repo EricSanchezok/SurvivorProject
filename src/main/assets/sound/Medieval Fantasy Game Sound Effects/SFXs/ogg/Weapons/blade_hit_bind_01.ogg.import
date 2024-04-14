@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ca84ti4f8l1hw"
+path="res://.godot/imported/blade_hit_bind_01.ogg-fe9d4ed43901a597bd969e7bd9965a58.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_hit_bind_01.ogg"
+dest_files=["res://.godot/imported/blade_hit_bind_01.ogg-fe9d4ed43901a597bd969e7bd9965a58.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

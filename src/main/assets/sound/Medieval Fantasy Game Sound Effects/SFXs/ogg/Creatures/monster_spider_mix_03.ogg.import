@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://doygl50h1kdb0"
+path="res://.godot/imported/monster_spider_mix_03.ogg-c50d487dfa52318453b5baabafac6862.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_spider_mix_03.ogg"
+dest_files=["res://.godot/imported/monster_spider_mix_03.ogg-c50d487dfa52318453b5baabafac6862.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

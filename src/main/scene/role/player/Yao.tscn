@@ -1,12 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://bist1b2wqovq7"]
+[gd_scene load_steps=11 format=3 uid="uid://bist1b2wqovq7"]
 
 [ext_resource type="PackedScene" uid="uid://cn4p6111oiol3" path="res://src/main/common/classes/player.tscn" id="1_77066"]
 [ext_resource type="Script" path="res://src/main/scene/role/player/Yao.gd" id="2_kgtja"]
 [ext_resource type="Texture2D" uid="uid://cvkgofsveebp0" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Heroes/Knight/Idle/Idle-Sheet.png" id="3_av27r"]
+[ext_resource type="Texture2D" uid="uid://crtae015pkgqj" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Hands/Hands.png" id="4_7ynuj"]
 [ext_resource type="Texture2D" uid="uid://dlwmvxurjtpma" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Heroes/Knight/Run/Run-Sheet.png" id="4_s02f0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hhok"]
+atlas = ExtResource("4_7ynuj")
+region = Rect2(0, 0, 32, 16)
 
 [sub_resource type="Animation" id="Animation_o6xpb"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/Hands:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 4)]
+}
 
 [sub_resource type="Animation" id="Animation_fnsrj"]
 resource_name = "idle"
@@ -60,6 +77,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("3_av27r")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Graphics/Hands:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 4), Vector2(0, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_857gm"]
@@ -115,6 +144,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ExtResource("4_s02f0")]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Graphics/Hands:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 4), Vector2(0, 3), Vector2(0, 4), Vector2(0, 5), Vector2(0, 3), Vector2(0, 4)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6snfg"]
 _data = {
@@ -124,15 +165,18 @@ _data = {
 }
 
 [node name="Yao" instance=ExtResource("1_77066")]
-z_index = 50
 script = ExtResource("2_kgtja")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_av27r")
-hframes = 4
-frame = 2
-region_rect = Rect2(0, 0, 128, 32)
+texture = ExtResource("4_s02f0")
+hframes = 6
+region_rect = Rect2(0, 32, 384, 32)
+
+[node name="Hands" type="Sprite2D" parent="Graphics" index="1"]
+position = Vector2(0, 4)
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_1hhok")
 
 [node name="AnimationPlayer" parent="." index="6"]
 libraries = {
