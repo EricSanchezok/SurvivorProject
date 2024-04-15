@@ -14,6 +14,7 @@ enum NodeType {
 class MapNode:
 	var type = NodeType.NORMAL
 	var connections = []
+	var container_position = Vector2.ZERO
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 创建地图 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func create_game_map(total_layers, min_nodes, max_nodes):

@@ -182,6 +182,3 @@ texture = SubResource("AtlasTexture_1hhok")
 libraries = {
 "": SubResource("AnimationLibrary_6snfg")
 }
-
-[node name="PauseScreen" parent="CanvasLayer" index="0"]
-visible = false

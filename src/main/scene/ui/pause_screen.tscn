@@ -1,4 +1,4 @@
-[gd_scene load_steps=205 format=3 uid="uid://b7r4uo6xex26a"]
+[gd_scene load_steps=211 format=3 uid="uid://b7r4uo6xex26a"]
 
 [ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_jy0m2"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_txxue"]
@@ -48,8 +48,14 @@
 [ext_resource type="Texture2D" uid="uid://bgk5kb31m4dj1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/11.png" id="176_0h1hc"]
 [ext_resource type="Texture2D" uid="uid://0hngndhco1pw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/16.png" id="181_aaobm"]
 [ext_resource type="Texture2D" uid="uid://cqu8obsksls2d" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/21.png" id="186_ufwkq"]
+[ext_resource type="Texture2D" uid="uid://dn611yvcgst6n" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Sprites/Decorations/0.png" id="187_7yti3"]
+[ext_resource type="FontFile" uid="uid://clk0dq2382af2" path="res://src/main/assets/font/DungeonFont.ttf" id="187_xtmwt"]
+[ext_resource type="Texture2D" uid="uid://euikwcq275pa" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/137.png" id="189_5pfmq"]
+[ext_resource type="Texture2D" uid="uid://cc1nb1gi2dgdk" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/163.png" id="190_6q6ls"]
 [ext_resource type="Texture2D" uid="uid://15vqmbf43slj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/4.png" id="191_4pva2"]
+[ext_resource type="Texture2D" uid="uid://tv4iwoelelgm" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/107.png" id="191_6j4xu"]
 [ext_resource type="Texture2D" uid="uid://by5lwfvrnkoqe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/5.png" id="192_h77ya"]
+[ext_resource type="Texture2D" uid="uid://dsq8xmuoptbil" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/232.png" id="192_ktcwh"]
 [ext_resource type="Texture2D" uid="uid://bwwl0tfw6u3sr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/6.png" id="193_ma0bu"]
 [ext_resource type="Texture2D" uid="uid://dd13asj8lt03r" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/8.png" id="194_xc2pb"]
 [ext_resource type="Texture2D" uid="uid://d1i2foms0gkvn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/9.png" id="195_l83av"]
@@ -86,8 +92,8 @@
 [ext_resource type="Texture2D" uid="uid://d0gdjhm0bn7tf" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/17.png" id="226_6w3ya"]
 [ext_resource type="Texture2D" uid="uid://bv8vmxivmdxmv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/18.png" id="227_7jpkk"]
 [ext_resource type="Texture2D" uid="uid://dl76qiiwbuh33" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/19.png" id="228_cmavw"]
-[ext_resource type="PackedScene" uid="uid://cv8ior6sb7rd1" path="res://src/main/scene/ui/combat_progress_control.tscn" id="249_epysb"]
 [ext_resource type="Texture2D" uid="uid://cq4jbyjhevigr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/0.png" id="249_ercje"]
+[ext_resource type="Script" path="res://src/main/scene/ui/CombatProgressControl.gd" id="249_owj30"]
 [ext_resource type="Texture2D" uid="uid://cybkvi102r3mm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/1.png" id="250_txmki"]
 [ext_resource type="Texture2D" uid="uid://cy3nyb75uckg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/4.png" id="251_0q01h"]
 [ext_resource type="Texture2D" uid="uid://cyqi10s0a581y" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/2.png" id="251_lqim0"]
@@ -602,7 +608,7 @@ tracks/16/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.494118, 0.494118, 0.494118, 1), Color(0.407843, 0.407843, 0.407843, 1)]
+"values": [Color(1, 1, 1, 1), Color(0.741176, 0.741176, 0.741176, 1), Color(0.607843, 0.607843, 0.607843, 1)]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
@@ -615,6 +621,18 @@ tracks/17/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("ColorRect:color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0), Color(0.054902, 0.0823529, 0.160784, 0.345098)]
 }
 
 [sub_resource type="Animation" id="Animation_7y6sf"]
@@ -653,7 +671,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [null]
+"values": [ExtResource("299_r7tx4")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -822,6 +840,78 @@ tracks/16/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("ColorRect:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0.345098)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CanvasModulate:color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_upl4p"]
@@ -1447,6 +1537,54 @@ tracks/16/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_prs05"]
@@ -3730,6 +3868,30 @@ tracks/15/keys = {
 "method": &"hide_pause"
 }]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ColorRect:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.95, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0.345098), Color(0.054902, 0.0823529, 0.160784, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CanvasModulate:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.95, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.603922, 0.603922, 0.603922, 1), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nld0k"]
 _data = {
@@ -3763,10 +3925,8 @@ grow_vertical = 2
 script = ExtResource("1_jy0m2")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.494118, 0.494118, 0.494118, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 z_index = -20
 z_as_relative = false
 layout_mode = 1
@@ -3775,7 +3935,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.054902, 0.0823529, 0.160784, 1)
+color = Color(0.054902, 0.0823529, 0.160784, 0.345098)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_txxue")
@@ -3798,5 +3958,180 @@ region_rect = Rect2(0, 0, 1024, 768)
 [node name="PanelSprite2D" type="Sprite2D" parent="."]
 position = Vector2(192, 108)
 scale = Vector2(0.35, 0.35)
+texture = ExtResource("299_r7tx4")
 
-[node name="CombatProgressControl" parent="PanelSprite2D" instance=ExtResource("249_epysb")]
+[node name="CombatProgressControl" type="Control" parent="PanelSprite2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = -344.0
+offset_right = -392.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("249_owj30")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSprite2D/CombatProgressControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlUp" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.67
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.811765, 0.603922, 0.309804, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 45
+text = "Combat Progress"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("187_7yti3")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.88
+
+[node name="ControlLeft" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.15
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="ControlRight" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("189_5pfmq")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Stay vigilant"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("190_6q6ls")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Be prepared......"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("191_6j4xu")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Fortune favors the bold!"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("192_ktcwh")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Who Knows?"
+
+[node name="ControlDown" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.6
