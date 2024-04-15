@@ -1,30 +1,42 @@
 extends Control
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@onready var back_pack_animated_sprite_2d: AnimatedSprite2D = $BackPackAnimatedSprite2D
-@onready var tabs_animated_sprite_2d: AnimatedSprite2D = $TabsAnimatedSprite2D
-@onready var panels_animated_sprite_2d: AnimatedSprite2D = $PanelsAnimatedSprite2D
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var up: bool = false
 var down: bool = false
 
+var show_flag: bool = false
+
+func _ready() -> void:
+	hide()
+
 func _input(event):
+	if event.is_action_pressed("pause"):
+		show_flag = false
 	if not animation_playing():
 		if event.is_action_pressed("move_up"):
 			up = true
 		if event.is_action_pressed("move_down"):
-			down = true
+			down = true	
 	
-
+func show_pause() -> void:
+	if not animation_playing():
+		show_flag = true
+		get_tree().paused = true
+	
+func hide_pause() -> void:
+	get_tree().paused = false
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	get_window().set_input_as_handled()
 
 func animation_playing() -> bool:
-	return back_pack_animated_sprite_2d.is_playing() or tabs_animated_sprite_2d.is_playing() or panels_animated_sprite_2d.is_playing()
-
+	return animation_player.is_playing()
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 enum State {
-	IDLE,
+	CLOSE,
+	OPEN,
 	INVENTORY,
 	INVENTORY_LEAVE,
 	TOP_POUCH_OPEN,
@@ -47,7 +59,9 @@ func tick_physics(state: State, delta: float) -> void:
 	#print(camera_2d.get_screen_center_position())
 
 	match state:
-		State.IDLE:
+		State.CLOSE:
+			pass
+		State.OPEN:
 			pass
 		State.INVENTORY:
 			pass
@@ -79,11 +93,18 @@ func tick_physics(state: State, delta: float) -> void:
 			pass
 			
 func get_next_state(state: State) -> int:
+	if not show_flag:
+		return StateMachine.KEEP_CURRENT if state == State.CLOSE else State.CLOSE
 	match state:
-		State.IDLE:
+		State.CLOSE:
+			if show_flag and not animation_playing():
+				return State.OPEN
+		State.OPEN:
 			if not animation_playing():
 				return State.INVENTORY
 		State.INVENTORY:
+			if up:
+				up = false
 			if down and not animation_playing():
 				return State.INVENTORY_LEAVE
 		State.INVENTORY_LEAVE:
@@ -143,64 +164,44 @@ func get_next_state(state: State) -> int:
 			if up and not animation_playing():
 				up = false
 				return State.SAVE_LOAD
+			if down:
+				down = false
 
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
 	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
-	
-	match from:
-		State.IDLE:
-			#tabs_animated_sprite_2d.position.y += 10
-			pass
 
 	match to:
-		State.IDLE:
-			#tabs_animated_sprite_2d.position.y -= 10
-			back_pack_animated_sprite_2d.play("Idle")
-			panels_animated_sprite_2d.play("Idle")
-			#tabs_animated_sprite_2d.play("TabsAppear")
+		State.CLOSE:
+			animation_player.play("Close")
+		State.OPEN:
+			animation_player.play("Open")
 		State.INVENTORY:
-			back_pack_animated_sprite_2d.play("InventoryAppear")
-			tabs_animated_sprite_2d.play("SelectInventory")
+			animation_player.play("Inventory")
 		State.INVENTORY_LEAVE:
-			back_pack_animated_sprite_2d.play("InventoryDisappear")
+			animation_player.play("InventoryDisappear")
 		State.TOP_POUCH_OPEN:
-			back_pack_animated_sprite_2d.play("TopPouchOpenT")
+			animation_player.play("TopPouchOpenT")
 		State.TOP_POUCH_CLOSE:
-			back_pack_animated_sprite_2d.play("TopPouchCloseT")
+			animation_player.play("TopPouchCloseT")
 		State.COMBAT_PROGRESS:
-			back_pack_animated_sprite_2d.play("SelectCombatProgress")
-			tabs_animated_sprite_2d.play("SelectCombatProgress")
-			panels_animated_sprite_2d.play("CombatProgressAppear")
+			animation_player.play("CombatProgressAppear")
 		State.COMBAT_PROGRESS_LEAVE:
-			back_pack_animated_sprite_2d.play("CombatProgressDisappear")
-			panels_animated_sprite_2d.play("CombatProgressDisappear")
+			animation_player.play("CombatProgressDisappear")
 		State.EQUIPMENT:
-			back_pack_animated_sprite_2d.play("SelectEquipment")
-			tabs_animated_sprite_2d.play("SelectEquipment")
-			panels_animated_sprite_2d.play("EquipmentAppear")
+			animation_player.play("EquipmentAppear")
 		State.EQUIPMENT_LEAVE:
-			back_pack_animated_sprite_2d.play("EquipmentDisappear")
-			panels_animated_sprite_2d.play("EquipmentDisappear")
+			animation_player.play("EquipmentDisappear")
 		State.QUESTS:
-			back_pack_animated_sprite_2d.play("SelectQuests")
-			tabs_animated_sprite_2d.play("SelectQuests")
-			panels_animated_sprite_2d.play("QuestsAppear")
+			animation_player.play("QuestsAppear")
 		State.QUESTS_LEAVE:
-			back_pack_animated_sprite_2d.play("QuestsDisappear")
-			panels_animated_sprite_2d.play("QuestsDisappear")
+			animation_player.play("QuestsDisappear")
 		State.SAVE_LOAD:
-			back_pack_animated_sprite_2d.play("SelectSaveLoad")
-			tabs_animated_sprite_2d.play("SelectSaveLoad")
-			panels_animated_sprite_2d.play("SaveLoadAppear")
+			animation_player.play("SaveLoadAppear")
 		State.SAVE_LOAD_LEAVE:
-			back_pack_animated_sprite_2d.play("SaveLoadDisappear")
-			panels_animated_sprite_2d.play("SaveLoadDisappear")
+			animation_player.play("SaveLoadDisappear")
 		State.SETTINGS:
-			back_pack_animated_sprite_2d.play("SelectSettings")
-			tabs_animated_sprite_2d.play("SelectSettings")
-			panels_animated_sprite_2d.play("SettingsAppear")
+			animation_player.play("SettingsAppear")
 		State.SETTINGS_LEAVE:
-			back_pack_animated_sprite_2d.play("SettingsDisappear")
-			panels_animated_sprite_2d.play("SettingsDisappear")
+			animation_player.play("SettingsDisappear")
