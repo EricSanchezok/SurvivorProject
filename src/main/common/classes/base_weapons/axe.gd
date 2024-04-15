@@ -132,11 +132,11 @@ func transition_state(from: State, to: State) -> void:
 			# 归零 scale position rotation
 			var total_time = position.distance_to(targetPos) / projectile_speed
 			var tween1 = get_tree().create_tween()
-			tween1.tween_property($Graphics, "scale", Vector2(1.0, 1.0), total_time)		
+			tween1.tween_property($Graphics, "scale", Vector2(1.0, 1.0), total_time)
 			var tween2 = get_tree().create_tween()
-			tween2.tween_property($Graphics, "position", Vector2.ZERO, 0.15)	
+			tween2.tween_property($Graphics, "position", Vector2.ZERO, 0.15)
 			var tween3 = get_tree().create_tween()
-			tween3.tween_property($Graphics, "rotation", 0.0, 0.15)		
+			tween3.tween_property($Graphics, "rotation", 0.0, 0.15)
 			hit_box.monitoring = true
 		State.LANDING:
 			attack_wait_timer.start()
@@ -148,7 +148,7 @@ func transition_state(from: State, to: State) -> void:
 			picked_up = false
 			animation_player.play("disappear")
 		
-		
+
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _update_parameters() -> void:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://7ho7hib2uxe4"]
 
-[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/bullet.tscn" id="1_piesx"]
+[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/base_weapons/bullet.tscn" id="1_piesx"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Bullet/normal_bullet.gd" id="2_h1d2f"]
 [ext_resource type="Texture2D" uid="uid://dvjkufoiali47" path="res://src/main/assets/packs/1BitAssets/16x16_various.png" id="3_vwt4f"]
 

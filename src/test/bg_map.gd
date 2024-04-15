@@ -12,5 +12,5 @@ func _ready() -> void:
 
 
 func _on_timer_timeout() -> void:
-	# enemy_generator.register_enemy(enemies["orc"], 20)
+	enemy_generator.register_enemy(enemies["orc"], 1)
 	pass

@@ -2,8 +2,8 @@ extends Player
 
 
 func _ready() -> void:
-	register_weapon.emit(self, "normal_bow", 1)
-	#register_weapon.emit(self, "normal_boomerang", 2)
+	register_weapon.emit(self, "normal_bomb", 1)
+	#register_weapon.emit(self, "normal_bomb", 2)
 	#register_weapon.emit(self, "normal_boomerang", 3)
 	#register_weapon.emit(self, "normal_axe", 4)
 	#register_weapon.emit(self, "normal_axe", 5)

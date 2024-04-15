@@ -35,10 +35,10 @@ script = ExtResource("1_d8qjv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -200
-offset_left = -142.0
-offset_top = -998.0
-offset_right = 1634.0
-offset_bottom = 228.0
+offset_left = -161.0
+offset_top = -991.0
+offset_right = 1615.0
+offset_bottom = 235.0
 color = Color(0.0784314, 0.0784314, 0.0705882, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -147,7 +147,6 @@ position = Vector2(561, -417)
 stream = ExtResource("6_bbfy8")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
 one_shot = true
 autostart = true
 

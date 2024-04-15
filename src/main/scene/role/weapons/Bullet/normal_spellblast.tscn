@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://h1dtskxkakn7"]
 
-[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/bullet.tscn" id="1_avmvr"]
+[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/base_weapons/bullet.tscn" id="1_avmvr"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Bullet/normal_spellblast.gd" id="2_anpnt"]
 [ext_resource type="Texture2D" uid="uid://djkqejdvpsl4w" path="res://src/main/assets/texture/vfx/Free Smoke Fx Pixel 2/Free Smoke Fx  Pixel 06.png" id="3_h0n43"]
 

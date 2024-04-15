@@ -21,6 +21,7 @@ var playerStats: Node
 @export var base_rotation_speed: float = 15.0
 @export var base_attack_wait_time: float = 0.5
 @export var base_knockback: float = 30.0
+@export var base_projectile_speed: float = 200.0   #发射物速度
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var physical_attack_power: float
@@ -31,6 +32,7 @@ var rotation_speed: float
 var attack_wait_time: float
 var knockback: float
 var damage: float = 0.0 # 能够造成的总伤害
+var projectile_speed: float
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 特殊属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var penetration_rate: float = 0.3
 
@@ -117,7 +119,7 @@ func transition_state(from: State, to: State) -> void:
 
 func shoot() -> void:
 	var now_bullet = bullets["normal_arrow"].instantiate()
-	now_bullet.attack_speed = attack_speed
+	now_bullet.projectile_speed = projectile_speed
 	now_bullet.damage = damage
 	now_bullet.knockback = knockback
 	now_bullet.penetration_rate = penetration_rate
@@ -142,6 +144,7 @@ func _update_parameters() -> void:
 
 	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
 	rotation_speed = base_rotation_speed * playerStats.attack_speed_multiplier
+	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier
 
 	knockback = base_knockback * playerStats.knockback_multiplier
 

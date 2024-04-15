@@ -75,6 +75,47 @@ func aim_success() -> bool:
 	var dir := (targetPos - global_position).normalized()
 	return Tools.are_angles_close(rotation, dir.angle())
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 参数更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func _update_parameters() -> void:
+	'''
+	更新武器的属性
+
+	:return: void
+	'''
+	physical_attack_power = base_physical_attack_power * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
+	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
+	damage = (physical_attack_power + magic_attack_power) * critical_hit_rate * critical_damage
+	attack_range = base_attack_range * playerStats.attack_range_multiplier
+	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
+	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
+	animation_player.speed_scale = playerStats.attack_speed_multiplier
+	rotation_speed = base_rotation_speed * playerStats.attack_speed_multiplier
+	attack_wait_time = base_attack_wait_time / playerStats.attack_speed_multiplier
+	attack_wait_timer.wait_time = attack_wait_time
+	knockback = base_knockback * playerStats.knockback_multiplier
+	critical_hit_rate=base_critical_hit_rate + playerStats.critical_hit_rate
+	critical_damage = base_critical_damage + playerStats.critical_damage
+	number_of_projectiles=base_number_of_projectiles + playerStats.number_of_projectiles
+	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier
+	
+	explosion_range = base_explosion_range * playerStats.attack_range_multiplier
+	magazine = base_magazine + playerStats.number_of_projectiles
+
+
+func _on_stats_changed() -> void:
+	_update_parameters()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemy") and not enemies.has(body):
+		enemies.append(body)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("enemy") and enemies.has(body):
+		enemies.erase(body)
+
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 enum State {
 	WAIT,
@@ -141,43 +182,4 @@ func shoot() ->void:
 	get_tree().root.add_child(now_bullet)
 	bullet_count += 1
 	attack_wait_timer.start()
-
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 参数更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-func _update_parameters() -> void:
-	'''
-	更新武器的属性
-
-	:return: void
-	'''
-	physical_attack_power = base_physical_attack_power * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
-	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
-	damage = (physical_attack_power + magic_attack_power) * critical_hit_rate * critical_damage
-	attack_range = base_attack_range * playerStats.attack_range_multiplier
-	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
-	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
-	animation_player.speed_scale = playerStats.attack_speed_multiplier
-	rotation_speed = base_rotation_speed * playerStats.attack_speed_multiplier
-	attack_wait_time = base_attack_wait_time / playerStats.attack_speed_multiplier
-	attack_wait_timer.wait_time = attack_wait_time
-	knockback = base_knockback * playerStats.knockback_multiplier
-	critical_hit_rate=base_critical_hit_rate + playerStats.critical_hit_rate
-	critical_damage = base_critical_damage + playerStats.critical_damage
-	number_of_projectiles=base_number_of_projectiles + playerStats.number_of_projectiles
-	magazine = base_magazine + playerStats.number_of_projectiles
-	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier
-	explosion_range = base_explosion_range * playerStats.attack_range_multiplier
-
-
-func _on_stats_changed() -> void:
-	_update_parameters()
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("enemy") and not enemies.has(body):
-		enemies.append(body)
-
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.is_in_group("enemy") and enemies.has(body):
-		enemies.erase(body)
 
