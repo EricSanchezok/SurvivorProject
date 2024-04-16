@@ -7,9 +7,8 @@ extends Node2D
 }
 
 func _ready() -> void:
-	var map = CombatProgressGenerator.create_game_map(10, 1, 4)
-	CombatProgressGenerator.print_map(map)
-
+	var map = CombatProgressGenerator.create_game_map(20, 1, 4)
+	pass
 
 func _on_timer_timeout() -> void:
 	enemy_generator.register_enemy(enemies["orc"], 1)

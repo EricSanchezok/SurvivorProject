@@ -1,30 +1,9 @@
-[gd_scene load_steps=338 format=3 uid="uid://b7r4uo6xex26a"]
+[gd_scene load_steps=211 format=3 uid="uid://b7r4uo6xex26a"]
 
 [ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_jy0m2"]
-[ext_resource type="Texture2D" uid="uid://b5ypwty7x1fbb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/0.png" id="2_1ggot"]
-[ext_resource type="Texture2D" uid="uid://b3aoy8sxfr8rm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/3.png" id="2_i3bgl"]
-[ext_resource type="Texture2D" uid="uid://jnpxqah60xd3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/1 - idle/0.png" id="2_xolwl"]
-[ext_resource type="Texture2D" uid="uid://cn48c23tht87o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/1.png" id="3_5ceje"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_txxue"]
-[ext_resource type="Texture2D" uid="uid://dtkkhs3b0nnji" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/2.png" id="4_8550c"]
-[ext_resource type="Texture2D" uid="uid://c3b48qjf03atk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/1.png" id="4_tqafl"]
-[ext_resource type="Texture2D" uid="uid://capfbga6wtqh1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/3.png" id="5_l7yqa"]
-[ext_resource type="Texture2D" uid="uid://dmpy88402bf2q" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/4.png" id="6_4hjn6"]
-[ext_resource type="Texture2D" uid="uid://bkppd6xw1ivaj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/5.png" id="7_egjea"]
-[ext_resource type="Texture2D" uid="uid://78qnjcnkd1ht" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/5.png" id="8_1nppi"]
-[ext_resource type="Texture2D" uid="uid://ck4wgyqsh1r61" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/0.png" id="8_gm1wb"]
-[ext_resource type="Texture2D" uid="uid://gkupimgcis7o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/1.png" id="9_2a2ol"]
-[ext_resource type="Texture2D" uid="uid://p4wj1bs7mc1x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/2.png" id="10_4ycor"]
-[ext_resource type="Texture2D" uid="uid://h704h0a6r6dd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/7.png" id="10_31o3t"]
-[ext_resource type="Texture2D" uid="uid://ban37cfq8qjvu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/3.png" id="11_aapft"]
-[ext_resource type="Texture2D" uid="uid://bk6yb7tdb02po" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/9.png" id="12_6ix2f"]
-[ext_resource type="Texture2D" uid="uid://dfilgbk46d8xr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/4.png" id="12_84587"]
-[ext_resource type="Texture2D" uid="uid://b01o151vwbnt0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/5.png" id="13_717md"]
-[ext_resource type="Texture2D" uid="uid://bakuaxdxyuuri" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/11.png" id="14_nq0mw"]
-[ext_resource type="Texture2D" uid="uid://b3k3e4mlxoxs4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/13.png" id="16_lne3o"]
-[ext_resource type="Texture2D" uid="uid://bekgi3cd7btqw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/15.png" id="18_1tokl"]
-[ext_resource type="Texture2D" uid="uid://fs0a7l8eingy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/17.png" id="20_taamu"]
-[ext_resource type="Texture2D" uid="uid://bu33pbnagoaa4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/19.png" id="22_6it56"]
+[ext_resource type="Texture2D" uid="uid://daok8uqf3bxtd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/0.png" id="15_umurd"]
+[ext_resource type="Texture2D" uid="uid://glqf1630v1il" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/12.png" id="19_agcg0"]
 [ext_resource type="Texture2D" uid="uid://dj3ism0mdbjq3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/21.png" id="24_21few"]
 [ext_resource type="Texture2D" uid="uid://c0cnbdcncddr7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/22.png" id="25_r83wh"]
 [ext_resource type="Texture2D" uid="uid://beyccarwufgg4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/23.png" id="26_v776w"]
@@ -43,95 +22,17 @@
 [ext_resource type="Texture2D" uid="uid://jyrx86l04iqp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/5.png" id="39_21uds"]
 [ext_resource type="Texture2D" uid="uid://6i2416h7u7vp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/6.png" id="40_qjyvb"]
 [ext_resource type="Texture2D" uid="uid://cdvbs5egb1v38" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/7.png" id="41_laaa8"]
+[ext_resource type="Texture2D" uid="uid://c3uqp4ncemtks" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/9.png" id="41_qc5q0"]
 [ext_resource type="Texture2D" uid="uid://ccrvto0jlp83b" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/8.png" id="42_hswk3"]
 [ext_resource type="Texture2D" uid="uid://bxbiq3wqmsht" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/10.png" id="44_oojqd"]
 [ext_resource type="Texture2D" uid="uid://bch8u1pm6r81m" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/14.png" id="48_igjwe"]
-[ext_resource type="Texture2D" uid="uid://d1qohapvhvrpk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/17.png" id="51_tho32"]
 [ext_resource type="Texture2D" uid="uid://dxosdf28qcdpe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/18.png" id="52_6s6w0"]
-[ext_resource type="Texture2D" uid="uid://b70cpcjucuifn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/19.png" id="53_pdpex"]
-[ext_resource type="Texture2D" uid="uid://yddgpxh4k016" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/20.png" id="54_8m7q8"]
 [ext_resource type="Texture2D" uid="uid://cgk5h16m5883h" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/22.png" id="56_kco22"]
-[ext_resource type="Texture2D" uid="uid://yb3ohi66i3vq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/24.png" id="58_tl10u"]
-[ext_resource type="Texture2D" uid="uid://brigdpb0q7dpm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/28.png" id="62_jbneo"]
 [ext_resource type="Texture2D" uid="uid://bycv7m8utm8mu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/30.png" id="64_j33h7"]
-[ext_resource type="Texture2D" uid="uid://bmcdrpptu6pta" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/0.png" id="65_4ktxa"]
-[ext_resource type="Texture2D" uid="uid://2w0tyxw8x2ii" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Close/0.png" id="65_6jmbk"]
-[ext_resource type="Texture2D" uid="uid://ctw7mthgclrw5" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/0.png" id="65_22gvr"]
-[ext_resource type="Texture2D" uid="uid://8qjsqym7fx33" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/0.png" id="65_lfurm"]
-[ext_resource type="Texture2D" uid="uid://ndtj3hhbs6fw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Open/0.png" id="65_t4b5k"]
-[ext_resource type="Texture2D" uid="uid://cm5el8mkvokx6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/1.png" id="66_eukr8"]
-[ext_resource type="Texture2D" uid="uid://6d5lvvc4xws0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Open/1.png" id="66_js4me"]
-[ext_resource type="Texture2D" uid="uid://cm4tbjy66glo1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/1.png" id="66_qeex5"]
-[ext_resource type="Texture2D" uid="uid://be87l8i5lv803" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Close/1.png" id="66_t6slg"]
-[ext_resource type="Texture2D" uid="uid://duwwxrs3ub51p" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/1.png" id="66_yp8r0"]
-[ext_resource type="Texture2D" uid="uid://ku2r68py01kt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/2.png" id="67_g6onj"]
-[ext_resource type="Texture2D" uid="uid://pjgwru8tnius" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/2.png" id="67_gmp62"]
-[ext_resource type="Texture2D" uid="uid://c3ambhegcu1e3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/2.png" id="67_h05vk"]
-[ext_resource type="Texture2D" uid="uid://og120dpf75gr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Open/2.png" id="67_lsm6j"]
-[ext_resource type="Texture2D" uid="uid://cp8hj5tobkmeo" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Close/2.png" id="67_yxhxy"]
-[ext_resource type="Texture2D" uid="uid://ba4a4t6f8xbgs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/3.png" id="68_fm0ye"]
-[ext_resource type="Texture2D" uid="uid://byc6wwrvf3exg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/3.png" id="68_hv2cl"]
-[ext_resource type="Texture2D" uid="uid://d2k1rh2w1daqt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/3.png" id="68_sch47"]
-[ext_resource type="Texture2D" uid="uid://wkimghqcte2x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/4.png" id="69_cxy5y"]
-[ext_resource type="Texture2D" uid="uid://dce06l6w7nq4y" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/4.png" id="69_jsyel"]
-[ext_resource type="Texture2D" uid="uid://dk13vvyjiai3i" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/4.png" id="69_kc6wl"]
-[ext_resource type="Texture2D" uid="uid://5soqgj6tb26r" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/5.png" id="70_8rf10"]
-[ext_resource type="Texture2D" uid="uid://b67i1hv4pogvm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/5.png" id="70_ppw4t"]
-[ext_resource type="Texture2D" uid="uid://cm37htadw4082" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/5.png" id="70_smhij"]
-[ext_resource type="Texture2D" uid="uid://do1patgxnq4e6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/0.png" id="71_cofuf"]
-[ext_resource type="Texture2D" uid="uid://bo3vn1ffgwfja" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/6.png" id="71_ngubf"]
-[ext_resource type="Texture2D" uid="uid://cr4t7addd44pa" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/6.png" id="71_ywu1j"]
-[ext_resource type="Texture2D" uid="uid://clpjgfi2qslhf" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/7.png" id="72_5xri6"]
-[ext_resource type="Texture2D" uid="uid://57s6lh4jk4g6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/1.png" id="72_bh453"]
-[ext_resource type="Texture2D" uid="uid://ccxrvqlwgejfe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/7.png" id="72_se38v"]
-[ext_resource type="Texture2D" uid="uid://dgsbomgg1j0kk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/8.png" id="73_c2edj"]
-[ext_resource type="Texture2D" uid="uid://cwphj7faci1ql" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/8.png" id="73_gwpia"]
-[ext_resource type="Texture2D" uid="uid://dsugrr1s4ooci" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/2.png" id="73_la255"]
-[ext_resource type="Texture2D" uid="uid://ps8twro5w7d3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/9.png" id="74_vo4j3"]
-[ext_resource type="Texture2D" uid="uid://buxm78dvf24l0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/3.png" id="74_vs3yj"]
-[ext_resource type="Texture2D" uid="uid://rwak8vkamaq3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/9.png" id="74_ykeac"]
-[ext_resource type="Texture2D" uid="uid://d0a70xxyd1tyw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/4.png" id="75_6pyl0"]
-[ext_resource type="Texture2D" uid="uid://c442q5lnj1dh8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/10.png" id="75_c4bpe"]
-[ext_resource type="Texture2D" uid="uid://dfveml60m4ekn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/10.png" id="75_twyrx"]
-[ext_resource type="Texture2D" uid="uid://vmgfalrrp3f3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/5.png" id="76_f2wo8"]
-[ext_resource type="Texture2D" uid="uid://73o4jvk8iqni" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/11.png" id="76_qbg08"]
-[ext_resource type="Texture2D" uid="uid://db88jtkumux2s" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/11.png" id="76_v12hf"]
-[ext_resource type="Texture2D" uid="uid://vgvdae2bq5fy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/12.png" id="77_h1jb2"]
-[ext_resource type="Texture2D" uid="uid://f036dmlpqr66" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/12.png" id="77_qly6p"]
-[ext_resource type="Texture2D" uid="uid://bqyn45lfnd1s8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/13.png" id="78_16sg8"]
-[ext_resource type="Texture2D" uid="uid://bci8i7ncmhys1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/13.png" id="78_qhu1i"]
-[ext_resource type="Texture2D" uid="uid://c1gt7mdg4u761" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/14.png" id="79_264ce"]
-[ext_resource type="Texture2D" uid="uid://clmfdg5m6ih07" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/14.png" id="79_tv0nt"]
-[ext_resource type="Texture2D" uid="uid://cyc24jjibycas" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/15.png" id="80_6lno4"]
-[ext_resource type="Texture2D" uid="uid://b76h3qq2mim6x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/15.png" id="80_jbpa8"]
-[ext_resource type="Texture2D" uid="uid://chyx3ykiguwvg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/16.png" id="81_3lphv"]
-[ext_resource type="Texture2D" uid="uid://cdnoms3ih65vq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/16.png" id="81_kkdgu"]
-[ext_resource type="Texture2D" uid="uid://gpvcddydmjgk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/17.png" id="82_5cx5g"]
-[ext_resource type="Texture2D" uid="uid://cb36gmhfwlbwl" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/17.png" id="82_xxgle"]
-[ext_resource type="Texture2D" uid="uid://30cyqsns0gfs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/18.png" id="83_g1hhs"]
-[ext_resource type="Texture2D" uid="uid://dv1oi75ce7ve2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/18.png" id="83_ifb15"]
-[ext_resource type="Texture2D" uid="uid://csi0dn4jur72d" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/19.png" id="84_buvim"]
-[ext_resource type="Texture2D" uid="uid://c4iihldt4844m" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/19.png" id="84_qkg0f"]
-[ext_resource type="Texture2D" uid="uid://biwrcmi6ee7g8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/20.png" id="85_582fl"]
-[ext_resource type="Texture2D" uid="uid://b12h1jqj4gdab" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/20.png" id="85_kq7mk"]
-[ext_resource type="Texture2D" uid="uid://47gejr68dofc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/21.png" id="86_58hjc"]
-[ext_resource type="Texture2D" uid="uid://ch66sloml6dcg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/21.png" id="86_odk8k"]
-[ext_resource type="Texture2D" uid="uid://ba8lblq01n47a" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/22.png" id="87_5po0v"]
-[ext_resource type="Texture2D" uid="uid://u78ildhqo0b3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/22.png" id="87_iucfe"]
-[ext_resource type="Texture2D" uid="uid://0vveyfcerftc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/23.png" id="88_f8yc8"]
-[ext_resource type="Texture2D" uid="uid://1tmht0iuhknj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/23.png" id="88_mrsu0"]
 [ext_resource type="Texture2D" uid="uid://c027kbathma" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/0.png" id="89_2iuws"]
-[ext_resource type="Texture2D" uid="uid://boub76btljx53" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/24.png" id="89_84myk"]
-[ext_resource type="Texture2D" uid="uid://sdb8h0tt7qf7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/24.png" id="89_x2vq4"]
 [ext_resource type="Texture2D" uid="uid://c42kmrp02yb4v" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/1.png" id="90_3mk8a"]
-[ext_resource type="Texture2D" uid="uid://bpfopvtmkga7t" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/25.png" id="90_o0v72"]
-[ext_resource type="Texture2D" uid="uid://dcabwrkkq7tpm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/25.png" id="90_q8ygf"]
-[ext_resource type="Texture2D" uid="uid://kny6mfjxm0id" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/26.png" id="91_chils"]
-[ext_resource type="Texture2D" uid="uid://clbtrfxtfhyt4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/26.png" id="91_g1t71"]
 [ext_resource type="Texture2D" uid="uid://ctaa7slafnkoe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/2.png" id="91_kimwt"]
-[ext_resource type="Texture2D" uid="uid://cfiig8k21n2si" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/27.png" id="92_hnfac"]
 [ext_resource type="Texture2D" uid="uid://c1skexjwwwc2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/3.png" id="92_qrr0b"]
-[ext_resource type="Texture2D" uid="uid://bbd58olbrfyqu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/27.png" id="92_xcagb"]
 [ext_resource type="Texture2D" uid="uid://dowy8jt8fwocn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/4.png" id="93_v7qgn"]
 [ext_resource type="Texture2D" uid="uid://de24ha5w4wxqs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/5.png" id="94_r6ufa"]
 [ext_resource type="Texture2D" uid="uid://bvfh7xmbmfetk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/0.png" id="95_810bb"]
@@ -142,74 +43,19 @@
 [ext_resource type="Texture2D" uid="uid://b7apvifdbjpqv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/4.png" id="99_fkee1"]
 [ext_resource type="Texture2D" uid="uid://cpimtpc8aquls" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/5.png" id="100_opdsj"]
 [ext_resource type="Texture2D" uid="uid://c137hd88ypcmv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/6.png" id="101_oixb8"]
-[ext_resource type="Texture2D" uid="uid://x0nujckuy86k" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/0.png" id="109_0akrf"]
-[ext_resource type="Texture2D" uid="uid://c4ok28wxtq8rk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/1.png" id="110_j0u02"]
-[ext_resource type="Texture2D" uid="uid://bm4jcs3xgv8qd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/2.png" id="111_6ma44"]
-[ext_resource type="Texture2D" uid="uid://cgp4mml3dm3du" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/3.png" id="112_4aq3d"]
-[ext_resource type="Texture2D" uid="uid://csq5iayq4865" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/4.png" id="113_08775"]
-[ext_resource type="Texture2D" uid="uid://c0vg6m24mq6pk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/5.png" id="114_f2cad"]
-[ext_resource type="Texture2D" uid="uid://3tb3ephg1qkb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/6.png" id="115_6v3ii"]
-[ext_resource type="Texture2D" uid="uid://cq7t4sbp7yvgf" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/7.png" id="116_kgmfh"]
-[ext_resource type="Texture2D" uid="uid://dc1xjsqxaky4p" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/8.png" id="117_w082n"]
-[ext_resource type="Texture2D" uid="uid://b2keb1v6pwgvs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/9.png" id="118_vj6nw"]
-[ext_resource type="Texture2D" uid="uid://c05n1t8mk8x2h" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/10.png" id="119_nbnq4"]
-[ext_resource type="Texture2D" uid="uid://dlohxwdhl5n70" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/11.png" id="120_aej62"]
-[ext_resource type="Texture2D" uid="uid://b6xwtx8uklotr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/12.png" id="121_ivnjv"]
-[ext_resource type="Texture2D" uid="uid://yudkcsebv6mn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/13.png" id="122_kwhu0"]
-[ext_resource type="Texture2D" uid="uid://ctmgr8lkvj4fu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/14.png" id="123_r1bhx"]
-[ext_resource type="Texture2D" uid="uid://c45rvka8xlpwr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/15.png" id="124_ewstu"]
-[ext_resource type="Texture2D" uid="uid://c4cq4hawyqx1x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/16.png" id="125_rw1a4"]
-[ext_resource type="Texture2D" uid="uid://c0x6jkt1qcjhv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/17.png" id="126_von36"]
-[ext_resource type="Texture2D" uid="uid://c6kn65a2iyxs6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/18.png" id="127_mnmy5"]
-[ext_resource type="Texture2D" uid="uid://bfdukxpbu0y5c" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Appear/19.png" id="128_h4bwe"]
-[ext_resource type="Texture2D" uid="uid://q1esqdefsow2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/0.png" id="129_cdpto"]
-[ext_resource type="Texture2D" uid="uid://c6tbbgns4ew2f" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/1.png" id="130_l2gxg"]
-[ext_resource type="Texture2D" uid="uid://yc0y3d3roo77" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/2.png" id="131_uh4c0"]
-[ext_resource type="Texture2D" uid="uid://bvrpm7imwg4vm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/3.png" id="132_s6frt"]
-[ext_resource type="Texture2D" uid="uid://dtom7wma28pcb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/4.png" id="133_pw2wf"]
-[ext_resource type="Texture2D" uid="uid://dqcy5vgv4bs4q" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/5.png" id="134_p3ue1"]
-[ext_resource type="Texture2D" uid="uid://d0vwdh04qdw1m" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/6.png" id="135_ooaj0"]
-[ext_resource type="Texture2D" uid="uid://gqovcm0tw06v" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/7.png" id="136_q4fef"]
-[ext_resource type="Texture2D" uid="uid://bjln3c8obpxk5" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/8.png" id="137_upntp"]
-[ext_resource type="Texture2D" uid="uid://cbumgb6iardfd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/9.png" id="138_po0tr"]
-[ext_resource type="Texture2D" uid="uid://bg122y81mwr5f" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/10.png" id="139_cgk07"]
-[ext_resource type="Texture2D" uid="uid://5yq3w0gp625r" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/11.png" id="140_eu6bp"]
-[ext_resource type="Texture2D" uid="uid://bko2p1i8il8ha" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/12.png" id="141_46sy6"]
-[ext_resource type="Texture2D" uid="uid://c5b8rn5chstd6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/13.png" id="142_j2i4x"]
-[ext_resource type="Texture2D" uid="uid://cnq3cixioxkbm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/14.png" id="143_63apl"]
-[ext_resource type="Texture2D" uid="uid://cy343durf3ap5" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/15.png" id="144_2tyw7"]
-[ext_resource type="Texture2D" uid="uid://c58t11i78h4ph" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/16.png" id="145_0n0cc"]
-[ext_resource type="Texture2D" uid="uid://dmwsfh76hmxb2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/17.png" id="146_usmv4"]
-[ext_resource type="Texture2D" uid="uid://bleng0c0tj38t" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/18.png" id="147_m601u"]
-[ext_resource type="Texture2D" uid="uid://doqc1quvxuk1o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/With icons/Disappear/19.png" id="148_67nvw"]
-[ext_resource type="Texture2D" uid="uid://2sm1r6r1p77o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/0.png" id="165_mrs8w"]
-[ext_resource type="Texture2D" uid="uid://2b2h13vkub3b" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/1.png" id="166_2n5s0"]
 [ext_resource type="Texture2D" uid="uid://dqali130khit4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/2.png" id="167_uqfe6"]
-[ext_resource type="Texture2D" uid="uid://crlgeaqkey1bn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/3.png" id="168_rt06w"]
-[ext_resource type="Texture2D" uid="uid://dhsknrotaakn3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/4.png" id="169_o8e24"]
-[ext_resource type="Texture2D" uid="uid://cbnetvmdi5k18" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/5.png" id="170_xak3d"]
 [ext_resource type="Texture2D" uid="uid://bfbydiuely6hy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/6.png" id="171_4f3eb"]
-[ext_resource type="Texture2D" uid="uid://dn6xc4a55eibm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/7.png" id="172_1p5m4"]
-[ext_resource type="Texture2D" uid="uid://i4ihdefup06q" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/8.png" id="173_8njfg"]
-[ext_resource type="Texture2D" uid="uid://c8w3gyr7rlj4x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/9.png" id="174_yejky"]
-[ext_resource type="Texture2D" uid="uid://0b4xrxluohns" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/10.png" id="175_wjabv"]
 [ext_resource type="Texture2D" uid="uid://bgk5kb31m4dj1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/11.png" id="176_0h1hc"]
-[ext_resource type="Texture2D" uid="uid://clx0d03naeuih" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/12.png" id="177_ww01t"]
-[ext_resource type="Texture2D" uid="uid://cx74810jdkfbw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/13.png" id="178_iyapy"]
-[ext_resource type="Texture2D" uid="uid://bg812wiloo186" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/14.png" id="179_7ke6f"]
-[ext_resource type="Texture2D" uid="uid://c7iny18isylko" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/15.png" id="180_ukf0h"]
 [ext_resource type="Texture2D" uid="uid://0hngndhco1pw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/16.png" id="181_aaobm"]
-[ext_resource type="Texture2D" uid="uid://by07v2bjoe7em" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/17.png" id="182_0fkef"]
-[ext_resource type="Texture2D" uid="uid://cjb7sygtsj8yd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/18.png" id="183_bc3te"]
-[ext_resource type="Texture2D" uid="uid://bn3warx46cade" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/19.png" id="184_kg54s"]
-[ext_resource type="Texture2D" uid="uid://c0w77u6i1003c" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/20.png" id="185_xbppj"]
 [ext_resource type="Texture2D" uid="uid://cqu8obsksls2d" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/21.png" id="186_ufwkq"]
-[ext_resource type="Texture2D" uid="uid://bf5ekluigtrtp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/22.png" id="187_i5g8l"]
-[ext_resource type="Texture2D" uid="uid://cay0rmr6blhsr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/23.png" id="188_1jh0e"]
-[ext_resource type="Texture2D" uid="uid://b2fokoxilcni8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/24.png" id="189_jcx1b"]
-[ext_resource type="Texture2D" uid="uid://dtt3descysf5a" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/25.png" id="190_c5eyi"]
+[ext_resource type="Texture2D" uid="uid://dn611yvcgst6n" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Sprites/Decorations/0.png" id="187_7yti3"]
+[ext_resource type="FontFile" uid="uid://clk0dq2382af2" path="res://src/main/assets/font/DungeonFont.ttf" id="187_xtmwt"]
+[ext_resource type="Texture2D" uid="uid://euikwcq275pa" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/137.png" id="189_5pfmq"]
+[ext_resource type="Texture2D" uid="uid://cc1nb1gi2dgdk" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/163.png" id="190_6q6ls"]
 [ext_resource type="Texture2D" uid="uid://15vqmbf43slj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/4.png" id="191_4pva2"]
+[ext_resource type="Texture2D" uid="uid://tv4iwoelelgm" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/107.png" id="191_6j4xu"]
 [ext_resource type="Texture2D" uid="uid://by5lwfvrnkoqe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/5.png" id="192_h77ya"]
+[ext_resource type="Texture2D" uid="uid://dsq8xmuoptbil" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/232.png" id="192_ktcwh"]
 [ext_resource type="Texture2D" uid="uid://bwwl0tfw6u3sr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/6.png" id="193_ma0bu"]
 [ext_resource type="Texture2D" uid="uid://dd13asj8lt03r" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/8.png" id="194_xc2pb"]
 [ext_resource type="Texture2D" uid="uid://d1i2foms0gkvn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/9.png" id="195_l83av"]
@@ -247,10 +93,15 @@
 [ext_resource type="Texture2D" uid="uid://bv8vmxivmdxmv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/18.png" id="227_7jpkk"]
 [ext_resource type="Texture2D" uid="uid://dl76qiiwbuh33" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/19.png" id="228_cmavw"]
 [ext_resource type="Texture2D" uid="uid://cq4jbyjhevigr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/0.png" id="249_ercje"]
+[ext_resource type="Script" path="res://src/main/scene/ui/CombatProgressControl.gd" id="249_owj30"]
 [ext_resource type="Texture2D" uid="uid://cybkvi102r3mm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/1.png" id="250_txmki"]
+[ext_resource type="Texture2D" uid="uid://cy3nyb75uckg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/4.png" id="251_0q01h"]
 [ext_resource type="Texture2D" uid="uid://cyqi10s0a581y" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/2.png" id="251_lqim0"]
+[ext_resource type="Texture2D" uid="uid://d3nnnv86o4yhb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/8.png" id="252_6qbyr"]
 [ext_resource type="Texture2D" uid="uid://cijo2vte7cpkn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/3.png" id="252_kwdbm"]
 [ext_resource type="Texture2D" uid="uid://ble70bgevly0h" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/4.png" id="253_kddvb"]
+[ext_resource type="Texture2D" uid="uid://bdp23w8njs3cn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/16.png" id="253_m00jl"]
+[ext_resource type="Texture2D" uid="uid://fh6fr13yveip" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/20.png" id="254_witox"]
 [ext_resource type="Texture2D" uid="uid://feffawdxbmq2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/5.png" id="254_xl2q0"]
 [ext_resource type="Texture2D" uid="uid://b77y7chtiseh0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/6.png" id="255_i1xgr"]
 [ext_resource type="Texture2D" uid="uid://b5ucwpmhla1ks" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/7.png" id="256_yfyaa"]
@@ -266,6 +117,14 @@
 [ext_resource type="Texture2D" uid="uid://bgo0f3qff0rcl" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/17.png" id="266_7nlom"]
 [ext_resource type="Texture2D" uid="uid://bjbsnr6woys5x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/18.png" id="267_vg0c7"]
 [ext_resource type="Texture2D" uid="uid://btu8itxpjkl5v" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/19.png" id="268_ol5lr"]
+[ext_resource type="Texture2D" uid="uid://drp72cfr4m0k4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/3.png" id="275_iqag2"]
+[ext_resource type="Texture2D" uid="uid://crp5vohvsu0we" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/26.png" id="278_apkir"]
+[ext_resource type="Texture2D" uid="uid://bpaf6mnodcdmw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/7.png" id="280_i0gvr"]
+[ext_resource type="Texture2D" uid="uid://bceqtkmmgm1wm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/11.png" id="281_f8vxd"]
+[ext_resource type="Texture2D" uid="uid://q2s8qberut8c" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/15.png" id="282_4axkh"]
+[ext_resource type="Texture2D" uid="uid://c618ckw8kuvv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/19.png" id="283_fs6ea"]
+[ext_resource type="Texture2D" uid="uid://81d7ef8qrwr7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/23.png" id="284_lhe6x"]
+[ext_resource type="Texture2D" uid="uid://bmglwr34uhs16" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/24.png" id="285_ybmqc"]
 [ext_resource type="Texture2D" uid="uid://b8w7gqck005lq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/0.png" id="289_r7yha"]
 [ext_resource type="Texture2D" uid="uid://chmgco7bxmgij" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/1.png" id="290_git67"]
 [ext_resource type="Texture2D" uid="uid://rwhwck551y0w" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/2.png" id="291_bb1o2"]
@@ -288,7 +147,6 @@
 [ext_resource type="Texture2D" uid="uid://bkjdfg0qsuhqn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/8.png" id="308_fsqci"]
 [ext_resource type="Texture2D" uid="uid://dfqcpfxgx71h0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/9.png" id="309_2p4hv"]
 [ext_resource type="Texture2D" uid="uid://cc2t0yqhtusvd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/10.png" id="310_tyqxf"]
-[ext_resource type="Texture2D" uid="uid://yi56l4dbygcq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/empty.png" id="311_gafp3"]
 [ext_resource type="Texture2D" uid="uid://dqymh473o03yl" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/0.png" id="311_oljiw"]
 [ext_resource type="Texture2D" uid="uid://jeg8laeetubt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/0.png" id="311_u7xfi"]
 [ext_resource type="Texture2D" uid="uid://bccdjsgls4nlh" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/1.png" id="312_ekgx4"]
@@ -335,1324 +193,3729 @@
 [ext_resource type="Texture2D" uid="uid://cxjrvdu7chvgy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Disappear/2.png" id="354_jqqoj"]
 [ext_resource type="Texture2D" uid="uid://dv6kjbbhdabjj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Disappear/3.png" id="355_05a0u"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_scddx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_1ggot")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_5ceje")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_8550c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_l7yqa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_4hjn6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_egjea")
-}],
-"loop": false,
-"name": &"BottomPouchClose",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_gm1wb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_2a2ol")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_4ycor")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_aapft")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_84587")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_717md")
-}],
-"loop": false,
-"name": &"BottomPouchOpen",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_xolwl")
-}],
-"loop": false,
-"name": &"Idle",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_tqafl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_i3bgl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_1nppi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_31o3t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_6ix2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_nq0mw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_lne3o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_1tokl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_taamu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_6it56")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_21few")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_r83wh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_v776w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_1xxue")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_vqakw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_x2osg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_gfmx4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_oj8ya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_23ltb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_5p43w")
-}],
-"loop": false,
-"name": &"InventoryAppear",
-"speed": 30.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("34_yi0uu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_iffbk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_yracu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_tknkf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_6esbj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_21uds")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_qjyvb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_laaa8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_hswk3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_oojqd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_igjwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_tho32")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_6s6w0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_pdpex")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_8m7q8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_kco22")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_tl10u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_jbneo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("64_j33h7")
-}],
-"loop": false,
-"name": &"InventoryDisappear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("167_uqfe6")
-}],
-"loop": false,
-"name": &"SelectCombatProgress",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("171_4f3eb")
-}],
-"loop": false,
-"name": &"SelectEquipment",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("176_0h1hc")
-}],
-"loop": false,
-"name": &"SelectQuests",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("181_aaobm")
-}],
-"loop": false,
-"name": &"SelectSaveLoad",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("186_ufwkq")
-}],
-"loop": false,
-"name": &"SelectSettings",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("65_6jmbk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_t6slg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_yxhxy")
-}],
-"loop": false,
-"name": &"SidePouchesClose",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("65_t4b5k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_js4me")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_lsm6j")
-}],
-"loop": false,
-"name": &"SidePouchesOpen",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("65_4ktxa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_qeex5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_gmp62")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_fm0ye")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_kc6wl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_smhij")
-}],
-"loop": false,
-"name": &"TopPouchClose",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("89_2iuws")
-}, {
-"duration": 1.0,
-"texture": ExtResource("90_3mk8a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("91_kimwt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("92_qrr0b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("93_v7qgn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("94_r6ufa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("95_t1cgq")
-}],
-"loop": false,
-"name": &"TopPouchCloseT",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("71_cofuf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("72_bh453")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_la255")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_vs3yj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_6pyl0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_f2wo8")
-}],
-"loop": false,
-"name": &"TopPouchOpen",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("95_810bb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("96_782jd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("97_fslsg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("98_80bdh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("99_fkee1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("100_opdsj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("101_oixb8")
-}],
-"loop": false,
-"name": &"TopPouchOpenT",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("65_lfurm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_eukr8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_h05vk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_hv2cl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_jsyel")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_ppw4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("71_ywu1j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("72_se38v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_c2edj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_ykeac")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_twyrx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_qbg08")
-}, {
-"duration": 1.0,
-"texture": ExtResource("77_qly6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_16sg8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("79_tv0nt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_jbpa8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_kkdgu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_5cx5g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_ifb15")
-}, {
-"duration": 1.0,
-"texture": ExtResource("84_buvim")
-}, {
-"duration": 1.0,
-"texture": ExtResource("85_582fl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("86_odk8k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("87_5po0v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("88_mrsu0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("89_x2vq4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("90_o0v72")
-}, {
-"duration": 1.0,
-"texture": ExtResource("91_g1t71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("92_hnfac")
-}],
-"loop": false,
-"name": &"ZipPouchClose",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("65_22gvr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_yp8r0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_g6onj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_sch47")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_cxy5y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_8rf10")
-}, {
-"duration": 1.0,
-"texture": ExtResource("71_ngubf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("72_5xri6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_gwpia")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_vo4j3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_c4bpe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_v12hf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("77_h1jb2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_qhu1i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("79_264ce")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_6lno4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_3lphv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_xxgle")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_g1hhs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("84_qkg0f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("85_kq7mk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("86_58hjc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("87_iucfe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("88_f8yc8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("89_84myk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("90_q8ygf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("91_chils")
-}, {
-"duration": 1.0,
-"texture": ExtResource("92_xcagb")
-}],
-"loop": false,
-"name": &"ZipPouchOpen",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("165_mrs8w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("166_2n5s0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("167_uqfe6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("168_rt06w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("169_o8e24")
-}, {
-"duration": 1.0,
-"texture": ExtResource("170_xak3d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("171_4f3eb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("172_1p5m4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("173_8njfg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("174_yejky")
-}, {
-"duration": 1.0,
-"texture": ExtResource("175_wjabv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("176_0h1hc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("177_ww01t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("178_iyapy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("179_7ke6f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("180_ukf0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("181_aaobm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("182_0fkef")
-}, {
-"duration": 1.0,
-"texture": ExtResource("183_bc3te")
-}, {
-"duration": 1.0,
-"texture": ExtResource("184_kg54s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("185_xbppj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("186_ufwkq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("187_i5g8l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("188_1jh0e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("189_jcx1b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("190_c5eyi")
-}],
-"loop": false,
-"name": &"test",
-"speed": 15.0
-}]
+[sub_resource type="Animation" id="Animation_dofny"]
+resource_name = "idle"
+length = 1.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("15_umurd"), ExtResource("251_0q01h"), ExtResource("252_6qbyr"), ExtResource("19_agcg0"), ExtResource("253_m00jl"), ExtResource("254_witox"), ExtResource("24_21few"), ExtResource("25_r83wh"), ExtResource("26_v776w"), ExtResource("27_1xxue"), ExtResource("28_vqakw"), ExtResource("29_x2osg"), ExtResource("30_gfmx4"), ExtResource("31_oj8ya"), ExtResource("32_23ltb"), ExtResource("33_5p43w")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("197_18wai"), ExtResource("198_shelb"), ExtResource("199_jq03k")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_nyyxn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("191_4pva2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("192_h77ya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("193_ma0bu")
-}],
-"loop": false,
-"name": &"SelectCombatProgress",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("194_xc2pb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("195_l83av")
-}, {
-"duration": 1.0,
-"texture": ExtResource("196_o3fg4")
-}],
-"loop": false,
-"name": &"SelectEquipment",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("197_18wai")
-}, {
-"duration": 1.0,
-"texture": ExtResource("198_shelb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("199_jq03k")
-}],
-"loop": false,
-"name": &"SelectInventory",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("200_xe5tb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("201_itong")
-}, {
-"duration": 1.0,
-"texture": ExtResource("202_ffhy2")
-}],
-"loop": false,
-"name": &"SelectQuests",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("203_t3cxl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("204_it4ec")
-}, {
-"duration": 1.0,
-"texture": ExtResource("205_2csyn")
-}],
-"loop": false,
-"name": &"SelectSaveLoad",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("206_8ypyg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("207_bsqtf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("208_e6vo3")
-}],
-"loop": false,
-"name": &"SelectSettings",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("209_jrevy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("210_nuky7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("211_kamir")
-}, {
-"duration": 1.0,
-"texture": ExtResource("212_4uute")
-}, {
-"duration": 1.0,
-"texture": ExtResource("213_mddjm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("214_vhw71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("215_oe7ox")
-}, {
-"duration": 1.0,
-"texture": ExtResource("216_pncsl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("217_ehhv8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("218_cahe0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("219_s685y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("220_kfoqx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("221_13ksy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("222_8acm0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("223_6vyeu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("224_dvpn1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("225_w7l1m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("226_6w3ya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("227_7jpkk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("228_cmavw")
-}],
-"loop": false,
-"name": &"TabsAppear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("209_jrevy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("210_nuky7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("211_kamir")
-}, {
-"duration": 1.0,
-"texture": ExtResource("212_4uute")
-}, {
-"duration": 1.0,
-"texture": ExtResource("213_mddjm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("214_vhw71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("215_oe7ox")
-}, {
-"duration": 1.0,
-"texture": ExtResource("216_pncsl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("217_ehhv8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("218_cahe0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("219_s685y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("220_kfoqx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("221_13ksy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("222_8acm0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("223_6vyeu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("224_dvpn1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("225_w7l1m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("226_6w3ya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("227_7jpkk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("228_cmavw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("197_18wai")
-}, {
-"duration": 1.0,
-"texture": ExtResource("198_shelb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("199_jq03k")
-}],
-"loop": false,
-"name": &"TabsAppearAndChoose",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("109_0akrf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("110_j0u02")
-}, {
-"duration": 1.0,
-"texture": ExtResource("111_6ma44")
-}, {
-"duration": 1.0,
-"texture": ExtResource("112_4aq3d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("113_08775")
-}, {
-"duration": 1.0,
-"texture": ExtResource("114_f2cad")
-}, {
-"duration": 1.0,
-"texture": ExtResource("115_6v3ii")
-}, {
-"duration": 1.0,
-"texture": ExtResource("116_kgmfh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("117_w082n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("118_vj6nw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("119_nbnq4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("120_aej62")
-}, {
-"duration": 1.0,
-"texture": ExtResource("121_ivnjv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("122_kwhu0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("123_r1bhx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("124_ewstu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("125_rw1a4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("126_von36")
-}, {
-"duration": 1.0,
-"texture": ExtResource("127_mnmy5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("128_h4bwe")
-}],
-"loop": false,
-"name": &"TabsAppearT",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("249_ercje")
-}, {
-"duration": 1.0,
-"texture": ExtResource("250_txmki")
-}, {
-"duration": 1.0,
-"texture": ExtResource("251_lqim0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("252_kwdbm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("253_kddvb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("254_xl2q0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("255_i1xgr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("256_yfyaa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("257_57gd7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("258_xgpl6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("259_hejmj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("260_04f13")
-}, {
-"duration": 1.0,
-"texture": ExtResource("261_31oq7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("262_juf6n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("263_hx8ri")
-}, {
-"duration": 1.0,
-"texture": ExtResource("264_jvmiq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("265_ofsi4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("266_7nlom")
-}, {
-"duration": 1.0,
-"texture": ExtResource("267_vg0c7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("268_ol5lr")
-}],
-"loop": false,
-"name": &"TabsDisappear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("129_cdpto")
-}, {
-"duration": 1.0,
-"texture": ExtResource("130_l2gxg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("131_uh4c0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("132_s6frt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("133_pw2wf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("134_p3ue1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("135_ooaj0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("136_q4fef")
-}, {
-"duration": 1.0,
-"texture": ExtResource("137_upntp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("138_po0tr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("139_cgk07")
-}, {
-"duration": 1.0,
-"texture": ExtResource("140_eu6bp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("141_46sy6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("142_j2i4x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("143_63apl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("144_2tyw7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("145_0n0cc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("146_usmv4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("147_m601u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("148_67nvw")
-}],
-"loop": false,
-"name": &"TabsDisappearT",
-"speed": 15.0
-}]
+[sub_resource type="Animation" id="Animation_r67n0"]
+resource_name = "Open"
+length = 1.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("209_jrevy"), ExtResource("209_jrevy"), ExtResource("210_nuky7"), ExtResource("211_kamir"), ExtResource("212_4uute"), ExtResource("213_mddjm"), ExtResource("214_vhw71"), ExtResource("215_oe7ox"), ExtResource("216_pncsl"), ExtResource("217_ehhv8"), ExtResource("218_cahe0"), ExtResource("219_s685y"), ExtResource("220_kfoqx"), ExtResource("221_13ksy"), ExtResource("222_8acm0"), ExtResource("223_6vyeu"), ExtResource("224_dvpn1"), ExtResource("225_w7l1m"), ExtResource("226_6w3ya"), ExtResource("227_7jpkk"), ExtResource("228_cmavw")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(192, -110), Vector2(192, -10), Vector2(192, 50), Vector2(192, 100), Vector2(192, 108)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasModulate:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.741176, 0.741176, 0.741176, 1), Color(0.607843, 0.607843, 0.607843, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("ColorRect:color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0), Color(0.054902, 0.0823529, 0.160784, 0.345098)]
+}
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0coe4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("289_r7yha")
-}, {
-"duration": 1.0,
-"texture": ExtResource("290_git67")
-}, {
-"duration": 1.0,
-"texture": ExtResource("291_bb1o2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("292_uahyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("293_fd0sq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("294_e6jli")
-}, {
-"duration": 1.0,
-"texture": ExtResource("295_k7xid")
-}, {
-"duration": 1.0,
-"texture": ExtResource("296_c2j5c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("297_ihe2t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("298_c5tuu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("299_r7tx4")
-}],
-"loop": false,
-"name": &"CombatProgressAppear",
-"speed": 30.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("300_nhewg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("301_v31lu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("302_q7yuq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("303_136fk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("304_v5u0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("305_luhg0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("306_vdovn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("307_ig3no")
-}, {
-"duration": 1.0,
-"texture": ExtResource("308_fsqci")
-}, {
-"duration": 1.0,
-"texture": ExtResource("309_2p4hv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("310_tyqxf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"CombatProgressDisappear",
-"speed": 30.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("311_oljiw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("312_p52vy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("313_yykr3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("314_acd1v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("315_gtwid")
-}, {
-"duration": 1.0,
-"texture": ExtResource("316_7vtf7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("317_8j38f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("318_syuxy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("319_maoqt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("320_r24gg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("321_flr7d")
-}],
-"loop": false,
-"name": &"EquipmentAppear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("322_qrplr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("323_jh2r2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("324_ae1ig")
-}, {
-"duration": 1.0,
-"texture": ExtResource("325_bn2kt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("326_cd0t1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("327_k0ocf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("328_hhglx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("329_yb7su")
-}, {
-"duration": 1.0,
-"texture": ExtResource("330_2dj5u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("331_ctqv7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"EquipmentDisappear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("311_u7xfi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("312_ekgx4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("313_rqsdf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("314_lrw52")
-}],
-"loop": false,
-"name": &"QuestsAppear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("315_pqpfm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("316_24vbx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("317_8xg8q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("318_wr5gj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"QuestsDisappear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("340_e7yun")
-}, {
-"duration": 1.0,
-"texture": ExtResource("341_pc14n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("342_iksew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("343_h8onl")
-}],
-"loop": false,
-"name": &"SaveLoadAppear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("344_vtc6u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("345_wf6im")
-}, {
-"duration": 1.0,
-"texture": ExtResource("346_d5ko2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("347_cmjm8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"SaveLoadDisappear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("348_7yau4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("349_x75w5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("350_54510")
-}, {
-"duration": 1.0,
-"texture": ExtResource("351_scnfl")
-}],
-"loop": false,
-"name": &"SettingsAppear",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("352_ksq77")
-}, {
-"duration": 1.0,
-"texture": ExtResource("353_y2dcm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("354_jqqoj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("355_05a0u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("311_gafp3")
-}],
-"loop": false,
-"name": &"SettingsDisappear",
-"speed": 15.0
+[sub_resource type="Animation" id="Animation_7y6sf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("299_r7tx4")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("ColorRect:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0.345098)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CanvasModulate:color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_upl4p"]
+resource_name = "InventoryDisappear"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("34_yi0uu"), ExtResource("35_iffbk"), ExtResource("36_yracu"), ExtResource("37_tknkf"), ExtResource("38_6esbj"), ExtResource("39_21uds"), ExtResource("40_qjyvb"), ExtResource("41_laaa8"), ExtResource("42_hswk3"), ExtResource("41_qc5q0"), ExtResource("44_oojqd"), ExtResource("48_igjwe"), ExtResource("52_6s6w0"), ExtResource("56_kco22"), ExtResource("278_apkir"), ExtResource("64_j33h7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("199_jq03k"), ExtResource("275_iqag2"), ExtResource("191_4pva2")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_x52j3"]
+resource_name = "TopPouchOpenT"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("95_810bb"), ExtResource("96_782jd"), ExtResource("97_fslsg"), ExtResource("98_80bdh"), ExtResource("99_fkee1"), ExtResource("100_opdsj"), ExtResource("101_oixb8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("191_4pva2"), ExtResource("192_h77ya"), ExtResource("193_ma0bu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_stkfg"]
+resource_name = "CombatProgressAppear"
+length = 0.55
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("167_uqfe6")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("193_ma0bu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("289_r7yha"), ExtResource("290_git67"), ExtResource("291_bb1o2"), ExtResource("292_uahyv"), ExtResource("293_fd0sq"), ExtResource("294_e6jli"), ExtResource("295_k7xid"), ExtResource("296_c2j5c"), ExtResource("297_ihe2t"), ExtResource("298_c5tuu"), ExtResource("299_r7tx4")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_prs05"]
+resource_name = "CombatProgressDisappear"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("167_uqfe6")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("193_ma0bu"), ExtResource("280_i0gvr"), ExtResource("194_xc2pb")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("300_nhewg"), ExtResource("301_v31lu"), ExtResource("302_q7yuq"), ExtResource("303_136fk"), ExtResource("304_v5u0h"), ExtResource("305_luhg0"), ExtResource("306_vdovn"), ExtResource("307_ig3no"), ExtResource("308_fsqci"), ExtResource("309_2p4hv"), ExtResource("310_tyqxf")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_48di8"]
+resource_name = "TopPouchCloseT"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("89_2iuws"), ExtResource("90_3mk8a"), ExtResource("91_kimwt"), ExtResource("92_qrr0b"), ExtResource("93_v7qgn"), ExtResource("94_r6ufa"), ExtResource("95_t1cgq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("197_18wai")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_msnik"]
+resource_name = "EquipmentAppear"
+length = 0.55
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("171_4f3eb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("194_xc2pb"), ExtResource("195_l83av"), ExtResource("196_o3fg4")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("311_oljiw"), ExtResource("312_p52vy"), ExtResource("313_yykr3"), ExtResource("314_acd1v"), ExtResource("315_gtwid"), ExtResource("316_7vtf7"), ExtResource("317_8j38f"), ExtResource("318_syuxy"), ExtResource("319_maoqt"), ExtResource("320_r24gg"), ExtResource("321_flr7d")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g2g5q"]
+resource_name = "EquipmentDisappear"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("171_4f3eb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("196_o3fg4"), ExtResource("281_f8vxd"), ExtResource("200_xe5tb")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("322_qrplr"), ExtResource("323_jh2r2"), ExtResource("324_ae1ig"), ExtResource("325_bn2kt"), ExtResource("326_cd0t1"), ExtResource("327_k0ocf"), ExtResource("328_hhglx"), ExtResource("329_yb7su"), ExtResource("330_2dj5u"), ExtResource("331_ctqv7")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_2741x"]
+resource_name = "QuestsDisappear"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("176_0h1hc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("202_ffhy2"), ExtResource("282_4axkh"), ExtResource("203_t3cxl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("315_pqpfm"), ExtResource("316_24vbx"), ExtResource("317_8xg8q"), ExtResource("318_wr5gj")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_yt4ov"]
+resource_name = "QuestsAppear"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("176_0h1hc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("200_xe5tb"), ExtResource("201_itong"), ExtResource("202_ffhy2")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("311_u7xfi"), ExtResource("312_ekgx4"), ExtResource("313_rqsdf"), ExtResource("314_lrw52")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_2ymlb"]
+resource_name = "SettingsDisappear"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("186_ufwkq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("208_e6vo3"), ExtResource("284_lhe6x"), ExtResource("285_ybmqc")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("352_ksq77"), ExtResource("353_y2dcm"), ExtResource("354_jqqoj"), ExtResource("355_05a0u")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_hp2wr"]
+resource_name = "SettingsAppear"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("186_ufwkq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("206_8ypyg"), ExtResource("207_bsqtf"), ExtResource("208_e6vo3")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("348_7yau4"), ExtResource("349_x75w5"), ExtResource("350_54510"), ExtResource("351_scnfl")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5b3l7"]
+resource_name = "SaveLoadAppear"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("181_aaobm")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("205_2csyn"), ExtResource("204_it4ec"), ExtResource("203_t3cxl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("344_vtc6u"), ExtResource("345_wf6im"), ExtResource("346_d5ko2"), ExtResource("347_cmjm8")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xxeg1"]
+resource_name = "SaveLoadDisappear"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("181_aaobm")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("206_8ypyg"), ExtResource("283_fs6ea"), ExtResource("205_2csyn")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelSprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("340_e7yun"), ExtResource("341_pc14n"), ExtResource("342_iksew"), ExtResource("343_h8onl")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 119.25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelSprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackPackSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TabsSprite2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TabsSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackPackSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PanelSprite2D:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ggifj"]
+resource_name = "Close"
+length = 1.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("249_ercje"), ExtResource("250_txmki"), ExtResource("251_lqim0"), ExtResource("252_kwdbm"), ExtResource("253_kddvb"), ExtResource("254_xl2q0"), ExtResource("255_i1xgr"), ExtResource("256_yfyaa"), ExtResource("257_57gd7"), ExtResource("258_xgpl6"), ExtResource("259_hejmj"), ExtResource("260_04f13"), ExtResource("261_31oq7"), ExtResource("262_juf6n"), ExtResource("263_hx8ri"), ExtResource("264_jvmiq"), ExtResource("265_ofsi4"), ExtResource("266_7nlom"), ExtResource("267_vg0c7"), ExtResource("268_ol5lr")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackPackSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 108)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TabsSprite2D:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.95, 1.05, 1.15, 1.25, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(192, 108), Vector2(192, 108), Vector2(192, 10), Vector2(192, -50), Vector2(192, -100), Vector2(192, -110)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PanelSprite2D:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.95, 1.05, 1.15, 1.25, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(192, 108), Vector2(192, 108), Vector2(192, 10), Vector2(192, -50), Vector2(192, -100), Vector2(192, -110)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BackPackSprite2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackPackSprite2D:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TabsSprite2D:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TabsSprite2D:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PanelSprite2D:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PanelSprite2D:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PanelSprite2D/CombatProgressControl:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TabsSprite2D:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BackPackSprite2D:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("PanelSprite2D:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide_pause"
 }]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ColorRect:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.95, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0.345098), Color(0.054902, 0.0823529, 0.160784, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CanvasModulate:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.95, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.603922, 0.603922, 0.603922, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nld0k"]
+_data = {
+"Close": SubResource("Animation_ggifj"),
+"CombatProgressAppear": SubResource("Animation_stkfg"),
+"CombatProgressDisappear": SubResource("Animation_prs05"),
+"EquipmentAppear": SubResource("Animation_msnik"),
+"EquipmentDisappear": SubResource("Animation_g2g5q"),
+"Inventory": SubResource("Animation_dofny"),
+"InventoryDisappear": SubResource("Animation_upl4p"),
+"Open": SubResource("Animation_r67n0"),
+"QuestsAppear": SubResource("Animation_yt4ov"),
+"QuestsDisappear": SubResource("Animation_2741x"),
+"RESET": SubResource("Animation_7y6sf"),
+"SaveLoadAppear": SubResource("Animation_xxeg1"),
+"SaveLoadDisappear": SubResource("Animation_5b3l7"),
+"SettingsAppear": SubResource("Animation_hp2wr"),
+"SettingsDisappear": SubResource("Animation_2ymlb"),
+"TopPouchCloseT": SubResource("Animation_48di8"),
+"TopPouchOpenT": SubResource("Animation_x52j3")
+}
 
 [node name="PauseScreen" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1662,7 +3925,6 @@ grow_vertical = 2
 script = ExtResource("1_jy0m2")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.745098, 0.745098, 0.745098, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -20
@@ -1673,41 +3935,203 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.054902, 0.0823529, 0.160784, 1)
-
-[node name="BackPackAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_as_relative = false
-position = Vector2(192, 108)
-scale = Vector2(0.35, 0.35)
-sprite_frames = SubResource("SpriteFrames_scddx")
-animation = &"TopPouchOpenT"
-
-[node name="TabsAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = -10
-z_as_relative = false
-position = Vector2(192, 108)
-scale = Vector2(0.35, 0.35)
-sprite_frames = SubResource("SpriteFrames_nyyxn")
-animation = &"Idle"
-
-[node name="PanelsAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(192, 108)
-scale = Vector2(0.35, 0.35)
-sprite_frames = SubResource("SpriteFrames_0coe4")
-animation = &"Idle"
+color = Color(0.054902, 0.0823529, 0.160784, 0.345098)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_txxue")
 
-[node name="0" type="Sprite2D" parent="."]
-visible = false
-z_index = 100
-position = Vector2(192, 108)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("197_18wai")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nld0k")
+}
+speed_scale = 2.0
 
-[node name="19" type="Sprite2D" parent="."]
+[node name="BackPackSprite2D" type="Sprite2D" parent="."]
+position = Vector2(192, 108)
+scale = Vector2(0.35, 0.35)
+
+[node name="TabsSprite2D" type="Sprite2D" parent="."]
+position = Vector2(192, 119.25)
+scale = Vector2(0.35, 0.35)
+region_rect = Rect2(0, 0, 1024, 768)
+
+[node name="PanelSprite2D" type="Sprite2D" parent="."]
+position = Vector2(192, 108)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("299_r7tx4")
+
+[node name="CombatProgressControl" type="Control" parent="PanelSprite2D"]
 visible = false
-position = Vector2(192, 98)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("228_cmavw")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = -344.0
+offset_right = -392.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("249_owj30")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSprite2D/CombatProgressControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlUp" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.67
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.811765, 0.603922, 0.309804, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 45
+text = "Combat Progress"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("187_7yti3")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.88
+
+[node name="ControlLeft" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.15
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="ControlRight" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("189_5pfmq")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Stay vigilant"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("190_6q6ls")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Be prepared......"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("191_6j4xu")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Fortune favors the bold!"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("192_ktcwh")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("187_xtmwt")
+theme_override_font_sizes/font_size = 20
+text = "Who Knows?"
+
+[node name="ControlDown" type="Control" parent="PanelSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.6

@@ -1,0 +1,1335 @@
+[gd_scene load_steps=254 format=3 uid="uid://b7r4uo6xex26a"]
+
+[ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_jy0m2"]
+[ext_resource type="Texture2D" uid="uid://b5ypwty7x1fbb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/0.png" id="2_1ggot"]
+[ext_resource type="Texture2D" uid="uid://b3aoy8sxfr8rm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/3.png" id="2_i3bgl"]
+[ext_resource type="Texture2D" uid="uid://jnpxqah60xd3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/1 - idle/0.png" id="2_xolwl"]
+[ext_resource type="Texture2D" uid="uid://cn48c23tht87o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/1.png" id="3_5ceje"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_txxue"]
+[ext_resource type="Texture2D" uid="uid://dtkkhs3b0nnji" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/2.png" id="4_8550c"]
+[ext_resource type="Texture2D" uid="uid://capfbga6wtqh1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/3.png" id="5_l7yqa"]
+[ext_resource type="Texture2D" uid="uid://dmpy88402bf2q" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/4.png" id="6_4hjn6"]
+[ext_resource type="Texture2D" uid="uid://bkppd6xw1ivaj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Close/5.png" id="7_egjea"]
+[ext_resource type="Texture2D" uid="uid://ck4wgyqsh1r61" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/0.png" id="8_gm1wb"]
+[ext_resource type="Texture2D" uid="uid://gkupimgcis7o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/1.png" id="9_2a2ol"]
+[ext_resource type="Texture2D" uid="uid://p4wj1bs7mc1x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/2.png" id="10_4ycor"]
+[ext_resource type="Texture2D" uid="uid://ban37cfq8qjvu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/3.png" id="11_aapft"]
+[ext_resource type="Texture2D" uid="uid://bk6yb7tdb02po" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/9.png" id="12_6ix2f"]
+[ext_resource type="Texture2D" uid="uid://dfilgbk46d8xr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/4.png" id="12_84587"]
+[ext_resource type="Texture2D" uid="uid://b01o151vwbnt0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/5 - Bottom Pouch/Open/5.png" id="13_717md"]
+[ext_resource type="Texture2D" uid="uid://daok8uqf3bxtd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/0.png" id="15_umurd"]
+[ext_resource type="Texture2D" uid="uid://f5rip703fjjn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/6.png" id="17_q01ri"]
+[ext_resource type="Texture2D" uid="uid://bekgi3cd7btqw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/15.png" id="18_1tokl"]
+[ext_resource type="Texture2D" uid="uid://glqf1630v1il" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/12.png" id="19_agcg0"]
+[ext_resource type="Texture2D" uid="uid://dfxmdr8pfpuu7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/18.png" id="21_kwer3"]
+[ext_resource type="Texture2D" uid="uid://dj3ism0mdbjq3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/21.png" id="24_21few"]
+[ext_resource type="Texture2D" uid="uid://c0cnbdcncddr7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/22.png" id="25_r83wh"]
+[ext_resource type="Texture2D" uid="uid://beyccarwufgg4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/23.png" id="26_v776w"]
+[ext_resource type="Texture2D" uid="uid://cftn4d3wr773n" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/24.png" id="27_1xxue"]
+[ext_resource type="Texture2D" uid="uid://h18nmmlbyur5" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/25.png" id="28_vqakw"]
+[ext_resource type="Texture2D" uid="uid://c3uxhnl3h26gy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/26.png" id="29_x2osg"]
+[ext_resource type="Texture2D" uid="uid://dacbgj0mmtv00" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/27.png" id="30_gfmx4"]
+[ext_resource type="Texture2D" uid="uid://ctn1rs65xxy8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/28.png" id="31_oj8ya"]
+[ext_resource type="Texture2D" uid="uid://btxjjeosjpp8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/29.png" id="32_23ltb"]
+[ext_resource type="Texture2D" uid="uid://qikqg6gc8q2a" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Appear/30.png" id="33_5p43w"]
+[ext_resource type="Texture2D" uid="uid://dl1qwdvi4o5nu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/0.png" id="34_yi0uu"]
+[ext_resource type="Texture2D" uid="uid://bl6nxn6yu46df" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/1.png" id="35_iffbk"]
+[ext_resource type="Texture2D" uid="uid://df63ufsponiv0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/2.png" id="36_yracu"]
+[ext_resource type="Texture2D" uid="uid://dswepr5817u8i" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/3.png" id="37_tknkf"]
+[ext_resource type="Texture2D" uid="uid://cyqy001k4dtsa" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/4.png" id="38_6esbj"]
+[ext_resource type="Texture2D" uid="uid://jyrx86l04iqp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/5.png" id="39_21uds"]
+[ext_resource type="Texture2D" uid="uid://6i2416h7u7vp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/6.png" id="40_qjyvb"]
+[ext_resource type="Texture2D" uid="uid://cdvbs5egb1v38" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/7.png" id="41_laaa8"]
+[ext_resource type="Texture2D" uid="uid://c3uqp4ncemtks" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/9.png" id="41_qc5q0"]
+[ext_resource type="Texture2D" uid="uid://ccrvto0jlp83b" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/8.png" id="42_hswk3"]
+[ext_resource type="Texture2D" uid="uid://ico48paabd18" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/12.png" id="42_qjsoh"]
+[ext_resource type="Texture2D" uid="uid://chl41dw56xeft" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/15.png" id="43_xtww7"]
+[ext_resource type="Texture2D" uid="uid://dfc5jc4lb11v6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/21.png" id="45_265cj"]
+[ext_resource type="Texture2D" uid="uid://dyl72iuys20ek" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/27.png" id="47_ickjr"]
+[ext_resource type="Texture2D" uid="uid://dxosdf28qcdpe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/18.png" id="52_6s6w0"]
+[ext_resource type="Texture2D" uid="uid://yb3ohi66i3vq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/24.png" id="58_tl10u"]
+[ext_resource type="Texture2D" uid="uid://bycv7m8utm8mu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/30.png" id="64_j33h7"]
+[ext_resource type="Texture2D" uid="uid://bmcdrpptu6pta" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/0.png" id="65_4ktxa"]
+[ext_resource type="Texture2D" uid="uid://2w0tyxw8x2ii" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Close/0.png" id="65_6jmbk"]
+[ext_resource type="Texture2D" uid="uid://ctw7mthgclrw5" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/0.png" id="65_22gvr"]
+[ext_resource type="Texture2D" uid="uid://8qjsqym7fx33" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/0.png" id="65_lfurm"]
+[ext_resource type="Texture2D" uid="uid://ndtj3hhbs6fw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Open/0.png" id="65_t4b5k"]
+[ext_resource type="Texture2D" uid="uid://cm5el8mkvokx6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/1.png" id="66_eukr8"]
+[ext_resource type="Texture2D" uid="uid://6d5lvvc4xws0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Open/1.png" id="66_js4me"]
+[ext_resource type="Texture2D" uid="uid://cm4tbjy66glo1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/1.png" id="66_qeex5"]
+[ext_resource type="Texture2D" uid="uid://be87l8i5lv803" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Close/1.png" id="66_t6slg"]
+[ext_resource type="Texture2D" uid="uid://duwwxrs3ub51p" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/1.png" id="66_yp8r0"]
+[ext_resource type="Texture2D" uid="uid://ku2r68py01kt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/2.png" id="67_g6onj"]
+[ext_resource type="Texture2D" uid="uid://pjgwru8tnius" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/2.png" id="67_gmp62"]
+[ext_resource type="Texture2D" uid="uid://c3ambhegcu1e3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/2.png" id="67_h05vk"]
+[ext_resource type="Texture2D" uid="uid://og120dpf75gr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Open/2.png" id="67_lsm6j"]
+[ext_resource type="Texture2D" uid="uid://cp8hj5tobkmeo" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/4 - Side Pouches/Close/2.png" id="67_yxhxy"]
+[ext_resource type="Texture2D" uid="uid://ba4a4t6f8xbgs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/3.png" id="68_fm0ye"]
+[ext_resource type="Texture2D" uid="uid://byc6wwrvf3exg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/3.png" id="68_hv2cl"]
+[ext_resource type="Texture2D" uid="uid://d2k1rh2w1daqt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/3.png" id="68_sch47"]
+[ext_resource type="Texture2D" uid="uid://wkimghqcte2x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/4.png" id="69_cxy5y"]
+[ext_resource type="Texture2D" uid="uid://dce06l6w7nq4y" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/4.png" id="69_jsyel"]
+[ext_resource type="Texture2D" uid="uid://dk13vvyjiai3i" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/4.png" id="69_kc6wl"]
+[ext_resource type="Texture2D" uid="uid://5soqgj6tb26r" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/5.png" id="70_8rf10"]
+[ext_resource type="Texture2D" uid="uid://b67i1hv4pogvm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/5.png" id="70_ppw4t"]
+[ext_resource type="Texture2D" uid="uid://cm37htadw4082" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Close/5.png" id="70_smhij"]
+[ext_resource type="Texture2D" uid="uid://do1patgxnq4e6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/0.png" id="71_cofuf"]
+[ext_resource type="Texture2D" uid="uid://bo3vn1ffgwfja" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/6.png" id="71_ngubf"]
+[ext_resource type="Texture2D" uid="uid://cr4t7addd44pa" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/6.png" id="71_ywu1j"]
+[ext_resource type="Texture2D" uid="uid://clpjgfi2qslhf" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/7.png" id="72_5xri6"]
+[ext_resource type="Texture2D" uid="uid://57s6lh4jk4g6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/1.png" id="72_bh453"]
+[ext_resource type="Texture2D" uid="uid://ccxrvqlwgejfe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/7.png" id="72_se38v"]
+[ext_resource type="Texture2D" uid="uid://dgsbomgg1j0kk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/8.png" id="73_c2edj"]
+[ext_resource type="Texture2D" uid="uid://cwphj7faci1ql" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/8.png" id="73_gwpia"]
+[ext_resource type="Texture2D" uid="uid://dsugrr1s4ooci" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/2.png" id="73_la255"]
+[ext_resource type="Texture2D" uid="uid://ps8twro5w7d3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/9.png" id="74_vo4j3"]
+[ext_resource type="Texture2D" uid="uid://buxm78dvf24l0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/3.png" id="74_vs3yj"]
+[ext_resource type="Texture2D" uid="uid://rwak8vkamaq3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/9.png" id="74_ykeac"]
+[ext_resource type="Texture2D" uid="uid://d0a70xxyd1tyw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/4.png" id="75_6pyl0"]
+[ext_resource type="Texture2D" uid="uid://c442q5lnj1dh8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/10.png" id="75_c4bpe"]
+[ext_resource type="Texture2D" uid="uid://dfveml60m4ekn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/10.png" id="75_twyrx"]
+[ext_resource type="Texture2D" uid="uid://vmgfalrrp3f3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/3 - Top Pouch/Open/5.png" id="76_f2wo8"]
+[ext_resource type="Texture2D" uid="uid://73o4jvk8iqni" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/11.png" id="76_qbg08"]
+[ext_resource type="Texture2D" uid="uid://db88jtkumux2s" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/11.png" id="76_v12hf"]
+[ext_resource type="Texture2D" uid="uid://vgvdae2bq5fy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/12.png" id="77_h1jb2"]
+[ext_resource type="Texture2D" uid="uid://f036dmlpqr66" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/12.png" id="77_qly6p"]
+[ext_resource type="Texture2D" uid="uid://bqyn45lfnd1s8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/13.png" id="78_16sg8"]
+[ext_resource type="Texture2D" uid="uid://bci8i7ncmhys1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/13.png" id="78_qhu1i"]
+[ext_resource type="Texture2D" uid="uid://c1gt7mdg4u761" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/14.png" id="79_264ce"]
+[ext_resource type="Texture2D" uid="uid://clmfdg5m6ih07" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/14.png" id="79_tv0nt"]
+[ext_resource type="Texture2D" uid="uid://cyc24jjibycas" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/15.png" id="80_6lno4"]
+[ext_resource type="Texture2D" uid="uid://b76h3qq2mim6x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/15.png" id="80_jbpa8"]
+[ext_resource type="Texture2D" uid="uid://chyx3ykiguwvg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/16.png" id="81_3lphv"]
+[ext_resource type="Texture2D" uid="uid://cdnoms3ih65vq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/16.png" id="81_kkdgu"]
+[ext_resource type="Texture2D" uid="uid://gpvcddydmjgk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/17.png" id="82_5cx5g"]
+[ext_resource type="Texture2D" uid="uid://cb36gmhfwlbwl" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/17.png" id="82_xxgle"]
+[ext_resource type="Texture2D" uid="uid://30cyqsns0gfs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/18.png" id="83_g1hhs"]
+[ext_resource type="Texture2D" uid="uid://dv1oi75ce7ve2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/18.png" id="83_ifb15"]
+[ext_resource type="Texture2D" uid="uid://csi0dn4jur72d" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/19.png" id="84_buvim"]
+[ext_resource type="Texture2D" uid="uid://c4iihldt4844m" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/19.png" id="84_qkg0f"]
+[ext_resource type="Texture2D" uid="uid://biwrcmi6ee7g8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/20.png" id="85_582fl"]
+[ext_resource type="Texture2D" uid="uid://b12h1jqj4gdab" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/20.png" id="85_kq7mk"]
+[ext_resource type="Texture2D" uid="uid://47gejr68dofc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/21.png" id="86_58hjc"]
+[ext_resource type="Texture2D" uid="uid://ch66sloml6dcg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/21.png" id="86_odk8k"]
+[ext_resource type="Texture2D" uid="uid://ba8lblq01n47a" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/22.png" id="87_5po0v"]
+[ext_resource type="Texture2D" uid="uid://u78ildhqo0b3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/22.png" id="87_iucfe"]
+[ext_resource type="Texture2D" uid="uid://0vveyfcerftc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/23.png" id="88_f8yc8"]
+[ext_resource type="Texture2D" uid="uid://1tmht0iuhknj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/23.png" id="88_mrsu0"]
+[ext_resource type="Texture2D" uid="uid://c027kbathma" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/0.png" id="89_2iuws"]
+[ext_resource type="Texture2D" uid="uid://boub76btljx53" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/24.png" id="89_84myk"]
+[ext_resource type="Texture2D" uid="uid://sdb8h0tt7qf7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/24.png" id="89_x2vq4"]
+[ext_resource type="Texture2D" uid="uid://c42kmrp02yb4v" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/1.png" id="90_3mk8a"]
+[ext_resource type="Texture2D" uid="uid://bpfopvtmkga7t" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/25.png" id="90_o0v72"]
+[ext_resource type="Texture2D" uid="uid://dcabwrkkq7tpm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/25.png" id="90_q8ygf"]
+[ext_resource type="Texture2D" uid="uid://kny6mfjxm0id" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/26.png" id="91_chils"]
+[ext_resource type="Texture2D" uid="uid://clbtrfxtfhyt4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/26.png" id="91_g1t71"]
+[ext_resource type="Texture2D" uid="uid://ctaa7slafnkoe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/2.png" id="91_kimwt"]
+[ext_resource type="Texture2D" uid="uid://cfiig8k21n2si" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Close/27.png" id="92_hnfac"]
+[ext_resource type="Texture2D" uid="uid://c1skexjwwwc2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/3.png" id="92_qrr0b"]
+[ext_resource type="Texture2D" uid="uid://bbd58olbrfyqu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/BackPack/2 - Middle Zip Pouch/Open/27.png" id="92_xcagb"]
+[ext_resource type="Texture2D" uid="uid://dowy8jt8fwocn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/4.png" id="93_v7qgn"]
+[ext_resource type="Texture2D" uid="uid://de24ha5w4wxqs" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/5.png" id="94_r6ufa"]
+[ext_resource type="Texture2D" uid="uid://bvfh7xmbmfetk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/0.png" id="95_810bb"]
+[ext_resource type="Texture2D" uid="uid://bgini5gkscemi" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Close/6.png" id="95_t1cgq"]
+[ext_resource type="Texture2D" uid="uid://ch7befwpufpi2" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/1.png" id="96_782jd"]
+[ext_resource type="Texture2D" uid="uid://dslgdidd0sjmw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/2.png" id="97_fslsg"]
+[ext_resource type="Texture2D" uid="uid://cn80hn73ke7ku" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/3.png" id="98_80bdh"]
+[ext_resource type="Texture2D" uid="uid://b7apvifdbjpqv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/4.png" id="99_fkee1"]
+[ext_resource type="Texture2D" uid="uid://cpimtpc8aquls" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/5.png" id="100_opdsj"]
+[ext_resource type="Texture2D" uid="uid://c137hd88ypcmv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/6.png" id="101_oixb8"]
+[ext_resource type="Texture2D" uid="uid://2sm1r6r1p77o" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/0.png" id="165_mrs8w"]
+[ext_resource type="Texture2D" uid="uid://2b2h13vkub3b" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/1.png" id="166_2n5s0"]
+[ext_resource type="Texture2D" uid="uid://dqali130khit4" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/2.png" id="167_uqfe6"]
+[ext_resource type="Texture2D" uid="uid://crlgeaqkey1bn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/3.png" id="168_rt06w"]
+[ext_resource type="Texture2D" uid="uid://dhsknrotaakn3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/4.png" id="169_o8e24"]
+[ext_resource type="Texture2D" uid="uid://cbnetvmdi5k18" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/5.png" id="170_xak3d"]
+[ext_resource type="Texture2D" uid="uid://bfbydiuely6hy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/6.png" id="171_4f3eb"]
+[ext_resource type="Texture2D" uid="uid://dn6xc4a55eibm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/7.png" id="172_1p5m4"]
+[ext_resource type="Texture2D" uid="uid://i4ihdefup06q" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/8.png" id="173_8njfg"]
+[ext_resource type="Texture2D" uid="uid://c8w3gyr7rlj4x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/9.png" id="174_yejky"]
+[ext_resource type="Texture2D" uid="uid://0b4xrxluohns" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/10.png" id="175_wjabv"]
+[ext_resource type="Texture2D" uid="uid://bgk5kb31m4dj1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/11.png" id="176_0h1hc"]
+[ext_resource type="Texture2D" uid="uid://clx0d03naeuih" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/12.png" id="177_ww01t"]
+[ext_resource type="Texture2D" uid="uid://cx74810jdkfbw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/13.png" id="178_iyapy"]
+[ext_resource type="Texture2D" uid="uid://bg812wiloo186" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/14.png" id="179_7ke6f"]
+[ext_resource type="Texture2D" uid="uid://c7iny18isylko" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/15.png" id="180_ukf0h"]
+[ext_resource type="Texture2D" uid="uid://0hngndhco1pw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/16.png" id="181_aaobm"]
+[ext_resource type="Texture2D" uid="uid://by07v2bjoe7em" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/17.png" id="182_0fkef"]
+[ext_resource type="Texture2D" uid="uid://cjb7sygtsj8yd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/18.png" id="183_bc3te"]
+[ext_resource type="Texture2D" uid="uid://bn3warx46cade" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/19.png" id="184_kg54s"]
+[ext_resource type="Texture2D" uid="uid://c0w77u6i1003c" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/20.png" id="185_xbppj"]
+[ext_resource type="Texture2D" uid="uid://cqu8obsksls2d" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/21.png" id="186_ufwkq"]
+[ext_resource type="Texture2D" uid="uid://bf5ekluigtrtp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/22.png" id="187_i5g8l"]
+[ext_resource type="Texture2D" uid="uid://cay0rmr6blhsr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/23.png" id="188_1jh0e"]
+[ext_resource type="Texture2D" uid="uid://b2fokoxilcni8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/24.png" id="189_jcx1b"]
+[ext_resource type="Texture2D" uid="uid://dtt3descysf5a" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/25.png" id="190_c5eyi"]
+[ext_resource type="Texture2D" uid="uid://15vqmbf43slj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/4.png" id="191_4pva2"]
+[ext_resource type="Texture2D" uid="uid://by5lwfvrnkoqe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/5.png" id="192_h77ya"]
+[ext_resource type="Texture2D" uid="uid://bwwl0tfw6u3sr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/6.png" id="193_ma0bu"]
+[ext_resource type="Texture2D" uid="uid://dd13asj8lt03r" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/8.png" id="194_xc2pb"]
+[ext_resource type="Texture2D" uid="uid://d1i2foms0gkvn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/9.png" id="195_l83av"]
+[ext_resource type="Texture2D" uid="uid://q3c761v8oapn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/10.png" id="196_o3fg4"]
+[ext_resource type="Texture2D" uid="uid://dkdhmd3plof4w" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/0.png" id="197_18wai"]
+[ext_resource type="Texture2D" uid="uid://b8ywgypbfqh6e" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/1.png" id="198_shelb"]
+[ext_resource type="Texture2D" uid="uid://bsrbhvuabx0vt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/2.png" id="199_jq03k"]
+[ext_resource type="Texture2D" uid="uid://lm182isokh0q" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/12.png" id="200_xe5tb"]
+[ext_resource type="Texture2D" uid="uid://bqa47tahn3n8x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/13.png" id="201_itong"]
+[ext_resource type="Texture2D" uid="uid://ct3mbrmfs8ivb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/14.png" id="202_ffhy2"]
+[ext_resource type="Texture2D" uid="uid://bsujyae0tf0cn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/16.png" id="203_t3cxl"]
+[ext_resource type="Texture2D" uid="uid://dc56bft2apjpl" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/17.png" id="204_it4ec"]
+[ext_resource type="Texture2D" uid="uid://cylndeluwbrbm" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/18.png" id="205_2csyn"]
+[ext_resource type="Texture2D" uid="uid://dhyu51s6irr6l" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/20.png" id="206_8ypyg"]
+[ext_resource type="Texture2D" uid="uid://1pec6wnege14" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/21.png" id="207_bsqtf"]
+[ext_resource type="Texture2D" uid="uid://cmi21w82qwtuh" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/22.png" id="208_e6vo3"]
+[ext_resource type="Script" path="res://src/main/scene/ui/CombatProgressControl.gd" id="249_owj30"]
+[ext_resource type="Texture2D" uid="uid://b8w7gqck005lq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/0.png" id="289_r7yha"]
+[ext_resource type="Texture2D" uid="uid://chmgco7bxmgij" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/1.png" id="290_git67"]
+[ext_resource type="Texture2D" uid="uid://rwhwck551y0w" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/2.png" id="291_bb1o2"]
+[ext_resource type="Texture2D" uid="uid://bmh33w4ul767u" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/3.png" id="292_uahyv"]
+[ext_resource type="Texture2D" uid="uid://qv7dnhnc7ck7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/4.png" id="293_fd0sq"]
+[ext_resource type="Texture2D" uid="uid://bqyoqvhne75gx" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/5.png" id="294_e6jli"]
+[ext_resource type="Texture2D" uid="uid://c350jeg5caj5k" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/6.png" id="295_k7xid"]
+[ext_resource type="Texture2D" uid="uid://dpraoscckl4s1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/7.png" id="296_c2j5c"]
+[ext_resource type="Texture2D" uid="uid://co42ruabu66o6" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/8.png" id="297_ihe2t"]
+[ext_resource type="Texture2D" uid="uid://cj1shcdkkwxqg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/9.png" id="298_c5tuu"]
+[ext_resource type="Texture2D" uid="uid://cufa8mlw28wjw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/10.png" id="299_r7tx4"]
+[ext_resource type="Texture2D" uid="uid://bdblc5yuu0g58" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/0.png" id="300_nhewg"]
+[ext_resource type="Texture2D" uid="uid://bf130ra8xacw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/1.png" id="301_v31lu"]
+[ext_resource type="Texture2D" uid="uid://d1m1fqu7d4unr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/2.png" id="302_q7yuq"]
+[ext_resource type="Texture2D" uid="uid://500p5yleegt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/3.png" id="303_136fk"]
+[ext_resource type="Texture2D" uid="uid://qfjj21wr8rsp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/4.png" id="304_v5u0h"]
+[ext_resource type="Texture2D" uid="uid://yl3gl7nauwmc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/5.png" id="305_luhg0"]
+[ext_resource type="Texture2D" uid="uid://b7xt7qmnajea7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/6.png" id="306_vdovn"]
+[ext_resource type="Texture2D" uid="uid://c1ned4bkn1hfg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/7.png" id="307_ig3no"]
+[ext_resource type="Texture2D" uid="uid://bkjdfg0qsuhqn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/8.png" id="308_fsqci"]
+[ext_resource type="Texture2D" uid="uid://dfqcpfxgx71h0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/9.png" id="309_2p4hv"]
+[ext_resource type="Texture2D" uid="uid://cc2t0yqhtusvd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/10.png" id="310_tyqxf"]
+[ext_resource type="Texture2D" uid="uid://yi56l4dbygcq" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/empty.png" id="311_gafp3"]
+[ext_resource type="Texture2D" uid="uid://dqymh473o03yl" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/0.png" id="311_oljiw"]
+[ext_resource type="Texture2D" uid="uid://jeg8laeetubt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/0.png" id="311_u7xfi"]
+[ext_resource type="Texture2D" uid="uid://bccdjsgls4nlh" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/1.png" id="312_ekgx4"]
+[ext_resource type="Texture2D" uid="uid://xa04qq44ovs7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/1.png" id="312_p52vy"]
+[ext_resource type="Texture2D" uid="uid://h768yqhq36jx" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/2.png" id="313_rqsdf"]
+[ext_resource type="Texture2D" uid="uid://clpkb4et0ebga" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/2.png" id="313_yykr3"]
+[ext_resource type="Texture2D" uid="uid://s84c48qubopx" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/3.png" id="314_acd1v"]
+[ext_resource type="Texture2D" uid="uid://ey5tgp0xn6gd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/3.png" id="314_lrw52"]
+[ext_resource type="Texture2D" uid="uid://4av3gdop1cc8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/4.png" id="315_gtwid"]
+[ext_resource type="Texture2D" uid="uid://87upli4bfjjc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/0.png" id="315_pqpfm"]
+[ext_resource type="Texture2D" uid="uid://b4spmi7tqjpau" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/5.png" id="316_7vtf7"]
+[ext_resource type="Texture2D" uid="uid://b27425ko8rhwa" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/1.png" id="316_24vbx"]
+[ext_resource type="Texture2D" uid="uid://dbh1f883ypxjb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/6.png" id="317_8j38f"]
+[ext_resource type="Texture2D" uid="uid://cltb7kn22hnwy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/2.png" id="317_8xg8q"]
+[ext_resource type="Texture2D" uid="uid://cvvk5pl1tp41" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/7.png" id="318_syuxy"]
+[ext_resource type="Texture2D" uid="uid://56h4fuokshqd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/3.png" id="318_wr5gj"]
+[ext_resource type="Texture2D" uid="uid://bv8j3sjegr4yg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/8.png" id="319_maoqt"]
+[ext_resource type="Texture2D" uid="uid://dy0fn2o3i1wkn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/9.png" id="320_r24gg"]
+[ext_resource type="Texture2D" uid="uid://dempwrwa0y6ge" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/10.png" id="321_flr7d"]
+[ext_resource type="Texture2D" uid="uid://pa1rpq47w8fh" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/0.png" id="322_qrplr"]
+[ext_resource type="Texture2D" uid="uid://ij0s7a3j6piw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/1.png" id="323_jh2r2"]
+[ext_resource type="Texture2D" uid="uid://xxyni5xl5nds" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/2.png" id="324_ae1ig"]
+[ext_resource type="Texture2D" uid="uid://b50q1dpkqxdxn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/3.png" id="325_bn2kt"]
+[ext_resource type="Texture2D" uid="uid://b4gl4p0sgvr4b" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/4.png" id="326_cd0t1"]
+[ext_resource type="Texture2D" uid="uid://o18jv8wyg8n3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/5.png" id="327_k0ocf"]
+[ext_resource type="Texture2D" uid="uid://b0lnhrnrugq1h" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/6.png" id="328_hhglx"]
+[ext_resource type="Texture2D" uid="uid://1w5jxrodmlnr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/7.png" id="329_yb7su"]
+[ext_resource type="Texture2D" uid="uid://bkf6v65mhx3o5" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/8.png" id="330_2dj5u"]
+[ext_resource type="Texture2D" uid="uid://72tnqegrm6t0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/9.png" id="331_ctqv7"]
+[ext_resource type="Texture2D" uid="uid://di7r3ymi28cja" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Appear/0.png" id="340_e7yun"]
+[ext_resource type="Texture2D" uid="uid://dlbdutnhr0xad" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Appear/1.png" id="341_pc14n"]
+[ext_resource type="Texture2D" uid="uid://bvnopsr73srsk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Appear/2.png" id="342_iksew"]
+[ext_resource type="Texture2D" uid="uid://cvnbf6kb5os5n" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Appear/3.png" id="343_h8onl"]
+[ext_resource type="Texture2D" uid="uid://ctii3etqe4g1n" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Disappear/0.png" id="344_vtc6u"]
+[ext_resource type="Texture2D" uid="uid://ox6f31yblnug" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Disappear/1.png" id="345_wf6im"]
+[ext_resource type="Texture2D" uid="uid://bfcytogjiqpax" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Disappear/2.png" id="346_d5ko2"]
+[ext_resource type="Texture2D" uid="uid://n667o12v8q40" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/5 - Save & Load/Disappear/3.png" id="347_cmjm8"]
+[ext_resource type="Texture2D" uid="uid://3t6b0vre0xku" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Appear/0.png" id="348_7yau4"]
+[ext_resource type="Texture2D" uid="uid://dslj1omfmjyvv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Appear/1.png" id="349_x75w5"]
+[ext_resource type="Texture2D" uid="uid://cbpelbve0lfgk" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Appear/2.png" id="350_54510"]
+[ext_resource type="Texture2D" uid="uid://dpacull7m0jyg" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Appear/3.png" id="351_scnfl"]
+[ext_resource type="Texture2D" uid="uid://b6cxwoecv1und" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Disappear/0.png" id="352_ksq77"]
+[ext_resource type="Texture2D" uid="uid://dx1brw6ccn2ye" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Disappear/1.png" id="353_y2dcm"]
+[ext_resource type="Texture2D" uid="uid://cxjrvdu7chvgy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Disappear/2.png" id="354_jqqoj"]
+[ext_resource type="Texture2D" uid="uid://dv6kjbbhdabjj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/6 - Settings/ClipBoard/Disappear/3.png" id="355_05a0u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_scddx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1ggot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5ceje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8550c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l7yqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4hjn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_egjea")
+}],
+"loop": false,
+"name": &"BottomPouchClose",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gm1wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2a2ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4ycor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aapft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_84587")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_717md")
+}],
+"loop": false,
+"name": &"BottomPouchOpen",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xolwl")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_umurd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i3bgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_q01ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6ix2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_agcg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1tokl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kwer3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_21few")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_r83wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_v776w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1xxue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vqakw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_x2osg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gfmx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_oj8ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_23ltb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5p43w")
+}],
+"loop": false,
+"name": &"InventoryAppear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_yi0uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_iffbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_yracu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_tknkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_6esbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_21uds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_qjyvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_laaa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hswk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_qc5q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_qjsoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_xtww7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_6s6w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_265cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_tl10u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ickjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_j33h7")
+}],
+"loop": false,
+"name": &"InventoryDisappear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("167_uqfe6")
+}],
+"loop": false,
+"name": &"SelectCombatProgress",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("171_4f3eb")
+}],
+"loop": false,
+"name": &"SelectEquipment",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("176_0h1hc")
+}],
+"loop": false,
+"name": &"SelectQuests",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("181_aaobm")
+}],
+"loop": false,
+"name": &"SelectSaveLoad",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("186_ufwkq")
+}],
+"loop": false,
+"name": &"SelectSettings",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_6jmbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_t6slg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_yxhxy")
+}],
+"loop": false,
+"name": &"SidePouchesClose",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_t4b5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_js4me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_lsm6j")
+}],
+"loop": false,
+"name": &"SidePouchesOpen",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_4ktxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_qeex5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_gmp62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_fm0ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_kc6wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_smhij")
+}],
+"loop": false,
+"name": &"TopPouchClose",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("89_2iuws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_3mk8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_kimwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_qrr0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_v7qgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_r6ufa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_t1cgq")
+}],
+"loop": false,
+"name": &"TopPouchCloseT",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("71_cofuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_bh453")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_la255")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_vs3yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_6pyl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_f2wo8")
+}],
+"loop": false,
+"name": &"TopPouchOpen",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("95_810bb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_782jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_fslsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_80bdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_fkee1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_opdsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_oixb8")
+}],
+"loop": false,
+"name": &"TopPouchOpenT",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_lfurm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_eukr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_h05vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_hv2cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_jsyel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ppw4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ywu1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_se38v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_c2edj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ykeac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_twyrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_qbg08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_qly6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_16sg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_tv0nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_jbpa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_kkdgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_5cx5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ifb15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_buvim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_582fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_odk8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_5po0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_mrsu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_x2vq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_o0v72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_g1t71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_hnfac")
+}],
+"loop": false,
+"name": &"ZipPouchClose",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_22gvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_yp8r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_g6onj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_sch47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_cxy5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_8rf10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ngubf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_5xri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_gwpia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_vo4j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_c4bpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_v12hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_h1jb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_qhu1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_264ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_6lno4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3lphv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_xxgle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_g1hhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_qkg0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_kq7mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_58hjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_iucfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_f8yc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_84myk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_q8ygf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_chils")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_xcagb")
+}],
+"loop": false,
+"name": &"ZipPouchOpen",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("165_mrs8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_2n5s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_uqfe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_rt06w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_o8e24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_xak3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_4f3eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_1p5m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_8njfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_yejky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_wjabv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_0h1hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_ww01t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_iyapy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_7ke6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_ukf0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_aaobm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_0fkef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_bc3te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_kg54s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_xbppj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_ufwkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_i5g8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_1jh0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_jcx1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_c5eyi")
+}],
+"loop": false,
+"name": &"test",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nyyxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("191_4pva2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_h77ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_ma0bu")
+}],
+"loop": false,
+"name": &"SelectCombatProgress",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("194_xc2pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_l83av")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_o3fg4")
+}],
+"loop": false,
+"name": &"SelectEquipment",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("197_18wai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_shelb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_jq03k")
+}],
+"loop": false,
+"name": &"SelectInventory",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("200_xe5tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_itong")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_ffhy2")
+}],
+"loop": false,
+"name": &"SelectQuests",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("203_t3cxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_it4ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_2csyn")
+}],
+"loop": false,
+"name": &"SelectSaveLoad",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("206_8ypyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_bsqtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_e6vo3")
+}],
+"loop": false,
+"name": &"SelectSettings",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0coe4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("289_r7yha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_git67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_bb1o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_uahyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_fd0sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_e6jli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_k7xid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_c2j5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_ihe2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_c5tuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_r7tx4")
+}],
+"loop": false,
+"name": &"CombatProgressAppear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("300_nhewg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_v31lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_q7yuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_136fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_v5u0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_luhg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_vdovn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_ig3no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_fsqci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_2p4hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_tyqxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"CombatProgressDisappear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("311_oljiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_p52vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_yykr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_acd1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_gtwid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_7vtf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_8j38f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_syuxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_maoqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_r24gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_flr7d")
+}],
+"loop": false,
+"name": &"EquipmentAppear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("322_qrplr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_jh2r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_ae1ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_bn2kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_cd0t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_k0ocf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_hhglx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_yb7su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_2dj5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_ctqv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"EquipmentDisappear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("311_u7xfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_ekgx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_rqsdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_lrw52")
+}],
+"loop": false,
+"name": &"QuestsAppear",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("315_pqpfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_24vbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_8xg8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_wr5gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"QuestsDisappear",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("340_e7yun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_pc14n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_iksew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_h8onl")
+}],
+"loop": false,
+"name": &"SaveLoadAppear",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("344_vtc6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_wf6im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_d5ko2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_cmjm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"SaveLoadDisappear",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("348_7yau4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_x75w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_54510")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_scnfl")
+}],
+"loop": false,
+"name": &"SettingsAppear",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("352_ksq77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_y2dcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_jqqoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_05a0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_gafp3")
+}],
+"loop": false,
+"name": &"SettingsDisappear",
+"speed": 15.0
+}]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jy0m2")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.733333, 0.733333, 0.733333, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = -20
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.0823529, 0.160784, 1)
+
+[node name="BackPackAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_as_relative = false
+position = Vector2(192, 108)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_scddx")
+animation = &"InventoryAppear"
+
+[node name="TabsAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -10
+z_as_relative = false
+position = Vector2(192, 108)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_nyyxn")
+animation = &"Idle"
+
+[node name="PanelsAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(192, 108)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_0coe4")
+animation = &"CombatProgressAppear"
+frame = 10
+frame_progress = 1.0
+
+[node name="CombatProgressControl" type="Control" parent="PanelsAnimatedSprite2D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = -344.0
+offset_right = -392.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("249_owj30")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsAnimatedSprite2D/CombatProgressControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRectUp" type="ColorRect" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.27
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.88
+
+[node name="ColorRectLeft" type="ColorRect" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="ColorRectRight" type="ColorRect" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRectDown" type="ColorRect" parent="PanelsAnimatedSprite2D/CombatProgressControl/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_txxue")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="PanelsAnimatedSprite2D/CombatProgressControl" method="_on_timer_timeout"]
