@@ -1,16 +1,5 @@
 extends Control
 
-
-# 节点类型颜色定义
-var type_colors = {
-	CombatProgressGenerator.NodeType.START: Color(0, 1, 0),
-	CombatProgressGenerator.NodeType.END: Color(1, 0, 0),
-	CombatProgressGenerator.NodeType.NORMAL: Color(0.5, 0.5, 0.5),
-	CombatProgressGenerator.NodeType.ELITE: Color(0, 0, 1),
-	CombatProgressGenerator.NodeType.MYSTERY: Color(1, 0, 1),
-	CombatProgressGenerator.NodeType.TREASURE: Color(1, 1, 0),
-}
-
 @onready var h_box_container: HBoxContainer = $VBoxContainer/HBoxContainer/ScrollContainer/HBoxContainer
 @onready var scroll_container: ScrollContainer = $VBoxContainer/HBoxContainer/ScrollContainer
 
@@ -31,8 +20,8 @@ func _process(delta: float) -> void:
 		line.points[1] = lines_base_points[index][1] - Vector2(scroll_container.scroll_horizontal, 0)
 		index += 1
 
-func set_container(map):
-	var parameters: Vector2i = CombatProgressGenerator.get_parameters(map)
+func set_container(nodes: Array):
+	var parameters: Vector2i = CombatProgressGenerator.get_parameters(nodes)
 	var max_layers = parameters[0]
 	var max_nodes_in_layer = parameters[1]
 	
@@ -47,7 +36,7 @@ func set_container(map):
 		h_box_container.add_child(vbox_container)
 		
 		var layer = []
-		for node in map[x]:
+		for node in nodes[x]:
 			var center_container = CenterContainer.new()
 			center_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
 			vbox_container.add_child(center_container)
@@ -67,23 +56,23 @@ func get_container_position(index_layer: int, index_node: int) -> Vector2:
 	# 创建并返回节点的位置向量
 	return Vector2(pos_x, pos_y)
 
-func draw_map(map) -> void:
-	var parameters: Vector2i = CombatProgressGenerator.get_parameters(map)
+func draw_nodes(nodes: Array) -> void:
+	var parameters: Vector2i = CombatProgressGenerator.get_parameters(nodes)
 	var max_layers = parameters[0]
 	var max_nodes_in_layer = parameters[1]
 
 	for index_layer in max_layers:
-		for node in map[index_layer]:
-			var index = map[index_layer].find(node)
+		for node in nodes[index_layer]:
+			var index = nodes[index_layer].find(node)
 			# 给予node对象container_position，方便后续调用
 			node.container_position = get_container_position(index_layer, index)
 			var container = container_matrix[index_layer][index]
 			var node_button_instance = node_button.instantiate()
-			node_button_instance.node_type = node.type
+			node_button_instance.combat_node = node
 			container.add_child(node_button_instance)
 			
 			for connection in node.connections:
-				var next_index = map[index_layer+1].find(connection)
+				var next_index = nodes[index_layer+1].find(connection)
 				draw_connection(Vector2i(index_layer, index), Vector2i(index_layer+1, next_index))
 
 func draw_connection(index_from: Vector2i, index_to: Vector2i) -> void:
@@ -97,7 +86,7 @@ func draw_connection(index_from: Vector2i, index_to: Vector2i) -> void:
 	lines.append(line)
 	lines_base_points.append(line.points)
 
-func _on_update_combat_progress(map) -> void:
-	set_container(map)
-	draw_map(map)
+func _on_update_combat_progress(nodes: Array) -> void:
+	set_container(nodes)
+	draw_nodes(nodes)
 	

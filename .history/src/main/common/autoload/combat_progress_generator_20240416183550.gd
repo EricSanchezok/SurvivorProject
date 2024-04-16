@@ -1,6 +1,7 @@
 extends Node
 
 signal update_combat_progress(nodes: Array)
+signal activate_changed(activate: bool)
 
 enum NodeType {
 	START,
@@ -12,19 +13,13 @@ enum NodeType {
 }
 
 class CombatNode:
-	signal activate_changed(activate: bool)
-	signal selected_changed(selected: bool)
 	var type = NodeType.NORMAL
 	var connections = []
 	var container_position = Vector2.ZERO
 	var activate := false:
 		set(v):
 			activate = v
-			activate_changed.emit(v)
-	var selected = false:
-		set(v):
-			selected = v
-			selected_changed.emit(v)
+			emit_signal("activate_changed", v)
 	
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 创建战斗进度 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
