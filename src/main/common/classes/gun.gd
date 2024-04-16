@@ -7,7 +7,7 @@ var player: CharacterBody2D
 var playerStats: Node
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@onready var area_2d: Area2D = $Area2D
+@onready var searching_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var graphics: Node2D = $Graphics
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_wait_timer: Timer = $AttackWaitTimer
@@ -86,7 +86,7 @@ func _update_parameters() -> void:
 	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
 	damage = (physical_attack_power + magic_attack_power) * critical_hit_rate * critical_damage
 	attack_range = base_attack_range * playerStats.attack_range_multiplier
-	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
+	searching_shape_2d.shape.radius = attack_range
 	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
 	animation_player.speed_scale = playerStats.attack_speed_multiplier
 	rotation_speed = base_rotation_speed * playerStats.attack_speed_multiplier
@@ -142,7 +142,7 @@ func get_next_state(state: State) -> int:
 	match state:
 		State.WAIT:
 			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
-			if target and attack_wait_timer.is_stopped():
+			if target and attack_wait_timer.is_stopped(): 
 				return State.AIMNG
 		State.AIMNG:
 			if  aim_success() :
