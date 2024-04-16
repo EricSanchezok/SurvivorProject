@@ -13,6 +13,7 @@ extends Node
 	"normal_caser": preload("res://src/main/scene/role/weapons/Caser/normal_caser.tscn"),
 	"normal_gun": preload("res://src/main/scene/role/weapons/Gun/normal_gun.tscn"),
 	"normal_bomb": preload("res://src/main/scene/role/weapons/Bomb/normal_bomb.tscn"),
+	"normal_turret": preload("res://src/main/scene/role/weapons/Turret/normal_turret.tscn"),
 }
 
 

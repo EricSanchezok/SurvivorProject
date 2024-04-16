@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhs3biji6ooth"]
+
+[ext_resource type="PackedScene" uid="uid://bu7130w3w7bjh" path="res://src/main/common/classes/position_generator.tscn" id="1_kuvlq"]
+[ext_resource type="Script" path="res://src/main/component/turret_generator.gd" id="2_gjmnc"]
+
+[node name="turret_generator" instance=ExtResource("1_kuvlq")]
+script = ExtResource("2_gjmnc")
