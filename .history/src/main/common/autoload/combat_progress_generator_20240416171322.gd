@@ -1,6 +1,8 @@
 extends Node
 
-signal update_combat_progress(nodes: Array)
+signal update_combat_progress(map)
+
+var current_map 
 
 enum NodeType {
 	START,
@@ -11,29 +13,42 @@ enum NodeType {
 	TREASURE,
 }
 
-class CombatNode:
-	signal activate_changed(activate: bool)
-	signal selected_changed(selected: bool)
+class MapNode:
 	var type = NodeType.NORMAL
 	var connections = []
 	var container_position = Vector2.ZERO
-	var activate := false:
-		set(v):
-			activate = v
-			activate_changed.emit(v)
-	var selected = false:
-		set(v):
-			selected = v
-			selected_changed.emit(v)
-	
 
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 创建战斗进度 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 创建地图 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func create_combat_progress(total_layers, min_nodes, max_nodes):
 	var nodes = generate_nodes(total_layers, min_nodes, max_nodes)
 	for i in range(nodes.size() - 1):
 		connect_layers(nodes[i], nodes[i + 1])
 	update_combat_progress.emit(nodes)
+	current_map = nodes
 	return nodes
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 工具函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func get_parameters(map) -> Vector2i:
+	var max_layers = len(map)
+	var max_nodes_in_layer = 0
+
+	for layer in map:
+		var layer_size = layer.size()
+		if layer_size > max_nodes_in_layer:
+			max_nodes_in_layer = layer_size
+
+	return Vector2i(max_layers, max_nodes_in_layer)
+
+func print_map(map):
+	for i in range(map.size()):
+		print("Layer", i, ":")
+		for node in map[i]:
+			var conn_ids = []
+			for connection in node.connections:
+				conn_ids.append(map[i+1].find(connection))  # 使用 find 函数来查找索引
+			print("  Node", map[i].find(node), " Type:", node.type, " Connections:", conn_ids)
+
+
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 创建节点 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func generate_nodes(layers, min_nodes_per_layer, max_nodes_per_layer):
@@ -43,10 +58,8 @@ func generate_nodes(layers, min_nodes_per_layer, max_nodes_per_layer):
 		var num_nodes = determine_num_nodes(i, layers, min_nodes_per_layer, max_nodes_per_layer, 0) if i == 0 else determine_num_nodes(i, layers, min_nodes_per_layer, max_nodes_per_layer, nodes[i-1].size())
 
 		for j in range(num_nodes):
-			var node = CombatNode.new()
+			var node = MapNode.new()
 			node.type = determine_node_type(i, layers)
-			if i == 1:
-				node.activate = true
 			layer_nodes.append(node)
 
 		nodes.append(layer_nodes)
@@ -164,24 +177,3 @@ func connect_layers(prev_layer, next_layer):
 		for i in range(prev_layer.size()):
 			prev_layer[i].connections.append(next_layer[i])
 		connect_remaining_nodes(prev_layer, next_layer, shuffle_and_select_indices(prev_layer.size(), prev_layer.size()-1), true)
-
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 工具函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-func get_parameters(nodes) -> Vector2i:
-	var max_layers = len(nodes)
-	var max_nodes_in_layer = 0
-
-	for layer in nodes:
-		var layer_size = layer.size()
-		if layer_size > max_nodes_in_layer:
-			max_nodes_in_layer = layer_size
-
-	return Vector2i(max_layers, max_nodes_in_layer)
-
-func print_combat_progress (nodes):
-	for i in range(nodes.size()):
-		print("Layer", i, ":")
-		for node in nodes[i]:
-			var conn_ids = []
-			for connection in node.connections:
-				conn_ids.append(nodes[i+1].find(connection))  # 使用 find 函数来查找索引
-			print("  Node", nodes[i].find(node), " Type:", node.type, " Connections:", conn_ids)

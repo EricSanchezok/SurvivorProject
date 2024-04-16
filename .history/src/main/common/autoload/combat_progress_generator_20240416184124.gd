@@ -21,10 +21,7 @@ class CombatNode:
 		set(v):
 			activate = v
 			activate_changed.emit(v)
-	var selected = false:
-		set(v):
-			selected = v
-			selected_changed.emit(v)
+	var selected = false
 	
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 创建战斗进度 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cv8ior6sb7rd1"]
 
-[ext_resource type="Script" path="res://src/main/scene/ui/CombatProgressControl.gd" id="1_eky7h"]
+[ext_resource type="Script" path="res://src/main/scene/ui/combat_progress_control.gd" id="1_eky7h"]
 
 [node name="CombatProgressControl" type="Control"]
 layout_mode = 3

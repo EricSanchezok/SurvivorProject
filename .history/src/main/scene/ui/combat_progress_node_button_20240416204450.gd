@@ -1,6 +1,7 @@
 class_name CombatProgressNodeButton
 extends TextureButton
 
+
 var combat_node: CombatProgressGenerator.CombatNode = CombatProgressGenerator.CombatNode.new()
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -42,14 +43,17 @@ func _update_visual() -> void:
 			self.material.set_shader_parameter("line_color", Color(1,1,1,1))
 
 func _on_activate_changed(activate: bool) -> void:
+	# print(Engine.get_physics_frames(), "  activate changed to: ", activate)
 	disabled = not activate
 	_update_visual()
 
 func _on_selected_changed(selected: bool) -> void:
+	# print(Engine.get_physics_frames(), "  selected changed to: ", selected)
 	button_pressed = selected
 	_update_visual()
 	
 func _on_toggled(toggled_on: bool) -> void:
+	# print(Engine.get_physics_frames(), "  toggled changed to: ", toggled_on)
 	CombatRouteManager.update(combat_node, toggled_on)
 
 func _on_mouse_entered() -> void:

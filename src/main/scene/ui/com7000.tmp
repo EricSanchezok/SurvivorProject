@@ -7,7 +7,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pvx12"]
 shader = ExtResource("1_rtv7g")
 shader_parameter/line_color = Color(1, 1, 1, 0)
-shader_parameter/line_width = 2.0
+shader_parameter/line_width = 3.0
 
 [sub_resource type="Animation" id="Animation_7ey8q"]
 length = 0.001
