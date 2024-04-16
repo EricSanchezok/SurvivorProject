@@ -1,8 +1,6 @@
 extends Node2D
 
-
 @onready var weapons_instance: Node2D = $WeaponsInstance
-
 
 var players = []
 func _ready():

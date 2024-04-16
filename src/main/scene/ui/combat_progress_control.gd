@@ -5,7 +5,7 @@ extends Control
 @onready var scroll_container: ScrollContainer = $VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer
 @onready var v_box_container: VBoxContainer = $VBoxContainer/HBoxContainer/VBoxContainer
 
-var node_button = preload("res://src/main/scene/ui/combat_progress_node_button.tscn")
+var node_button = preload("res://src/main/common/classes/ui/combat_progress_node_button.tscn")
 
 var container_matrix := []  # 用于存储CenterContainer的二维数组
 var container_size :Vector2 = Vector2.ZERO
@@ -98,3 +98,7 @@ func _on_update_combat_progress(nodes: Array) -> void:
 	set_container(nodes)
 	draw_nodes(nodes)
 	
+
+
+func _on_texture_button_pressed() -> void:
+	Game.next_level = true

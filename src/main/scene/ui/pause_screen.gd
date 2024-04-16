@@ -3,6 +3,7 @@ extends Control
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+var first_tick: bool = true
 
 var up: bool = false
 var down: bool = false
@@ -11,6 +12,7 @@ var show_flag: bool = false
 
 func _ready() -> void:
 	$StateMachine.owner = self
+	$BackPackSprite2D.size = Vector2(384, 216)
 	hide()
 
 func _input(event):
@@ -22,18 +24,14 @@ func _input(event):
 		if event.is_action_pressed("move_down"):
 			down = true	
 	
-func show_pause() -> void:
+func show_pause_screen() -> void:
 	if not animation_playing():
 		show_flag = true
-		get_tree().paused = true
 	
-func hide_pause() -> void:
-	'''
-	结束暂停界面
-
-	**经过测试，这三行代码不能更换位置！**
-	'''
-	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+func start_pause() -> void:
+	get_tree().paused = true
+	
+func cancel_pause() -> void:
 	get_window().set_input_as_handled()
 	get_tree().paused = false
 
@@ -61,9 +59,6 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
-	## 打印视口中心点的坐标
-	#var camera_2d = get_viewport().get_camera_2d()
-	#print(camera_2d.get_screen_center_position())
 	match state:
 		State.CLOSE:
 			pass
@@ -176,11 +171,19 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	#print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 	match to:
 		State.CLOSE:
 			animation_player.play("Close")
+			if first_tick:
+				var animation_name = "Close"
+				animation_player.play(animation_name)
+				# 获取动画的长度
+				var animation_length = animation_player.get_animation(animation_name).length
+				# 直接跳转到动画的最后一帧
+				animation_player.seek(animation_length, true)
+				first_tick = false
 		State.OPEN:
 			animation_player.play("Open")
 		State.INVENTORY:
@@ -211,3 +214,4 @@ func transition_state(from: State, to: State) -> void:
 			animation_player.play("SettingsAppear")
 		State.SETTINGS_LEAVE:
 			animation_player.play("SettingsDisappear")
+

@@ -32,7 +32,7 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
-		Game.pause_screen.show_pause()
+		Game.pause_screen.show_pause_screen()
 
 func stand() -> void:
 	'''
@@ -112,11 +112,8 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:
-	#print("[%s] %s => %s" % [
-		#Engine.get_physics_frames()	,
-		#State.keys()[from] if from != -1 else "<START>",
-		#State.keys()[to],
-	#])
+	#print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+
 
 	match from:
 		State.IDLE:
