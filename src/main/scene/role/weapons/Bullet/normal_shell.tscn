@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxbue0132al4r"]
+[gd_scene load_steps=6 format=3 uid="uid://bxbue0132al4r"]
 
 [ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/main/common/classes/base_weapons/bullet.tscn" id="1_5vywr"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Bullet/normal_shell.gd" id="2_iradr"]
@@ -8,8 +8,14 @@
 atlas = ExtResource("3_gcnhd")
 region = Rect2(51, 250, 8, 9)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3iipc"]
+radius = 5.09902
+
 [node name="normal_shell" instance=ExtResource("1_5vywr")]
 script = ExtResource("2_iradr")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 texture = SubResource("AtlasTexture_1nj2d")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CircleShape2D_3iipc")

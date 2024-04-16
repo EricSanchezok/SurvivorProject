@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/main/common/classes/base_weapons/turret.gd" id="1_hmg1o"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="2_jc7ny"]
 
-[node name="turret" type="Node2D"]
+[node name="turret" type="Node2D" groups=["turrets"]]
 script = ExtResource("1_hmg1o")
 
 [node name="Graphics" type="Node2D" parent="."]
@@ -11,6 +11,8 @@ script = ExtResource("1_hmg1o")
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
@@ -19,6 +21,7 @@ script = ExtResource("1_hmg1o")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AttackWaitTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_jc7ny")

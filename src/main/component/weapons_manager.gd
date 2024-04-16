@@ -24,7 +24,7 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, wea
 	var weapon_instance = weapons_instance.instance_weapon(weaponName) # 实例化武器
 	
 	# 设置武器实例属性
-	weapon_instance.slot = slot_instance 
+	weapon_instance.slot = slot_instance
 	weapon_instance.player = player
 	weapon_instance.playerStats = player.playerStats
 	weapon_instance.position = slot_instance.global_position

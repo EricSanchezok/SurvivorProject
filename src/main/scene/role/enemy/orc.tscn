@@ -712,6 +712,7 @@ shape = SubResource("CapsuleShape2D_7p2d1")
 
 [node name="EnemyStats" parent="." index="3"]
 base_max_health = 30.0
+base_movement_speed = 50.0
 
 [node name="AnimationPlayer" parent="." index="4"]
 libraries = {

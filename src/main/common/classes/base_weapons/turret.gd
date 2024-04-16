@@ -54,7 +54,7 @@ var enemies: Array = []
 var bullet_count:float = 0 #子弹计数器
 var target: CharacterBody2D = null
 var targetPos: Vector2 = Vector2()
-signal number_of_turrets(number_of_turrets)
+
 
 func _ready() -> void:
 	'''
@@ -65,14 +65,7 @@ func _ready() -> void:
 	_update_parameters()
 	playerStats.connect("stats_changed", _on_stats_changed)
 
-func aim_success() -> bool:
-	'''
-	瞄准成功
 
-	:return: bool
-	'''
-	var dir := (targetPos - global_position).normalized()
-	return Tools.are_angles_close(rotation, dir.angle())
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and not enemies.has(body):
@@ -120,42 +113,44 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
+	target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
 	if  target:
 		targetPos = target.global_position
-		var dir := (targetPos - global_position).normalized()
 	
 	match state:
+		State.APPEAR:
+			pass
 		State.WAIT:
 			pass
 		State.FIRE:
-			animation_player.play("fire")
+			pass
 			
 func get_next_state(state: State) -> int:
 	match state:
 		State.APPEAR:
-			number_of_turrets.emit(1)
-			return State.WAIT
+			if not animation_player.is_playing():
+				return State.WAIT
 		State.WAIT:
-			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
 			if target and attack_wait_timer.is_stopped(): 
 				return State.FIRE
 		State.FIRE:
-				bullet_count =0
+			if not animation_player.is_playing():
 				return State.WAIT
 				
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:
-	# print("[%s] %s => %s" % [
-	# 	Engine.get_physics_frames()	,
-	# 	State.keys()[from] if from != -1 else "<START>",
-	# 	State.keys()[to],
-	# ])
+	#print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	
 	match to:
+		State.APPEAR:
+			var turret_generator = get_tree().root.get_node("bg_map/turretGenerator")
+			position = turret_generator.get_random_position()
+			animation_player.play("appear")
 		State.WAIT:
 			pass
 		State.FIRE:
-			pass
+			animation_player.play("fire")
 
 func shoot() ->void:
 	var now_bullet = bullets["normal_shell"].instantiate()
