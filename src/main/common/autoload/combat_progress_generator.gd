@@ -79,8 +79,6 @@ func determine_num_nodes(layer_index: int, total_layers: int, min_nodes_per_laye
 		return max_nodes_per_layer  # 返回对于第二层和倒数第二层的最大节点数量
 	else:
 		var num_nodes = randi_range(min_nodes_per_layer, max_nodes_per_layer)
-		# while num_nodes == prev_layer_nodes:
-		# 	num_nodes = randi_range(min_nodes_per_layer, max_nodes_per_layer)
 		return num_nodes
 
 

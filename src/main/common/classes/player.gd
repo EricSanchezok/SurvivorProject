@@ -1,13 +1,14 @@
 class_name Player
 extends CharacterBody2D
 
+@export var default_weapon: String = "normal_sword"
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var graphics: Node2D = $Graphics
 @onready var playerStats: PlayerStats = $PlayerStats
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var invincible_timer: Timer = $InvincibleTimer
-@onready var pause_screen: Control = $CanvasLayer/PauseScreen
 @onready var weapons_track: Node2D = $WeaponsTrack
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, weapon_slot: int)
@@ -24,11 +25,14 @@ enum Direction {
 		if not is_node_ready():
 			await ready
 		graphics.scale.x = direction	
+		
+func _ready() -> void:
+	register_weapon.emit(self, default_weapon, 1)
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
-		pause_screen.show_pause()
+		Game.pause_screen.show_pause()
 
 func stand() -> void:
 	'''

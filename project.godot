@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Game="*res://src/main/common/autoload/game.tscn"
 Tools="*res://src/main/common/autoload/tools.gd"
 CombatProgressGenerator="*res://src/main/common/autoload/combat_progress_generator.gd"
 CombatRouteManager="*res://src/main/common/autoload/combat_route_manager.gd"
@@ -25,6 +26,7 @@ CombatRouteManager="*res://src/main/common/autoload/combat_route_manager.gd"
 
 window/size/viewport_width=384
 window/size/viewport_height=216
+window/size/always_on_top=true
 window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="canvas_items"

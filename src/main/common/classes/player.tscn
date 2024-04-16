@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn4p6111oiol3"]
+[gd_scene load_steps=8 format=3 uid="uid://cn4p6111oiol3"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/player.gd" id="1_jpkda"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_hj28x"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_y7wn2"]
 [ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="5_n3ida"]
 [ext_resource type="PackedScene" uid="uid://bprrbvv515u6e" path="res://src/main/component/weapons_track.tscn" id="6_lsui7"]
-[ext_resource type="PackedScene" uid="uid://b7r4uo6xex26a" path="res://src/main/scene/ui/pause_screen.tscn" id="6_qc3b2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg6c6"]
 radius = 8.0
@@ -59,9 +58,5 @@ position_smoothing_enabled = true
 [node name="InvincibleTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("6_qc3b2")]
 
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]
