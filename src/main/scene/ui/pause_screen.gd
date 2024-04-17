@@ -3,12 +3,14 @@ extends Control
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+
 var up: bool = false
 var down: bool = false
 
 var show_flag: bool = false
 
 func _ready() -> void:
+	$StateMachine.owner = self
 	hide()
 
 func _input(event):
@@ -62,7 +64,6 @@ func tick_physics(state: State, delta: float) -> void:
 	## 打印视口中心点的坐标
 	#var camera_2d = get_viewport().get_camera_2d()
 	#print(camera_2d.get_screen_center_position())
-
 	match state:
 		State.CLOSE:
 			pass

@@ -28,10 +28,11 @@ func update(selected_node: CombatProgressGenerator.CombatNode, selected: bool) -
 	if selected:
 		for node in current_combat_progress[vec_index.x]:
 			if node == selected_node:
+				if only_one_way(node):
+					print("only one way")
 				node.selected = true
 				for connection in node.connections:
-					if connection.type != CombatProgressGenerator.NodeType.END:
-						connection.activate = true
+					connection.activate = true
 			else:
 				node.selected = false
 				for connection in node.connections:
@@ -54,11 +55,6 @@ func update(selected_node: CombatProgressGenerator.CombatNode, selected: bool) -
 					if i == current_combat_progress.size() - 2:
 						current_route.append(current_combat_progress[i][j])
 					break
-	#print("-----------------------------------------")
-	#var index = 0
-	#for node in current_route:
-		#print(index, ":", node.type, " ")
-		#index += 1
 	
 func get_combat_node_index(combat_node: CombatProgressGenerator.CombatNode) -> Vector2i:
 	'''
