@@ -4,6 +4,8 @@ var current_combat_progress: Array
 var current_layer_index: int
 var current_route: Array
 
+signal update_current_route
+
 func _ready() -> void:
 		CombatProgressGenerator.connect("update_combat_progress", _on_update_combat_progress)
 
