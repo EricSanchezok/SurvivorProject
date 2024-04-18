@@ -4216,7 +4216,7 @@ grow_vertical = 2
 script = ExtResource("1_0ec10")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="PauseScreen"]
-color = Color(0.607843, 0.607843, 0.607843, 1)
+color = Color(0.370364, 0.370364, 0.370364, 1)
 
 [node name="ColorRect" type="ColorRect" parent="PauseScreen"]
 z_index = -20
@@ -4227,7 +4227,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.054902, 0.0823529, 0.160784, 0.345098)
+color = Color(0.10527, 0.145107, 0.258785, 0.345098)
 
 [node name="StateMachine" type="Node" parent="PauseScreen"]
 script = ExtResource("2_uc0um")
