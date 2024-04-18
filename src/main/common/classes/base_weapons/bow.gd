@@ -15,7 +15,7 @@ var playerStats: Node
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var base_physical_attack_power: float = 3.0
-@export var base_magic_attack_power: float = 0.0
+@export var base_magic_attack_power: float = 5.0
 @export var base_attack_range: float = 150.0 # 自动索敌的范围
 @export var base_attack_speed: float = 300.0
 @export var base_rotation_speed: float = 15.0
@@ -34,7 +34,7 @@ var knockback: float
 var damage: float = 0.0 # 能够造成的总伤害
 var projectile_speed: float
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 特殊属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-var penetration_rate: float = 0.3
+var penetration_rate: float = 0.0
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 变量定义 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var bullets = {
@@ -44,6 +44,7 @@ var enemies: Array = []
 
 var target: CharacterBody2D = null
 var targetPos: Vector2 = Vector2()
+var targetInitialPos: Vector2 = Vector2()
 
 func _ready() -> void:
 	'''
@@ -92,6 +93,7 @@ func get_next_state(state: State) -> int:
 		State.WAIT:
 			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
 			if target and attack_wait_timer.is_stopped():
+				targetInitialPos = target.position
 				return State.AIMNG
 		State.AIMNG:
 			if (not animation_player.is_playing() and aim_success()) or not target:
@@ -124,7 +126,8 @@ func shoot() -> void:
 	now_bullet.knockback = knockback
 	now_bullet.penetration_rate = penetration_rate
 	now_bullet.position = marker_2d.global_position
-	now_bullet.dir = (targetPos - now_bullet.position).normalized()
+	now_bullet.target = target
+	now_bullet.targetInitialPos = targetInitialPos
 	get_tree().root.add_child(now_bullet)
 
 	attack_wait_timer.start()

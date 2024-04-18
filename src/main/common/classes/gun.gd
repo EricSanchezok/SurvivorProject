@@ -14,15 +14,15 @@ var playerStats: Node
 @onready var marker_2d: Marker2D = $Marker2D
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@export var base_physical_attack_power: float = 0.0  #物理攻击力
-@export var base_magic_attack_power: float = 3.0   #魔法攻击力
+@export var base_physical_attack_power: float = 4.0  #物理攻击力
+@export var base_magic_attack_power: float = 0.0   #魔法攻击力
 @export var base_attack_range: float = 150.0 #自动索敌的范围
 @export var base_attack_speed: float = 300.0  #攻击速度
 @export var base_rotation_speed: float = 15.0   #旋转速度
 @export var base_attack_wait_time: float = 1.5   #攻击间隔
 @export var base_knockback: float = 30.0    #击退效果
 @export var base_critical_hit_rate: float = 0.0  #暴击率
-@export var base_critical_damage: float = 1.5    #暴击伤害
+@export var base_critical_damage: float = 0.0    #暴击伤害
 @export var base_number_of_projectiles: int = 1   #发射物数量
 @export var base_projectile_speed: float = 200.0   #发射物速度
 
@@ -56,6 +56,7 @@ var enemies: Array = []
 var bullet_count:float = 0 #子弹计数器
 var target: CharacterBody2D = null
 var targetPos: Vector2 = Vector2()
+var targetInitialPos: Vector2 = Vector2()
 
 func _ready() -> void:
 	'''
@@ -84,7 +85,7 @@ func _update_parameters() -> void:
 	'''
 	physical_attack_power = base_physical_attack_power * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
 	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
-	damage = (physical_attack_power + magic_attack_power) * critical_hit_rate * critical_damage
+
 	attack_range = base_attack_range * playerStats.attack_range_multiplier
 	searching_shape_2d.shape.radius = attack_range
 	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
@@ -97,6 +98,8 @@ func _update_parameters() -> void:
 	critical_damage = base_critical_damage + playerStats.critical_damage
 	number_of_projectiles=base_number_of_projectiles + playerStats.number_of_projectiles
 	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier
+	
+	damage = physical_attack_power + magic_attack_power
 	
 	explosion_range = base_explosion_range * playerStats.attack_range_multiplier
 	magazine = base_magazine + playerStats.number_of_projectiles
@@ -143,6 +146,7 @@ func get_next_state(state: State) -> int:
 		State.WAIT:
 			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
 			if target and attack_wait_timer.is_stopped(): 
+				targetInitialPos = target.position
 				return State.AIMNG
 		State.AIMNG:
 			if  aim_success() :
@@ -174,7 +178,8 @@ func shoot() ->void:
 	now_bullet.penetration_rate = penetration_rate
 	now_bullet.explosion_range = explosion_range
 	now_bullet.position = marker_2d.global_position
-	now_bullet.dir = (targetPos - now_bullet.position).normalized()
+	now_bullet.target = target
+	now_bullet.targetInitialPos = targetInitialPos
 	get_tree().root.add_child(now_bullet)
 	bullet_count += 1
 	attack_wait_timer.start()

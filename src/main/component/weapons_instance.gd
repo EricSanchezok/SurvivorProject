@@ -10,10 +10,11 @@ extends Node
 	"normal_axe": preload("res://src/main/scene/role/weapons/Axe/normal_axe.tscn"),
 	"normal_spear": preload("res://src/main/scene/role/weapons/Spear/normal_spear.tscn"),
 	"normal_boomerang": preload("res://src/main/scene/role/weapons/Boomerang/normal_boomerang.tscn"),
-	"normal_caser": preload("res://src/main/scene/role/weapons/Caser/normal_caser.tscn"),
+	"normal_wand": preload("res://src/main/scene/role/weapons/Wand/normal_wand.tscn"),
 	"normal_gun": preload("res://src/main/scene/role/weapons/Gun/normal_gun.tscn"),
 	"normal_bomb": preload("res://src/main/scene/role/weapons/Bomb/normal_bomb.tscn"),
 	"normal_turret": preload("res://src/main/scene/role/weapons/Turret/normal_turret.tscn"),
+	"normal_laser_wand": preload("res://src/main/scene/role/weapons/LaserWand/normal_laser_wand.tscn"),
 }
 
 

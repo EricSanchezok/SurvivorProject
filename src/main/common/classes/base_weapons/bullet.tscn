@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqd8dqmnefqj"]
+[gd_scene load_steps=4 format=3 uid="uid://cqd8dqmnefqj"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/base_weapons/bullet.gd" id="1_gbdxo"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_msyim"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_2k0h8"]
 
 [node name="Bullet" type="CharacterBody2D"]
 z_index = 200
@@ -30,6 +31,9 @@ script = ExtResource("2_msyim")
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_2k0h8")
 
 [connection signal="hit" from="Graphics/HitBox" to="." method="_on_hit_box_hit"]
 [connection signal="timeout" from="DestructionTimer" to="." method="_on_destruction_timer_timeout"]

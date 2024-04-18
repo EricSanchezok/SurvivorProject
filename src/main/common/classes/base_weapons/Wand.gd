@@ -1,4 +1,4 @@
-class_name Caser
+class_name Wand
 extends Node2D
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 武器基类 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -55,7 +55,7 @@ var penetration_rate: float = base_penetration_rate
 var enemies: Array = []
 var target: CharacterBody2D = null
 var targetPos: Vector2 = Vector2()
-
+var targetInitialPos: Vector2 = Vector2()
 
 func _ready() -> void:
 	'''
@@ -83,7 +83,7 @@ func _update_parameters() -> void:
 	'''
 	physical_attack_power = base_physical_attack_power * playerStats.physical_attack_power_multiplier * playerStats.attack_power_multiplier
 	magic_attack_power = base_magic_attack_power * playerStats.magic_attack_power_multiplier * playerStats.attack_power_multiplier
-	damage = (physical_attack_power + magic_attack_power) * critical_hit_rate * critical_damage
+	damage = physical_attack_power + magic_attack_power
 	attack_range = base_attack_range * playerStats.attack_range_multiplier
 	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
 	attack_speed = base_attack_speed * playerStats.attack_speed_multiplier
@@ -138,6 +138,7 @@ func get_next_state(state: State) -> int:
 		State.WAIT:
 			target = Tools.get_nearest_enemy(attack_range, enemies, global_position)
 			if target and attack_wait_timer.is_stopped():
+				targetInitialPos = target.position
 				return State.FIRE
 		State.FIRE:
 			if not animation_player.is_playing():
@@ -163,6 +164,7 @@ func shoot() ->void:
 	now_bullet.penetration_rate = penetration_rate
 	now_bullet.explosion_range = explosion_range
 	now_bullet.position = marker_2d.global_position
-	now_bullet.dir = (targetPos - now_bullet.position).normalized()
+	now_bullet.target = target
+	now_bullet.targetInitialPos = targetInitialPos
 	get_tree().root.add_child(now_bullet)
 	attack_wait_timer.start()
