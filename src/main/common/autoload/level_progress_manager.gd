@@ -76,18 +76,20 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:
-	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 	match to:
 		State.IDLE:
 			pass
 		State.CHOOSE_ROUTE:
 			Game.pause_screen.animation_player.play("OnlyCombatProgressAppear")
+			Game.pause_screen.global_animation_player.play("enter_pause_screen")
 		State.WAIT_TO_CHOOSE:
 			pass
 		State.CHOOSE_ROUTE_LEAVE:
 			confirm = false
 			Game.pause_screen.animation_player.play("OnlyCombatProgressDisappear")
+			Game.pause_screen.global_animation_player.play("leave_pause_screen")
 		State.ENTER:
 			current_level_index += 1
 		State.SHOP:

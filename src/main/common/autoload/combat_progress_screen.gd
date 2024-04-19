@@ -12,8 +12,8 @@ var container_size :Vector2 = Vector2.ZERO
 var lines := []
 var lines_base_points := []
 
-var map_width: float =  125
-var map_height: float = 64
+var map_width: float =  201
+var map_height: float = 105
 
 func _ready() -> void:
 	CombatProgressGenerator.connect("update_combat_progress", _on_update_combat_progress)

@@ -2,12 +2,17 @@ extends Control
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var global_animation_player: AnimationPlayer = $GlobalAnimationPlayer
+@onready var canvas_modulate: CanvasModulate = $CanvasModulate
+
+
+signal show_equipment_screen(show: bool)
 
 var first_tick: bool = true
 
 var up: bool = false
 var down: bool = false
-
+var close_prepare_finished: bool = false
 var show_flag: bool = false
 
 func _ready() -> void:
@@ -18,9 +23,8 @@ func _ready() -> void:
 func _input(event):
 	if event.is_action_pressed("pause"):
 		show_flag = false
-	if not animation_playing():
+	if not animation_playing() and show_flag:
 		if event.is_action_pressed("move_up"):
-			print("fuck")
 			up = true
 		if event.is_action_pressed("move_down"):
 			down = true	
@@ -28,6 +32,20 @@ func _input(event):
 func show_pause_screen() -> void:
 	if not animation_playing():
 		show_flag = true
+		
+func need_close_prepare() -> bool:
+	if $BackPackSprite2D.scale != Vector2(1, 1):
+		return true
+	return false
+
+func animation_playing() -> bool:
+	return animation_player.is_playing()
+		
+func show_equip() -> void:
+	show_equipment_screen.emit(true)
+	
+func hide_equip() -> void:
+	show_equipment_screen.emit(false)
 	
 func start_pause() -> void:
 	get_tree().paused = true
@@ -35,10 +53,7 @@ func start_pause() -> void:
 func cancel_pause() -> void:
 	get_window().set_input_as_handled()
 	get_tree().paused = false
-
-func animation_playing() -> bool:
-	return animation_player.is_playing()
-
+	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 enum State {
 	CLOSE,
@@ -176,17 +191,21 @@ func transition_state(from: State, to: State) -> void:
 
 	match to:
 		State.CLOSE:
-			animation_player.play("Close")
+			close_prepare_finished = false
+			if need_close_prepare():
+				animation_player.play("CloseWithPrepare")
+			else:
+				animation_player.play("Close")
+			global_animation_player.play("leave_pause_screen")
 			if first_tick:
 				var animation_name = "Close"
 				animation_player.play(animation_name)
-				# 获取动画的长度
 				var animation_length = animation_player.get_animation(animation_name).length
-				# 直接跳转到动画的最后一帧
 				animation_player.seek(animation_length, true)
 				first_tick = false
 		State.OPEN:
 			animation_player.play("Open")
+			global_animation_player.play("enter_pause_screen")
 		State.INVENTORY:
 			animation_player.play("Inventory")
 		State.INVENTORY_LEAVE:

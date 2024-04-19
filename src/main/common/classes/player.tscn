@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cn4p6111oiol3"]
+[gd_scene load_steps=9 format=3 uid="uid://cn4p6111oiol3"]
 
 [ext_resource type="Script" path="res://src/main/common/classes/player.gd" id="1_jpkda"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_hj28x"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_y7wn2"]
 [ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="5_n3ida"]
+[ext_resource type="PackedScene" uid="uid://3rpnjuxjd6oo" path="res://src/main/scene/ui/equipment_screen.tscn" id="6_kpxy7"]
 [ext_resource type="PackedScene" uid="uid://bprrbvv515u6e" path="res://src/main/component/weapons_track.tscn" id="6_lsui7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg6c6"]
@@ -61,5 +62,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EquipmentScreen" parent="CanvasLayer" instance=ExtResource("6_kpxy7")]
 
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]
