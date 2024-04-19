@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://2jlh6yar57x1"]
-
-[ext_resource type="PackedScene" uid="uid://jjmqstgbpd8u" path="res://src/main/common/classes/base_weapons/test.tscn" id="1_h2gr3"]
-
-[node name="NormalTest" instance=ExtResource("1_h2gr3")]

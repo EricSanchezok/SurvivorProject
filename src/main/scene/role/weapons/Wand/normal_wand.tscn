@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dr841735h0yqn"]
 
-[ext_resource type="PackedScene" uid="uid://cm3glfa668d5e" path="res://src/main/common/classes/base_weapons/Wand.tscn" id="1_kkxg3"]
+[ext_resource type="PackedScene" uid="uid://cm3glfa668d5e" path="res://src/main/common/classes/base_weapons/wand.tscn" id="1_e7sc2"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Wand/normal_wandr.gd" id="2_28f5l"]
 [ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/1BitAssets/16x16_weapons.png" id="3_a1k02"]
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="4_3mogi"]
@@ -60,7 +60,7 @@ _data = {
 "charge": SubResource("Animation_ytjlr")
 }
 
-[node name="normal_caser" instance=ExtResource("1_kkxg3")]
+[node name="normal_caser" instance=ExtResource("1_e7sc2")]
 script = ExtResource("2_28f5l")
 
 [node name="Sprite2D" parent="Graphics" index="0"]

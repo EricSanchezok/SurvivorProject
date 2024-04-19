@@ -20,6 +20,7 @@ func _input(event):
 		show_flag = false
 	if not animation_playing():
 		if event.is_action_pressed("move_up"):
+			print("fuck")
 			up = true
 		if event.is_action_pressed("move_down"):
 			down = true	

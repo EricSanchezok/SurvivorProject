@@ -1,4 +1,4 @@
-[gd_scene load_steps=218 format=3 uid="uid://cjtl76o2osd63"]
+[gd_scene load_steps=231 format=3 uid="uid://cjtl76o2osd63"]
 
 [ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_0ec10"]
 [ext_resource type="Script" path="res://src/main/common/autoload/game.gd" id="1_o6wew"]
@@ -196,7 +196,17 @@
 [ext_resource type="Texture2D" uid="uid://dsq8xmuoptbil" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/232.png" id="192_3pk7l"]
 [ext_resource type="Texture2D" uid="uid://c5gbxf1bqieak" path="res://src/main/assets/packs/Wood Buttons v1.0/1 Slice Buttons 32x32/Brown Buttons/57.png" id="195_1hdxj"]
 [ext_resource type="PackedScene" uid="uid://bpooajq7gmp2m" path="res://src/main/scene/ui/shop_screen.tscn" id="195_f6gt2"]
-[ext_resource type="PackedScene" uid="uid://3rpnjuxjd6oo" path="res://src/main/scene/ui/equipment_screen.tscn" id="196_shqut"]
+[ext_resource type="Script" path="res://src/main/scene/ui/equipment_screen.gd" id="197_qxqel"]
+[ext_resource type="Texture2D" uid="uid://cpixkjrm6j1kh" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Decorations/2.png" id="198_1iqfg"]
+[ext_resource type="Texture2D" uid="uid://d2klda8wt5mn7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/0.png" id="199_kh3xy"]
+[ext_resource type="Texture2D" uid="uid://2l2ml0a7dd5u" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Items/5.png" id="200_w5puy"]
+[ext_resource type="Texture2D" uid="uid://6tmw40qkaaim" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/1.png" id="201_5tptq"]
+[ext_resource type="Texture2D" uid="uid://bioblbs66ydka" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Progress Bars/1.png" id="201_kw2q8"]
+[ext_resource type="Texture2D" uid="uid://cotp6fq5fvc6k" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Progress Bars/0.png" id="202_f7s1p"]
+[ext_resource type="Texture2D" uid="uid://cetihw8rnkliw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/5.png" id="204_u1h2n"]
+[ext_resource type="Texture2D" uid="uid://deu4csk3rlf87" path="res://src/main/assets/texture/tiles/1bit 16px patterns and tiles.png" id="205_rwsu3"]
+[ext_resource type="Texture2D" uid="uid://bryi2rgrcbbpn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/8.png" id="206_g8xsw"]
+[ext_resource type="Texture2D" uid="uid://dc8l4gtp2yvja" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Decorations/1.png" id="207_5v0pa"]
 
 [sub_resource type="Animation" id="Animation_ggifj"]
 resource_name = "Close"
@@ -301,7 +311,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("CombatProgressControl:visible")
+tracks/8/path = NodePath("../CombatProgressScreen:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -387,7 +397,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/15/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -399,7 +409,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -411,7 +421,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -423,7 +433,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/18/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -548,7 +558,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -572,7 +582,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -584,7 +594,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -596,7 +606,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -608,7 +618,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -632,7 +642,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -644,7 +654,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -768,7 +778,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -792,7 +802,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -804,7 +814,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -816,7 +826,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -828,7 +838,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -965,7 +975,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -989,7 +999,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1001,7 +1011,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1013,7 +1023,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1025,7 +1035,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1162,7 +1172,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1186,7 +1196,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1198,7 +1208,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1210,7 +1220,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1222,7 +1232,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1359,7 +1369,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1383,7 +1393,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1395,7 +1405,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1407,7 +1417,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1419,7 +1429,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1555,7 +1565,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1579,7 +1589,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1591,7 +1601,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1603,7 +1613,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1615,7 +1625,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1752,7 +1762,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1776,7 +1786,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1788,7 +1798,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1800,7 +1810,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1812,7 +1822,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1836,7 +1846,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -1848,7 +1858,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -1874,7 +1884,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("CombatProgressControl/VBoxContainer/ControlUp/Label:self_modulate")
+tracks/19/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlUp/Label:self_modulate")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -1886,7 +1896,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
+tracks/20/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -2011,7 +2021,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2035,7 +2045,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -2047,7 +2057,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -2059,7 +2069,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -2071,7 +2081,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -2109,7 +2119,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/ControlUp/Label:self_modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlUp/Label:self_modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -2121,7 +2131,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
+tracks/18/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -2246,7 +2256,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2306,7 +2316,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -2318,7 +2328,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/15/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -2330,7 +2340,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -2342,7 +2352,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -2480,7 +2490,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2504,7 +2514,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -2516,7 +2526,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -2528,7 +2538,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -2540,7 +2550,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -2677,7 +2687,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2701,7 +2711,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -2713,7 +2723,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -2725,7 +2735,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -2737,7 +2747,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -2872,7 +2882,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2896,7 +2906,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -2908,7 +2918,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -2920,7 +2930,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -2932,7 +2942,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -2956,7 +2966,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -2968,7 +2978,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -2980,7 +2990,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("CombatProgressControl/VBoxContainer/ControlUp/Label:self_modulate")
+tracks/18/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlUp/Label:self_modulate")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -2992,7 +3002,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
+tracks/19/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -3116,7 +3126,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -3140,7 +3150,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -3152,7 +3162,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -3164,7 +3174,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -3176,7 +3186,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -3312,7 +3322,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -3336,7 +3346,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -3348,7 +3358,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -3360,7 +3370,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -3372,7 +3382,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -3508,7 +3518,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -3532,7 +3542,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -3544,7 +3554,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -3556,7 +3566,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -3568,7 +3578,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -3704,7 +3714,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -3728,7 +3738,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -3740,7 +3750,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -3752,7 +3762,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -3764,7 +3774,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -3900,7 +3910,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -3924,7 +3934,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -3936,7 +3946,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -3948,7 +3958,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -3960,7 +3970,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -4096,7 +4106,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -4120,7 +4130,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -4132,7 +4142,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -4144,7 +4154,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -4156,7 +4166,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -4201,11 +4211,34 @@ _data = {
 "TopPouchOpenT": SubResource("Animation_x52j3")
 }
 
-[node name="Game" type="CanvasLayer"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpgsp"]
+atlas = ExtResource("205_rwsu3")
+region = Rect2(362, 394, 46, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7cpe"]
+texture = SubResource("AtlasTexture_mpgsp")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 10.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0.592157, 0.388235, 0.356863, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utn1l"]
+texture = ExtResource("206_g8xsw")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[node name="Game" type="Node"]
 process_mode = 3
 script = ExtResource("1_o6wew")
 
-[node name="PauseScreen" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" type="Control" parent="CanvasLayer"]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -4215,10 +4248,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ec10")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="PauseScreen"]
-color = Color(0.370364, 0.370364, 0.370364, 1)
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/PauseScreen"]
+color = Color(0.603922, 0.603922, 0.603922, 1)
 
-[node name="ColorRect" type="ColorRect" parent="PauseScreen"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PauseScreen"]
 z_index = -20
 z_as_relative = false
 layout_mode = 1
@@ -4227,18 +4260,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.10527, 0.145107, 0.258785, 0.345098)
+color = Color(0.054902, 0.0823529, 0.160784, 0.345098)
 
-[node name="StateMachine" type="Node" parent="PauseScreen"]
+[node name="StateMachine" type="Node" parent="CanvasLayer/PauseScreen"]
 script = ExtResource("2_uc0um")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PauseScreen"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/PauseScreen"]
 libraries = {
 "": SubResource("AnimationLibrary_nld0k")
 }
 speed_scale = 2.0
 
-[node name="BackPackSprite2D" type="TextureRect" parent="PauseScreen"]
+[node name="BackPackSprite2D" type="TextureRect" parent="CanvasLayer/PauseScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TabsSprite2D" type="TextureRect" parent="CanvasLayer/PauseScreen/BackPackSprite2D"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4248,17 +4292,7 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TabsSprite2D" type="TextureRect" parent="PauseScreen/BackPackSprite2D"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="PanelSprite2D" type="TextureRect" parent="PauseScreen/BackPackSprite2D/TabsSprite2D"]
+[node name="PanelSprite2D" type="TextureRect" parent="CanvasLayer/PauseScreen/BackPackSprite2D/TabsSprite2D"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4269,9 +4303,9 @@ texture = ExtResource("35_mn6ex")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CombatProgressControl" type="Control" parent="PauseScreen"]
+[node name="CombatProgressScreen" type="Control" parent="CanvasLayer"]
 visible = false
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -4281,7 +4315,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("186_y1uxy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen/CombatProgressControl"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CombatProgressScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4291,12 +4325,12 @@ grow_vertical = 2
 theme = ExtResource("190_o8da1")
 theme_override_constants/separation = 0
 
-[node name="ControlUp" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer"]
+[node name="ControlUp" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.3
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/ControlUp"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlUp"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -4314,16 +4348,16 @@ text = "Please select your next combat route."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.88
 
-[node name="ControlLeft" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer"]
+[node name="ControlLeft" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 z_as_relative = false
 layout_mode = 2
@@ -4331,7 +4365,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
@@ -4343,7 +4377,7 @@ text = "Combat Progress"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.35
@@ -4351,25 +4385,25 @@ texture = ExtResource("188_d3qqh")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.15
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="ControlRight" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer"]
+[node name="ControlRight" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4380,109 +4414,508 @@ mouse_filter = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_bottom = 40
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer1" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("189_8eg1p")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
 layout_mode = 2
 size_flags_horizontal = 2
 theme = ExtResource("190_o8da1")
 text = "Stay vigilant"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("190_705vf")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Be prepared......"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("191_iqilp")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Fortune favors the bold!"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("192_3pk7l")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Who Knows?"
 
-[node name="ControlDown" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer"]
+[node name="ControlDown" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.1
 
-[node name="MarginContainer" type="MarginContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/ControlDown"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 15
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="TextureButton" type="TextureButton" parent="PauseScreen/CombatProgressControl/VBoxContainer/ControlDown/MarginContainer"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 texture_normal = ExtResource("195_1hdxj")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ShopScreen" parent="." instance=ExtResource("195_f6gt2")]
+[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("195_f6gt2")]
 
-[node name="EquipmentScreen" parent="." instance=ExtResource("196_shqut")]
+[node name="EquipmentScreen" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("190_o8da1")
+script = ExtResource("197_qxqel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/EquipmentScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("190_o8da1")
+theme_override_constants/separation = 0
+
+[node name="ControlUP" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.8
+theme_override_constants/separation = 0
+
+[node name="ControlLeft" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainerLeft" type="MarginContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 6
+
+[node name="Status" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 2
+offset_right = 72.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 16
+text = "Status"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TitleLine" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_top = 13.0
+offset_right = 72.0
+offset_bottom = 19.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("198_1iqfg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Player" type="Label" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
 visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 29.0
+offset_right = 56.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 5
+text = "PLAYER"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AvatarHolder" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 35.0
+offset_right = 49.0
+offset_bottom = 62.0
+texture = ExtResource("199_kh3xy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlayerHead" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status/AvatarHolder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("200_w5puy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 45.0
+offset_right = 84.0
+offset_bottom = 109.0
+scale = Vector2(0.348, 0.348)
+pivot_offset = Vector2(48, 0)
+max_value = 1.0
+step = 0.01
+value = 1.0
+fill_mode = 3
+texture_under = ExtResource("201_kw2q8")
+texture_progress = ExtResource("202_f7s1p")
+
+[node name="WeaponHolder1" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 43.0
+offset_bottom = 34.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder2" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 29.0
+offset_bottom = 37.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder3" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 22.0
+offset_right = 58.0
+offset_bottom = 37.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder4" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 30.0
+offset_right = 17.0
+offset_bottom = 45.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder5" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 30.0
+offset_right = 70.0
+offset_bottom = 45.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder6" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 54.0
+offset_right = 17.0
+offset_bottom = 69.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder7" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 63.0
+offset_right = 29.0
+offset_bottom = 78.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder8" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 67.0
+offset_right = 43.0
+offset_bottom = 82.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder9" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 63.0
+offset_right = 58.0
+offset_bottom = 78.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="WeaponHolder10" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerLeft/Status"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 54.0
+offset_right = 70.0
+offset_bottom = 69.0
+texture = ExtResource("201_5tptq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MarginContainerRight" type="MarginContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 0
+
+[node name="Equip" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip"]
+layout_mode = 2
+offset_right = 69.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 16
+text = "Equip"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TitleLine" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip"]
+layout_mode = 0
+offset_top = 15.0
+offset_right = 72.0
+offset_bottom = 21.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("198_1iqfg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 24.0
+offset_right = 66.0
+offset_bottom = 55.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = -2
+columns = 5
+
+[node name="Equip1" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip2" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip3" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip4" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip5" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip6" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip7" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip8" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip9" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Equip10" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("204_u1h2n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 55.0
+offset_right = 212.0
+offset_bottom = 165.0
+scale = Vector2(0.31, 0.31)
+theme_override_styles/panel = SubResource("StyleBoxTexture_b7cpe")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer"]
+layout_mode = 2
+
+[node name="WeaponAvatarHolder" type="PanelContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_utn1l")
+
+[node name="Detail" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.6
+
+[node name="WeaponName" type="VBoxContainer" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer/HBoxContainer/Detail"]
+layout_mode = 2
+offset_right = 80.0
+offset_bottom = 18.0
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer/HBoxContainer/Detail/WeaponName"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "WeaponName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer/HBoxContainer/Detail/WeaponName"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("207_5v0pa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextDetail" type="TextEdit" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/PanelContainer/HBoxContainer/Detail"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 117.0
+offset_bottom = 95.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[connection signal="pressed" from="PauseScreen/CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton" to="PauseScreen/CombatProgressControl" method="_on_texture_button_pressed"]
+[node name="ControlRight" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.76
+
+[node name="ControlDown" type="Control" parent="CanvasLayer/EquipmentScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton" to="CanvasLayer/CombatProgressScreen" method="_on_texture_button_pressed"]

@@ -60,4 +60,6 @@ position_smoothing_enabled = true
 wait_time = 0.5
 one_shot = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]

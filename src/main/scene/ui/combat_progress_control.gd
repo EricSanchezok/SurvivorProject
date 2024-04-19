@@ -101,4 +101,4 @@ func _on_update_combat_progress(nodes: Array) -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	Game.next_level = true
+	LevelProgressManager.confirm = true
