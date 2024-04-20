@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://dwy48kklpg6tr"]
+
+[ext_resource type="Shader" path="res://src/main/assets/shader/dissolve.gdshader" id="1_akbum"]
+[ext_resource type="Theme" uid="uid://dum4ct87pjet4" path="res://src/main/assets/theme/default_theme.tres" id="1_b8bt2"]
+[ext_resource type="Script" path="res://src/main/common/classes/ui/weapon_card.gd" id="2_8v2k2"]
+[ext_resource type="Texture2D" uid="uid://t15m3at4skvj" path="res://src/main/assets/texture/role/Card/WeaponCard.png" id="2_bk36k"]
+[ext_resource type="Shader" path="res://src/main/assets/shader/fake_3D.gdshader" id="2_wujj2"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_i18xi"]
+frequency = 0.0074
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_aco6i"]
+noise = SubResource("FastNoiseLite_i18xi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ckko"]
+shader = ExtResource("1_akbum")
+shader_parameter/dissolve_value = 0.0
+shader_parameter/burn_size = 0.08
+shader_parameter/burn_color = Color(0.984314, 0.501961, 0, 1)
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_aco6i")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ed528"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dfruo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgb37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4u6u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rd113"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jtsb8"]
+shader = ExtResource("2_wujj2")
+shader_parameter/rect_size = Vector2(30, 42)
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[node name="WeaponCard" type="Button"]
+material = SubResource("ShaderMaterial_4ckko")
+custom_minimum_size = Vector2(30, 42)
+offset_right = 30.0
+offset_bottom = 42.0
+pivot_offset = Vector2(15, 21)
+theme = ExtResource("1_b8bt2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ed528")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dfruo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vgb37")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l4u6u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rd113")
+script = ExtResource("2_8v2k2")
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.364706)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bk36k")
+expand_mode = 1
+
+[node name="CardTexture" type="TextureRect" parent="."]
+show_behind_parent = true
+material = SubResource("ShaderMaterial_jtsb8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bk36k")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
