@@ -2,8 +2,13 @@ extends Player
 
 
 func _ready() -> void:
+<<<<<<< Updated upstream
 	super()
 	#register_weapon.emit(self, "normal_turret", 1)
+=======
+	#super()
+	register_weapon.emit(self, "normal_bomb", 1)
+>>>>>>> Stashed changes
 	#register_weapon.emit(self, "normal_bomb", 2)
 	#register_weapon.emit(self, "normal_boomerang", 3)
 	#register_weapon.emit(self, "normal_axe", 4)
