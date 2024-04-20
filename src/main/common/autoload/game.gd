@@ -1,7 +1,9 @@
-extends CanvasLayer
+extends Node
 
+@onready var pause_screen: Control = $CanvasLayer/PauseScreen
 
-@onready var pause_screen: Control = $PauseScreen
-@onready var pause_animation_player: AnimationPlayer = $PauseScreen/AnimationPlayer
-
-var next_level: bool = false
+var players = []
+func _ready():
+	players = get_tree().get_nodes_in_group("player")
+	for player in players:
+		print(player)

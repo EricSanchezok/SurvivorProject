@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://p48lonijxsy6"]
 
-[ext_resource type="PackedScene" uid="uid://di4di36eun22p" path="res://src/main/common/classes/gun.tscn" id="1_xysg6"]
+[ext_resource type="PackedScene" uid="uid://di4di36eun22p" path="res://src/main/common/classes/base_weapons/gun.tscn" id="1_xysg6"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Gun/normal_gun.gd" id="2_kbhaw"]
 [ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/1BitAssets/16x16_weapons.png" id="3_6k4di"]
 

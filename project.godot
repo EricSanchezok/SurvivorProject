@@ -21,6 +21,7 @@ Game="*res://src/main/common/autoload/game.tscn"
 Tools="*res://src/main/common/autoload/tools.gd"
 CombatProgressGenerator="*res://src/main/common/autoload/combat_progress_generator.gd"
 CombatRouteManager="*res://src/main/common/autoload/combat_route_manager.gd"
+LevelProgressManager="*res://src/main/common/autoload/level_progress_manager.tscn"
 
 [display]
 
@@ -29,7 +30,6 @@ window/size/viewport_height=216
 window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 

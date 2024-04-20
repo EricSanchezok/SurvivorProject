@@ -1,4 +1,4 @@
-[gd_scene load_steps=218 format=3 uid="uid://cjtl76o2osd63"]
+[gd_scene load_steps=222 format=3 uid="uid://cjtl76o2osd63"]
 
 [ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_0ec10"]
 [ext_resource type="Script" path="res://src/main/common/autoload/game.gd" id="1_o6wew"]
@@ -186,7 +186,7 @@
 [ext_resource type="Texture2D" uid="uid://cpimtpc8aquls" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/5.png" id="183_00l57"]
 [ext_resource type="Texture2D" uid="uid://c137hd88ypcmv" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/6.png" id="184_dbaba"]
 [ext_resource type="Texture2D" uid="uid://by5lwfvrnkoqe" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/5.png" id="185_t1vgs"]
-[ext_resource type="Script" path="res://src/main/scene/ui/combat_progress_control.gd" id="186_y1uxy"]
+[ext_resource type="Script" path="res://src/main/common/autoload/combat_progress_screen.gd" id="186_y1uxy"]
 [ext_resource type="FontFile" uid="uid://clk0dq2382af2" path="res://src/main/assets/font/DungeonFont.ttf" id="187_52cgn"]
 [ext_resource type="Texture2D" uid="uid://dn611yvcgst6n" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Sprites/Decorations/0.png" id="188_d3qqh"]
 [ext_resource type="Texture2D" uid="uid://euikwcq275pa" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/137.png" id="189_8eg1p"]
@@ -196,11 +196,9 @@
 [ext_resource type="Texture2D" uid="uid://dsq8xmuoptbil" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/232.png" id="192_3pk7l"]
 [ext_resource type="Texture2D" uid="uid://c5gbxf1bqieak" path="res://src/main/assets/packs/Wood Buttons v1.0/1 Slice Buttons 32x32/Brown Buttons/57.png" id="195_1hdxj"]
 [ext_resource type="PackedScene" uid="uid://bpooajq7gmp2m" path="res://src/main/scene/ui/shop_screen.tscn" id="195_f6gt2"]
-[ext_resource type="PackedScene" uid="uid://3rpnjuxjd6oo" path="res://src/main/scene/ui/equipment_screen.tscn" id="196_shqut"]
 
 [sub_resource type="Animation" id="Animation_ggifj"]
 resource_name = "Close"
-length = 1.5
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -209,22 +207,22 @@ tracks/0/path = NodePath("BackPackSprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [null]
+"values": [ExtResource("75_sefeb"), ExtResource("75_sefeb")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95, 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_jas26"), ExtResource("4_frnpo"), ExtResource("5_amsqt"), ExtResource("6_mhso7"), ExtResource("7_eoudr"), ExtResource("8_dicsu"), ExtResource("9_h3f8g"), ExtResource("10_7ayhg"), ExtResource("11_hcbua"), ExtResource("12_7mhkf"), ExtResource("13_uiug1"), ExtResource("14_26iqu"), ExtResource("15_xp5k7"), ExtResource("16_pd5ca"), ExtResource("17_7xk3a"), ExtResource("18_8yfoe"), ExtResource("19_smopj"), ExtResource("20_2npsn"), ExtResource("21_fpvqc"), ExtResource("22_h3tql")]
+"values": [null, null, ExtResource("3_jas26"), ExtResource("4_frnpo"), ExtResource("5_amsqt"), ExtResource("6_mhso7"), ExtResource("7_eoudr"), ExtResource("8_dicsu"), ExtResource("9_h3f8g"), ExtResource("10_7ayhg"), ExtResource("11_hcbua"), ExtResource("12_7mhkf"), ExtResource("13_uiug1"), ExtResource("14_26iqu"), ExtResource("15_xp5k7"), ExtResource("16_pd5ca"), ExtResource("17_7xk3a"), ExtResource("18_8yfoe"), ExtResource("19_smopj"), ExtResource("20_2npsn"), ExtResource("21_fpvqc"), ExtResource("22_h3tql")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -253,7 +251,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/4/path = NodePath("TabsSprite2D:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -265,7 +263,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/5/path = NodePath("TabsSprite2D:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -277,7 +275,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/6/path = NodePath("PanelSprite2D:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -289,148 +287,52 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/7/path = NodePath("PanelSprite2D:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.95),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/8/type = "value"
+tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("CombatProgressControl:visible")
+tracks/8/path = NodePath(".")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath(".")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(1.5),
-"transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"cancel_pause"
+"method": &"hide_equip"
 }]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("ColorRect:color")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0.95, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.054902, 0.0823529, 0.160784, 0.345098), Color(0.054902, 0.0823529, 0.160784, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CanvasModulate:color")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0.95, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.603922, 0.603922, 0.603922, 1), Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("BackPackSprite2D:position")
-tracks/12/interp = 2
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0.95, 1.1, 1.2, 1.35, 1.5),
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BackPackSprite2D:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.45, 0.6, 0.7, 0.85, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 30), Vector2(0, -120), Vector2(0, -200), Vector2(0, -250)]
 }
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("35_mn6ex")]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath(".:visible")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_stkfg"]
@@ -452,7 +354,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -464,7 +366,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -500,7 +402,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -512,7 +414,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -524,7 +426,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -536,7 +438,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -548,7 +450,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -572,7 +474,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -584,7 +486,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -596,7 +498,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -608,7 +510,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -632,7 +534,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -644,7 +546,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -672,7 +574,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -684,7 +586,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -720,7 +622,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -732,7 +634,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -744,7 +646,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -756,7 +658,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -768,7 +670,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -792,7 +694,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -804,7 +706,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -816,7 +718,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -828,7 +730,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -869,7 +771,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -881,7 +783,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -917,7 +819,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -929,7 +831,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -941,7 +843,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -953,7 +855,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -965,7 +867,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -989,7 +891,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1001,7 +903,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1013,7 +915,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1025,7 +927,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1045,6 +947,32 @@ tracks/15/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_equip"
+}]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PanelSprite2D:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
 }
 
 [sub_resource type="Animation" id="Animation_g2g5q"]
@@ -1066,7 +994,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1078,7 +1006,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1114,7 +1042,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1126,7 +1054,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1138,7 +1066,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1150,7 +1078,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1162,7 +1090,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1186,7 +1114,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1198,7 +1126,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1210,7 +1138,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1222,7 +1150,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1242,6 +1170,32 @@ tracks/15/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide_equip"
+}]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PanelSprite2D:position")
+tracks/17/interp = 0
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 10), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_dofny"]
@@ -1263,7 +1217,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1275,7 +1229,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1311,7 +1265,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1323,7 +1277,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1335,7 +1289,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1347,7 +1301,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1359,86 +1313,26 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
+tracks/10/path = NodePath("BackPackSprite2D:scale")
+tracks/10/interp = 2
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
 }
 
 [sub_resource type="Animation" id="Animation_upl4p"]
@@ -1459,7 +1353,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1471,7 +1365,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1507,7 +1401,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1519,7 +1413,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1531,7 +1425,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1543,7 +1437,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1555,86 +1449,26 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
+tracks/10/path = NodePath("BackPackSprite2D:scale")
+tracks/10/interp = 2
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.3, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(1.5, 1.5), Vector2(1.5, 1.5), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_1x8re"]
@@ -1656,7 +1490,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1668,7 +1502,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1704,7 +1538,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1716,7 +1550,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1728,7 +1562,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1740,7 +1574,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1752,7 +1586,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1776,7 +1610,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1788,7 +1622,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -1800,7 +1634,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -1812,7 +1646,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1836,7 +1670,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
+tracks/16/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -1848,7 +1682,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -1874,7 +1708,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("CombatProgressControl/VBoxContainer/ControlUp/Label:self_modulate")
+tracks/19/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlUp/Label:self_modulate")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -1886,7 +1720,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
+tracks/20/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -1915,7 +1749,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1927,7 +1761,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1963,7 +1797,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1975,7 +1809,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1987,7 +1821,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1999,7 +1833,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -2011,7 +1845,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2035,7 +1869,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -2047,7 +1881,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -2059,7 +1893,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -2071,7 +1905,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
+tracks/14/path = NodePath("../CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -2109,7 +1943,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/ControlUp/Label:self_modulate")
+tracks/17/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlUp/Label:self_modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -2121,7 +1955,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
+tracks/18/path = NodePath("../CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -2133,7 +1967,7 @@ tracks/18/keys = {
 
 [sub_resource type="Animation" id="Animation_r67n0"]
 resource_name = "Open"
-length = 1.45
+length = 0.8
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -2145,24 +1979,24 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [null]
+"values": [ExtResource("75_sefeb")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45),
+"times": PackedFloat32Array(0, 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55, 2.6, 2.65, 2.7, 2.75, 2.8, 2.85, 2.9, 2.95),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("112_wcgvs"), ExtResource("112_wcgvs"), ExtResource("113_wst1x"), ExtResource("114_5xca0"), ExtResource("115_cvnl5"), ExtResource("116_tc0rh"), ExtResource("117_kdqvh"), ExtResource("118_bx5p5"), ExtResource("119_ypknm"), ExtResource("120_gd7sr"), ExtResource("121_tya71"), ExtResource("122_464x2"), ExtResource("123_uwkok"), ExtResource("124_00vqg"), ExtResource("125_vqtpu"), ExtResource("126_gy5w0"), ExtResource("127_488ot"), ExtResource("128_afewa"), ExtResource("129_tsxoo"), ExtResource("130_fsnh4"), ExtResource("131_0w5yg")]
+"values": [ExtResource("91_j063w"), ExtResource("112_wcgvs"), ExtResource("113_wst1x"), ExtResource("114_5xca0"), ExtResource("115_cvnl5"), ExtResource("116_tc0rh"), ExtResource("117_kdqvh"), ExtResource("118_bx5p5"), ExtResource("119_ypknm"), ExtResource("120_gd7sr"), ExtResource("121_tya71"), ExtResource("122_464x2"), ExtResource("123_uwkok"), ExtResource("124_00vqg"), ExtResource("125_vqtpu"), ExtResource("126_gy5w0"), ExtResource("127_488ot"), ExtResource("128_afewa"), ExtResource("129_tsxoo"), ExtResource("130_fsnh4"), ExtResource("131_0w5yg")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -2198,7 +2032,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -2210,19 +2044,19 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -2234,7 +2068,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -2246,7 +2080,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2258,14 +2092,14 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("CanvasModulate:color")
-tracks/10/interp = 1
+tracks/10/path = NodePath("BackPackSprite2D:position")
+tracks/10/interp = 2
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.741176, 0.741176, 0.741176, 1), Color(0.607843, 0.607843, 0.607843, 1)]
+"values": [Vector2(0, -250), Vector2(0, -100), Vector2(0, -50), Vector2(0, 30), Vector2(0, 0)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -2278,92 +2112,6 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("ColorRect:color")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.054902, 0.0823529, 0.160784, 0), Color(0.054902, 0.0823529, 0.160784, 0.345098)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("BackPackSprite2D:position")
-tracks/13/interp = 2
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -250), Vector2(0, -100), Vector2(0, -50), Vector2(0, 30), Vector2(0, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/18/type = "method"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath(".")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(1.45),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"start_pause"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_yt4ov"]
@@ -2384,7 +2132,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -2396,7 +2144,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -2432,7 +2180,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -2444,7 +2192,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -2456,7 +2204,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -2468,7 +2216,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -2480,82 +2228,10 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -2581,7 +2257,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -2593,7 +2269,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -2629,7 +2305,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -2641,7 +2317,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -2653,7 +2329,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -2665,7 +2341,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -2677,82 +2353,10 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -2776,7 +2380,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -2788,7 +2392,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -2824,7 +2428,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -2836,7 +2440,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -2848,7 +2452,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -2860,7 +2464,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -2872,7 +2476,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("../CombatProgressScreen:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2896,110 +2500,38 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
+tracks/11/path = NodePath("BackPackSprite2D:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(0, 0)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/12/path = NodePath("PanelSprite2D:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(0, 0)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
+tracks/13/path = NodePath("BackPackSprite2D:scale")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:material:shader_parameter/ratio")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("CombatProgressControl/VBoxContainer/ControlUp/Label:self_modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton:self_modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_xxeg1"]
@@ -3020,7 +2552,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -3032,7 +2564,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -3068,7 +2600,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -3080,7 +2612,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -3092,7 +2624,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -3104,7 +2636,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -3116,86 +2648,26 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
+tracks/10/path = NodePath("PanelSprite2D:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, -5), Vector2(0, -5)]
 }
 
 [sub_resource type="Animation" id="Animation_5b3l7"]
@@ -3216,7 +2688,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -3228,7 +2700,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -3264,7 +2736,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -3276,7 +2748,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -3288,7 +2760,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -3300,7 +2772,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -3312,86 +2784,26 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
+tracks/10/path = NodePath("PanelSprite2D:position")
+tracks/10/interp = 0
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, -5), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_hp2wr"]
@@ -3412,7 +2824,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -3424,7 +2836,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -3460,7 +2872,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -3472,7 +2884,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -3484,7 +2896,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -3496,7 +2908,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -3508,82 +2920,10 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -3608,7 +2948,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -3620,7 +2960,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -3656,7 +2996,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -3668,7 +3008,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -3680,7 +3020,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -3692,7 +3032,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -3704,82 +3044,10 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -3804,7 +3072,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -3816,7 +3084,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -3852,7 +3120,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -3864,7 +3132,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -3876,7 +3144,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -3888,7 +3156,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -3900,82 +3168,10 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -4000,7 +3196,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BackPackSprite2D/TabsSprite2D:texture")
+tracks/1/path = NodePath("TabsSprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -4012,7 +3208,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:texture")
+tracks/2/path = NodePath("PanelSprite2D:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -4048,7 +3244,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BackPackSprite2D/TabsSprite2D:visible")
+tracks/5/path = NodePath("TabsSprite2D:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -4060,7 +3256,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackPackSprite2D/TabsSprite2D:modulate")
+tracks/6/path = NodePath("TabsSprite2D:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -4072,7 +3268,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:visible")
+tracks/7/path = NodePath("PanelSprite2D:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -4084,7 +3280,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("BackPackSprite2D/TabsSprite2D/PanelSprite2D:modulate")
+tracks/8/path = NodePath("PanelSprite2D:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -4096,91 +3292,185 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CombatProgressControl:visible")
+tracks/9/path = NodePath("BackPackSprite2D:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("BackPackSprite2D:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_gp2gn"]
+resource_name = "CloseWithPrepare"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackPackSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("75_sefeb"), ExtResource("75_sefeb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabsSprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95, 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [null, null, ExtResource("3_jas26"), ExtResource("4_frnpo"), ExtResource("5_amsqt"), ExtResource("6_mhso7"), ExtResource("7_eoudr"), ExtResource("8_dicsu"), ExtResource("9_h3f8g"), ExtResource("10_7ayhg"), ExtResource("11_hcbua"), ExtResource("12_7mhkf"), ExtResource("13_uiug1"), ExtResource("14_26iqu"), ExtResource("15_xp5k7"), ExtResource("16_pd5ca"), ExtResource("17_7xk3a"), ExtResource("18_8yfoe"), ExtResource("19_smopj"), ExtResource("20_2npsn"), ExtResource("21_fpvqc"), ExtResource("22_h3tql")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackPackSprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackPackSprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TabsSprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TabsSprite2D:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PanelSprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PanelSprite2D:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../CombatProgressScreen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"hide_equip"
+}, {
+"args": [],
+"method": &"cancel_pause"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BackPackSprite2D:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.45, 0.6, 0.7, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 30), Vector2(0, -120), Vector2(0, -200), Vector2(0, -250)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BackPackSprite2D:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nld0k"]
 _data = {
 "Close": SubResource("Animation_ggifj"),
+"CloseWithPrepare": SubResource("Animation_gp2gn"),
 "CombatProgressAppear": SubResource("Animation_stkfg"),
 "CombatProgressDisappear": SubResource("Animation_prs05"),
 "EquipmentAppear": SubResource("Animation_msnik"),
@@ -4201,11 +3491,131 @@ _data = {
 "TopPouchOpenT": SubResource("Animation_x52j3")
 }
 
-[node name="Game" type="CanvasLayer"]
+[sub_resource type="Animation" id="Animation_d8srb"]
+resource_name = "enter_pause_screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.629675, 0.629675, 0.629675, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0), Color(0.054902, 0.0823529, 0.160784, 0.498039)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_pause"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_41q87"]
+resource_name = "leave_pause_screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0.498039), Color(0.054902, 0.0823529, 0.160784, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.629675, 0.629675, 0.629675, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cancel_pause"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_mgiy2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.629675, 0.629675, 0.629675, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.054902, 0.0823529, 0.160784, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsjtm"]
+_data = {
+"RESET": SubResource("Animation_mgiy2"),
+"enter_pause_screen": SubResource("Animation_d8srb"),
+"leave_pause_screen": SubResource("Animation_41q87")
+}
+
+[node name="Game" type="Node"]
 process_mode = 3
 script = ExtResource("1_o6wew")
 
-[node name="PauseScreen" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" type="Control" parent="CanvasLayer"]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -4215,10 +3625,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ec10")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="PauseScreen"]
-color = Color(0.370364, 0.370364, 0.370364, 1)
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/PauseScreen"]
+color = Color(0.629675, 0.629675, 0.629675, 1)
 
-[node name="ColorRect" type="ColorRect" parent="PauseScreen"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PauseScreen"]
 z_index = -20
 z_as_relative = false
 layout_mode = 1
@@ -4227,51 +3637,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.10527, 0.145107, 0.258785, 0.345098)
+color = Color(0.054902, 0.0823529, 0.160784, 0)
 
-[node name="StateMachine" type="Node" parent="PauseScreen"]
+[node name="StateMachine" type="Node" parent="CanvasLayer/PauseScreen"]
 script = ExtResource("2_uc0um")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PauseScreen"]
+[node name="BackPackSprite2D" type="TextureRect" parent="CanvasLayer/PauseScreen"]
+layout_mode = 1
+offset_right = 384.0
+offset_bottom = 216.0
+pivot_offset = Vector2(192, 108)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TabsSprite2D" type="TextureRect" parent="CanvasLayer/PauseScreen"]
+custom_minimum_size = Vector2(384, 216)
+layout_mode = 1
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PanelSprite2D" type="TextureRect" parent="CanvasLayer/PauseScreen"]
+custom_minimum_size = Vector2(384, 216)
+layout_mode = 1
+offset_right = 384.0
+offset_bottom = 216.0
+texture = ExtResource("35_mn6ex")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/PauseScreen"]
 libraries = {
 "": SubResource("AnimationLibrary_nld0k")
 }
 speed_scale = 2.0
 
-[node name="BackPackSprite2D" type="TextureRect" parent="PauseScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 5
+[node name="GlobalAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/PauseScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_qsjtm")
+}
 
-[node name="TabsSprite2D" type="TextureRect" parent="PauseScreen/BackPackSprite2D"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="PanelSprite2D" type="TextureRect" parent="PauseScreen/BackPackSprite2D/TabsSprite2D"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("35_mn6ex")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="CombatProgressControl" type="Control" parent="PauseScreen"]
+[node name="CombatProgressScreen" type="Control" parent="CanvasLayer"]
 visible = false
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -4281,7 +3688,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("186_y1uxy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen/CombatProgressControl"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CombatProgressScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4291,12 +3698,13 @@ grow_vertical = 2
 theme = ExtResource("190_o8da1")
 theme_override_constants/separation = 0
 
-[node name="ControlUp" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer"]
+[node name="ControlUp" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 1.3
+size_flags_stretch_ratio = 0.3
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/ControlUp"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlUp"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -4314,62 +3722,61 @@ text = "Please select your next combat route."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 1.88
 
-[node name="ControlLeft" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer"]
+[node name="ControlLeft" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer"]
-modulate = Color(1, 1, 1, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer"]
 z_as_relative = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 2.3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.7
+size_flags_stretch_ratio = 0.5
 theme_override_colors/font_color = Color(0.00392157, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.811765, 0.603922, 0.309804, 1)
 theme_override_fonts/font = ExtResource("187_52cgn")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 25
 text = "Combat Progress"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.35
+size_flags_stretch_ratio = 0.3
 texture = ExtResource("188_d3qqh")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.15
+size_flags_stretch_ratio = 2.2
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="ControlRight" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer"]
+[node name="ControlRight" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4377,112 +3784,120 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_bottom = 34
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="BoxContainer1" type="BoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
+vertical = true
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1"]
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 3
 texture = ExtResource("189_8eg1p")
-expand_mode = 2
+expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer1"]
 layout_mode = 2
 size_flags_horizontal = 2
 theme = ExtResource("190_o8da1")
 text = "Stay vigilant"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="BoxContainer2" type="BoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
+vertical = true
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2"]
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 3
 texture = ExtResource("190_705vf")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Be prepared......"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="BoxContainer3" type="BoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
+vertical = true
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3"]
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 3
 texture = ExtResource("191_iqilp")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Fortune favors the bold!"
+text = "Fortune favors the 
+bold!"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
+[node name="BoxContainer4" type="BoxContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
+vertical = true
 
-[node name="TextureRect" type="TextureRect" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4"]
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 3
 texture = ExtResource("192_3pk7l")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PauseScreen/CombatProgressControl/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/HBoxContainer4"]
+[node name="Label" type="Label" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/HBoxContainer/ControlRight/MarginContainer/VBoxContainer/BoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Who Knows?"
 
-[node name="ControlDown" type="Control" parent="PauseScreen/CombatProgressControl/VBoxContainer"]
+[node name="ControlDown" type="Control" parent="CanvasLayer/CombatProgressScreen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 1.1
+size_flags_stretch_ratio = 0.16
 
-[node name="MarginContainer" type="MarginContainer" parent="PauseScreen/CombatProgressControl/VBoxContainer/ControlDown"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
 
-[node name="TextureButton" type="TextureButton" parent="PauseScreen/CombatProgressControl/VBoxContainer/ControlDown/MarginContainer"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 texture_normal = ExtResource("195_1hdxj")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ShopScreen" parent="." instance=ExtResource("195_f6gt2")]
+[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("195_f6gt2")]
 
-[node name="EquipmentScreen" parent="." instance=ExtResource("196_shqut")]
-visible = false
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[connection signal="pressed" from="PauseScreen/CombatProgressControl/VBoxContainer/ControlDown/MarginContainer/TextureButton" to="PauseScreen/CombatProgressControl" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton" to="CanvasLayer/CombatProgressScreen" method="_on_texture_button_pressed"]
