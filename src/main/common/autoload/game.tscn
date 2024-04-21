@@ -1,4 +1,4 @@
-[gd_scene load_steps=222 format=3 uid="uid://cjtl76o2osd63"]
+[gd_scene load_steps=221 format=3 uid="uid://cjtl76o2osd63"]
 
 [ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_0ec10"]
 [ext_resource type="Script" path="res://src/main/common/autoload/game.gd" id="1_o6wew"]
@@ -195,7 +195,6 @@
 [ext_resource type="Texture2D" uid="uid://tv4iwoelelgm" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/107.png" id="191_iqilp"]
 [ext_resource type="Texture2D" uid="uid://dsq8xmuoptbil" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/232.png" id="192_3pk7l"]
 [ext_resource type="Texture2D" uid="uid://c5gbxf1bqieak" path="res://src/main/assets/packs/Wood Buttons v1.0/1 Slice Buttons 32x32/Brown Buttons/57.png" id="195_1hdxj"]
-[ext_resource type="PackedScene" uid="uid://bpooajq7gmp2m" path="res://src/main/scene/ui/shop_screen.tscn" id="195_f6gt2"]
 
 [sub_resource type="Animation" id="Animation_ggifj"]
 resource_name = "Close"
@@ -3873,7 +3872,5 @@ layout_mode = 2
 texture_normal = ExtResource("195_1hdxj")
 ignore_texture_size = true
 stretch_mode = 5
-
-[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("195_f6gt2")]
 
 [connection signal="pressed" from="CanvasLayer/CombatProgressScreen/VBoxContainer/ControlDown/MarginContainer/TextureButton" to="CanvasLayer/CombatProgressScreen" method="_on_texture_button_pressed"]

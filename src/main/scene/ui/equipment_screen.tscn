@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://3rpnjuxjd6oo"]
+[gd_scene load_steps=36 format=3 uid="uid://3rpnjuxjd6oo"]
 
 [ext_resource type="Theme" uid="uid://dum4ct87pjet4" path="res://src/main/assets/theme/default_theme.tres" id="1_0llwj"]
 [ext_resource type="Script" path="res://src/main/scene/ui/equipment_screen.gd" id="2_xd5r7"]
@@ -13,7 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://deu4csk3rlf87" path="res://src/main/assets/texture/tiles/1bit 16px patterns and tiles.png" id="10_7cgcy"]
 [ext_resource type="Texture2D" uid="uid://bryi2rgrcbbpn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/8.png" id="11_e6063"]
 [ext_resource type="Texture2D" uid="uid://dc8l4gtp2yvja" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Decorations/1.png" id="12_dpq0d"]
-[ext_resource type="Texture2D" uid="uid://ctqga5knpu07" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Sprites/Holders/2.png" id="14_gxoys"]
+[ext_resource type="Script" path="res://src/main/scene/ui/shop.gd" id="14_fg8yx"]
+[ext_resource type="PackedScene" uid="uid://dwy48kklpg6tr" path="res://src/main/common/classes/ui/weapon_card.tscn" id="15_aj5vo"]
+[ext_resource type="Texture2D" uid="uid://byj4goebhxjah" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/94.png" id="16_e1ves"]
+[ext_resource type="Texture2D" uid="uid://t15m3at4skvj" path="res://src/main/assets/texture/role/Card/WeaponCard.png" id="17_58l16"]
+[ext_resource type="Texture2D" uid="uid://dp2mmyvabj5u7" path="res://src/main/assets/packs/Wood Buttons v1.0/1 Slice Buttons 32x32/Brown Buttons/154.png" id="18_xhsd6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mpgsp"]
 atlas = ExtResource("10_7cgcy")
@@ -48,7 +52,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -126,15 +130,27 @@ _data = {
 "show": SubResource("Animation_dfejp")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jvpo"]
-texture = ExtResource("14_gxoys")
-texture_margin_left = 24.0
-texture_margin_top = 24.0
-texture_margin_right = 24.0
-texture_margin_bottom = 24.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fss6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wxi6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1cbr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3jvh5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia7qs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6cby"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghkt2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktkm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gsl3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6uo8k"]
 
 [node name="EquipmentScreen" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -632,19 +648,117 @@ libraries = {
 "": SubResource("AnimationLibrary_djs4b")
 }
 
-[node name="Shop" type="Control" parent="."]
-visible = false
+[node name="Shop" type="Control" parent="." node_paths=PackedStringArray("from")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("14_fg8yx")
+from = NodePath("DealingArea")
+card_scene = ExtResource("15_aj5vo")
 
-[node name="PanelContainer" type="PanelContainer" parent="Shop"]
+[node name="DealingArea" type="TextureRect" parent="Shop"]
+self_modulate = Color(1, 0.753, 0.62, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 345.0
+offset_top = 9.0
+offset_right = 375.0
+offset_bottom = 51.0
+texture = ExtResource("17_58l16")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Shop/DealingArea"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 100.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_4jvpo")
+grow_vertical = 2
+texture = ExtResource("16_e1ves")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RefreshButton" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 177.0
+offset_right = 370.0
+offset_bottom = 193.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7fss6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7wxi6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j1cbr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3jvh5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ia7qs")
+
+[node name="TextureRect" type="TextureRect" parent="Shop/RefreshButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_xhsd6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Shop/RefreshButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 5
+text = "REFRESH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpdateButton" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 150.0
+offset_right = 370.0
+offset_bottom = 166.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m6cby")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ghkt2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ktkm2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5gsl3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6uo8k")
+
+[node name="TextureRect" type="TextureRect" parent="Shop/UpdateButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_xhsd6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Shop/UpdateButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 5
+text = "UPDATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Marker2D" type="Marker2D" parent="Shop"]
+position = Vector2(295, 29)
+
+[connection signal="pressed" from="Shop/RefreshButton" to="Shop" method="_on_refresh_button_pressed"]

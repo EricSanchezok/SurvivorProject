@@ -1,3 +1,4 @@
+class_name WeaponCard
 extends Button
 
 @onready var shadow: TextureRect = $Shadow
@@ -13,8 +14,8 @@ var tween_destroy: Tween
 var tween_handle: Tween
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 移动时旋转相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@export var spring: float = 300.0
-@export var damp: float = 30.0
+@export var spring: float = 400.0
+@export var damp: float = 10.0
 @export var velocity_multiplier: float = 0.6
 var displacement: float = 0.0 
 var oscillator_velocity: float = 0.0

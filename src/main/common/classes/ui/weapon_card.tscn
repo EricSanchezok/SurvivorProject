@@ -67,7 +67,7 @@ grow_vertical = 2
 texture = ExtResource("2_bk36k")
 expand_mode = 1
 
-[node name="CardTexture" type="TextureRect" parent="."]
+[node name="CardTexture" type="TextureRect" parent="." groups=["WeaponCard"]]
 show_behind_parent = true
 material = SubResource("ShaderMaterial_jtsb8")
 layout_mode = 1
