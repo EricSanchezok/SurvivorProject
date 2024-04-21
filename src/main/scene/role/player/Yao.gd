@@ -4,6 +4,7 @@ extends Player
 func _ready() -> void:
 <<<<<<< Updated upstream
 	super()
+<<<<<<< HEAD
 	#register_weapon.emit(self, "normal_turret", 1)
 =======
 	#super()
@@ -19,3 +20,5 @@ func _ready() -> void:
 	#register_weapon.emit(self, "normal_axe", 9)
 	#register_weapon.emit(self, "normal_axe", 10)
 	pass
+=======
+>>>>>>> origin/main
