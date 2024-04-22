@@ -18,29 +18,61 @@ var sine_offset_mult: float = 0.0
 var drawn: bool = false
 
 var cards: Array
-var cards_pos: Array
+
+
+var purchased_cards: Array
+var equipment_cards: Array
 
 
 func _ready():
 	set_process(false)
-	
-	# Convert degrees to radians to use lerp_angle later
-	rot_max = deg_to_rad(rot_max)
-	await get_tree().create_timer(2.0).timeout
+	#await get_tree().create_timer(2.0).timeout
 	#draw_cards(from.global_position, 10)
 
 func _physics_process(delta: float) -> void:
-	pass
+	update_mouse_filters()
+	for card in cards:
+		if card.purchased:
+			cards.erase(card)
+			purchased_cards.append(card)
+	print(cards.size(), " ", purchased_cards.size())
 	#time += delta
 	#for card in cards:
 		#var i := cards.find(card)
 		#var val: float = sin(i + (time * time_multiplier))
-		#print("Child %d, sin(%d) = %f" % [i, i, val])
+		##print("Child %d, sin(%d) = %f" % [i, i, val])
 		#card.position.y = cards_pos[i].y + val * sine_offset_mult
+	
+
+func update_mouse_filters():
+	var is_any_card_following_mouse = false
+	var moving_card = null
+
+	# 检查是否有卡片正在跟随鼠标
+	for card in cards:
+		if card.following_mouse:
+			is_any_card_following_mouse = true
+			moving_card = card
+			break  # 找到后立即退出循环
+
+	# 根据是否有卡片正在跟随鼠标来设置其他卡片的 mouse_filter
+	if is_any_card_following_mouse:
+		for card in cards:
+			if card != moving_card:
+				if card.mouse_filter != MOUSE_FILTER_IGNORE:
+					card.mouse_filter = MOUSE_FILTER_IGNORE
+			else:
+				if card.mouse_filter != MOUSE_FILTER_STOP:
+					card.mouse_filter = MOUSE_FILTER_STOP
+	else:
+		for card in cards:
+			if card.mouse_filter != MOUSE_FILTER_STOP:
+				card.mouse_filter = MOUSE_FILTER_STOP
+
 
 func draw_cards(from_pos: Vector2, number: int) -> void:
 	drawn = true
-	clear_cards()
+	cards.clear()
 	if tween and tween.is_running():
 		tween.kill()
 	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
@@ -57,7 +89,6 @@ func draw_cards(from_pos: Vector2, number: int) -> void:
 		tween.parallel().tween_property(instance, "rotation", rot_radians, 0.3 + (i * 0.075))
 		
 		cards.append(instance)
-		cards_pos.append(final_pos)
 	
 	tween.tween_callback(set_process.bind(true))
 	tween.tween_property(self, "sine_offset_mult", anim_offset_y, 1.5).from(0.0)
@@ -68,15 +99,13 @@ func undraw_cards(to_pos: Vector2) -> void:
 		tween.kill()
 	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 	
-	tween.tween_property(self, "sine_offset_mult", 0.0, 0.9)
+	tween.tween_property(self, "sine_offset_mult", 0.0, 1.0)
 	
 	for card in cards:
-		tween.parallel().tween_property(card, "global_position", to_pos, 0.3 + ((cards.size() - cards.find(card)) * 0.075))
-		tween.parallel().tween_property(card, "rotation", 0.0, 0.3 + ((cards.size() - cards.find(card)) * 0.075))
-	
+		card.destroy()
+		
 	await tween.finished
-	
-	clear_cards()
+	cards.clear()
 
 func animate_cards() -> void:
 	if tween_animate and tween_animate.is_running():
@@ -86,14 +115,6 @@ func animate_cards() -> void:
 	for i in range(get_child_count()):
 		var c: Button = get_child(i)
 		
-func clear_cards() -> void:
-	for card in cards:
-		card.queue_free()
-		
-	cards.clear()
-	cards_pos.clear()
-		
-
 
 func _on_refresh_button_pressed() -> void:
 	if drawn:

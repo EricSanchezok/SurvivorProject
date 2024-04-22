@@ -21,9 +21,17 @@ var displacement: float = 0.0
 var oscillator_velocity: float = 0.0
 var last_mouse_pos: Vector2
 var mouse_velocity: Vector2
-var following_mouse: bool = false
 var last_pos: Vector2
 var velocity: Vector2
+
+var following_mouse: bool = false
+
+
+var purchased: bool = false
+var storage_area: Array
+
+var equipped: bool = false
+var equip_area: Array
 
 
 func _ready() -> void:
@@ -39,11 +47,11 @@ func _process(delta: float) -> void:
 func rotate_velocity(delta: float) -> void:
 	if not following_mouse: return
 	var center_pos: Vector2 = global_position - (size/2.0)
-	# Compute the velocity
+	
 	velocity = (position - last_pos) / delta
 	last_pos = position
 	oscillator_velocity += velocity.normalized().x * velocity_multiplier
-	# Oscillator stuff
+	
 	var force = -spring * displacement - damp * oscillator_velocity
 	oscillator_velocity += force * delta
 	displacement += oscillator_velocity * delta
@@ -66,13 +74,32 @@ func handle_mouse_click(event: InputEvent) -> void:
 	
 	if event.is_pressed():
 		following_mouse = true
+		z_index = 100
 	else:
 		# drop card
 		following_mouse = false
+		z_index = 0
 		if tween_handle and tween_handle.is_running():
 			tween_handle.kill()
 		tween_handle = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 		tween_handle.tween_property(self, "rotation", 0.0, 0.3)
+		
+		# 重置缩放
+		if tween_hover and tween_hover.is_running():
+			tween_hover.kill()
+		tween_hover = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+		tween_hover.tween_property(self, "scale", Vector2.ONE, 0.55)
+		
+		# 如果松开鼠标时在装备区域
+		if storage_area.size() > 0:
+			purchased = true
+			var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+			tween.tween_property(self, "position", storage_area[0].center_position()-size/2.0, 0.3)
+			
+			await tween.finished
+			
+		if purchased and storage_area.size() == 0:
+			destroy()
 	
 
 func _gui_input(event: InputEvent) -> void:
@@ -93,14 +120,18 @@ func _gui_input(event: InputEvent) -> void:
 
 	card_texture.material.set_shader_parameter("x_rot", rot_y)
 	card_texture.material.set_shader_parameter("y_rot", rot_x)
+	
 
 func destroy() -> void:
 	card_texture.use_parent_material = true
 	if tween_destroy and tween_destroy.is_running():
 		tween_destroy.kill()
 	tween_destroy = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-	tween_destroy.tween_property(material, "shader_parameter/dissolve_value", 0.0, 2.0).from(1.0)
+	tween_destroy.tween_property(material, "shader_parameter/dissolve_value", 0.0, 1.0).from(1.0)
 	tween_destroy.parallel().tween_property(shadow, "self_modulate:a", 0.0, 1.0)
+	
+	await tween_destroy.finished
+	queue_free()
 
 func _on_mouse_entered() -> void:
 	if tween_hover and tween_hover.is_running():
@@ -123,3 +154,13 @@ func _on_mouse_exited() -> void:
 	tween_hover = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
 	tween_hover.tween_property(self, "scale", Vector2.ONE, 0.55)
 
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.owner.type == "slot":
+		storage_area.append(area.owner)
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.owner.type == "slot":
+		storage_area.erase(area.owner)
