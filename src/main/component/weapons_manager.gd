@@ -31,6 +31,9 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, wea
 	var index = players.find(player) + 1
 	var player_slot = get_node("Player" + str(index))
 	player_slot.add_child(weapon_instance)
+	
+	player.fire.fire_number = 5
+	
 
 
 

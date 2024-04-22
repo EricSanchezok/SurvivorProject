@@ -12,8 +12,8 @@ var playerStats: Node
 @onready var hit_box: HitBox = $Graphics/HitBox
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@export var base_physical_attack_power: float = 2.0
-@export var base_magic_attack_power: float = 0.0
+@export var base_physical_attack_power: float = 3.0
+@export var base_magic_attack_power: float = 3.0
 @export var base_attack_range: float = 60.0
 @export var base_attack_windup_speed: float = 180.0
 @export var base_attack_backswing_speed: float = 120.0
@@ -126,6 +126,8 @@ func _update_parameters() -> void:
 	knockback = base_knockback * playerStats.knockback_multiplier
 
 	area_2d.scale = Vector2(attack_range/10.0, attack_range/10.0)
+	
+	damage = physical_attack_power + magic_attack_power
 
 func _on_stats_changed() -> void:
 	_update_parameters()

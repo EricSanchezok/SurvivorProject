@@ -10,10 +10,12 @@ extends CharacterBody2D
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var invincible_timer: Timer = $InvincibleTimer
 @onready var weapons_track: Node2D = $WeaponsTrack
+@onready var fire: Fire = $Fire
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, weapon_slot: int)
 
 var pending_damage: Damage
+
 
 enum Direction {
 	LEFT = -1,
