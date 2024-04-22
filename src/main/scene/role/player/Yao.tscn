@@ -169,9 +169,9 @@ script = ExtResource("2_kgtja")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("4_s02f0")
-hframes = 6
-region_rect = Rect2(0, 32, 384, 32)
+texture = ExtResource("3_av27r")
+hframes = 4
+region_rect = Rect2(0, 0, 128, 32)
 
 [node name="Hands" type="Sprite2D" parent="Graphics" index="1"]
 position = Vector2(0, 4)

@@ -23,6 +23,8 @@ var cards: Array
 var purchased_cards: Array
 var equipment_cards: Array
 
+var refreshing: bool = false
+
 
 func _ready():
 	set_process(false)
@@ -35,7 +37,6 @@ func _physics_process(delta: float) -> void:
 		if card.purchased:
 			cards.erase(card)
 			purchased_cards.append(card)
-	print(cards.size(), " ", purchased_cards.size())
 	#time += delta
 	#for card in cards:
 		#var i := cards.find(card)
@@ -68,13 +69,23 @@ func update_mouse_filters():
 		for card in cards:
 			if card.mouse_filter != MOUSE_FILTER_STOP:
 				card.mouse_filter = MOUSE_FILTER_STOP
-
-
-func draw_cards(from_pos: Vector2, number: int) -> void:
-	drawn = true
+	
+func refresh_cards(from_pos: Vector2, number: int) -> void:
+	if refreshing:
+		return
+	refreshing = true
+	if cards.size() > 0:
+		if tween and tween.is_running():
+			tween.kill()
+		tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(self, "sine_offset_mult", 0.0, 1.0)
+	
+		for card in cards:
+			card.destroy()
+		
+		await tween.finished
+		
 	cards.clear()
-	if tween and tween.is_running():
-		tween.kill()
 	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 			
 	for i in range(number):
@@ -91,33 +102,11 @@ func draw_cards(from_pos: Vector2, number: int) -> void:
 		cards.append(instance)
 	
 	tween.tween_callback(set_process.bind(true))
-	tween.tween_property(self, "sine_offset_mult", anim_offset_y, 1.5).from(0.0)
-
-func undraw_cards(to_pos: Vector2) -> void:
-	drawn = false
-	if tween and tween.is_running():
-		tween.kill()
-	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	# tween.tween_property(self, "sine_offset_mult", anim_offset_y, 1.5).from(0.0)
 	
-	tween.tween_property(self, "sine_offset_mult", 0.0, 1.0)
-	
-	for card in cards:
-		card.destroy()
-		
 	await tween.finished
-	cards.clear()
-
-func animate_cards() -> void:
-	if tween_animate and tween_animate.is_running():
-		tween_animate.kill()
-	tween_animate = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-	tween_animate.set_loops()
-	for i in range(get_child_count()):
-		var c: Button = get_child(i)
-		
+	refreshing = false
+	
 
 func _on_refresh_button_pressed() -> void:
-	if drawn:
-		undraw_cards(from.global_position)
-	else:
-		draw_cards(from.global_position, 5)
+	refresh_cards(from.global_position, 5)

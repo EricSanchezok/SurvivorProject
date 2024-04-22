@@ -1,6 +1,6 @@
-[gd_scene load_steps=221 format=3 uid="uid://cjtl76o2osd63"]
+[gd_scene load_steps=230 format=3 uid="uid://cjtl76o2osd63"]
 
-[ext_resource type="Script" path="res://src/main/scene/ui/pause_screen.gd" id="1_0ec10"]
+[ext_resource type="Script" path="res://src/main/common/autoload/pause_screen.gd" id="1_0ec10"]
 [ext_resource type="Script" path="res://src/main/common/autoload/game.gd" id="1_o6wew"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="2_uc0um"]
 [ext_resource type="Texture2D" uid="uid://cq4jbyjhevigr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/0.png" id="3_jas26"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://chmgco7bxmgij" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/1.png" id="26_hrb1m"]
 [ext_resource type="Texture2D" uid="uid://rwhwck551y0w" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/2.png" id="27_2aiwy"]
 [ext_resource type="Texture2D" uid="uid://bmh33w4ul767u" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/3.png" id="28_o38hg"]
+[ext_resource type="AudioStream" uid="uid://cgbb8lpakgoeg" path="res://src/main/assets/sound/backpack_free/18 OBJBag, Backpack, Polyester, Handling.wav" id="28_qcypq"]
 [ext_resource type="Texture2D" uid="uid://qv7dnhnc7ck7" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/4.png" id="29_gswwl"]
 [ext_resource type="Texture2D" uid="uid://bqyoqvhne75gx" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/5.png" id="30_ljlbf"]
 [ext_resource type="Texture2D" uid="uid://c350jeg5caj5k" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Appear/6.png" id="31_ejkul"]
@@ -41,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://bdblc5yuu0g58" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/0.png" id="38_6m3gy"]
 [ext_resource type="Texture2D" uid="uid://bf130ra8xacw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/1.png" id="39_a3xcc"]
 [ext_resource type="Texture2D" uid="uid://d1m1fqu7d4unr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/2.png" id="40_dr0sk"]
+[ext_resource type="AudioStream" uid="uid://dkw6oaxmvs2sk" path="res://src/main/assets/sound/backpack_free/19 OBJBag, Backpack, Polyester, Handling.wav" id="41_l0qrn"]
 [ext_resource type="Texture2D" uid="uid://500p5yleegt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/3.png" id="41_leelt"]
 [ext_resource type="Texture2D" uid="uid://qfjj21wr8rsp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/4.png" id="42_t1mjf"]
 [ext_resource type="Texture2D" uid="uid://yl3gl7nauwmc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Disappear/5.png" id="43_nl21d"]
@@ -57,6 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://clpkb4et0ebga" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/2.png" id="54_1ts7n"]
 [ext_resource type="Texture2D" uid="uid://s84c48qubopx" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/3.png" id="55_pa53a"]
 [ext_resource type="Texture2D" uid="uid://4av3gdop1cc8" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/4.png" id="56_jbf5s"]
+[ext_resource type="AudioStream" uid="uid://bfr1h13gakbdq" path="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicBook/magicbook_open_close_01.ogg" id="56_w0y3t"]
 [ext_resource type="Texture2D" uid="uid://b4spmi7tqjpau" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/5.png" id="57_xvjtx"]
 [ext_resource type="Texture2D" uid="uid://dbh1f883ypxjb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/6.png" id="58_5y00g"]
 [ext_resource type="Texture2D" uid="uid://cvvk5pl1tp41" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Appear/7.png" id="59_5amsd"]
@@ -70,6 +73,7 @@
 [ext_resource type="Texture2D" uid="uid://xxyni5xl5nds" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/2.png" id="67_c2sqb"]
 [ext_resource type="Texture2D" uid="uid://b50q1dpkqxdxn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/3.png" id="68_m38h5"]
 [ext_resource type="Texture2D" uid="uid://b4gl4p0sgvr4b" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/4.png" id="69_vijrn"]
+[ext_resource type="AudioStream" uid="uid://r6qj5bpvm8bp" path="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicBook/magicbook_open_close_02.ogg" id="70_buntm"]
 [ext_resource type="Texture2D" uid="uid://o18jv8wyg8n3" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/5.png" id="70_getoc"]
 [ext_resource type="Texture2D" uid="uid://b0lnhrnrugq1h" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/6.png" id="71_j62wk"]
 [ext_resource type="Texture2D" uid="uid://1w5jxrodmlnr" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Disappear/7.png" id="72_ecac5"]
@@ -95,8 +99,10 @@
 [ext_resource type="Texture2D" uid="uid://b8ywgypbfqh6e" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/1.png" id="92_xggu4"]
 [ext_resource type="Texture2D" uid="uid://bsrbhvuabx0vt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/2.png" id="93_ycyqj"]
 [ext_resource type="Texture2D" uid="uid://dl1qwdvi4o5nu" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/0.png" id="94_668v6"]
+[ext_resource type="AudioStream" uid="uid://bv0wr06dp3o37" path="res://src/main/assets/sound/backpack_free/24 OBJZipr, Backpack, Zipper.wav" id="95_60u8s"]
 [ext_resource type="Texture2D" uid="uid://bl6nxn6yu46df" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/1.png" id="95_q7mb2"]
 [ext_resource type="Texture2D" uid="uid://df63ufsponiv0" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/2.png" id="96_6gsdr"]
+[ext_resource type="AudioStream" uid="uid://drjaxtgg2obt7" path="res://src/main/assets/sound/backpack_free/33 OBJBag, Backpack, Polyester, Subtle Move.wav" id="96_8louh"]
 [ext_resource type="Texture2D" uid="uid://dswepr5817u8i" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/3.png" id="97_omals"]
 [ext_resource type="Texture2D" uid="uid://cyqy001k4dtsa" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/4.png" id="98_cmsjd"]
 [ext_resource type="Texture2D" uid="uid://jyrx86l04iqp" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Disappear/5.png" id="99_d6lr1"]
@@ -117,6 +123,7 @@
 [ext_resource type="Texture2D" uid="uid://ruyat35fju1m" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/2.png" id="114_5xca0"]
 [ext_resource type="Texture2D" uid="uid://ctp2tt6qh51tj" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/3.png" id="115_cvnl5"]
 [ext_resource type="Texture2D" uid="uid://5rt78mpwi87j" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/4.png" id="116_tc0rh"]
+[ext_resource type="AudioStream" uid="uid://mea34uph2itx" path="res://src/main/assets/sound/backpack_free/25 OBJZipr, Backpack, Zipper.wav" id="117_d28nn"]
 [ext_resource type="Texture2D" uid="uid://c2on31w1viycd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/5.png" id="117_kdqvh"]
 [ext_resource type="Texture2D" uid="uid://hqeay8gvudxn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/6.png" id="118_bx5p5"]
 [ext_resource type="Texture2D" uid="uid://d2wbqws6op48f" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Appear/7.png" id="119_ypknm"]
@@ -135,6 +142,7 @@
 [ext_resource type="Texture2D" uid="uid://bgk5kb31m4dj1" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/11.png" id="132_4doei"]
 [ext_resource type="Texture2D" uid="uid://bqa47tahn3n8x" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/13.png" id="133_o53hj"]
 [ext_resource type="Texture2D" uid="uid://ct3mbrmfs8ivb" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/14.png" id="134_6q0fx"]
+[ext_resource type="AudioStream" uid="uid://vq8vldpgfcfq" path="res://src/main/assets/sound/backpack_free/01 OBJBag, Backpack, Polyester, Handling.wav" id="134_yydjw"]
 [ext_resource type="Texture2D" uid="uid://jeg8laeetubt" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/0.png" id="135_gvdpn"]
 [ext_resource type="Texture2D" uid="uid://bccdjsgls4nlh" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/1.png" id="136_7ypun"]
 [ext_resource type="Texture2D" uid="uid://h768yqhq36jx" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Appear/2.png" id="137_7wpwi"]
@@ -144,6 +152,7 @@
 [ext_resource type="Texture2D" uid="uid://87upli4bfjjc" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/0.png" id="141_0yibs"]
 [ext_resource type="Texture2D" uid="uid://b27425ko8rhwa" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/1.png" id="142_x2sy7"]
 [ext_resource type="Texture2D" uid="uid://cltb7kn22hnwy" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/2.png" id="143_pt0eg"]
+[ext_resource type="AudioStream" uid="uid://cn7ghb5mupjg0" path="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_page_flipping_01.ogg" id="144_mwgim"]
 [ext_resource type="Texture2D" uid="uid://56h4fuokshqd" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/4 - Quests/Disappear/3.png" id="144_qqcaf"]
 [ext_resource type="Texture2D" uid="uid://0hngndhco1pw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Selection/16.png" id="145_c4bia"]
 [ext_resource type="Texture2D" uid="uid://dhyu51s6irr6l" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/20.png" id="146_tbv6x"]
@@ -719,6 +728,21 @@ tracks/17/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/18/type = "audio"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AudioStreamPlayer")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"clips": [{
+"end_offset": 0.2685,
+"start_offset": 0.0583,
+"stream": ExtResource("28_qcypq")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/18/use_blend = true
 
 [sub_resource type="Animation" id="Animation_prs05"]
 resource_name = "CombatProgressDisappear"
@@ -915,6 +939,21 @@ tracks/15/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/16/type = "audio"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AudioStreamPlayer")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.226,
+"stream": ExtResource("41_l0qrn")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/16/use_blend = true
 
 [sub_resource type="Animation" id="Animation_msnik"]
 resource_name = "EquipmentAppear"
@@ -1126,6 +1165,21 @@ tracks/16/keys = {
 "method": &"show_equip"
 }]
 }
+tracks/17/type = "audio"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AudioStreamPlayer")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.885,
+"stream": ExtResource("56_w0y3t")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/17/use_blend = true
 
 [sub_resource type="Animation" id="Animation_g2g5q"]
 resource_name = "EquipmentDisappear"
@@ -1337,6 +1391,21 @@ tracks/16/keys = {
 "method": &"hide_equip"
 }]
 }
+tracks/17/type = "audio"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AudioStreamPlayer")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.688,
+"stream": ExtResource("70_buntm")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/17/use_blend = true
 
 [sub_resource type="Animation" id="Animation_dofny"]
 resource_name = "idle"
@@ -1474,6 +1543,25 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.5, 1.5)]
 }
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 0.6101,
+"start_offset": 0.0527,
+"stream": ExtResource("95_60u8s")
+}, {
+"end_offset": 0.3521,
+"start_offset": 0.3326,
+"stream": ExtResource("96_8louh")
+}],
+"times": PackedFloat32Array(0, 0.55)
+}
+tracks/11/use_blend = true
 
 [sub_resource type="Animation" id="Animation_upl4p"]
 resource_name = "InventoryDisappear"
@@ -1610,6 +1698,25 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(1.5, 1.5), Vector2(1.5, 1.5), Vector2(1, 1)]
 }
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 0.6847,
+"start_offset": 0.3423,
+"stream": ExtResource("96_8louh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.054,
+"stream": ExtResource("117_d28nn")
+}],
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/11/use_blend = true
 
 [sub_resource type="Animation" id="Animation_1x8re"]
 resource_name = "OnlyCombatProgressAppear"
@@ -2253,6 +2360,21 @@ tracks/11/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/12/type = "audio"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AudioStreamPlayer")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.2,
+"stream": ExtResource("134_yydjw")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/12/use_blend = true
 
 [sub_resource type="Animation" id="Animation_yt4ov"]
 resource_name = "QuestsAppear"
@@ -2377,6 +2499,21 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/10/type = "audio"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AudioStreamPlayer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0369,
+"stream": ExtResource("144_mwgim")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/10/use_blend = true
 
 [sub_resource type="Animation" id="Animation_2741x"]
 resource_name = "QuestsDisappear"
@@ -3650,6 +3787,9 @@ speed_scale = 2.0
 libraries = {
 "": SubResource("AnimationLibrary_qsjtm")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/PauseScreen"]
+bus = &"SFXBus"
 
 [node name="CombatProgressScreen" type="Control" parent="CanvasLayer"]
 visible = false
