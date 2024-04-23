@@ -2,19 +2,19 @@
 
 [ext_resource type="Script" path="res://src/test/bg_map.gd" id="1_d8qjv"]
 [ext_resource type="PackedScene" uid="uid://dgngpu7u70p6s" path="res://src/main/scene/tile_map.tscn" id="1_kvdhd"]
-[ext_resource type="PackedScene" uid="uid://bist1b2wqovq7" path="res://src/main/scene/role/player/Yao.tscn" id="3_j63gr"]
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="4_jcjgd"]
 [ext_resource type="Script" path="res://src/main/common/classes/spawn_shape_2d.gd" id="4_x4s3l"]
 [ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/component/weapons_manager.tscn" id="5_k0m37"]
 [ext_resource type="PackedScene" uid="uid://dhs3biji6ooth" path="res://src/main/component/turret_generator.tscn" id="6_1rhmu"]
 [ext_resource type="AudioStream" uid="uid://f284c0p7bk8a" path="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 3 - Fortified (Loopable).mp3" id="6_bbfy8"]
 [ext_resource type="PackedScene" uid="uid://btxc5hfxx24vb" path="res://src/main/component/enemy_generator.tscn" id="8_l45hi"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0qv45"]
-radius = 121.004
+[ext_resource type="PackedScene" uid="uid://bu4qkguaw7xus" path="res://src/main/scene/role/player/a_niu.tscn" id="9_c2o64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d66ul"]
 size = Vector2(311, 72)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qv45"]
+radius = 121.004
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vew0x"]
 radius = 118.004
@@ -53,41 +53,10 @@ layer_2/tile_data = PackedInt32Array(-2621407, 262145, 0, -2555871, 262145, 1, -
 [node name="WeaponsManager" parent="." instance=ExtResource("5_k0m37")]
 
 [node name="EnemyGenerator" parent="." instance=ExtResource("8_l45hi")]
-visible = false
-
-[node name="SpawnShape2D" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(241, -618)
-shape = SubResource("CircleShape2D_0qv45")
-script = ExtResource("4_x4s3l")
 
 [node name="SpawnShape2D2" type="CollisionShape2D" parent="EnemyGenerator"]
 position = Vector2(534.5, -555)
 shape = SubResource("RectangleShape2D_d66ul")
-script = ExtResource("4_x4s3l")
-
-[node name="SpawnShape2D3" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(911, -611)
-shape = SubResource("CircleShape2D_vew0x")
-script = ExtResource("4_x4s3l")
-
-[node name="SpawnShape2D4" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(895, -218.5)
-shape = SubResource("RectangleShape2D_k4m0x")
-script = ExtResource("4_x4s3l")
-
-[node name="SpawnShape2D5" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(411.5, -242.5)
-shape = SubResource("RectangleShape2D_r8dih")
-script = ExtResource("4_x4s3l")
-
-[node name="SpawnShape2D6" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(782, -403)
-shape = SubResource("RectangleShape2D_lsehc")
-script = ExtResource("4_x4s3l")
-
-[node name="SpawnShape2D7" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(354, -406.5)
-shape = SubResource("RectangleShape2D_iwhfk")
 script = ExtResource("4_x4s3l")
 
 [node name="turretGenerator" parent="." instance=ExtResource("6_1rhmu")]
@@ -180,14 +149,15 @@ color = Color(0.92549, 0.25098, 0.109804, 1)
 energy = 3.0
 texture = ExtResource("4_jcjgd")
 
-[node name="Yao" parent="." instance=ExtResource("3_j63gr")]
-position = Vector2(561, -417)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_bbfy8")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="ANiu" parent="." instance=ExtResource("9_c2o64")]
+position = Vector2(550, -421)
+collision_mask = 3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

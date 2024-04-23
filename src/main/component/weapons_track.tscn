@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bprrbvv515u6e"]
 
-[ext_resource type="Script" path="res://src/main/component/weapons_track.gd" id="1_wf1eq"]
+[ext_resource type="Script" path="res://src/main/component/Scripts/weapons_track.gd" id="1_p8fxu"]
 
 [sub_resource type="Curve2D" id="Curve2D_ho4cm"]
 _data = {
@@ -167,7 +167,7 @@ _data = {
 }
 
 [node name="WeaponsTrack" type="Node2D"]
-script = ExtResource("1_wf1eq")
+script = ExtResource("1_p8fxu")
 
 [node name="Path2D_1" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ho4cm")
@@ -254,6 +254,8 @@ position = Vector2(20, -18)
 [node name="weapon_6" type="Node2D" parent="."]
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="weapon_6"]
+update_rotation = false
+update_scale = false
 
 [node name="weapon_7" type="Node2D" parent="."]
 

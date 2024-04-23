@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgcods5co5qya"]
 
-[ext_resource type="Script" path="res://src/main/component/weapons_manager.gd" id="1_y6o1v"]
-[ext_resource type="PackedScene" uid="uid://qcgweflmqwcp" path="res://src/main/component/weapons_instance.tscn" id="2_0plid"]
+[ext_resource type="Script" path="res://src/main/component/Scripts/weapons_manager.gd" id="1_8hmhd"]
+[ext_resource type="Script" path="res://src/main/common/classes/weapons_instance.gd" id="2_u78lx"]
 
 [node name="WeaponsManager" type="Node2D"]
-script = ExtResource("1_y6o1v")
+script = ExtResource("1_8hmhd")
 
-[node name="WeaponsInstance" parent="." instance=ExtResource("2_0plid")]
+[node name="WeaponInstance" type="Node" parent="."]
+script = ExtResource("2_u78lx")
 
 [node name="Player1" type="Node2D" parent="."]
 

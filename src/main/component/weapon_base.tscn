@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bopq4yahq3nsm"]
+
+[ext_resource type="Script" path="res://src/main/component/Scripts/weapon_base.gd" id="1_ro216"]
+[ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_odq2c"]
+[ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_obb52"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_qkwuw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_erb7m"]
+radius = 100.0
+
+[node name="WeaponBase" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_ro216")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("2_odq2c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+debug_color = Color(0.970343, 0, 0.455358, 0.42)
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("3_obb52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+debug_color = Color(0, 0.643345, 0.301713, 0.42)
+
+[node name="SearchBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SearchBox"]
+shape = SubResource("CircleShape2D_erb7m")
+debug_color = Color(0.60867, 0.539673, 0, 0.42)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4_qkwuw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="TimerCoolDown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="SearchBox" to="." method="_on_search_box_body_entered"]
+[connection signal="body_exited" from="SearchBox" to="." method="_on_search_box_body_exited"]
