@@ -17,7 +17,6 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, wea
 	:param weaponName: 武器名
 	:param weapon_slot: 武器槽
 	'''
-	# print("player:", player, "weapon_name:", weaponName, "weapon_slot:", weapon_slot)
 	var slot_instance = player.weapons_track.get_weapon_slot_instance(weapon_slot) # 获取武器槽实例
 	var weapon_instance = weapons_instance.instance_weapon(weaponName) # 实例化武器
 	

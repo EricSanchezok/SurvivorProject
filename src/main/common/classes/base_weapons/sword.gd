@@ -62,13 +62,12 @@ func tick_physics(state: State, delta: float) -> void:
 			position = slot.global_position
 		State.ATTACK:
 			var dir = (target.global_position - position).normalized()
-			rotation = lerp_angle(rotation, dir.angle(), rotation_speed*delta)
+			rotation = lerp_angle(rotation, dir.angle(), rotation_speed*delta*3.0)
 			position = position.move_toward(target.global_position, attack_windup_speed*delta)
 		State.BACK:
 			rotation = lerp_angle(rotation, PI/2, rotation_speed*delta)
 			position = position.move_toward(slot.global_position, attack_backswing_speed*delta)
 
-			
 func get_next_state(state: State) -> int:
 	match state:
 		State.WAIT:
@@ -76,20 +75,16 @@ func get_next_state(state: State) -> int:
 			if target and attack_wait_timer.is_stopped():
 				return State.ATTACK
 		State.ATTACK:
-			if not target or position.distance_to(target.global_position) < 1.0:
+			if not target or position.distance_squared_to(target.global_position) < pow(1.0, 2):
 				return State.BACK
 		State.BACK:
-			if position.distance_to(slot.global_position) < 1.0:
+			if position.distance_squared_to(slot.global_position) < pow(1.0, 2):
 				return State.WAIT
 				
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	# print("[%s] %s => %s" % [
-	# 	Engine.get_physics_frames()	,
-	# 	State.keys()[from] if from != -1 else "<START>",
-	# 	State.keys()[to],
-	# ])
+	#print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 	match to:
 		State.WAIT:
