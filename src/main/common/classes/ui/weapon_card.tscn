@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwy48kklpg6tr"]
+[gd_scene load_steps=16 format=3 uid="uid://dwy48kklpg6tr"]
 
 [ext_resource type="Shader" path="res://src/main/assets/shader/dissolve.gdshader" id="1_akbum"]
 [ext_resource type="Theme" uid="uid://dum4ct87pjet4" path="res://src/main/assets/theme/default_theme.tres" id="1_b8bt2"]
@@ -14,7 +14,7 @@ noise = SubResource("FastNoiseLite_i18xi")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ckko"]
 shader = ExtResource("1_akbum")
-shader_parameter/dissolve_value = 0.0
+shader_parameter/dissolve_value = 1.0
 shader_parameter/burn_size = 0.08
 shader_parameter/burn_color = Color(0.984314, 0.501961, 0, 1)
 shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_aco6i")
@@ -37,6 +37,9 @@ shader_parameter/cull_back = true
 shader_parameter/y_rot = 0.0
 shader_parameter/x_rot = 0.0
 shader_parameter/inset = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfekw"]
+radius = 5.0
 
 [node name="WeaponCard" type="Button"]
 material = SubResource("ShaderMaterial_4ckko")
@@ -64,10 +67,11 @@ offset_top = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_bk36k")
 expand_mode = 1
 
-[node name="CardTexture" type="TextureRect" parent="."]
+[node name="CardTexture" type="TextureRect" parent="." groups=["WeaponCard"]]
 show_behind_parent = true
 material = SubResource("ShaderMaterial_jtsb8")
 layout_mode = 1
@@ -76,8 +80,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_bk36k")
 expand_mode = 1
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+collision_layer = 64
+collision_mask = 32
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 21)
+shape = SubResource("CircleShape2D_vfekw")
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

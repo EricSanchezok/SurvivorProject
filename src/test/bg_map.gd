@@ -12,7 +12,7 @@ extends Node2D
 var number_of_turrets :int = 0
 
 func _ready() -> void:
-	var combat_progress = CombatProgressGenerator.create_combat_progress(20, 1, 4)
+	# var combat_progress = CombatProgressGenerator.create_combat_progress(20, 1, 4)
 	# CombatProgressGenerator.print_combat_progress(combat_progress)
 	pass
 

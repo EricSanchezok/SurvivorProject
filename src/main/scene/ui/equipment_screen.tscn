@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://3rpnjuxjd6oo"]
+[gd_scene load_steps=31 format=3 uid="uid://3rpnjuxjd6oo"]
 
 [ext_resource type="Theme" uid="uid://dum4ct87pjet4" path="res://src/main/assets/theme/default_theme.tres" id="1_0llwj"]
 [ext_resource type="Script" path="res://src/main/scene/ui/equipment_screen.gd" id="2_xd5r7"]
@@ -9,32 +9,33 @@
 [ext_resource type="Texture2D" uid="uid://bioblbs66ydka" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Progress Bars/1.png" id="6_0cau2"]
 [ext_resource type="Texture2D" uid="uid://cotp6fq5fvc6k" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Progress Bars/0.png" id="7_hhtxe"]
 [ext_resource type="Texture2D" uid="uid://6tmw40qkaaim" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/1.png" id="8_y1t60"]
-[ext_resource type="Texture2D" uid="uid://cetihw8rnkliw" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/5.png" id="9_5spab"]
-[ext_resource type="Texture2D" uid="uid://deu4csk3rlf87" path="res://src/main/assets/texture/tiles/1bit 16px patterns and tiles.png" id="10_7cgcy"]
-[ext_resource type="Texture2D" uid="uid://bryi2rgrcbbpn" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Holders/8.png" id="11_e6063"]
+[ext_resource type="PackedScene" uid="uid://b80pwlcj6xv82" path="res://src/main/common/classes/ui/weapon_card_slot.tscn" id="11_22r64"]
 [ext_resource type="Texture2D" uid="uid://dc8l4gtp2yvja" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/3 - Equipment/Sprites/Decorations/1.png" id="12_dpq0d"]
-[ext_resource type="Texture2D" uid="uid://ctqga5knpu07" path="res://src/main/assets/packs/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/1 - Inventory/Sprites/Holders/2.png" id="14_gxoys"]
+[ext_resource type="Script" path="res://src/main/scene/ui/shop.gd" id="14_fg8yx"]
+[ext_resource type="PackedScene" uid="uid://dwy48kklpg6tr" path="res://src/main/common/classes/ui/weapon_card.tscn" id="15_aj5vo"]
+[ext_resource type="Texture2D" uid="uid://byj4goebhxjah" path="res://src/main/assets/packs/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/94.png" id="16_e1ves"]
+[ext_resource type="Texture2D" uid="uid://t15m3at4skvj" path="res://src/main/assets/texture/role/Card/WeaponCard.png" id="17_58l16"]
+[ext_resource type="Texture2D" uid="uid://dp2mmyvabj5u7" path="res://src/main/assets/packs/Wood Buttons v1.0/1 Slice Buttons 32x32/Brown Buttons/154.png" id="18_xhsd6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mpgsp"]
-atlas = ExtResource("10_7cgcy")
-region = Rect2(362, 394, 46, 28)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fss6"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7cpe"]
-texture = SubResource("AtlasTexture_mpgsp")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 6.0
-texture_margin_bottom = 3.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-modulate_color = Color(0.592157, 0.388235, 0.356863, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wxi6"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utn1l"]
-texture = ExtResource("11_e6063")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1cbr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3jvh5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia7qs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6cby"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghkt2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktkm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gsl3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6uo8k"]
 
 [sub_resource type="Animation" id="Animation_30b8r"]
 length = 0.001
@@ -126,15 +127,9 @@ _data = {
 "show": SubResource("Animation_dfejp")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jvpo"]
-texture = ExtResource("14_gxoys")
-texture_margin_left = 24.0
-texture_margin_top = 24.0
-texture_margin_right = 24.0
-texture_margin_bottom = 24.0
-
 [node name="EquipmentScreen" type="Control"]
 visible = false
+top_level = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,6 +144,7 @@ script = ExtResource("2_xd5r7")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -428,13 +424,12 @@ stretch_mode = 4
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 9
-theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 5
 
 [node name="Equip" type="Control" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip"]
 layout_mode = 1
@@ -445,6 +440,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Title" type="Control" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
@@ -459,163 +455,62 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 24
 text = "Equip"
 horizontal_alignment = 1
-vertical_alignment = 2
+vertical_alignment = 1
 
 [node name="TitleLine" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/Title"]
 layout_mode = 2
-offset_left = 17.0
-offset_top = 23.0
-offset_right = 97.0
-offset_bottom = 33.0
+offset_left = 14.0
+offset_top = 19.0
+offset_right = 94.0
+offset_bottom = 29.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
 texture = ExtResource("3_enlhy")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="WeaponPack" type="Control" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer"]
+[node name="WeaponPack" type="ScrollContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
 [node name="GridContainer" type="GridContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack"]
+custom_minimum_size = Vector2(106, 144)
 layout_mode = 2
-offset_left = 1.0
-offset_right = 104.0
-offset_bottom = 56.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 2
-theme_override_constants/v_separation = -2
-columns = 5
+theme_override_constants/v_separation = 5
+columns = 3
 
-[node name="Equip1" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip2" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot2" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip3" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot3" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip4" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot4" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip5" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot5" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip6" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot6" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip7" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot7" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip8" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot8" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="Equip9" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
+[node name="WeaponCardSlot9" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer" instance=ExtResource("11_22r64")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Equip10" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/WeaponPack/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("9_5spab")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="PanelContainer" type="PanelContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 1.3
-theme_override_styles/panel = SubResource("StyleBoxTexture_b7cpe")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer"]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="WeaponAvatarHolder" type="PanelContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_utn1l")
-
-[node name="Detail" type="Control" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.6
-
-[node name="WeaponName" type="VBoxContainer" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer/HBoxContainer/Detail"]
-layout_mode = 0
-offset_right = 60.0
-offset_bottom = 13.0
-theme_override_constants/separation = -2
-
-[node name="Label" type="Label" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer/HBoxContainer/Detail/WeaponName"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 8
-text = "WeaponName"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer/HBoxContainer/Detail/WeaponName"]
-layout_mode = 2
-size_flags_vertical = 3
-texture = ExtResource("12_dpq0d")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextDetail" type="TextEdit" parent="Pack/HBoxContainer/HBoxContainer/MarginContainerRight/Equip/VBoxContainer/PanelContainer/HBoxContainer/Detail"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 14.0
-offset_right = 60.0
-offset_bottom = 55.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="ControlRight" type="Control" parent="Pack/HBoxContainer"]
 layout_mode = 2
@@ -627,24 +522,123 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_djs4b")
-}
-
-[node name="Shop" type="Control" parent="."]
-visible = false
+[node name="Shop" type="Control" parent="." node_paths=PackedStringArray("from")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("14_fg8yx")
+from = NodePath("DealingArea")
+card_scene = ExtResource("15_aj5vo")
 
-[node name="PanelContainer" type="PanelContainer" parent="Shop"]
+[node name="DealingArea" type="TextureRect" parent="Shop"]
+self_modulate = Color(1, 0.753, 0.62, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 345.0
+offset_top = 9.0
+offset_right = 375.0
+offset_bottom = 51.0
+texture = ExtResource("17_58l16")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Shop/DealingArea"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 100.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_4jvpo")
+grow_vertical = 2
+texture = ExtResource("16_e1ves")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RefreshButton" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 177.0
+offset_right = 370.0
+offset_bottom = 193.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7fss6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7wxi6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j1cbr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3jvh5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ia7qs")
+
+[node name="TextureRect" type="TextureRect" parent="Shop/RefreshButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_xhsd6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Shop/RefreshButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 5
+text = "REFRESH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpdateButton" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 150.0
+offset_right = 370.0
+offset_bottom = 166.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m6cby")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ghkt2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ktkm2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5gsl3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6uo8k")
+
+[node name="TextureRect" type="TextureRect" parent="Shop/UpdateButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_xhsd6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Shop/UpdateButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 5
+text = "UPDATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Marker2D" type="Marker2D" parent="Shop"]
+position = Vector2(295, 29)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_djs4b")
+}
+
+[connection signal="pressed" from="Shop/RefreshButton" to="Shop" method="_on_refresh_button_pressed"]
