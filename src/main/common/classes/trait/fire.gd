@@ -8,4 +8,4 @@ var fire_number = 0:
 		fire_number = v
 		fire_trait.emit(v)
 		
-		
+

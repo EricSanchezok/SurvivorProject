@@ -13,7 +13,7 @@ var number_of_turrets :int = 0
 
 func _ready() -> void:
 	# var combat_progress = CombatProgressGenerator.create_combat_progress(20, 1, 4)
-	# CombatProgressGenerator.print_combat_progress(combat_progress)
+	 #CombatProgressGenerator.print_combat_progress(combat_progress)
 	pass
 
 func _on_timer_timeout() -> void:

@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export var default_weapon: String = "normal_sword"
-
+var weapons
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var graphics: Node2D = $Graphics
 @onready var playerStats: PlayerStats = $PlayerStats
@@ -31,6 +31,9 @@ enum Direction {
 		
 func _ready() -> void:
 	register_weapon.emit(self, default_weapon, 1)
+	var weapon_manager = get_node("/root/bg_map/WeaponsManager")
+	var index = weapon_manager.player_index(self)
+	weapons = weapon_manager.players_weapon["Player"+str(index)+"_weapon"]
 
 
 func _unhandled_input(event: InputEvent) -> void:

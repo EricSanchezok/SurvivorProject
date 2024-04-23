@@ -1,9 +1,11 @@
 extends Player
 
+@onready var player_stats: PlayerStats = $PlayerStats
+
 
 func _ready() -> void:
-	#super()
-	register_weapon.emit(self, "normal_sword", 1)
+	super()
+	#register_weapon.emit(self, "normal_sword", 1)
 	#register_weapon.emit(self, "normal_bomb", 2)
 	#register_weapon.emit(self, "normal_boomerang", 3)
 	#register_weapon.emit(self, "normal_axe", 4)
@@ -14,4 +16,5 @@ func _ready() -> void:
 	#register_weapon.emit(self, "normal_axe", 9)
 	#register_weapon.emit(self, "normal_axe", 10)
 	pass
+
 

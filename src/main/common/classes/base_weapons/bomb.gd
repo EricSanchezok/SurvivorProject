@@ -95,7 +95,7 @@ func _update_parameters() -> void:
 	attack_wait_time = base_attack_wait_time / playerStats.attack_speed_multiplier
 	attack_wait_timer.wait_time = attack_wait_time
 	knockback = base_knockback * playerStats.knockback_multiplier
-	critical_hit_rate=base_critical_hit_rate + playerStats.critical_hit_rate
+	#critical_hit_rate=base_critical_hit_rate + playerStats.critical_hit_rate
 	critical_damage = base_critical_damage + playerStats.critical_damage
 	number_of_projectiles=base_number_of_projectiles + playerStats.number_of_projectiles
 	projectile_speed = base_projectile_speed * playerStats.projectile_speed_multiplier

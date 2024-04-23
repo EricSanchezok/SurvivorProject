@@ -4,6 +4,8 @@ extends Node
 signal health_changed
 signal stats_changed
 
+
+
 # 基础最大生命值
 @export var base_max_health: float = 10:
 	set(v):
@@ -30,20 +32,26 @@ signal stats_changed
 	set(v):
 		if critical_hit_rate == v:
 			return
+		for weapon in owner.weapons:
+			weapon.modify_attribute("critical_hit_rate","absolute",v-critical_hit_rate)
 		critical_hit_rate = v
 		stats_changed.emit()
 # 暴击伤害
-@export var critical_damage: float = 1.5:
+@export var critical_damage: float = 0:
 	set(v):
 		if critical_damage == v:
 			return
+		for weapon in owner.weapons:
+			weapon.modify_attribute("critical_hit_rate","absolute",v-critical_hit_rate)
 		critical_damage = v
 		stats_changed.emit()
 # 发射物数量
-@export var number_of_projectiles: int = 1:
+@export var number_of_projectiles: int = 0:
 	set(v):
 		if number_of_projectiles == v:
 			return
+		for weapon in owner.weapons:
+			weapon.modify_attribute("number_of_projectiles","absolute",v-critical_hit_rate)
 		number_of_projectiles = v
 		stats_changed.emit()
 # 伤害减免率
@@ -78,53 +86,68 @@ signal stats_changed
 		movement_speed_multiplier = v
 		stats_changed.emit()
 # 总攻击力倍率
-@export var attack_power_multiplier: float = 1.0:
+@export var power_multiplier: float = 0:
 	set(v):
-		if attack_power_multiplier == v:
+		if power_multiplier == v:
 			return
-		attack_power_multiplier = v
+		for weapon in owner.weapons:
+			weapon.modify_attribute("power_physical","percent",v-critical_hit_rate)
+			weapon.modify_attribute("power_magic","percent",v-critical_hit_rate)
+		power_multiplier = v
 		stats_changed.emit()
 # 物理攻击力倍率
-@export var physical_attack_power_multiplier: float = 1.0:
+@export var power_physical_multiplier: float = 0:
 	set(v):
-		if physical_attack_power_multiplier == v:
+		if power_physical_multiplier == v:
 			return
-		physical_attack_power_multiplier = v
+		for weapon in owner.weapons:
+			weapon.modify_attribute("power_physical","percent",v-critical_hit_rate)
+		power_physical_multiplier = v
 		stats_changed.emit()
 # 魔法攻击力倍率
-@export var magic_attack_power_multiplier: float = 1.0:
+@export var power_magic_multiplier: float = 0:
 	set(v):
-		if magic_attack_power_multiplier == v:
+		if power_magic_multiplier == v:
 			return
-		magic_attack_power_multiplier = v
+		for weapon in owner.weapons:
+			weapon.modify_attribute("power_magic","percent",v-critical_hit_rate)
+		power_magic_multiplier = v
 		stats_changed.emit()
 # 攻击范围倍率
-@export var attack_range_multiplier: float = 1.0:
+@export var range_attack_multiplier: float = 0:
 	set(v):
-		if attack_range_multiplier == v:
+		if range_attack_multiplier == v:
 			return
-		attack_range_multiplier = v
+		for weapon in owner.weapons:
+			weapon.modify_attribute("range_attack","percent",v-critical_hit_rate)
+		range_attack_multiplier = v
 		stats_changed.emit()
 # 攻击速度倍率
-@export var attack_speed_multiplier: float = 1.0:
+@export var time_cooldown_multiplier: float = 0:
 	set(v):
-		if attack_speed_multiplier == v:
+		if time_cooldown_multiplier == v:
 			return
-		attack_speed_multiplier = v
+		for weapon in owner.weapons:
+			weapon.modify_attribute("time_cooldown","percent",v-critical_hit_rate)
+		time_cooldown_multiplier = v
 		stats_changed.emit()
 # 击退倍率
-@export var knockback_multiplier: float = 1.0:
+@export var knockback_multiplier: float = 0:
 	set(v):
 		if knockback_multiplier == v:
 			return
+		for weapon in owner.weapons:
+			weapon.modify_attribute("knockback","percent",v-critical_hit_rate)
 		knockback_multiplier = v
 		stats_changed.emit()
-# 发射物速度倍率
-@export var projectile_speed_multiplier: float = 1.0:
+# 武器飞行速度倍率
+@export var speed_fly_multiplier: float = 0:
 	set(v):
-		if projectile_speed_multiplier == v:
+		if speed_fly_multiplier == v:
 			return
-		projectile_speed_multiplier = v
+		for weapon in owner.weapons:
+			weapon.modify_attribute("speed_fly","percent",v-critical_hit_rate)
+		speed_fly_multiplier = v
 		stats_changed.emit()
 # 经验获取倍率
 @export var experience_gain_multiplier: float = 1.0:
@@ -133,9 +156,6 @@ signal stats_changed
 			return
 		experience_gain_multiplier = v
 		stats_changed.emit()
-
-
-
 
 
 @onready var health: float = base_max_health * max_health_multiplier:
