@@ -26,6 +26,7 @@ var playerStats: Node
 @export var base_number_of_projectiles: int = 1   #发射物数量
 @export var base_projectile_speed: float = 200.0   #发射物速度
 
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var physical_attack_power: float
 var magic_attack_power: float
@@ -46,7 +47,7 @@ var projectile_speed: float
 @export var base_magazine: = 5  #弹匣
 var explosion_range: float 
 var penetration_rate: float = base_penetration_rate
-var magazine: float =  base_magazine
+var magazine: float 
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 变量定义 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var bullets = {

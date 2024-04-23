@@ -27,7 +27,7 @@ enum Direction {
 		direction = v
 		if not is_node_ready():
 			await ready
-		graphics.scale.x = direction	
+		graphics.scale.x = direction
 		
 func _ready() -> void:
 	register_weapon.emit(self, default_weapon, 1)

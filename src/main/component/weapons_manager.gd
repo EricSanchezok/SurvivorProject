@@ -25,6 +25,7 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, wea
 	weapon_instance.slot = slot_instance
 	weapon_instance.player = player
 	weapon_instance.playerStats = player.playerStats
+	#weapon_instance.attribute_calculator.playerStats = player.playerStats
 	weapon_instance.position = slot_instance.global_position
 	
 	# 添加武器实例到对应的玩家槽(玩家槽在当前节点中)

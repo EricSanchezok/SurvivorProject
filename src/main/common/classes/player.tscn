@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="5_n3ida"]
 [ext_resource type="PackedScene" uid="uid://3rpnjuxjd6oo" path="res://src/main/scene/ui/equipment_screen.tscn" id="6_kpxy7"]
 [ext_resource type="PackedScene" uid="uid://bprrbvv515u6e" path="res://src/main/component/weapons_track.tscn" id="6_lsui7"]
-[ext_resource type="Script" path="res://src/main/common/classes/fetters/fire.gd" id="7_s4nxs"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/fire.gd" id="7_uklpo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg6c6"]
 radius = 8.0
@@ -66,6 +66,6 @@ one_shot = true
 [node name="EquipmentScreen" parent="CanvasLayer" instance=ExtResource("6_kpxy7")]
 
 [node name="Fire" type="Node" parent="."]
-script = ExtResource("7_s4nxs")
+script = ExtResource("7_uklpo")
 
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]

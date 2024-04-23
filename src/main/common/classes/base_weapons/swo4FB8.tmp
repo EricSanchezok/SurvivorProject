@@ -39,7 +39,5 @@ script = ExtResource("3_4148g")
 [node name="AttributeCalculator" type="Node" parent="."]
 script = ExtResource("4_g0yfy")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
