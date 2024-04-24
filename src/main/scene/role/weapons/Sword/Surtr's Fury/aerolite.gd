@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("explode")
 		
 	position = position.move_toward(target_position, max_speed*delta)
-	look_at(target_position)
+	$Graphics.look_at(target_position)
 	
 	#var dir := (target_position - position).normalized()
 	#velocity.x = lerpf(velocity.x, max_speed, acceleration*delta)
