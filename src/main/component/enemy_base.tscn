@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bryw5ltiiocp1"]
+
+[ext_resource type="Script" path="res://src/main/component/Scripts/enemy_base.gd" id="1_lkhbt"]
+[ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_yfjr8"]
+[ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_btl2e"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_m830w"]
+[ext_resource type="Script" path="res://src/main/common/classes/EnemyStats.gd" id="5_ia363"]
+
+[node name="EnemyBase" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_lkhbt")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+
+[node name="HitBox" type="Area2D" parent="Graphics"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("2_yfjr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
+debug_color = Color(0.968627, 0, 0.454902, 0.419608)
+
+[node name="HurtBox" type="Area2D" parent="Graphics"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("3_btl2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
+debug_color = Color(0, 0.643137, 0.301961, 0.419608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4_m830w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="EnemyStats" type="Node" parent="."]
+script = ExtResource("5_ia363")
+
+[connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]

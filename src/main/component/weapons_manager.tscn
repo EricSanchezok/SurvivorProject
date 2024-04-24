@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgcods5co5qya"]
 
 [ext_resource type="Script" path="res://src/main/component/weapons_manager.gd" id="1_y6o1v"]
-[ext_resource type="PackedScene" uid="uid://qcgweflmqwcp" path="res://src/main/component/weapons_instance.tscn" id="2_0plid"]
+[ext_resource type="PackedScene" uid="uid://bctdh3xdlphdj" path="res://src/main/component/weapons_instance.tscn" id="2_0plid"]
 
 [node name="WeaponsManager" type="Node2D"]
 script = ExtResource("1_y6o1v")

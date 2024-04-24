@@ -5,7 +5,8 @@ extends Node2D
 
 
 @onready var enemies = {
-	"orc": preload("res://src/main/scene/role/enemy/orc.tscn")
+	"orc": preload("res://src/main/scene/role/enemy/orc.tscn"),
+	"shade": preload("res://src/main/scene/role/enemy/shade.tscn")
 }
 
 
@@ -17,7 +18,7 @@ func _ready() -> void:
 	pass
 
 func _on_timer_timeout() -> void:
-	enemy_generator.register_enemy(enemies["orc"], 1)
+	enemy_generator.register_enemy(enemies["shade"], 30)
 	pass
 
 

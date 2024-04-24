@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://qcgweflmqwcp"]
+[gd_scene load_steps=2 format=3 uid="uid://bctdh3xdlphdj"]
 
 [ext_resource type="Script" path="res://src/main/component/weapons_instance.gd" id="1_rltm6"]
 
