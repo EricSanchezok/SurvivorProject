@@ -9,8 +9,8 @@ var players_weapon ={
 	Player3_weapon = [],
 	Player4_weapon = [],
 }
-
-
+var weapon_origins = []
+var weapon_classes = []
 
 func _ready():
 	players = get_tree().get_nodes_in_group("player")
@@ -34,6 +34,7 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, wea
 	var slot_instance = player.weapons_track.get_weapon_slot_instance(weapon_slot) # 获取武器槽实例
 	var weapon_instance = weapons_instance.instance_weapon(weaponName) # 实例化武器
 	
+	
 	# 设置武器实例属性
 	weapon_instance.slot = slot_instance
 	weapon_instance.player = player
@@ -49,11 +50,14 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, wea
 	
 	player_slot.add_child(weapon_instance)
 	players_weapon[playerindex+"_weapon"].append(weapon_instance)
-	#print(players_weapon[playerindex+"_weapon"][0].physical_attack_power)
-	#players_weapon[playerindex+"_weapon"][0].modify_attribute("physical_attack_power","percent",0.5)
-	#print(players_weapon[playerindex+"_weapon"][0].physical_attack_power)
 	
-	player.fire.fire_number = 5
+	weapon_origins = weapon_instance.origins
+	weapon_classes = weapon_instance.classes
+	for origins in weapon_origins:
+		player.update_origins_number(origins,1) 
+	for classes in weapon_classes:
+		player.update_classes_number(classes,1) 
+	
 	
 
 

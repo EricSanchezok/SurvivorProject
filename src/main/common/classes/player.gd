@@ -1,8 +1,50 @@
 class_name Player
 extends CharacterBody2D
-
 @export var default_weapon: String = "normal_sword"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+signal origins_number_changed(type, value)
+signal classes_number_changed(type, value)
 var weapons
+var origins_number = {
+	fire_number = 0,
+	frost_number = 0,
+	lighting_number = 0,
+	earth_number = 0,
+	poison_number = 0,
+	nature_number = 0,
+	holy_number = 0,
+	evil_number = 0,
+	psychic_number = 0,
+	tech_number = 0,
+}
+func update_origins_number(key,value):
+	origins_number[key+"_number"] = origins_number[key+"_number"]+value
+	update_origins_numbers(key)
+func update_origins_numbers(key):
+	origins_number_changed.emit(key,origins_number[key+"_number"])
+var classes_number = {
+	sword_number = 0,
+	shield_number = 0,
+	axe_number = 0,
+	spear_number = 0,
+	hammer_number = 0,
+	dagger_number = 0,
+	armor_number = 0,
+	ring_number = 0,
+	boomerang_number = 0,
+	bow_number = 0,
+	wand_number = 0,
+	laserwand_number =0,
+	scroll_number = 0,
+	gun_number = 0,
+	turret_number = 0,
+	bomb_number = 0,
+}
+func update_classes_number(key,value):
+	classes_number[key+"_number"] = classes_number[key+"_number"]+value
+	update_classes_numbers(key)
+func update_classes_numbers(key):
+	classes_number_changed.emit(key,classes_number[key+"_number"])
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 节点引用 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var graphics: Node2D = $Graphics
 @onready var playerStats: PlayerStats = $PlayerStats

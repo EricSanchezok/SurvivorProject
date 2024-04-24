@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://byv6mwfcljgrl" path="res://src/main/common/classes/base_weapons/sword.tscn" id="1_q3v6j"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/normal_sword.gd" id="2_fvoto"]
 [ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_3to4j"]
-[ext_resource type="Script" path="res://src/main/common/classes/trait/trait_fire.gd" id="4_blw86"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/fire_trait.gd" id="4_igdp5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ghj1"]
 atlas = ExtResource("3_3to4j")
@@ -26,5 +26,5 @@ rotation = 1.5708
 scale = Vector2(1.05596, 0.815694)
 shape = SubResource("CapsuleShape2D_wvkga")
 
-[node name="trait_fire" type="Node" parent="." index="4"]
-script = ExtResource("4_blw86")
+[node name="fire_trait" type="Node" parent="." index="4"]
+script = ExtResource("4_igdp5")

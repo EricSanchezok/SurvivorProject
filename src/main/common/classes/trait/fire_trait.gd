@@ -1,4 +1,4 @@
-class_name  trait_fire
+class_name  Fire_Trait
 extends Node
 
 var new_fire_number : int
@@ -6,10 +6,11 @@ var old_fire_number : int
 
 
 func _ready():
-	owner.player.fire.connect("fire_trait", _on_player_fire_trait)
-		
+	owner.player.fire.connect("fire_trait",_on_player_fire_trait)
+
 
 func _on_player_fire_trait(fire_number: int ) -> void:
+	print(fire_number)
 	new_fire_number = fire_number
 	if old_fire_number ==2 and new_fire_number == 3:
 		owner.modify_attribute("power_magic","percent",0.5)
