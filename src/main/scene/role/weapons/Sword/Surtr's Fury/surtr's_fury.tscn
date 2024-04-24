@@ -25,9 +25,15 @@ visible = false
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_coyqf")
 
+[node name="HitBox" parent="." index="2"]
+visible = false
+
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_j3v2g")
 
 [node name="HurtBox" parent="." index="3"]
+visible = false
+
+[node name="SearchBox" parent="." index="4"]
 visible = false

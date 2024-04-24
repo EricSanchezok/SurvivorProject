@@ -129,5 +129,5 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.amount = hitbox.owner.damage
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
 	pending_damages.append(damage)
-	print(pending_damages.size())
+	#print(pending_damages.size())
 	
