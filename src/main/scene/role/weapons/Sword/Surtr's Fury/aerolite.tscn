@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbyabsxqw7y0t"]
+[gd_scene load_steps=20 format=3 uid="uid://cbyabsxqw7y0t"]
 
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/aerolite.gd" id="1_qandt"]
 [ext_resource type="Texture2D" uid="uid://bbu84ivwkswuu" path="res://src/main/assets/texture/role/Crater/Sprite.png" id="2_cbu01"]
@@ -6,9 +6,48 @@
 [ext_resource type="Shader" path="res://src/main/assets/shader/radial_fade.gdshader" id="2_ppv0s"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="3_rxj7i"]
 [ext_resource type="Texture2D" uid="uid://cdrwwb0an3a2e" path="res://src/main/assets/texture/vfx/explosions-pack-web/spritesheets/explosion-4.png" id="6_q80yw"]
+[ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="8_biuu4"]
+[ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="8_yxcq2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fbl1v"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_8fpyo"]
+offsets = PackedFloat32Array(0, 0.219595, 0.385135, 0.712838, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.960784, 0.00392157, 1, 1, 0, 0.0941176, 1, 0.0705882, 0.00392157, 0.0941176, 1, 0.0705882, 0.00392157, 0.0941176, 0.490196)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f7omj"]
+gradient = SubResource("Gradient_8fpyo")
+
+[sub_resource type="Curve" id="Curve_1h7ac"]
+_data = [Vector2(0, 0.396088), 0.0, 0.0, 0, 0, Vector2(0.117284, 1), 0.0, 0.0, 0, 0, Vector2(0.432099, 0.698044), -3.16304, -3.16304, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_o27pb"]
+curve = SubResource("Curve_1h7ac")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2esyy"]
+lifetime_randomness = 0.12
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector3(-1, 0, 0)
+spread = 15.0
+gravity = Vector3(0, 0, 0)
+tangential_accel_min = -15.0
+tangential_accel_max = 15.0
+scale_min = 0.4
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_o27pb")
+color_ramp = SubResource("GradientTexture1D_f7omj")
+anim_speed_min = 0.5
+anim_speed_max = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bespk"]
-radius = 28.0
+radius = 32.0
 height = 100.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o10rl"]
@@ -77,6 +116,42 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Graphics/GPUParticles2D:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PointLight2D:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:texture_scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.05]
 }
 
 [sub_resource type="Animation" id="Animation_5vmp4"]
@@ -157,6 +232,42 @@ tracks/5/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Graphics/GPUParticles2D:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:energy")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 3.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PointLight2D:texture_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.05, 0.1]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w5jsx"]
 _data = {
@@ -175,6 +286,14 @@ script = ExtResource("1_qandt")
 rotation = -2.35619
 texture = ExtResource("2_fp0b4")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Graphics"]
+material = SubResource("CanvasItemMaterial_fbl1v")
+position = Vector2(3, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_2esyy")
+texture = ExtResource("8_biuu4")
+randomness = 0.13
+
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 16
@@ -187,6 +306,7 @@ shape = SubResource("CapsuleShape2D_bespk")
 debug_color = Color(0.968627, 0, 0.454902, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 
 [node name="Crater" type="Sprite2D" parent="."]
 visible = false
@@ -206,3 +326,8 @@ region_rect = Rect2(0, 0, 1536, 128)
 libraries = {
 "": SubResource("AnimationLibrary_w5jsx")
 }
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.443137, 0.0705882, 1)
+texture = ExtResource("8_yxcq2")
+texture_scale = 0.05
