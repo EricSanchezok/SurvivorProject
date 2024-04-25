@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://by53wa1aaw10s"
-path="res://.godot/imported/move_slide_metal_01.ogg-762100f79cdfecd5c736f8cc8c1af767.oggvorbisstr"
+path="res://.godot/imported/move_slide_metal_01.ogg-3d8755906705d48b19127cd896289929.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/move_slide_metal_01.ogg"
-dest_files=["res://.godot/imported/move_slide_metal_01.ogg-762100f79cdfecd5c736f8cc8c1af767.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/move_slide_metal_01.ogg"
+dest_files=["res://.godot/imported/move_slide_metal_01.ogg-3d8755906705d48b19127cd896289929.oggvorbisstr"]
 
 [params]
 

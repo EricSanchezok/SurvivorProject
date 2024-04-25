@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dbwarwbx5vx55"
-path="res://.godot/imported/HIT 04.ogg-2fad7fcc10bc3f5833908ef9b59380fe.oggvorbisstr"
+path="res://.godot/imported/HIT 04.ogg-2aea3999b8d16a41afc743f9cae27211.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/HIT 04.ogg"
-dest_files=["res://.godot/imported/HIT 04.ogg-2fad7fcc10bc3f5833908ef9b59380fe.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/HIT 04.ogg"
+dest_files=["res://.godot/imported/HIT 04.ogg-2aea3999b8d16a41afc743f9cae27211.oggvorbisstr"]
 
 [params]
 

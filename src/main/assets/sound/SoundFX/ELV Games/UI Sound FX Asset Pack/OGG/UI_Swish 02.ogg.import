@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dpbv6utgtjda4"
-path="res://.godot/imported/UI_Swish 02.ogg-50b16adb2f6a18898648b2534e8d379d.oggvorbisstr"
+path="res://.godot/imported/UI_Swish 02.ogg-526db045d0745128d0aca81f42bc58f1.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/OGG/UI_Swish 02.ogg"
-dest_files=["res://.godot/imported/UI_Swish 02.ogg-50b16adb2f6a18898648b2534e8d379d.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/OGG/UI_Swish 02.ogg"
+dest_files=["res://.godot/imported/UI_Swish 02.ogg-526db045d0745128d0aca81f42bc58f1.oggvorbisstr"]
 
 [params]
 

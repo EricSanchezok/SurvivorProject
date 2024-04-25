@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://p5pa1namuoi6"
-path="res://.godot/imported/SCI-FI_Robotic 04.wav-fd138e144f8109c588303949fb1dadf0.sample"
+path="res://.godot/imported/SCI-FI_Robotic 04.wav-dfd333adbd988f0787a204997c3d77bf.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/WAV/SCI-FI_Robotic 04.wav"
-dest_files=["res://.godot/imported/SCI-FI_Robotic 04.wav-fd138e144f8109c588303949fb1dadf0.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/WAV/SCI-FI_Robotic 04.wav"
+dest_files=["res://.godot/imported/SCI-FI_Robotic 04.wav-dfd333adbd988f0787a204997c3d77bf.sample"]
 
 [params]
 

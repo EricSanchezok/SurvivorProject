@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://crpr3g2nmmx4t"
-path="res://.godot/imported/Gravel_Running.mp3-928ebdf304b61b205505c5994a542373.mp3str"
+path="res://.godot/imported/Gravel_Running.mp3-d39242ef65a9aa9d009e32e0eb487bf0.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Gravel_Running.mp3"
-dest_files=["res://.godot/imported/Gravel_Running.mp3-928ebdf304b61b205505c5994a542373.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Gravel_Running.mp3"
+dest_files=["res://.godot/imported/Gravel_Running.mp3-d39242ef65a9aa9d009e32e0eb487bf0.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://y1y5halksha8"
-path="res://.godot/imported/tornado.wav-58c7cd95bdfbb9c2acf0199fa927a94e.sample"
+path="res://.godot/imported/tornado.wav-55230cd769891a1ddef94d01aa195c22.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 2/tornado.wav"
-dest_files=["res://.godot/imported/tornado.wav-58c7cd95bdfbb9c2acf0199fa927a94e.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 2/tornado.wav"
+dest_files=["res://.godot/imported/tornado.wav-55230cd769891a1ddef94d01aa195c22.sample"]
 
 [params]
 

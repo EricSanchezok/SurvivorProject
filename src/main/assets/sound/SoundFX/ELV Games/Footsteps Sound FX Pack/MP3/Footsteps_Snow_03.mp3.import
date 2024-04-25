@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bm8hdp4wtdypu"
-path="res://.godot/imported/Footsteps_Snow_03.mp3-4e82ef6afcdbf7f508ff4d0ac84f391b.mp3str"
+path="res://.godot/imported/Footsteps_Snow_03.mp3-058f75604ed3cf00e759f8326d55408b.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/MP3/Footsteps_Snow_03.mp3"
-dest_files=["res://.godot/imported/Footsteps_Snow_03.mp3-4e82ef6afcdbf7f508ff4d0ac84f391b.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/MP3/Footsteps_Snow_03.mp3"
+dest_files=["res://.godot/imported/Footsteps_Snow_03.mp3-058f75604ed3cf00e759f8326d55408b.mp3str"]
 
 [params]
 

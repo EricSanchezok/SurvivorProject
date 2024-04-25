@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cndds1xbney76"
-path="res://.godot/imported/SCI-FI_Console UI 02.ogg-6ff6de87490f35784e239a2350d2964f.oggvorbisstr"
+path="res://.godot/imported/SCI-FI_Console UI 02.ogg-fe82c70be831126e2bf4dd9131098e3c.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Console UI 02.ogg"
-dest_files=["res://.godot/imported/SCI-FI_Console UI 02.ogg-6ff6de87490f35784e239a2350d2964f.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Console UI 02.ogg"
+dest_files=["res://.godot/imported/SCI-FI_Console UI 02.ogg-fe82c70be831126e2bf4dd9131098e3c.oggvorbisstr"]
 
 [params]
 

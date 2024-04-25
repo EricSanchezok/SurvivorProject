@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b12eh4aaq2pda"
-path="res://.godot/imported/UI_Menu Open.wav-9ce52871f92cd61f1619c79f9b84bc0c.sample"
+path="res://.godot/imported/UI_Menu Open.wav-2a8bd21d13a889c97155aee89d259ce3.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/UI_Menu Open.wav"
-dest_files=["res://.godot/imported/UI_Menu Open.wav-9ce52871f92cd61f1619c79f9b84bc0c.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Menu Open.wav"
+dest_files=["res://.godot/imported/UI_Menu Open.wav-2a8bd21d13a889c97155aee89d259ce3.sample"]
 
 [params]
 

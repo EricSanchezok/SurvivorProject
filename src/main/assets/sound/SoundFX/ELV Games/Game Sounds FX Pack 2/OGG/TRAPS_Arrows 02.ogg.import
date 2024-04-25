@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://h8764mxl4j5o"
-path="res://.godot/imported/TRAPS_Arrows 02.ogg-50c2ff729413d29fc7b259378c700f4d.oggvorbisstr"
+path="res://.godot/imported/TRAPS_Arrows 02.ogg-fd6b84d4a66a1ab4c2a86b6306e52621.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/TRAPS_Arrows 02.ogg"
-dest_files=["res://.godot/imported/TRAPS_Arrows 02.ogg-50c2ff729413d29fc7b259378c700f4d.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/TRAPS_Arrows 02.ogg"
+dest_files=["res://.godot/imported/TRAPS_Arrows 02.ogg-fd6b84d4a66a1ab4c2a86b6306e52621.oggvorbisstr"]
 
 [params]
 

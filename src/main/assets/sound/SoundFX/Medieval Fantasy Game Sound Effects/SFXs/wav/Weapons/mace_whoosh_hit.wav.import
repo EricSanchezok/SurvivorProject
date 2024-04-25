@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b3gdulwq8ayim"
-path="res://.godot/imported/mace_whoosh_hit.wav-534a81e3344022f9402cd6455beb6118.sample"
+path="res://.godot/imported/mace_whoosh_hit.wav-9ef95b87f7b7d67b01d22586a4241c66.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/mace_whoosh_hit.wav"
-dest_files=["res://.godot/imported/mace_whoosh_hit.wav-534a81e3344022f9402cd6455beb6118.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/mace_whoosh_hit.wav"
+dest_files=["res://.godot/imported/mace_whoosh_hit.wav-9ef95b87f7b7d67b01d22586a4241c66.sample"]
 
 [params]
 

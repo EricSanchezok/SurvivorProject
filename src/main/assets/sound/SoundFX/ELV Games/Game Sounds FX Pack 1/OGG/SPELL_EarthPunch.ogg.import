@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cej13qv8bhwfo"
-path="res://.godot/imported/SPELL_EarthPunch.ogg-4dcaff70e87add9cb35831ca063c21ea.oggvorbisstr"
+path="res://.godot/imported/SPELL_EarthPunch.ogg-88a3a3808c1fd54910ff319e208fb9c7.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_EarthPunch.ogg"
-dest_files=["res://.godot/imported/SPELL_EarthPunch.ogg-4dcaff70e87add9cb35831ca063c21ea.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_EarthPunch.ogg"
+dest_files=["res://.godot/imported/SPELL_EarthPunch.ogg-88a3a3808c1fd54910ff319e208fb9c7.oggvorbisstr"]
 
 [params]
 

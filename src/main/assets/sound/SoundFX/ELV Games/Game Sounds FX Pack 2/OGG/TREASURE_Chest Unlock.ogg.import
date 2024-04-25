@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dkdpgsa0x62la"
-path="res://.godot/imported/TREASURE_Chest Unlock.ogg-42f24e382fac2cf24b5b3decc21dac19.oggvorbisstr"
+path="res://.godot/imported/TREASURE_Chest Unlock.ogg-79c38f9037ecf3f643cc65d42c616991.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/TREASURE_Chest Unlock.ogg"
-dest_files=["res://.godot/imported/TREASURE_Chest Unlock.ogg-42f24e382fac2cf24b5b3decc21dac19.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/TREASURE_Chest Unlock.ogg"
+dest_files=["res://.godot/imported/TREASURE_Chest Unlock.ogg-79c38f9037ecf3f643cc65d42c616991.oggvorbisstr"]
 
 [params]
 

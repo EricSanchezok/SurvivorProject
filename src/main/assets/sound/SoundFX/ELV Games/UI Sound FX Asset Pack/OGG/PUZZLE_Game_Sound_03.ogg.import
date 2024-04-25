@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://i7kgx8wvq74h"
-path="res://.godot/imported/PUZZLE_Game_Sound_03.ogg-df9bf1b411efd27e4fe288058ebcf148.oggvorbisstr"
+path="res://.godot/imported/PUZZLE_Game_Sound_03.ogg-98b933c9df1dfd1243366b2376432c8e.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/OGG/PUZZLE_Game_Sound_03.ogg"
-dest_files=["res://.godot/imported/PUZZLE_Game_Sound_03.ogg-df9bf1b411efd27e4fe288058ebcf148.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/OGG/PUZZLE_Game_Sound_03.ogg"
+dest_files=["res://.godot/imported/PUZZLE_Game_Sound_03.ogg-98b933c9df1dfd1243366b2376432c8e.oggvorbisstr"]
 
 [params]
 

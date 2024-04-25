@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://44xxfc1j54tq"
-path="res://.godot/imported/coins_pickup_shake_06.ogg-530267a7d11907d2f1af13e530a767a3.oggvorbisstr"
+path="res://.godot/imported/coins_pickup_shake_06.ogg-563df0c4cad652211bbb9fc7e9d2baeb.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/coins_pickup_shake_06.ogg"
-dest_files=["res://.godot/imported/coins_pickup_shake_06.ogg-530267a7d11907d2f1af13e530a767a3.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/coins_pickup_shake_06.ogg"
+dest_files=["res://.godot/imported/coins_pickup_shake_06.ogg-563df0c4cad652211bbb9fc7e9d2baeb.oggvorbisstr"]
 
 [params]
 

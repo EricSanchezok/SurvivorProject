@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bmi8tt421wkfp"
-path="res://.godot/imported/corruption.wav-3cbdac78fb473651dfe9ef5acab5d226.sample"
+path="res://.godot/imported/corruption.wav-cd1452479dc021db6e74db31fbe4cb94.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/corruption.wav"
-dest_files=["res://.godot/imported/corruption.wav-3cbdac78fb473651dfe9ef5acab5d226.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/corruption.wav"
+dest_files=["res://.godot/imported/corruption.wav-cd1452479dc021db6e74db31fbe4cb94.sample"]
 
 [params]
 

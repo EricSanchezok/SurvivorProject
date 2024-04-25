@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ddb5tccto1ume"
-path="res://.godot/imported/amb_dread.wav-6062c9c2d7e747d4639dabbf84dcc82a.sample"
+path="res://.godot/imported/amb_dread.wav-63b9b1abc7dc095c796cd46110e31234.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_dread.wav"
-dest_files=["res://.godot/imported/amb_dread.wav-6062c9c2d7e747d4639dabbf84dcc82a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_dread.wav"
+dest_files=["res://.godot/imported/amb_dread.wav-63b9b1abc7dc095c796cd46110e31234.sample"]
 
 [params]
 

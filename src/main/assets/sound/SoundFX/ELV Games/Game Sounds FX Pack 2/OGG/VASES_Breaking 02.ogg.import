@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://die6npve13k2e"
-path="res://.godot/imported/VASES_Breaking 02.ogg-958c217d14b790ec9496e6ff30ec7a02.oggvorbisstr"
+path="res://.godot/imported/VASES_Breaking 02.ogg-e8c452ebf1d8520b3610617e39217168.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/VASES_Breaking 02.ogg"
-dest_files=["res://.godot/imported/VASES_Breaking 02.ogg-958c217d14b790ec9496e6ff30ec7a02.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/VASES_Breaking 02.ogg"
+dest_files=["res://.godot/imported/VASES_Breaking 02.ogg-e8c452ebf1d8520b3610617e39217168.oggvorbisstr"]
 
 [params]
 

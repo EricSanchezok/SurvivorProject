@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bv477lp4eewyh"
-path="res://.godot/imported/SPELL_IceHit.mp3-c288684fd7b13551f3aed135e8f351c1.mp3str"
+path="res://.godot/imported/SPELL_IceHit.mp3-ae432854269ff0d030d83132f8418301.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_IceHit.mp3"
-dest_files=["res://.godot/imported/SPELL_IceHit.mp3-c288684fd7b13551f3aed135e8f351c1.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_IceHit.mp3"
+dest_files=["res://.godot/imported/SPELL_IceHit.mp3-ae432854269ff0d030d83132f8418301.mp3str"]
 
 [params]
 

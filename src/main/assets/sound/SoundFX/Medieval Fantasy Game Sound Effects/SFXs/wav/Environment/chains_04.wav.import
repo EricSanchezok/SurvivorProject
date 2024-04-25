@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bnddttrsqwre3"
-path="res://.godot/imported/chains_04.wav-1ec07febc23cc59110ea2170d3f95364.sample"
+path="res://.godot/imported/chains_04.wav-87bc5a31a56143a4c5d2c81c67114513.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/chains_04.wav"
-dest_files=["res://.godot/imported/chains_04.wav-1ec07febc23cc59110ea2170d3f95364.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/chains_04.wav"
+dest_files=["res://.godot/imported/chains_04.wav-87bc5a31a56143a4c5d2c81c67114513.sample"]
 
 [params]
 

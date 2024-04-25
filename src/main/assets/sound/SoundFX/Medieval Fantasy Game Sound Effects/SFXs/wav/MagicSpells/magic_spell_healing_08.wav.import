@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpwtr571fq3qk"
-path="res://.godot/imported/magic_spell_healing_08.wav-6451eaca28c003ca3c7c719336923077.sample"
+path="res://.godot/imported/magic_spell_healing_08.wav-357b2bada76c1a68547257bcf9810cad.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_healing_08.wav"
-dest_files=["res://.godot/imported/magic_spell_healing_08.wav-6451eaca28c003ca3c7c719336923077.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_healing_08.wav"
+dest_files=["res://.godot/imported/magic_spell_healing_08.wav-357b2bada76c1a68547257bcf9810cad.sample"]
 
 [params]
 

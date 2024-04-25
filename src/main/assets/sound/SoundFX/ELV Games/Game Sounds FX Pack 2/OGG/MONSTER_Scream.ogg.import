@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dnmt5ju6vroh"
-path="res://.godot/imported/MONSTER_Scream.ogg-c2e6c46afccd92af569575e84962da22.oggvorbisstr"
+path="res://.godot/imported/MONSTER_Scream.ogg-e9223dce1e67b0ed42986be03daae9b2.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/MONSTER_Scream.ogg"
-dest_files=["res://.godot/imported/MONSTER_Scream.ogg-c2e6c46afccd92af569575e84962da22.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/MONSTER_Scream.ogg"
+dest_files=["res://.godot/imported/MONSTER_Scream.ogg-e9223dce1e67b0ed42986be03daae9b2.oggvorbisstr"]
 
 [params]
 

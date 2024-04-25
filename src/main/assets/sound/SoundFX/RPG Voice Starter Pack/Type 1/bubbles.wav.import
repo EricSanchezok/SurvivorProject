@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://yw3mms0ssfry"
-path="res://.godot/imported/bubbles.wav-417f09275ffb075de47148df8185a565.sample"
+path="res://.godot/imported/bubbles.wav-5353a0564c40f6da56801c6476aab1ab.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 1/bubbles.wav"
-dest_files=["res://.godot/imported/bubbles.wav-417f09275ffb075de47148df8185a565.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 1/bubbles.wav"
+dest_files=["res://.godot/imported/bubbles.wav-5353a0564c40f6da56801c6476aab1ab.sample"]
 
 [params]
 

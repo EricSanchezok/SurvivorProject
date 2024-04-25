@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cf5yn0fn545t6"
-path="res://.godot/imported/shield_metal_deflect.wav-8080bbf22e114da5517f4fe3bcec9cb6.sample"
+path="res://.godot/imported/shield_metal_deflect.wav-22e8a29a3756bdd18dc4f782f9f06bb6.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/shield_metal_deflect.wav"
-dest_files=["res://.godot/imported/shield_metal_deflect.wav-8080bbf22e114da5517f4fe3bcec9cb6.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/shield_metal_deflect.wav"
+dest_files=["res://.godot/imported/shield_metal_deflect.wav-22e8a29a3756bdd18dc4f782f9f06bb6.sample"]
 
 [params]
 

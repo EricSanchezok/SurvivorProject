@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://lc3m71e4gq7m"
-path="res://.godot/imported/amb_darkness.ogg-92dd0a562f0628b6d1b002f2d4f447f1.oggvorbisstr"
+path="res://.godot/imported/amb_darkness.ogg-ff8d200f00ec5cffc2aef69585d1f32a.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Soundscapes/amb_darkness.ogg"
-dest_files=["res://.godot/imported/amb_darkness.ogg-92dd0a562f0628b6d1b002f2d4f447f1.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Soundscapes/amb_darkness.ogg"
+dest_files=["res://.godot/imported/amb_darkness.ogg-ff8d200f00ec5cffc2aef69585d1f32a.oggvorbisstr"]
 
 [params]
 

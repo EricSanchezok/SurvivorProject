@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cg2t4ccqrqmbt"
-path="res://.godot/imported/WOOD_Open 02.wav-7bfbeab3865974adbd16ae0c4b030a87.sample"
+path="res://.godot/imported/WOOD_Open 02.wav-6c8695934d85e7ad8a71056bfd2887ed.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/WOOD_Open 02.wav"
-dest_files=["res://.godot/imported/WOOD_Open 02.wav-7bfbeab3865974adbd16ae0c4b030a87.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/WOOD_Open 02.wav"
+dest_files=["res://.godot/imported/WOOD_Open 02.wav-6c8695934d85e7ad8a71056bfd2887ed.sample"]
 
 [params]
 

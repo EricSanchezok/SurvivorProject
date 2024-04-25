@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dpcpvm5v5cdxo"
-path="res://.godot/imported/monster_medium_B_01.ogg-62fdba8895b8b547e2f90bce9510be78.oggvorbisstr"
+path="res://.godot/imported/monster_medium_B_01.ogg-f6991857a7b0708369af900f2a04b918.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_medium_B_01.ogg"
-dest_files=["res://.godot/imported/monster_medium_B_01.ogg-62fdba8895b8b547e2f90bce9510be78.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_medium_B_01.ogg"
+dest_files=["res://.godot/imported/monster_medium_B_01.ogg-f6991857a7b0708369af900f2a04b918.oggvorbisstr"]
 
 [params]
 

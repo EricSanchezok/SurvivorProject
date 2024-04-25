@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bmiqx21v2coly"
-path="res://.godot/imported/coins_pickup_shake_10.wav-0c3cfce8accc49d831c27e0971644254.sample"
+path="res://.godot/imported/coins_pickup_shake_10.wav-4a62135501d6ffc0485e859f46eb88bf.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/coins_pickup_shake_10.wav"
-dest_files=["res://.godot/imported/coins_pickup_shake_10.wav-0c3cfce8accc49d831c27e0971644254.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/coins_pickup_shake_10.wav"
+dest_files=["res://.godot/imported/coins_pickup_shake_10.wav-4a62135501d6ffc0485e859f46eb88bf.sample"]
 
 [params]
 

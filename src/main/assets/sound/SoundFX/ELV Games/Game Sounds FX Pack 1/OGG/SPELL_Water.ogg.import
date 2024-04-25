@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dsoon81hkjh5d"
-path="res://.godot/imported/SPELL_Water.ogg-3813458692f2156ffd9a8b955b4d46c4.oggvorbisstr"
+path="res://.godot/imported/SPELL_Water.ogg-5b27485d681b311d2a57b90bca73263c.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Water.ogg"
-dest_files=["res://.godot/imported/SPELL_Water.ogg-3813458692f2156ffd9a8b955b4d46c4.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Water.ogg"
+dest_files=["res://.godot/imported/SPELL_Water.ogg-5b27485d681b311d2a57b90bca73263c.oggvorbisstr"]
 
 [params]
 

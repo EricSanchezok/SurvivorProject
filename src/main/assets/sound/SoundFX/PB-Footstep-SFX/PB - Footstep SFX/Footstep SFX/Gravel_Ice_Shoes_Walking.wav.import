@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://flcrldgvablk"
-path="res://.godot/imported/Gravel_Ice_Shoes_Walking.wav-b753abb8da1f39be631f2e5720b93507.sample"
+path="res://.godot/imported/Gravel_Ice_Shoes_Walking.wav-f53abbec1c9b8c1e5451597184dcf599.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Gravel_Ice_Shoes_Walking.wav"
-dest_files=["res://.godot/imported/Gravel_Ice_Shoes_Walking.wav-b753abb8da1f39be631f2e5720b93507.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Gravel_Ice_Shoes_Walking.wav"
+dest_files=["res://.godot/imported/Gravel_Ice_Shoes_Walking.wav-f53abbec1c9b8c1e5451597184dcf599.sample"]
 
 [params]
 

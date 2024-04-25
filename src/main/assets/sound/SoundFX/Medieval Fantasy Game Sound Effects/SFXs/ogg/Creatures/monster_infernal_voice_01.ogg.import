@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cx5d3gh3iqdqo"
-path="res://.godot/imported/monster_infernal_voice_01.ogg-0a2b4f93fd8cc2dc3b14aca9dc367717.oggvorbisstr"
+path="res://.godot/imported/monster_infernal_voice_01.ogg-7aaa067a042500784c471f4845421ed7.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_infernal_voice_01.ogg"
-dest_files=["res://.godot/imported/monster_infernal_voice_01.ogg-0a2b4f93fd8cc2dc3b14aca9dc367717.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_infernal_voice_01.ogg"
+dest_files=["res://.godot/imported/monster_infernal_voice_01.ogg-7aaa067a042500784c471f4845421ed7.oggvorbisstr"]
 
 [params]
 

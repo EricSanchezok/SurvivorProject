@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bfe3nfdh6x0l"
-path="res://.godot/imported/ui_confirm_levelup_12.wav-2de2f052a00208b918843e977596b369.sample"
+path="res://.godot/imported/ui_confirm_levelup_12.wav-f410a7b4ed46f9cb1255af1543a81c5a.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_confirm_levelup_12.wav"
-dest_files=["res://.godot/imported/ui_confirm_levelup_12.wav-2de2f052a00208b918843e977596b369.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_confirm_levelup_12.wav"
+dest_files=["res://.godot/imported/ui_confirm_levelup_12.wav-f410a7b4ed46f9cb1255af1543a81c5a.sample"]
 
 [params]
 

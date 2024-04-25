@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cqbporjw7oupf"
-path="res://.godot/imported/Footsteps_Dirt_04.ogg-d69d622e5497709b4bb888b38eb69aab.oggvorbisstr"
+path="res://.godot/imported/Footsteps_Dirt_04.ogg-9ef6b81571b2bda7752205a0f1474966.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Dirt_04.ogg"
-dest_files=["res://.godot/imported/Footsteps_Dirt_04.ogg-d69d622e5497709b4bb888b38eb69aab.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Dirt_04.ogg"
+dest_files=["res://.godot/imported/Footsteps_Dirt_04.ogg-9ef6b81571b2bda7752205a0f1474966.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhfrxqmjj2v2b"
-path="res://.godot/imported/blade_sheath_sharpening_12.wav-77b682e942817f96b9c22b5cc7545f1d.sample"
+path="res://.godot/imported/blade_sheath_sharpening_12.wav-3c74402579edee64c200b423c0ea1680.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_sheath_sharpening_12.wav"
-dest_files=["res://.godot/imported/blade_sheath_sharpening_12.wav-77b682e942817f96b9c22b5cc7545f1d.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_sheath_sharpening_12.wav"
+dest_files=["res://.godot/imported/blade_sheath_sharpening_12.wav-3c74402579edee64c200b423c0ea1680.sample"]
 
 [params]
 

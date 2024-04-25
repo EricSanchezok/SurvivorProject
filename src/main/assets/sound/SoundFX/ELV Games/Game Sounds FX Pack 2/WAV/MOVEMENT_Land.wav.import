@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dfqpf00k7bq1h"
-path="res://.godot/imported/MOVEMENT_Land.wav-ea56272bd68d3808bf0890c0392fb1bd.sample"
+path="res://.godot/imported/MOVEMENT_Land.wav-55650982ddb2f612a62b39de8d58ea5b.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/MOVEMENT_Land.wav"
-dest_files=["res://.godot/imported/MOVEMENT_Land.wav-ea56272bd68d3808bf0890c0392fb1bd.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/MOVEMENT_Land.wav"
+dest_files=["res://.godot/imported/MOVEMENT_Land.wav-55650982ddb2f612a62b39de8d58ea5b.sample"]
 
 [params]
 

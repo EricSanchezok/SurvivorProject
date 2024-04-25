@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cp0g3k1fbcqcv"
-path="res://.godot/imported/hit_blood_flesh_gore_02.ogg-469029eb812754fad6fec81037499de5.oggvorbisstr"
+path="res://.godot/imported/hit_blood_flesh_gore_02.ogg-1884a6ec0d577008d1e585d4e620c62e.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/hit_blood_flesh_gore_02.ogg"
-dest_files=["res://.godot/imported/hit_blood_flesh_gore_02.ogg-469029eb812754fad6fec81037499de5.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/hit_blood_flesh_gore_02.ogg"
+dest_files=["res://.godot/imported/hit_blood_flesh_gore_02.ogg-1884a6ec0d577008d1e585d4e620c62e.oggvorbisstr"]
 
 [params]
 

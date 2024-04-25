@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://rub42ufyc7us"
-path="res://.godot/imported/MOVEMENT_Jump 02.ogg-2031f1c355c62f532721ac16e906b5c8.oggvorbisstr"
+path="res://.godot/imported/MOVEMENT_Jump 02.ogg-73cb5b9c8378f15da95e071ce48496b4.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/MOVEMENT_Jump 02.ogg"
-dest_files=["res://.godot/imported/MOVEMENT_Jump 02.ogg-2031f1c355c62f532721ac16e906b5c8.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/MOVEMENT_Jump 02.ogg"
+dest_files=["res://.godot/imported/MOVEMENT_Jump 02.ogg-73cb5b9c8378f15da95e071ce48496b4.oggvorbisstr"]
 
 [params]
 

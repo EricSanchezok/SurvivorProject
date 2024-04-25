@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d0oe6q8ra85dc"
-path="res://.godot/imported/amb_forest.ogg-7ba18992cc07861f8fd3c8491c1909cd.oggvorbisstr"
+path="res://.godot/imported/amb_forest.ogg-36ea638148b49237296e18a5b7de0b88.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Soundscapes/amb_forest.ogg"
-dest_files=["res://.godot/imported/amb_forest.ogg-7ba18992cc07861f8fd3c8491c1909cd.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Soundscapes/amb_forest.ogg"
+dest_files=["res://.godot/imported/amb_forest.ogg-36ea638148b49237296e18a5b7de0b88.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cl1ssqkkkk4d0"
-path="res://.godot/imported/magicbook_open_close_01.wav-681c9dd74ba4b87dbcbe5a3460bbab3a.sample"
+path="res://.godot/imported/magicbook_open_close_01.wav-d3c8535d7461996905a7813c73a29e6b.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicBook/magicbook_open_close_01.wav"
-dest_files=["res://.godot/imported/magicbook_open_close_01.wav-681c9dd74ba4b87dbcbe5a3460bbab3a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicBook/magicbook_open_close_01.wav"
+dest_files=["res://.godot/imported/magicbook_open_close_01.wav-d3c8535d7461996905a7813c73a29e6b.sample"]
 
 [params]
 

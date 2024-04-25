@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://chgyl4s6vll5c"
-path="res://.godot/imported/move_slide_metal_03.wav-c0c1575e53db7aba566383238f951c07.sample"
+path="res://.godot/imported/move_slide_metal_03.wav-14201ac87bbc27eb7e4a34221e305c92.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/move_slide_metal_03.wav"
-dest_files=["res://.godot/imported/move_slide_metal_03.wav-c0c1575e53db7aba566383238f951c07.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/move_slide_metal_03.wav"
+dest_files=["res://.godot/imported/move_slide_metal_03.wav-14201ac87bbc27eb7e4a34221e305c92.sample"]
 
 [params]
 

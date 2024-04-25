@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ivnb4b5urtlj"
-path="res://.godot/imported/blade_hit_scrape_09.ogg-d606f0d82ddaeab7befb4c9db23c286d.oggvorbisstr"
+path="res://.godot/imported/blade_hit_scrape_09.ogg-3be60ffb9f6dac875eeeda2cc7b62dbd.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_hit_scrape_09.ogg"
-dest_files=["res://.godot/imported/blade_hit_scrape_09.ogg-d606f0d82ddaeab7befb4c9db23c286d.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_hit_scrape_09.ogg"
+dest_files=["res://.godot/imported/blade_hit_scrape_09.ogg-3be60ffb9f6dac875eeeda2cc7b62dbd.oggvorbisstr"]
 
 [params]
 

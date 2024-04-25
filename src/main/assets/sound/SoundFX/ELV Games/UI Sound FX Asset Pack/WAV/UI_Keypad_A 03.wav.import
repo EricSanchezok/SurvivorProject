@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcddoyvct5ew8"
-path="res://.godot/imported/UI_Keypad_A 03.wav-c1987a2a4747554121167ee57a4e8e5f.sample"
+path="res://.godot/imported/UI_Keypad_A 03.wav-70d3cfb5c7fb065783606203423c1aa6.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/UI_Keypad_A 03.wav"
-dest_files=["res://.godot/imported/UI_Keypad_A 03.wav-c1987a2a4747554121167ee57a4e8e5f.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Keypad_A 03.wav"
+dest_files=["res://.godot/imported/UI_Keypad_A 03.wav-70d3cfb5c7fb065783606203423c1aa6.sample"]
 
 [params]
 

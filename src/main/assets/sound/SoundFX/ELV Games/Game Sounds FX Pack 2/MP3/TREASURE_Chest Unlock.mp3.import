@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cqdvd55s83lcr"
-path="res://.godot/imported/TREASURE_Chest Unlock.mp3-8ce6eef470c6b36e53386c31745997bb.mp3str"
+path="res://.godot/imported/TREASURE_Chest Unlock.mp3-8b2e2005b1d53f903fb3114196e70c24.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/TREASURE_Chest Unlock.mp3"
-dest_files=["res://.godot/imported/TREASURE_Chest Unlock.mp3-8ce6eef470c6b36e53386c31745997bb.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/TREASURE_Chest Unlock.mp3"
+dest_files=["res://.godot/imported/TREASURE_Chest Unlock.mp3-8b2e2005b1d53f903fb3114196e70c24.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dfsawv5y8on1m"
-path="res://.godot/imported/shield_wood_deflect.wav-d6b6b5bedf867b4d3b4f74161e11b650.sample"
+path="res://.godot/imported/shield_wood_deflect.wav-cd2ea24ae359a6b3a2d40cc8733b76c4.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/shield_wood_deflect.wav"
-dest_files=["res://.godot/imported/shield_wood_deflect.wav-d6b6b5bedf867b4d3b4f74161e11b650.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/shield_wood_deflect.wav"
+dest_files=["res://.godot/imported/shield_wood_deflect.wav-cd2ea24ae359a6b3a2d40cc8733b76c4.sample"]
 
 [params]
 

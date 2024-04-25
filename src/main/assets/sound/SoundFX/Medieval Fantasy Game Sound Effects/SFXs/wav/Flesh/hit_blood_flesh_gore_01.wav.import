@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://du8fhxxwfi4wq"
-path="res://.godot/imported/hit_blood_flesh_gore_01.wav-0373536d158b8cd04f6f62c6044feb60.sample"
+path="res://.godot/imported/hit_blood_flesh_gore_01.wav-71c211256268f1384723a8f756d34fd1.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Flesh/hit_blood_flesh_gore_01.wav"
-dest_files=["res://.godot/imported/hit_blood_flesh_gore_01.wav-0373536d158b8cd04f6f62c6044feb60.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Flesh/hit_blood_flesh_gore_01.wav"
+dest_files=["res://.godot/imported/hit_blood_flesh_gore_01.wav-71c211256268f1384723a8f756d34fd1.sample"]
 
 [params]
 

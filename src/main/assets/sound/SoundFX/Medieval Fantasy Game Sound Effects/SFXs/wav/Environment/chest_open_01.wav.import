@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dp70pvfhhyari"
-path="res://.godot/imported/chest_open_01.wav-b5edceb62299aa781cfb0b0eca13baa5.sample"
+path="res://.godot/imported/chest_open_01.wav-bef1d1dceec10275ad6909c0205c885e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/chest_open_01.wav"
-dest_files=["res://.godot/imported/chest_open_01.wav-b5edceb62299aa781cfb0b0eca13baa5.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/chest_open_01.wav"
+dest_files=["res://.godot/imported/chest_open_01.wav-bef1d1dceec10275ad6909c0205c885e.sample"]
 
 [params]
 

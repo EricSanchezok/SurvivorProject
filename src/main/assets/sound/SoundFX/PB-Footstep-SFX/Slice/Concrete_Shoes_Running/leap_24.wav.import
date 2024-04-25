@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ystgpiny023m"
-path="res://.godot/imported/leap_24.wav-77c50b95493edb77101f8a483f6f7d78.sample"
+path="res://.godot/imported/leap_24.wav-dc6632c6f1893ab7cdc1bac8baecf6aa.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/Slice/Concrete_Shoes_Running/leap_24.wav"
-dest_files=["res://.godot/imported/leap_24.wav-77c50b95493edb77101f8a483f6f7d78.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/Slice/Concrete_Shoes_Running/leap_24.wav"
+dest_files=["res://.godot/imported/leap_24.wav-dc6632c6f1893ab7cdc1bac8baecf6aa.sample"]
 
 [params]
 

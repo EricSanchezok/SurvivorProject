@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bca3wr430ya66"
-path="res://.godot/imported/SLASH 03.ogg-613e628ee30e24ceb25d581bec96a47f.oggvorbisstr"
+path="res://.godot/imported/SLASH 03.ogg-2819ac5d1afcce4f9703642b48020ffa.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SLASH 03.ogg"
-dest_files=["res://.godot/imported/SLASH 03.ogg-613e628ee30e24ceb25d581bec96a47f.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SLASH 03.ogg"
+dest_files=["res://.godot/imported/SLASH 03.ogg-2819ac5d1afcce4f9703642b48020ffa.oggvorbisstr"]
 
 [params]
 

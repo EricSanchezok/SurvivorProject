@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d00851wejktid"
-path="res://.godot/imported/magic_spell_ice_08.ogg-98ac1533c506fe5f97cc15c10fd4cb20.oggvorbisstr"
+path="res://.godot/imported/magic_spell_ice_08.ogg-4e4c3a58031b9325eaef9cfe8e0cdc83.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_ice_08.ogg"
-dest_files=["res://.godot/imported/magic_spell_ice_08.ogg-98ac1533c506fe5f97cc15c10fd4cb20.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_ice_08.ogg"
+dest_files=["res://.godot/imported/magic_spell_ice_08.ogg-4e4c3a58031b9325eaef9cfe8e0cdc83.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://deqq56clj123d"
-path="res://.godot/imported/combat_whoosh_02.wav-f90d1c5f9967e61c9f803b53e5d17ca7.sample"
+path="res://.godot/imported/combat_whoosh_02.wav-99476ebb93ddc00cf231e42e5027fbe9.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/combat_whoosh_02.wav"
-dest_files=["res://.godot/imported/combat_whoosh_02.wav-f90d1c5f9967e61c9f803b53e5d17ca7.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/combat_whoosh_02.wav"
+dest_files=["res://.godot/imported/combat_whoosh_02.wav-99476ebb93ddc00cf231e42e5027fbe9.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bq1srimemcswk"
-path="res://.godot/imported/Footsteps_Stone_Tiles_03.wav-89d4380b0a9f3314e581f3f028325fc2.sample"
+path="res://.godot/imported/Footsteps_Stone_Tiles_03.wav-cae7c75a3a7bfc8daaf15888cddafc14.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Stone_Tiles_03.wav"
-dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_03.wav-89d4380b0a9f3314e581f3f028325fc2.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Stone_Tiles_03.wav"
+dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_03.wav-cae7c75a3a7bfc8daaf15888cddafc14.sample"]
 
 [params]
 

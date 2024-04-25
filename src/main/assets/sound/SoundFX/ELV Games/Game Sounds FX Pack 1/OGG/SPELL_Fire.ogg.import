@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b7ljaak08urml"
-path="res://.godot/imported/SPELL_Fire.ogg-18a400752ff546e8a9c1ec64c16dfe6f.oggvorbisstr"
+path="res://.godot/imported/SPELL_Fire.ogg-e450ee6028968c23d805a1811323014e.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Fire.ogg"
-dest_files=["res://.godot/imported/SPELL_Fire.ogg-18a400752ff546e8a9c1ec64c16dfe6f.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Fire.ogg"
+dest_files=["res://.godot/imported/SPELL_Fire.ogg-e450ee6028968c23d805a1811323014e.oggvorbisstr"]
 
 [params]
 

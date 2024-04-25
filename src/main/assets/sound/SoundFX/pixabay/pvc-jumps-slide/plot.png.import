@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pio1rlotux1p"
-path="res://.godot/imported/plot.png-ef2e3007206c448422d479519e7d97aa.ctex"
+path="res://.godot/imported/plot.png-d3d2eba16a8d59cf04f5756f2f1733c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/main/assets/sound/pixabay/pvc-jumps-slide/plot.png"
-dest_files=["res://.godot/imported/plot.png-ef2e3007206c448422d479519e7d97aa.ctex"]
+source_file="res://src/main/assets/sound/SoundFX/pixabay/pvc-jumps-slide/plot.png"
+dest_files=["res://.godot/imported/plot.png-d3d2eba16a8d59cf04f5756f2f1733c3.ctex"]
 
 [params]
 

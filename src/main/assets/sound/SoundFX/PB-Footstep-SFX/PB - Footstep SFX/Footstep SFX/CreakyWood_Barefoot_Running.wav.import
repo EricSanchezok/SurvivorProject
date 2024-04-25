@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d0aemx2lmfwll"
-path="res://.godot/imported/CreakyWood_Barefoot_Running.wav-ff29b77fe4ee8af2475023a38cb84cb6.sample"
+path="res://.godot/imported/CreakyWood_Barefoot_Running.wav-7fa1182e2561881cdcc5ecae7fe67021.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/CreakyWood_Barefoot_Running.wav"
-dest_files=["res://.godot/imported/CreakyWood_Barefoot_Running.wav-ff29b77fe4ee8af2475023a38cb84cb6.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/CreakyWood_Barefoot_Running.wav"
+dest_files=["res://.godot/imported/CreakyWood_Barefoot_Running.wav-7fa1182e2561881cdcc5ecae7fe67021.sample"]
 
 [params]
 

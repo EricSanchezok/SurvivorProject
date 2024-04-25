@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ddnq4i1rj84s1"
-path="res://.godot/imported/loot_wood_pickup_01.wav-49dd97b85c6c68eaf0be766d3622017a.sample"
+path="res://.godot/imported/loot_wood_pickup_01.wav-d1a2907b8869f5ae609a763e5e9a55d4.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/loot_wood_pickup_01.wav"
-dest_files=["res://.godot/imported/loot_wood_pickup_01.wav-49dd97b85c6c68eaf0be766d3622017a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/loot_wood_pickup_01.wav"
+dest_files=["res://.godot/imported/loot_wood_pickup_01.wav-d1a2907b8869f5ae609a763e5e9a55d4.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cwlhrtmt0s1yc"
-path="res://.godot/imported/magicbook_page_flip_04.ogg-ce935498daab02244a42b5f19f2b59de.oggvorbisstr"
+path="res://.godot/imported/magicbook_page_flip_04.ogg-6df9b528ba368899d247ae9b0b4856b2.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicBook/magicbook_page_flip_04.ogg"
-dest_files=["res://.godot/imported/magicbook_page_flip_04.ogg-ce935498daab02244a42b5f19f2b59de.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicBook/magicbook_page_flip_04.ogg"
+dest_files=["res://.godot/imported/magicbook_page_flip_04.ogg-6df9b528ba368899d247ae9b0b4856b2.oggvorbisstr"]
 
 [params]
 

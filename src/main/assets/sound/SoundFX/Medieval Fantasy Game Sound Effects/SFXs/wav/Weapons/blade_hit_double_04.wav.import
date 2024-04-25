@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dkbuagk2tq46q"
-path="res://.godot/imported/blade_hit_double_04.wav-5f707ba18f8e77251d006b9ccf41eaf2.sample"
+path="res://.godot/imported/blade_hit_double_04.wav-3776cbd1fb881d4fdfc6b1cc30b00bee.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_hit_double_04.wav"
-dest_files=["res://.godot/imported/blade_hit_double_04.wav-5f707ba18f8e77251d006b9ccf41eaf2.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_hit_double_04.wav"
+dest_files=["res://.godot/imported/blade_hit_double_04.wav-3776cbd1fb881d4fdfc6b1cc30b00bee.sample"]
 
 [params]
 

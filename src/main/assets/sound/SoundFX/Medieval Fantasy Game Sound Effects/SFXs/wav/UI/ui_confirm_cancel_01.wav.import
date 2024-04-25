@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpqay01nahoia"
-path="res://.godot/imported/ui_confirm_cancel_01.wav-bef6f81b5b9e66285703a8ec8044eb07.sample"
+path="res://.godot/imported/ui_confirm_cancel_01.wav-90bd3d8e9e2d24b6c31c3d24fd5bc729.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_confirm_cancel_01.wav"
-dest_files=["res://.godot/imported/ui_confirm_cancel_01.wav-bef6f81b5b9e66285703a8ec8044eb07.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_confirm_cancel_01.wav"
+dest_files=["res://.godot/imported/ui_confirm_cancel_01.wav-90bd3d8e9e2d24b6c31c3d24fd5bc729.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://4ummsigufmt0"
-path="res://.godot/imported/ITEM_Aquire 03.mp3-1d0d43a48f96e6931ccf2bf0909b5d3a.mp3str"
+path="res://.godot/imported/ITEM_Aquire 03.mp3-52fc099eaf0c1d2d8c0d40ad949c5acf.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/ITEM_Aquire 03.mp3"
-dest_files=["res://.godot/imported/ITEM_Aquire 03.mp3-1d0d43a48f96e6931ccf2bf0909b5d3a.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/ITEM_Aquire 03.mp3"
+dest_files=["res://.godot/imported/ITEM_Aquire 03.mp3-52fc099eaf0c1d2d8c0d40ad949c5acf.mp3str"]
 
 [params]
 

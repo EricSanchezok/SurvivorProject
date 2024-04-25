@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bkftpenrye1rb"
-path="res://.godot/imported/SCI-FI_Console UI 04.mp3-26a22b302952692c3b5b9a4cfad012b2.mp3str"
+path="res://.godot/imported/SCI-FI_Console UI 04.mp3-e4b0fabdb8291d3a9e1012e5892717a7.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Console UI 04.mp3"
-dest_files=["res://.godot/imported/SCI-FI_Console UI 04.mp3-26a22b302952692c3b5b9a4cfad012b2.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Console UI 04.mp3"
+dest_files=["res://.godot/imported/SCI-FI_Console UI 04.mp3-e4b0fabdb8291d3a9e1012e5892717a7.mp3str"]
 
 [params]
 

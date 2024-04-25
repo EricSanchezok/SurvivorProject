@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://2vm0bf5doivl"
-path="res://.godot/imported/freeze.wav-22efdeae9be8eaee7032f21bea5bc92a.sample"
+path="res://.godot/imported/freeze.wav-24e70ae679a58e7ce9f9787cb9dce0c9.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 2/freeze.wav"
-dest_files=["res://.godot/imported/freeze.wav-22efdeae9be8eaee7032f21bea5bc92a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 2/freeze.wav"
+dest_files=["res://.godot/imported/freeze.wav-24e70ae679a58e7ce9f9787cb9dce0c9.sample"]
 
 [params]
 

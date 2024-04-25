@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bb6ar51xcx55n"
-path="res://.godot/imported/keys_jangling_03.ogg-9efd2bcfb55166784108a8b5ab65ce46.oggvorbisstr"
+path="res://.godot/imported/keys_jangling_03.ogg-20205ad4f4dc6964f69707f08287ae71.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/keys_jangling_03.ogg"
-dest_files=["res://.godot/imported/keys_jangling_03.ogg-9efd2bcfb55166784108a8b5ab65ce46.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/keys_jangling_03.ogg"
+dest_files=["res://.godot/imported/keys_jangling_03.ogg-20205ad4f4dc6964f69707f08287ae71.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c33jpgxf7ysrv"
-path="res://.godot/imported/MOVEMENT_Fall 02.wav-2f90f9602b665cf1dd104b5f5c72c5ec.sample"
+path="res://.godot/imported/MOVEMENT_Fall 02.wav-18f8570bfe3ceb662bede721ac8dc7e2.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/MOVEMENT_Fall 02.wav"
-dest_files=["res://.godot/imported/MOVEMENT_Fall 02.wav-2f90f9602b665cf1dd104b5f5c72c5ec.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/MOVEMENT_Fall 02.wav"
+dest_files=["res://.godot/imported/MOVEMENT_Fall 02.wav-18f8570bfe3ceb662bede721ac8dc7e2.sample"]
 
 [params]
 

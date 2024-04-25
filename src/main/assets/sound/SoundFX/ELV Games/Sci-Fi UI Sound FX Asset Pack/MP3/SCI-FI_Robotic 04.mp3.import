@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bphugxrjx61w6"
-path="res://.godot/imported/SCI-FI_Robotic 04.mp3-09ecca7e7db65bd540b664806ebb6ddb.mp3str"
+path="res://.godot/imported/SCI-FI_Robotic 04.mp3-6c2a8c27a78a5f8f57f6bbe81f35e9da.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Robotic 04.mp3"
-dest_files=["res://.godot/imported/SCI-FI_Robotic 04.mp3-09ecca7e7db65bd540b664806ebb6ddb.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Robotic 04.mp3"
+dest_files=["res://.godot/imported/SCI-FI_Robotic 04.mp3-6c2a8c27a78a5f8f57f6bbe81f35e9da.mp3str"]
 
 [params]
 

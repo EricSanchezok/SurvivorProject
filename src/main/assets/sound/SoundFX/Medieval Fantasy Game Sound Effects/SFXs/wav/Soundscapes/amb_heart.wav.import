@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dicjejtxrb7po"
-path="res://.godot/imported/amb_heart.wav-954b876a7a57807a1c4fb30fb0d3d981.sample"
+path="res://.godot/imported/amb_heart.wav-2cbced1edfbecf2955fc8738a741c6ab.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_heart.wav"
-dest_files=["res://.godot/imported/amb_heart.wav-954b876a7a57807a1c4fb30fb0d3d981.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_heart.wav"
+dest_files=["res://.godot/imported/amb_heart.wav-2cbced1edfbecf2955fc8738a741c6ab.sample"]
 
 [params]
 

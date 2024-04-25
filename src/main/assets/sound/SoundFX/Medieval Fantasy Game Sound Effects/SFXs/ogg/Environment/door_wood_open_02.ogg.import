@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c4vq66vs8j3j5"
-path="res://.godot/imported/door_wood_open_02.ogg-2178871d4d78d63a3b664c45506f24c1.oggvorbisstr"
+path="res://.godot/imported/door_wood_open_02.ogg-b8ddfb80f28dd183e6eebb0dfa441384.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/door_wood_open_02.ogg"
-dest_files=["res://.godot/imported/door_wood_open_02.ogg-2178871d4d78d63a3b664c45506f24c1.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/door_wood_open_02.ogg"
+dest_files=["res://.godot/imported/door_wood_open_02.ogg-b8ddfb80f28dd183e6eebb0dfa441384.oggvorbisstr"]
 
 [params]
 

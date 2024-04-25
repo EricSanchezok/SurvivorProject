@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8s3oum7078wf"
-path="res://.godot/imported/heartbeat_constant_60bpm.wav-7a9af9f84a28c8008b52f03f78de6fa6.sample"
+path="res://.godot/imported/heartbeat_constant_60bpm.wav-cfaddae8e453c1892c5dc3051d692e74.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/heartbeat_constant_60bpm.wav"
-dest_files=["res://.godot/imported/heartbeat_constant_60bpm.wav-7a9af9f84a28c8008b52f03f78de6fa6.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/heartbeat_constant_60bpm.wav"
+dest_files=["res://.godot/imported/heartbeat_constant_60bpm.wav-cfaddae8e453c1892c5dc3051d692e74.sample"]
 
 [params]
 

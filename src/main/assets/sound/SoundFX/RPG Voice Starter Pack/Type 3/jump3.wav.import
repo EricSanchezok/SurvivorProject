@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c0gwjdemwulop"
-path="res://.godot/imported/jump3.wav-76aa8095aafed8c4a6ef5b61c3156613.sample"
+path="res://.godot/imported/jump3.wav-9e9dd24ac8c828ad60cfb1b1abeb2610.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/jump3.wav"
-dest_files=["res://.godot/imported/jump3.wav-76aa8095aafed8c4a6ef5b61c3156613.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/jump3.wav"
+dest_files=["res://.godot/imported/jump3.wav-9e9dd24ac8c828ad60cfb1b1abeb2610.sample"]
 
 [params]
 

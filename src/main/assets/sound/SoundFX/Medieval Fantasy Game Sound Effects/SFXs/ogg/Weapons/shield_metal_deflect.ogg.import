@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://gtlmochf7arl"
-path="res://.godot/imported/shield_metal_deflect.ogg-8440e321c13aa3787b919119af164aec.oggvorbisstr"
+path="res://.godot/imported/shield_metal_deflect.ogg-1bf010db14b7f510aaaf98cd7223acf2.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/shield_metal_deflect.ogg"
-dest_files=["res://.godot/imported/shield_metal_deflect.ogg-8440e321c13aa3787b919119af164aec.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/shield_metal_deflect.ogg"
+dest_files=["res://.godot/imported/shield_metal_deflect.ogg-1bf010db14b7f510aaaf98cd7223acf2.oggvorbisstr"]
 
 [params]
 

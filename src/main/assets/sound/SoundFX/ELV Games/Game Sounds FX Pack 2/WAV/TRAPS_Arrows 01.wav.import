@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://byua0pkxnn1be"
-path="res://.godot/imported/TRAPS_Arrows 01.wav-86471f094d83d439fa8beac0ea0a158f.sample"
+path="res://.godot/imported/TRAPS_Arrows 01.wav-0a9b07ffea253dd139b8151eb8b89b2e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/TRAPS_Arrows 01.wav"
-dest_files=["res://.godot/imported/TRAPS_Arrows 01.wav-86471f094d83d439fa8beac0ea0a158f.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/TRAPS_Arrows 01.wav"
+dest_files=["res://.godot/imported/TRAPS_Arrows 01.wav-0a9b07ffea253dd139b8151eb8b89b2e.sample"]
 
 [params]
 

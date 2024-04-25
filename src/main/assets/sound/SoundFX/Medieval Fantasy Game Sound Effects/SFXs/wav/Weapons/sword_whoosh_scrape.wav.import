@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cbldk4w1jm10y"
-path="res://.godot/imported/sword_whoosh_scrape.wav-270fda04898d0ae383c7da0fa1b404f6.sample"
+path="res://.godot/imported/sword_whoosh_scrape.wav-1b0c58b877ceda75a5009bb551531ccc.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/sword_whoosh_scrape.wav"
-dest_files=["res://.godot/imported/sword_whoosh_scrape.wav-270fda04898d0ae383c7da0fa1b404f6.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/sword_whoosh_scrape.wav"
+dest_files=["res://.godot/imported/sword_whoosh_scrape.wav-1b0c58b877ceda75a5009bb551531ccc.sample"]
 
 [params]
 

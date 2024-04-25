@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dxyac8l8i5t4v"
-path="res://.godot/imported/Dirt_Walking.mp3-b4fe7109539431470fa681e329677e10.mp3str"
+path="res://.godot/imported/Dirt_Walking.mp3-fc09e9be5558755561ba13ed4fca07f5.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Dirt_Walking.mp3"
-dest_files=["res://.godot/imported/Dirt_Walking.mp3-b4fe7109539431470fa681e329677e10.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Dirt_Walking.mp3"
+dest_files=["res://.godot/imported/Dirt_Walking.mp3-fc09e9be5558755561ba13ed4fca07f5.mp3str"]
 
 [params]
 

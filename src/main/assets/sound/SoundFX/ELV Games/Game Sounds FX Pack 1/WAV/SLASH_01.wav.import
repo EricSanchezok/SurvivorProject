@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://djstx82susexu"
-path="res://.godot/imported/SLASH_01.wav-7ef5e6389873351802444fa7c63cb71d.sample"
+path="res://.godot/imported/SLASH_01.wav-39ac280e7d62d506dc8738924b05ee9e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SLASH_01.wav"
-dest_files=["res://.godot/imported/SLASH_01.wav-7ef5e6389873351802444fa7c63cb71d.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/SLASH_01.wav"
+dest_files=["res://.godot/imported/SLASH_01.wav-39ac280e7d62d506dc8738924b05ee9e.sample"]
 
 [params]
 

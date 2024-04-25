@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://be7583gemb8ud"
-path="res://.godot/imported/Footsteps_Snow_02.ogg-a4589aba4d7f7ed0ba5337d60f825363.oggvorbisstr"
+path="res://.godot/imported/Footsteps_Snow_02.ogg-7fd39a701fe7062b3c5a5c0809fa47f7.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Snow_02.ogg"
-dest_files=["res://.godot/imported/Footsteps_Snow_02.ogg-a4589aba4d7f7ed0ba5337d60f825363.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Snow_02.ogg"
+dest_files=["res://.godot/imported/Footsteps_Snow_02.ogg-7fd39a701fe7062b3c5a5c0809fa47f7.oggvorbisstr"]
 
 [params]
 

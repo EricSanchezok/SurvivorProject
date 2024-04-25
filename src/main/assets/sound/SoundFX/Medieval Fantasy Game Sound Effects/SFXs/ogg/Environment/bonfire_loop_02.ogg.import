@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://eqch0i176tde"
-path="res://.godot/imported/bonfire_loop_02.ogg-bbdfee7e592918e8e6553c63c65392d1.oggvorbisstr"
+path="res://.godot/imported/bonfire_loop_02.ogg-243ceac91c64156d15760e768bcc88e6.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/bonfire_loop_02.ogg"
-dest_files=["res://.godot/imported/bonfire_loop_02.ogg-bbdfee7e592918e8e6553c63c65392d1.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/bonfire_loop_02.ogg"
+dest_files=["res://.godot/imported/bonfire_loop_02.ogg-243ceac91c64156d15760e768bcc88e6.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dw0r4w77rl775"
-path="res://.godot/imported/monster_zombie_voice_02.ogg-f7467349e3e693e5e1bc618e6e841f64.oggvorbisstr"
+path="res://.godot/imported/monster_zombie_voice_02.ogg-ba59387e0d9f7e04d5b6f3dfde1d9eb7.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_zombie_voice_02.ogg"
-dest_files=["res://.godot/imported/monster_zombie_voice_02.ogg-f7467349e3e693e5e1bc618e6e841f64.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_zombie_voice_02.ogg"
+dest_files=["res://.godot/imported/monster_zombie_voice_02.ogg-ba59387e0d9f7e04d5b6f3dfde1d9eb7.oggvorbisstr"]
 
 [params]
 

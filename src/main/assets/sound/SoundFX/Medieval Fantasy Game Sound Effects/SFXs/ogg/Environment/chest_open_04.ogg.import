@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://k8iv10i1kbxe"
-path="res://.godot/imported/chest_open_04.ogg-1e23e2a289a5ddfb2cc236ead5e4b196.oggvorbisstr"
+path="res://.godot/imported/chest_open_04.ogg-2f2c71358ec543084bf9a2ba2741222b.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/chest_open_04.ogg"
-dest_files=["res://.godot/imported/chest_open_04.ogg-1e23e2a289a5ddfb2cc236ead5e4b196.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/chest_open_04.ogg"
+dest_files=["res://.godot/imported/chest_open_04.ogg-2f2c71358ec543084bf9a2ba2741222b.oggvorbisstr"]
 
 [params]
 

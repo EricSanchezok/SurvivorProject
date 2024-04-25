@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ccisu7i0nxxap"
-path="res://.godot/imported/Footsteps_Grass_01.ogg-e05eba97c5a5ddcfbf2db8573367a0dd.oggvorbisstr"
+path="res://.godot/imported/Footsteps_Grass_01.ogg-c6e089831559bacf52a61f8d617f6fa7.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Grass_01.ogg"
-dest_files=["res://.godot/imported/Footsteps_Grass_01.ogg-e05eba97c5a5ddcfbf2db8573367a0dd.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Grass_01.ogg"
+dest_files=["res://.godot/imported/Footsteps_Grass_01.ogg-c6e089831559bacf52a61f8d617f6fa7.oggvorbisstr"]
 
 [params]
 

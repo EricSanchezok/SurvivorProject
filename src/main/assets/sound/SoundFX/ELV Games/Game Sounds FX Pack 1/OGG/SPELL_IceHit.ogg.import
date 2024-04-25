@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://iylou5c3t2vp"
-path="res://.godot/imported/SPELL_IceHit.ogg-f55454cd982455e9e8034508ffed3963.oggvorbisstr"
+path="res://.godot/imported/SPELL_IceHit.ogg-2f7f63080385e4ec92643412ceef9fef.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_IceHit.ogg"
-dest_files=["res://.godot/imported/SPELL_IceHit.ogg-f55454cd982455e9e8034508ffed3963.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_IceHit.ogg"
+dest_files=["res://.godot/imported/SPELL_IceHit.ogg-2f7f63080385e4ec92643412ceef9fef.oggvorbisstr"]
 
 [params]
 

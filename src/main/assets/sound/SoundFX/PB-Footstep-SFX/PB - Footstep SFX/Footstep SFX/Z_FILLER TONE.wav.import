@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cj0ygpddl0mv2"
-path="res://.godot/imported/Z_FILLER TONE.wav-a9d57fa667669e525e94f73cb1630edf.sample"
+path="res://.godot/imported/Z_FILLER TONE.wav-ca02dba4cf10573dc75cc38870033d25.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Z_FILLER TONE.wav"
-dest_files=["res://.godot/imported/Z_FILLER TONE.wav-a9d57fa667669e525e94f73cb1630edf.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Z_FILLER TONE.wav"
+dest_files=["res://.godot/imported/Z_FILLER TONE.wav-ca02dba4cf10573dc75cc38870033d25.sample"]
 
 [params]
 

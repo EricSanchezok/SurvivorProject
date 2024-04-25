@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ca24gs4s124x"
-path="res://.godot/imported/SPELL_Fire.wav-d633e71ebf0d082abf0b74954b96f12c.sample"
+path="res://.godot/imported/SPELL_Fire.wav-64017e11b7f9d5444238e0524b420678.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Fire.wav"
-dest_files=["res://.godot/imported/SPELL_Fire.wav-d633e71ebf0d082abf0b74954b96f12c.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Fire.wav"
+dest_files=["res://.godot/imported/SPELL_Fire.wav-64017e11b7f9d5444238e0524b420678.sample"]
 
 [params]
 

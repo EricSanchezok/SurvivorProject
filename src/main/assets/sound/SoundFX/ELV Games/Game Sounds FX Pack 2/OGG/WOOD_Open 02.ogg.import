@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cj43h25p064gm"
-path="res://.godot/imported/WOOD_Open 02.ogg-d5f3c6070a56d78747b62e7108d6bf71.oggvorbisstr"
+path="res://.godot/imported/WOOD_Open 02.ogg-9a7001ed947f2095cf2b7838542f4daa.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/WOOD_Open 02.ogg"
-dest_files=["res://.godot/imported/WOOD_Open 02.ogg-d5f3c6070a56d78747b62e7108d6bf71.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/WOOD_Open 02.ogg"
+dest_files=["res://.godot/imported/WOOD_Open 02.ogg-9a7001ed947f2095cf2b7838542f4daa.oggvorbisstr"]
 
 [params]
 

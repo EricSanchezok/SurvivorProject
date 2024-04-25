@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cwqgiug5nlh34"
-path="res://.godot/imported/MONSTER_Beast 03.wav-685029dc1290c0c0dde10425b6d5c0ee.sample"
+path="res://.godot/imported/MONSTER_Beast 03.wav-f3a7587e9fcffbb7f95cba8b15fc2bbb.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/MONSTER_Beast 03.wav"
-dest_files=["res://.godot/imported/MONSTER_Beast 03.wav-685029dc1290c0c0dde10425b6d5c0ee.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/MONSTER_Beast 03.wav"
+dest_files=["res://.godot/imported/MONSTER_Beast 03.wav-f3a7587e9fcffbb7f95cba8b15fc2bbb.sample"]
 
 [params]
 

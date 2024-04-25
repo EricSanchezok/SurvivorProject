@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cgyup7muo5l8l"
-path="res://.godot/imported/Concrete_Barefoot_Running.wav-23bc9f80b7f4c9564674f557a3596fed.sample"
+path="res://.godot/imported/Concrete_Barefoot_Running.wav-c650b9bba22b8115e12524bf73459e42.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Concrete_Barefoot_Running.wav"
-dest_files=["res://.godot/imported/Concrete_Barefoot_Running.wav-23bc9f80b7f4c9564674f557a3596fed.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Concrete_Barefoot_Running.wav"
+dest_files=["res://.godot/imported/Concrete_Barefoot_Running.wav-c650b9bba22b8115e12524bf73459e42.sample"]
 
 [params]
 

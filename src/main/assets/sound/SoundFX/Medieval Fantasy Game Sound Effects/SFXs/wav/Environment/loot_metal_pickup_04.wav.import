@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bekrfeb42udes"
-path="res://.godot/imported/loot_metal_pickup_04.wav-d4fb4a47f4e5a2cdee2f3bbd861c3b76.sample"
+path="res://.godot/imported/loot_metal_pickup_04.wav-9ef9c103ba17d3538168395d1ced45ab.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/loot_metal_pickup_04.wav"
-dest_files=["res://.godot/imported/loot_metal_pickup_04.wav-d4fb4a47f4e5a2cdee2f3bbd861c3b76.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/loot_metal_pickup_04.wav"
+dest_files=["res://.godot/imported/loot_metal_pickup_04.wav-9ef9c103ba17d3538168395d1ced45ab.sample"]
 
 [params]
 

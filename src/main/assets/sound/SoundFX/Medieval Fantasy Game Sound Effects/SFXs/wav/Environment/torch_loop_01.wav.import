@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://7uf8lm4h75mv"
-path="res://.godot/imported/torch_loop_01.wav-7859c31f278b0343bc367214c9c17f83.sample"
+path="res://.godot/imported/torch_loop_01.wav-b85967e4d97083e9ba9349b3a4c3d47e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/torch_loop_01.wav"
-dest_files=["res://.godot/imported/torch_loop_01.wav-7859c31f278b0343bc367214c9c17f83.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/torch_loop_01.wav"
+dest_files=["res://.godot/imported/torch_loop_01.wav-b85967e4d97083e9ba9349b3a4c3d47e.sample"]
 
 [params]
 

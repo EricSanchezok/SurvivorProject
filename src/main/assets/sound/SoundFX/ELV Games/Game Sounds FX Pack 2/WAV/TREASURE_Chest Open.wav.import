@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cxrsl7toahtwq"
-path="res://.godot/imported/TREASURE_Chest Open.wav-0c9dba49613bd2ca72749bddcdc619b8.sample"
+path="res://.godot/imported/TREASURE_Chest Open.wav-706d198d4db981bc50eac0972a6e891a.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/TREASURE_Chest Open.wav"
-dest_files=["res://.godot/imported/TREASURE_Chest Open.wav-0c9dba49613bd2ca72749bddcdc619b8.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/TREASURE_Chest Open.wav"
+dest_files=["res://.godot/imported/TREASURE_Chest Open.wav-706d198d4db981bc50eac0972a6e891a.sample"]
 
 [params]
 

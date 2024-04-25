@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjlvqlto257lg"
-path="res://.godot/imported/monster_large_A_voice_01.wav-0cb6914fa968707a5c101ddb1dac49c3.sample"
+path="res://.godot/imported/monster_large_A_voice_01.wav-3b5eb0c25da9687b77367e5d1dd25187.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_large_A_voice_01.wav"
-dest_files=["res://.godot/imported/monster_large_A_voice_01.wav-0cb6914fa968707a5c101ddb1dac49c3.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_large_A_voice_01.wav"
+dest_files=["res://.godot/imported/monster_large_A_voice_01.wav-3b5eb0c25da9687b77367e5d1dd25187.sample"]
 
 [params]
 

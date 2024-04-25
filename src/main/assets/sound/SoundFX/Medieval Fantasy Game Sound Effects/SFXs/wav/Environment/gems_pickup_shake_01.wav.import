@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://db5kruescivcv"
-path="res://.godot/imported/gems_pickup_shake_01.wav-607a8414b2ab384c0877ca8383a626e4.sample"
+path="res://.godot/imported/gems_pickup_shake_01.wav-422f83a9ad29738da59453a622c6714a.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/gems_pickup_shake_01.wav"
-dest_files=["res://.godot/imported/gems_pickup_shake_01.wav-607a8414b2ab384c0877ca8383a626e4.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/gems_pickup_shake_01.wav"
+dest_files=["res://.godot/imported/gems_pickup_shake_01.wav-422f83a9ad29738da59453a622c6714a.sample"]
 
 [params]
 

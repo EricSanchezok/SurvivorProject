@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://irr4y3dwuupm"
-path="res://.godot/imported/SCI-FI_Modern UI 04.wav-00b39bb715b2706fb19a5b727d2ec3d3.sample"
+path="res://.godot/imported/SCI-FI_Modern UI 04.wav-22fe4c29fa342a6ca0d812d39f064428.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/WAV/SCI-FI_Modern UI 04.wav"
-dest_files=["res://.godot/imported/SCI-FI_Modern UI 04.wav-00b39bb715b2706fb19a5b727d2ec3d3.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/WAV/SCI-FI_Modern UI 04.wav"
+dest_files=["res://.godot/imported/SCI-FI_Modern UI 04.wav-22fe4c29fa342a6ca0d812d39f064428.sample"]
 
 [params]
 

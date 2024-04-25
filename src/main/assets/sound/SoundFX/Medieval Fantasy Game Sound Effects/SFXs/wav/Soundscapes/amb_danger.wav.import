@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crwpcbfi36mlm"
-path="res://.godot/imported/amb_danger.wav-ea13810a5f6177b731639ba579afd8a2.sample"
+path="res://.godot/imported/amb_danger.wav-eb8ca2938428c19eb5d4248e1d791330.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_danger.wav"
-dest_files=["res://.godot/imported/amb_danger.wav-ea13810a5f6177b731639ba579afd8a2.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_danger.wav"
+dest_files=["res://.godot/imported/amb_danger.wav-eb8ca2938428c19eb5d4248e1d791330.sample"]
 
 [params]
 

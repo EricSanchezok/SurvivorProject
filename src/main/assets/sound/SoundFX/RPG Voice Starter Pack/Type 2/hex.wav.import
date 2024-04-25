@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dlldr58l7e0s4"
-path="res://.godot/imported/hex.wav-e9c437bfa99a6381495687d302008746.sample"
+path="res://.godot/imported/hex.wav-b81310c35e59e34794122fbdbdfa9a0a.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 2/hex.wav"
-dest_files=["res://.godot/imported/hex.wav-e9c437bfa99a6381495687d302008746.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 2/hex.wav"
+dest_files=["res://.godot/imported/hex.wav-b81310c35e59e34794122fbdbdfa9a0a.sample"]
 
 [params]
 

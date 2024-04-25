@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhckby2h4aky"
-path="res://.godot/imported/attack1.wav-238e532286d2b3ecedb429f2df1c2989.sample"
+path="res://.godot/imported/attack1.wav-fb71ed96ed0806445a9c21475f3f71b9.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/attack1.wav"
-dest_files=["res://.godot/imported/attack1.wav-238e532286d2b3ecedb429f2df1c2989.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/attack1.wav"
+dest_files=["res://.godot/imported/attack1.wav-fb71ed96ed0806445a9c21475f3f71b9.sample"]
 
 [params]
 

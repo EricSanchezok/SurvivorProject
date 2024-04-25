@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cckxxjpcnylym"
-path="res://.godot/imported/damaged3.wav-06b80ffca3623066571e40147de69f93.sample"
+path="res://.godot/imported/damaged3.wav-f44c3734f17ddaf4defc68a3e7936833.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 1/damaged3.wav"
-dest_files=["res://.godot/imported/damaged3.wav-06b80ffca3623066571e40147de69f93.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 1/damaged3.wav"
+dest_files=["res://.godot/imported/damaged3.wav-f44c3734f17ddaf4defc68a3e7936833.sample"]
 
 [params]
 

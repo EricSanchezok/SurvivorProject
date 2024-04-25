@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d437fa8qljyr"
-path="res://.godot/imported/UI_Button Click 08.ogg-7d188d3fbc89b1aeba20c54b576a4823.oggvorbisstr"
+path="res://.godot/imported/UI_Button Click 08.ogg-c0c15b2a197489ab5791df3296bbded3.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/OGG/UI_Button Click 08.ogg"
-dest_files=["res://.godot/imported/UI_Button Click 08.ogg-7d188d3fbc89b1aeba20c54b576a4823.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/OGG/UI_Button Click 08.ogg"
+dest_files=["res://.godot/imported/UI_Button Click 08.ogg-c0c15b2a197489ab5791df3296bbded3.oggvorbisstr"]
 
 [params]
 

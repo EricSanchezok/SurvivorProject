@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cun2tsigdxnr8"
-path="res://.godot/imported/bone_flesh_crunch_02.ogg-9101bc5c81183faa0f276e3abf832120.oggvorbisstr"
+path="res://.godot/imported/bone_flesh_crunch_02.ogg-2d6d14577f1f43eff18fb501695b3943.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/bone_flesh_crunch_02.ogg"
-dest_files=["res://.godot/imported/bone_flesh_crunch_02.ogg-9101bc5c81183faa0f276e3abf832120.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/bone_flesh_crunch_02.ogg"
+dest_files=["res://.godot/imported/bone_flesh_crunch_02.ogg-2d6d14577f1f43eff18fb501695b3943.oggvorbisstr"]
 
 [params]
 

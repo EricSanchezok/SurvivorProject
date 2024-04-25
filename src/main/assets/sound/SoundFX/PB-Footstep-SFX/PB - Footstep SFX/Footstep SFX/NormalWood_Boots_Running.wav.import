@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://3ra5d4m2cm6u"
-path="res://.godot/imported/NormalWood_Boots_Running.wav-6386c9d7d410fca641bda70001c57ff4.sample"
+path="res://.godot/imported/NormalWood_Boots_Running.wav-e373bb47f0502614f7025efc70a677b8.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/NormalWood_Boots_Running.wav"
-dest_files=["res://.godot/imported/NormalWood_Boots_Running.wav-6386c9d7d410fca641bda70001c57ff4.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/NormalWood_Boots_Running.wav"
+dest_files=["res://.godot/imported/NormalWood_Boots_Running.wav-e373bb47f0502614f7025efc70a677b8.sample"]
 
 [params]
 

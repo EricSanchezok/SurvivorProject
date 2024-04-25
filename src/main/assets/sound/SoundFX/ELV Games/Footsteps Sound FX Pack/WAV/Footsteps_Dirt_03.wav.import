@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bu48lb0ejk15n"
-path="res://.godot/imported/Footsteps_Dirt_03.wav-cad5f0db7c7c49505e343b08827d50c3.sample"
+path="res://.godot/imported/Footsteps_Dirt_03.wav-97a9c2760fe256944e7c1cad1e800b8b.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Dirt_03.wav"
-dest_files=["res://.godot/imported/Footsteps_Dirt_03.wav-cad5f0db7c7c49505e343b08827d50c3.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Dirt_03.wav"
+dest_files=["res://.godot/imported/Footsteps_Dirt_03.wav-97a9c2760fe256944e7c1cad1e800b8b.sample"]
 
 [params]
 

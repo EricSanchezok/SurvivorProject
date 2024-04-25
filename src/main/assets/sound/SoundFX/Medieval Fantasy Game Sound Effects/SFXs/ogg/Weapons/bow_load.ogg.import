@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dsk4a3alrxxst"
-path="res://.godot/imported/bow_load.ogg-e5761bc720c7e3fb644f09f1518b050f.oggvorbisstr"
+path="res://.godot/imported/bow_load.ogg-2052c1e60209cea20ed6b2184c6378ee.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/bow_load.ogg"
-dest_files=["res://.godot/imported/bow_load.ogg-e5761bc720c7e3fb644f09f1518b050f.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/bow_load.ogg"
+dest_files=["res://.godot/imported/bow_load.ogg-2052c1e60209cea20ed6b2184c6378ee.oggvorbisstr"]
 
 [params]
 

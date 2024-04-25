@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://doq45udhdp7iq"
-path="res://.godot/imported/bow_load_shot.wav-20991a01e0c38ff0a523b993bc8e04fa.sample"
+path="res://.godot/imported/bow_load_shot.wav-3defd08b52e1f4296172d50fe1db6551.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/bow_load_shot.wav"
-dest_files=["res://.godot/imported/bow_load_shot.wav-20991a01e0c38ff0a523b993bc8e04fa.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/bow_load_shot.wav"
+dest_files=["res://.godot/imported/bow_load_shot.wav-3defd08b52e1f4296172d50fe1db6551.sample"]
 
 [params]
 

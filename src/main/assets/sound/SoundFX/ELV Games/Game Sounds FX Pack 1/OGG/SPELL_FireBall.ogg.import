@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://1ln50r8t0vbx"
-path="res://.godot/imported/SPELL_FireBall.ogg-9ee0576ba0c25d52ddf5e5e9fc34a8a0.oggvorbisstr"
+path="res://.godot/imported/SPELL_FireBall.ogg-112d2344202ceb857a22ae903ad0beda.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_FireBall.ogg"
-dest_files=["res://.godot/imported/SPELL_FireBall.ogg-9ee0576ba0c25d52ddf5e5e9fc34a8a0.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_FireBall.ogg"
+dest_files=["res://.godot/imported/SPELL_FireBall.ogg-112d2344202ceb857a22ae903ad0beda.oggvorbisstr"]
 
 [params]
 

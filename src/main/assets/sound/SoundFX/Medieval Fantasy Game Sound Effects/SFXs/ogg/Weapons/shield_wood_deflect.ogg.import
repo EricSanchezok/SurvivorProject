@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bq7esgn688et0"
-path="res://.godot/imported/shield_wood_deflect.ogg-457cfebb72c46065103b772157b95446.oggvorbisstr"
+path="res://.godot/imported/shield_wood_deflect.ogg-bf7a00732603ffc7614be328140b9c17.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/shield_wood_deflect.ogg"
-dest_files=["res://.godot/imported/shield_wood_deflect.ogg-457cfebb72c46065103b772157b95446.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/shield_wood_deflect.ogg"
+dest_files=["res://.godot/imported/shield_wood_deflect.ogg-bf7a00732603ffc7614be328140b9c17.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://gstuwcy8xxa5"
-path="res://.godot/imported/blizzard.wav-727bfdbfdf726969962ff9742faa5abf.sample"
+path="res://.godot/imported/blizzard.wav-55600bbebdf5db726daef240e98db811.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 1/blizzard.wav"
-dest_files=["res://.godot/imported/blizzard.wav-727bfdbfdf726969962ff9742faa5abf.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 1/blizzard.wav"
+dest_files=["res://.godot/imported/blizzard.wav-55600bbebdf5db726daef240e98db811.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cffssweikcg5b"
-path="res://.godot/imported/cyclone.wav-e4f9f283779caf9b1f2406c535d745e9.sample"
+path="res://.godot/imported/cyclone.wav-11ef3f42bdccd62321ef0e142de12628.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/cyclone.wav"
-dest_files=["res://.godot/imported/cyclone.wav-e4f9f283779caf9b1f2406c535d745e9.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/cyclone.wav"
+dest_files=["res://.godot/imported/cyclone.wav-11ef3f42bdccd62321ef0e142de12628.sample"]
 
 [params]
 

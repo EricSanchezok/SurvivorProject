@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bd206cl7r0kyf"
-path="res://.godot/imported/SPELL_EarthPunch.mp3-5ce468c09ed82baf6082044fc2626893.mp3str"
+path="res://.godot/imported/SPELL_EarthPunch.mp3-4036b47368a883745a5f82a809df8c44.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_EarthPunch.mp3"
-dest_files=["res://.godot/imported/SPELL_EarthPunch.mp3-5ce468c09ed82baf6082044fc2626893.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_EarthPunch.mp3"
+dest_files=["res://.godot/imported/SPELL_EarthPunch.mp3-4036b47368a883745a5f82a809df8c44.mp3str"]
 
 [params]
 

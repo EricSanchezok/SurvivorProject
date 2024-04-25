@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1l2gbl2kr48k"
-path="res://.godot/imported/Concrete_Shoes_Walking.wav-aa946e807b30823567e306ed1e18faed.sample"
+path="res://.godot/imported/Concrete_Shoes_Walking.wav-7d6ba2d17c63d0b0c658d2a594193287.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Concrete_Shoes_Walking.wav"
-dest_files=["res://.godot/imported/Concrete_Shoes_Walking.wav-aa946e807b30823567e306ed1e18faed.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Concrete_Shoes_Walking.wav"
+dest_files=["res://.godot/imported/Concrete_Shoes_Walking.wav-7d6ba2d17c63d0b0c658d2a594193287.sample"]
 
 [params]
 

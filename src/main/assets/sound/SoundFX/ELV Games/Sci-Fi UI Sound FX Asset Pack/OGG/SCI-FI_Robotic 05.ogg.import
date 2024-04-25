@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c2y84yb633ubv"
-path="res://.godot/imported/SCI-FI_Robotic 05.ogg-5a86d5d9e9721c52fd2974a89ec112fe.oggvorbisstr"
+path="res://.godot/imported/SCI-FI_Robotic 05.ogg-13ff54c99e34cf867dd19dbea13643e9.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Robotic 05.ogg"
-dest_files=["res://.godot/imported/SCI-FI_Robotic 05.ogg-5a86d5d9e9721c52fd2974a89ec112fe.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Robotic 05.ogg"
+dest_files=["res://.godot/imported/SCI-FI_Robotic 05.ogg-13ff54c99e34cf867dd19dbea13643e9.oggvorbisstr"]
 
 [params]
 

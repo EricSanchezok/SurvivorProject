@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cmpdpy0s1wkvd"
-path="res://.godot/imported/Glass_Running.wav-37c990dd56bf34a4a1176f9c4e56ebf7.sample"
+path="res://.godot/imported/Glass_Running.wav-1f38ab5ecaf2a6c036673f06bcfd1bc5.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Glass_Running.wav"
-dest_files=["res://.godot/imported/Glass_Running.wav-37c990dd56bf34a4a1176f9c4e56ebf7.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Glass_Running.wav"
+dest_files=["res://.godot/imported/Glass_Running.wav-1f38ab5ecaf2a6c036673f06bcfd1bc5.sample"]
 
 [params]
 

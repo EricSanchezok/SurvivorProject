@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c7ducahxlvbno"
-path="res://.godot/imported/Snow_Jogging.mp3-de0150922a5c399e61c24c2263c47082.mp3str"
+path="res://.godot/imported/Snow_Jogging.mp3-40a4116b79e62052fc76253cb1c00564.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Snow_Jogging.mp3"
-dest_files=["res://.godot/imported/Snow_Jogging.mp3-de0150922a5c399e61c24c2263c47082.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Snow_Jogging.mp3"
+dest_files=["res://.godot/imported/Snow_Jogging.mp3-40a4116b79e62052fc76253cb1c00564.mp3str"]
 
 [params]
 

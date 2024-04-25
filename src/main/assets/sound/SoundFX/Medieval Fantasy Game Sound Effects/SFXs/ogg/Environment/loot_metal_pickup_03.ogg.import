@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ddsxfe4mi50r"
-path="res://.godot/imported/loot_metal_pickup_03.ogg-f49e2468063e61896c60d10b31142404.oggvorbisstr"
+path="res://.godot/imported/loot_metal_pickup_03.ogg-97dd642a48bca95ffd15a5ee5534c233.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/loot_metal_pickup_03.ogg"
-dest_files=["res://.godot/imported/loot_metal_pickup_03.ogg-f49e2468063e61896c60d10b31142404.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/loot_metal_pickup_03.ogg"
+dest_files=["res://.godot/imported/loot_metal_pickup_03.ogg-97dd642a48bca95ffd15a5ee5534c233.oggvorbisstr"]
 
 [params]
 

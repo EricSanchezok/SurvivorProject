@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcbmryd8gcf3"
-path="res://.godot/imported/SCI-FI_CPU 03.wav-f0b32bf369cb430ecb8f5027bbe93a1a.sample"
+path="res://.godot/imported/SCI-FI_CPU 03.wav-20805b8906a748bf4c69568fc2ebd06a.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/WAV/SCI-FI_CPU 03.wav"
-dest_files=["res://.godot/imported/SCI-FI_CPU 03.wav-f0b32bf369cb430ecb8f5027bbe93a1a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/WAV/SCI-FI_CPU 03.wav"
+dest_files=["res://.godot/imported/SCI-FI_CPU 03.wav-20805b8906a748bf4c69568fc2ebd06a.sample"]
 
 [params]
 

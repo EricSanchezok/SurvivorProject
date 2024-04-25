@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d0jlx2lglokqq"
-path="res://.godot/imported/leap_1.wav-a0ffa5818b91cbc8e12ab90e5293103b.sample"
+path="res://.godot/imported/leap_1.wav-db0db5efce3131ffff54269ae1bdf064.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Short_Whoosh/leap_1.wav"
-dest_files=["res://.godot/imported/leap_1.wav-a0ffa5818b91cbc8e12ab90e5293103b.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Short_Whoosh/leap_1.wav"
+dest_files=["res://.godot/imported/leap_1.wav-db0db5efce3131ffff54269ae1bdf064.sample"]
 
 [params]
 

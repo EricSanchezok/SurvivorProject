@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cafixe04t5d6x"
-path="res://.godot/imported/SPELL_Misc 02.wav-f6756ae366a6e80160379f267a996c97.sample"
+path="res://.godot/imported/SPELL_Misc 02.wav-5139fb37bec1efb138c2611fc0b77586.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Misc 02.wav"
-dest_files=["res://.godot/imported/SPELL_Misc 02.wav-f6756ae366a6e80160379f267a996c97.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Misc 02.wav"
+dest_files=["res://.godot/imported/SPELL_Misc 02.wav-5139fb37bec1efb138c2611fc0b77586.sample"]
 
 [params]
 

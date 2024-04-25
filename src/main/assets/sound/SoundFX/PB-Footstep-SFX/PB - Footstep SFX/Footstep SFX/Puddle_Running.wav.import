@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6qtdygj30ggd"
-path="res://.godot/imported/Puddle_Running.wav-bddda4aa02310d589e2920014872f660.sample"
+path="res://.godot/imported/Puddle_Running.wav-8c20f1ceeba5bb1609419447dc5655db.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Puddle_Running.wav"
-dest_files=["res://.godot/imported/Puddle_Running.wav-bddda4aa02310d589e2920014872f660.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Puddle_Running.wav"
+dest_files=["res://.godot/imported/Puddle_Running.wav-8c20f1ceeba5bb1609419447dc5655db.sample"]
 
 [params]
 

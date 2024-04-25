@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bfxiy1tv2ss3a"
-path="res://.godot/imported/bone_flesh_crunch_long_02.wav-07b9bd02a51e82cb8ef98dcc62d4885c.sample"
+path="res://.godot/imported/bone_flesh_crunch_long_02.wav-46c69f2880d1a4dfda88ac79a4693a5b.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Flesh/bone_flesh_crunch_long_02.wav"
-dest_files=["res://.godot/imported/bone_flesh_crunch_long_02.wav-07b9bd02a51e82cb8ef98dcc62d4885c.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Flesh/bone_flesh_crunch_long_02.wav"
+dest_files=["res://.godot/imported/bone_flesh_crunch_long_02.wav-46c69f2880d1a4dfda88ac79a4693a5b.sample"]
 
 [params]
 

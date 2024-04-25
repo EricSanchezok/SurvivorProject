@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c3h6sr5dxdmqi"
-path="res://.godot/imported/chains_03.ogg-bc78399fa2a6935e7ca243b68ec6688d.oggvorbisstr"
+path="res://.godot/imported/chains_03.ogg-12c68ffff3dbe50623df87bfd1a40816.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/chains_03.ogg"
-dest_files=["res://.godot/imported/chains_03.ogg-bc78399fa2a6935e7ca243b68ec6688d.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/chains_03.ogg"
+dest_files=["res://.godot/imported/chains_03.ogg-12c68ffff3dbe50623df87bfd1a40816.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://mr2bs8xayrge"
-path="res://.godot/imported/Footsteps_Stone_Tiles_03.ogg-53abc637443929b7a7f76d55ee4ff391.oggvorbisstr"
+path="res://.godot/imported/Footsteps_Stone_Tiles_03.ogg-c29195bc3f050bd4f5e99320228ce91d.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Stone_Tiles_03.ogg"
-dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_03.ogg-53abc637443929b7a7f76d55ee4ff391.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Stone_Tiles_03.ogg"
+dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_03.ogg-c29195bc3f050bd4f5e99320228ce91d.oggvorbisstr"]
 
 [params]
 

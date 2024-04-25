@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cjmwlgtcyeg6t"
-path="res://.godot/imported/axe_hit.wav-555a4dc35e6b138e790d5d927defa393.sample"
+path="res://.godot/imported/axe_hit.wav-38b9db04626e2aa67fc7648ac87062b8.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/axe_hit.wav"
-dest_files=["res://.godot/imported/axe_hit.wav-555a4dc35e6b138e790d5d927defa393.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/axe_hit.wav"
+dest_files=["res://.godot/imported/axe_hit.wav-38b9db04626e2aa67fc7648ac87062b8.sample"]
 
 [params]
 

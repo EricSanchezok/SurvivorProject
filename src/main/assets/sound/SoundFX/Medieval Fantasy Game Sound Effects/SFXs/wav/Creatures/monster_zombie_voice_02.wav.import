@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://rf0td84k4tvt"
-path="res://.godot/imported/monster_zombie_voice_02.wav-2e92ce95ca75712ce4cb4d906647c337.sample"
+path="res://.godot/imported/monster_zombie_voice_02.wav-6e63b608a36dcced53fb25ddc40d922b.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_zombie_voice_02.wav"
-dest_files=["res://.godot/imported/monster_zombie_voice_02.wav-2e92ce95ca75712ce4cb4d906647c337.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_zombie_voice_02.wav"
+dest_files=["res://.godot/imported/monster_zombie_voice_02.wav-6e63b608a36dcced53fb25ddc40d922b.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://du4uwvmwn03kp"
-path="res://.godot/imported/monster_swamp_move_04.wav-8c10abd144941603291e27489a0e9ea2.sample"
+path="res://.godot/imported/monster_swamp_move_04.wav-6babd843e0af22a34d949bdea4a6bbd8.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_swamp_move_04.wav"
-dest_files=["res://.godot/imported/monster_swamp_move_04.wav-8c10abd144941603291e27489a0e9ea2.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_swamp_move_04.wav"
+dest_files=["res://.godot/imported/monster_swamp_move_04.wav-6babd843e0af22a34d949bdea4a6bbd8.sample"]
 
 [params]
 

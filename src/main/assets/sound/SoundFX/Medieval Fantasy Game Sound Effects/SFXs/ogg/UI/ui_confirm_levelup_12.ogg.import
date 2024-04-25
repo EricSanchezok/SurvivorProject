@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bqepstmd44vm"
-path="res://.godot/imported/ui_confirm_levelup_12.ogg-bb66bec2136996599ff5dbd3f5e491fe.oggvorbisstr"
+path="res://.godot/imported/ui_confirm_levelup_12.ogg-7c66b219a2a2736cb3f355757090b3ee.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_confirm_levelup_12.ogg"
-dest_files=["res://.godot/imported/ui_confirm_levelup_12.ogg-bb66bec2136996599ff5dbd3f5e491fe.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_confirm_levelup_12.ogg"
+dest_files=["res://.godot/imported/ui_confirm_levelup_12.ogg-7c66b219a2a2736cb3f355757090b3ee.oggvorbisstr"]
 
 [params]
 

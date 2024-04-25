@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bah4ysxgb0hqo"
-path="res://.godot/imported/UI_Keypad_Error.mp3-c4d9181e37e42ea853c3a4043b4a274c.mp3str"
+path="res://.godot/imported/UI_Keypad_Error.mp3-f2a845880d869714d854b27c1edcbb8e.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/MP3/UI_Keypad_Error.mp3"
-dest_files=["res://.godot/imported/UI_Keypad_Error.mp3-c4d9181e37e42ea853c3a4043b4a274c.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/MP3/UI_Keypad_Error.mp3"
+dest_files=["res://.godot/imported/UI_Keypad_Error.mp3-f2a845880d869714d854b27c1edcbb8e.mp3str"]
 
 [params]
 

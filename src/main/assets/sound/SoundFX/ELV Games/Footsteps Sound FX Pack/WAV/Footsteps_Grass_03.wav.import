@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cv7g4gakqv5it"
-path="res://.godot/imported/Footsteps_Grass_03.wav-56afde118c9e42a5d8c266c353d6ec53.sample"
+path="res://.godot/imported/Footsteps_Grass_03.wav-227c526a869d0773ad353d8c191a8d41.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Grass_03.wav"
-dest_files=["res://.godot/imported/Footsteps_Grass_03.wav-56afde118c9e42a5d8c266c353d6ec53.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Grass_03.wav"
+dest_files=["res://.godot/imported/Footsteps_Grass_03.wav-227c526a869d0773ad353d8c191a8d41.sample"]
 
 [params]
 

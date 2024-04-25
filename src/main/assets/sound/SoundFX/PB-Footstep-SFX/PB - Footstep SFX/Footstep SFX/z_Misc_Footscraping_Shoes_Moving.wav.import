@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bn13x5lsaw18d"
-path="res://.godot/imported/z_Misc_Footscraping_Shoes_Moving.wav-9f6d1343bdad99c9fa2126234bd7a3fe.sample"
+path="res://.godot/imported/z_Misc_Footscraping_Shoes_Moving.wav-21dc0a53c5bcbc0c9ce65c75375bb99c.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/z_Misc_Footscraping_Shoes_Moving.wav"
-dest_files=["res://.godot/imported/z_Misc_Footscraping_Shoes_Moving.wav-9f6d1343bdad99c9fa2126234bd7a3fe.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/z_Misc_Footscraping_Shoes_Moving.wav"
+dest_files=["res://.godot/imported/z_Misc_Footscraping_Shoes_Moving.wav-21dc0a53c5bcbc0c9ce65c75375bb99c.sample"]
 
 [params]
 

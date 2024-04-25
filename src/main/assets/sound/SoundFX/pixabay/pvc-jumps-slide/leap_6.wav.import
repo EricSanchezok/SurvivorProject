@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://wxbxcr3xkjc0"
-path="res://.godot/imported/leap_6.wav-a53dd30bb429effee90a5970cf9efeae.sample"
+path="res://.godot/imported/leap_6.wav-169c61f02c9320d645e3697d07c0c8ab.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/pixabay/pvc-jumps-slide/leap_6.wav"
-dest_files=["res://.godot/imported/leap_6.wav-a53dd30bb429effee90a5970cf9efeae.sample"]
+source_file="res://src/main/assets/sound/SoundFX/pixabay/pvc-jumps-slide/leap_6.wav"
+dest_files=["res://.godot/imported/leap_6.wav-169c61f02c9320d645e3697d07c0c8ab.sample"]
 
 [params]
 

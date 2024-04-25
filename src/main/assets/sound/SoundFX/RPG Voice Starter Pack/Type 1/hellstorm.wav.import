@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cljf1fcchd5ru"
-path="res://.godot/imported/hellstorm.wav-d74bbb2d0af352d5781daaddea47985a.sample"
+path="res://.godot/imported/hellstorm.wav-3264827d7d8f64d2c1690ab06b8d0391.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 1/hellstorm.wav"
-dest_files=["res://.godot/imported/hellstorm.wav-d74bbb2d0af352d5781daaddea47985a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 1/hellstorm.wav"
+dest_files=["res://.godot/imported/hellstorm.wav-3264827d7d8f64d2c1690ab06b8d0391.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c1gbtoxenga2e"
-path="res://.godot/imported/WOOD_Breaking 02.mp3-996898f3e5c3e227ee80000547307e1e.mp3str"
+path="res://.godot/imported/WOOD_Breaking 02.mp3-f71b531ef1e8b49c42eebd8b74e13d71.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/WOOD_Breaking 02.mp3"
-dest_files=["res://.godot/imported/WOOD_Breaking 02.mp3-996898f3e5c3e227ee80000547307e1e.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/WOOD_Breaking 02.mp3"
+dest_files=["res://.godot/imported/WOOD_Breaking 02.mp3-f71b531ef1e8b49c42eebd8b74e13d71.mp3str"]
 
 [params]
 

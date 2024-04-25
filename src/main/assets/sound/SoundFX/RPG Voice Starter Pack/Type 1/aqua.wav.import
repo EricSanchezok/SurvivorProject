@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d4j6e6cysd3ky"
-path="res://.godot/imported/aqua.wav-a5e9009db6b9945ae65dc8b16a5100ab.sample"
+path="res://.godot/imported/aqua.wav-78d8d0447b89be68df61011d365f0d5c.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 1/aqua.wav"
-dest_files=["res://.godot/imported/aqua.wav-a5e9009db6b9945ae65dc8b16a5100ab.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 1/aqua.wav"
+dest_files=["res://.godot/imported/aqua.wav-78d8d0447b89be68df61011d365f0d5c.sample"]
 
 [params]
 

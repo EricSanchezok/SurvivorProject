@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d1qxjldk64ymt"
-path="res://.godot/imported/MONSTER_Beast 01.ogg-eb583ee45df758f7c78e1575ee18f7c7.oggvorbisstr"
+path="res://.godot/imported/MONSTER_Beast 01.ogg-4a50b83d8e6b3f0217ab7ae472402277.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/MONSTER_Beast 01.ogg"
-dest_files=["res://.godot/imported/MONSTER_Beast 01.ogg-eb583ee45df758f7c78e1575ee18f7c7.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/MONSTER_Beast 01.ogg"
+dest_files=["res://.godot/imported/MONSTER_Beast 01.ogg-4a50b83d8e6b3f0217ab7ae472402277.oggvorbisstr"]
 
 [params]
 

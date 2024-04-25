@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ca3bsoyeln1bx"
-path="res://.godot/imported/amb_creatures_03.wav-359d9ef1d0772ec79120d7aa681f30cb.sample"
+path="res://.godot/imported/amb_creatures_03.wav-57ab5672441ed227db4db60de0b5a1d2.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_creatures_03.wav"
-dest_files=["res://.godot/imported/amb_creatures_03.wav-359d9ef1d0772ec79120d7aa681f30cb.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_creatures_03.wav"
+dest_files=["res://.godot/imported/amb_creatures_03.wav-57ab5672441ed227db4db60de0b5a1d2.sample"]
 
 [params]
 

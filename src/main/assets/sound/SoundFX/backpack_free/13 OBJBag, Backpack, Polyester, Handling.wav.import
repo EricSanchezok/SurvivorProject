@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://lg8paxrdjs1h"
-path="res://.godot/imported/13 OBJBag, Backpack, Polyester, Handling.wav-8b52fa649bfd6b93f98445d671a33381.sample"
+path="res://.godot/imported/13 OBJBag, Backpack, Polyester, Handling.wav-1996e9856520a38a3154c0a19f36495e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/backpack_free/13 OBJBag, Backpack, Polyester, Handling.wav"
-dest_files=["res://.godot/imported/13 OBJBag, Backpack, Polyester, Handling.wav-8b52fa649bfd6b93f98445d671a33381.sample"]
+source_file="res://src/main/assets/sound/SoundFX/backpack_free/13 OBJBag, Backpack, Polyester, Handling.wav"
+dest_files=["res://.godot/imported/13 OBJBag, Backpack, Polyester, Handling.wav-1996e9856520a38a3154c0a19f36495e.sample"]
 
 [params]
 

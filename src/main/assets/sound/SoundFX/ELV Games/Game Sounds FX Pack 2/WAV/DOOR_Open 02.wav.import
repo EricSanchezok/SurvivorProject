@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cdka51rcoo0mu"
-path="res://.godot/imported/DOOR_Open 02.wav-e719096355840b04df79a92d69e13c62.sample"
+path="res://.godot/imported/DOOR_Open 02.wav-92ab7f7e68d157e33a46793a1210f4e2.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/DOOR_Open 02.wav"
-dest_files=["res://.godot/imported/DOOR_Open 02.wav-e719096355840b04df79a92d69e13c62.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/DOOR_Open 02.wav"
+dest_files=["res://.godot/imported/DOOR_Open 02.wav-92ab7f7e68d157e33a46793a1210f4e2.sample"]
 
 [params]
 

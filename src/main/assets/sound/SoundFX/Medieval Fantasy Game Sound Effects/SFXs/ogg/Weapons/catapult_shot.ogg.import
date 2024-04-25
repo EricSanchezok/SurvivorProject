@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cfkknm5chpvl7"
-path="res://.godot/imported/catapult_shot.ogg-427dc6c50db975609785738554cd2591.oggvorbisstr"
+path="res://.godot/imported/catapult_shot.ogg-3a5eabd783793a93dec226e6690e04ee.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/catapult_shot.ogg"
-dest_files=["res://.godot/imported/catapult_shot.ogg-427dc6c50db975609785738554cd2591.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/catapult_shot.ogg"
+dest_files=["res://.godot/imported/catapult_shot.ogg-3a5eabd783793a93dec226e6690e04ee.oggvorbisstr"]
 
 [params]
 

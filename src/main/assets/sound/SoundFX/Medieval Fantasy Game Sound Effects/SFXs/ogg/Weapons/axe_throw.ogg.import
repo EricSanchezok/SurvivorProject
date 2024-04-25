@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dro1qcsjpm0j1"
-path="res://.godot/imported/axe_throw.ogg-c04805498a728ad03803b29ba5a795a9.oggvorbisstr"
+path="res://.godot/imported/axe_throw.ogg-d26913b4076d2b07313a962ba5d05bd0.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/axe_throw.ogg"
-dest_files=["res://.godot/imported/axe_throw.ogg-c04805498a728ad03803b29ba5a795a9.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/axe_throw.ogg"
+dest_files=["res://.godot/imported/axe_throw.ogg-d26913b4076d2b07313a962ba5d05bd0.oggvorbisstr"]
 
 [params]
 

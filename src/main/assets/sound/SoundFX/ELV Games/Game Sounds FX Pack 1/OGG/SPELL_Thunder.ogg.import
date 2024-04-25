@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dywc8dxe8yd5r"
-path="res://.godot/imported/SPELL_Thunder.ogg-d4cb69b1c9109a5e7d2e617747fd2cc2.oggvorbisstr"
+path="res://.godot/imported/SPELL_Thunder.ogg-8cb22d2b0887fe105fe6d9a0d53de87f.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Thunder.ogg"
-dest_files=["res://.godot/imported/SPELL_Thunder.ogg-d4cb69b1c9109a5e7d2e617747fd2cc2.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Thunder.ogg"
+dest_files=["res://.godot/imported/SPELL_Thunder.ogg-8cb22d2b0887fe105fe6d9a0d53de87f.oggvorbisstr"]
 
 [params]
 

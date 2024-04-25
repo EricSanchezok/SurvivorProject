@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dncdgbjb8npm3"
-path="res://.godot/imported/water.wav-fc9e9cc65243ea535cbd59ae80a98c09.sample"
+path="res://.godot/imported/water.wav-5ffa16b012b1360f1c4e9a8ebe165a4c.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/water.wav"
-dest_files=["res://.godot/imported/water.wav-fc9e9cc65243ea535cbd59ae80a98c09.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/water.wav"
+dest_files=["res://.godot/imported/water.wav-5ffa16b012b1360f1c4e9a8ebe165a4c.sample"]
 
 [params]
 

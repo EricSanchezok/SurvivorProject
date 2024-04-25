@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ce5mji58gqj2m"
-path="res://.godot/imported/sword_whoosh_hit_01.wav-b3293e35d808e8fe1ce5db4cdf27ef04.sample"
+path="res://.godot/imported/sword_whoosh_hit_01.wav-373f2ec25d4690ab2448d5847f24a501.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/sword_whoosh_hit_01.wav"
-dest_files=["res://.godot/imported/sword_whoosh_hit_01.wav-b3293e35d808e8fe1ce5db4cdf27ef04.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/sword_whoosh_hit_01.wav"
+dest_files=["res://.godot/imported/sword_whoosh_hit_01.wav-373f2ec25d4690ab2448d5847f24a501.sample"]
 
 [params]
 

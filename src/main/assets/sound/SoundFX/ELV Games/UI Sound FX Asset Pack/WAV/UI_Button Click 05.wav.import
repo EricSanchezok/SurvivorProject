@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cunyxkqud7gl2"
-path="res://.godot/imported/UI_Button Click 05.wav-06d8350a40f407a2cbc794dfb92ddfaf.sample"
+path="res://.godot/imported/UI_Button Click 05.wav-037d9682b182437ca95647f4af3d5b3a.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/UI_Button Click 05.wav"
-dest_files=["res://.godot/imported/UI_Button Click 05.wav-06d8350a40f407a2cbc794dfb92ddfaf.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Button Click 05.wav"
+dest_files=["res://.godot/imported/UI_Button Click 05.wav-037d9682b182437ca95647f4af3d5b3a.sample"]
 
 [params]
 

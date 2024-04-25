@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ci4trt4d83q4l"
-path="res://.godot/imported/SoftCarpet_Barefeet_Running.wav-6e8a8a4b9ce824610bca14aaa67fb505.sample"
+path="res://.godot/imported/SoftCarpet_Barefeet_Running.wav-6324f0c0528d0ff4218161d6cb159df7.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/SoftCarpet_Barefeet_Running.wav"
-dest_files=["res://.godot/imported/SoftCarpet_Barefeet_Running.wav-6e8a8a4b9ce824610bca14aaa67fb505.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/SoftCarpet_Barefeet_Running.wav"
+dest_files=["res://.godot/imported/SoftCarpet_Barefeet_Running.wav-6324f0c0528d0ff4218161d6cb159df7.sample"]
 
 [params]
 

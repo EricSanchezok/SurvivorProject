@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b82thnlld3acp"
-path="res://.godot/imported/blade_whoosh_04.wav-710336e4ab6196b10483f38f9793188e.sample"
+path="res://.godot/imported/blade_whoosh_04.wav-e518d21dcf5bf5a83c3e262fec1cac83.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_whoosh_04.wav"
-dest_files=["res://.godot/imported/blade_whoosh_04.wav-710336e4ab6196b10483f38f9793188e.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_whoosh_04.wav"
+dest_files=["res://.godot/imported/blade_whoosh_04.wav-e518d21dcf5bf5a83c3e262fec1cac83.sample"]
 
 [params]
 

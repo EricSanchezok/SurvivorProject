@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://xe33x2ry1ytf"
-path="res://.godot/imported/UI_Keypad_Rejected.wav-5bb9f8ae027d80853dc3915325a553f5.sample"
+path="res://.godot/imported/UI_Keypad_Rejected.wav-7dce503d151b8f76eb967580a97c2613.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/UI_Keypad_Rejected.wav"
-dest_files=["res://.godot/imported/UI_Keypad_Rejected.wav-5bb9f8ae027d80853dc3915325a553f5.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Keypad_Rejected.wav"
+dest_files=["res://.godot/imported/UI_Keypad_Rejected.wav-7dce503d151b8f76eb967580a97c2613.sample"]
 
 [params]
 

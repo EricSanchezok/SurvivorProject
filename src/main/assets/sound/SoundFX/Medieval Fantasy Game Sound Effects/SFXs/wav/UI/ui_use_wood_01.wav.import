@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c1yqppcdffuff"
-path="res://.godot/imported/ui_use_wood_01.wav-e2705ae2f7d5435c971f83c788019154.sample"
+path="res://.godot/imported/ui_use_wood_01.wav-3fab8fc42d43eed7a7855baf2eec4f35.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_use_wood_01.wav"
-dest_files=["res://.godot/imported/ui_use_wood_01.wav-e2705ae2f7d5435c971f83c788019154.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_use_wood_01.wav"
+dest_files=["res://.godot/imported/ui_use_wood_01.wav-3fab8fc42d43eed7a7855baf2eec4f35.sample"]
 
 [params]
 

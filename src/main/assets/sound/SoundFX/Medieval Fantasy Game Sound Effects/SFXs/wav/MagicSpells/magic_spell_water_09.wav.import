@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b7xnyilx6e8sb"
-path="res://.godot/imported/magic_spell_water_09.wav-3f8a0c5803199f27dbb4ef8cb57662c3.sample"
+path="res://.godot/imported/magic_spell_water_09.wav-1e49a68a13b6c10e44812ccfe7b19d40.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_water_09.wav"
-dest_files=["res://.godot/imported/magic_spell_water_09.wav-3f8a0c5803199f27dbb4ef8cb57662c3.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_water_09.wav"
+dest_files=["res://.godot/imported/magic_spell_water_09.wav-1e49a68a13b6c10e44812ccfe7b19d40.sample"]
 
 [params]
 

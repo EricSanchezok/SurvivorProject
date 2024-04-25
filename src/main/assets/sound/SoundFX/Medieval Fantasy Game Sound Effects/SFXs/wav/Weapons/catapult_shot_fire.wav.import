@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpvx0uqdsnchx"
-path="res://.godot/imported/catapult_shot_fire.wav-b9bbe2607a582dcc89527cc2eb2df42a.sample"
+path="res://.godot/imported/catapult_shot_fire.wav-0f972415112a3a3e4600f72e37105982.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/catapult_shot_fire.wav"
-dest_files=["res://.godot/imported/catapult_shot_fire.wav-b9bbe2607a582dcc89527cc2eb2df42a.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/catapult_shot_fire.wav"
+dest_files=["res://.godot/imported/catapult_shot_fire.wav-0f972415112a3a3e4600f72e37105982.sample"]
 
 [params]
 

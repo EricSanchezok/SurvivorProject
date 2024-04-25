@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://byd6n21mu67tr"
-path="res://.godot/imported/blade_sheath_sharpening_09.ogg-d5e180aca0ca5febca12d6c55ec69655.oggvorbisstr"
+path="res://.godot/imported/blade_sheath_sharpening_09.ogg-f068e831707eb0388eb49e4a04a52566.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_sheath_sharpening_09.ogg"
-dest_files=["res://.godot/imported/blade_sheath_sharpening_09.ogg-d5e180aca0ca5febca12d6c55ec69655.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_sheath_sharpening_09.ogg"
+dest_files=["res://.godot/imported/blade_sheath_sharpening_09.ogg-f068e831707eb0388eb49e4a04a52566.oggvorbisstr"]
 
 [params]
 

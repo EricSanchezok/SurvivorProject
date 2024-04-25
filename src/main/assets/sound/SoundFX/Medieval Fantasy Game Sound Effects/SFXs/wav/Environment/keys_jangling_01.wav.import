@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bxy7mi0gvpkrn"
-path="res://.godot/imported/keys_jangling_01.wav-01094de3a01a756affa0c30b8de9a87c.sample"
+path="res://.godot/imported/keys_jangling_01.wav-e0deebb4e00116132d151c972ebbdb11.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/keys_jangling_01.wav"
-dest_files=["res://.godot/imported/keys_jangling_01.wav-01094de3a01a756affa0c30b8de9a87c.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/keys_jangling_01.wav"
+dest_files=["res://.godot/imported/keys_jangling_01.wav-e0deebb4e00116132d151c972ebbdb11.sample"]
 
 [params]
 

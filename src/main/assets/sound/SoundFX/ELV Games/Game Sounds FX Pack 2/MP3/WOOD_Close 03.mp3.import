@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://chb6korbf1akm"
-path="res://.godot/imported/WOOD_Close 03.mp3-fa18959955cdaaf8ccf6b39588359881.mp3str"
+path="res://.godot/imported/WOOD_Close 03.mp3-5f7b22c0f69db73b3da7d35fabd155a4.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/WOOD_Close 03.mp3"
-dest_files=["res://.godot/imported/WOOD_Close 03.mp3-fa18959955cdaaf8ccf6b39588359881.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/WOOD_Close 03.mp3"
+dest_files=["res://.godot/imported/WOOD_Close 03.mp3-5f7b22c0f69db73b3da7d35fabd155a4.mp3str"]
 
 [params]
 

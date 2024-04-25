@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpumsu1a2sd7e"
-path="res://.godot/imported/bonfire_loop_03.wav-e54c61fbbe0ac6dd21bb06760c46d615.sample"
+path="res://.godot/imported/bonfire_loop_03.wav-42d33c85471b5647961140e9f98ccca8.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/bonfire_loop_03.wav"
-dest_files=["res://.godot/imported/bonfire_loop_03.wav-e54c61fbbe0ac6dd21bb06760c46d615.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/bonfire_loop_03.wav"
+dest_files=["res://.godot/imported/bonfire_loop_03.wav-42d33c85471b5647961140e9f98ccca8.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://5x4fti381ufq"
-path="res://.godot/imported/ui_purchase_02.ogg-2777170769267062243f857aa4540038.oggvorbisstr"
+path="res://.godot/imported/ui_purchase_02.ogg-88b7ab7e2f1f6db7f76ca636333e55db.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_purchase_02.ogg"
-dest_files=["res://.godot/imported/ui_purchase_02.ogg-2777170769267062243f857aa4540038.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_purchase_02.ogg"
+dest_files=["res://.godot/imported/ui_purchase_02.ogg-88b7ab7e2f1f6db7f76ca636333e55db.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dbsma2f6nxmkd"
-path="res://.godot/imported/Snow_Trudging.mp3-2f88ead04e4db2dc0f8be05a5947f0f1.mp3str"
+path="res://.godot/imported/Snow_Trudging.mp3-8ba7fc115d887f5e73cd17752ef2749f.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Snow_Trudging.mp3"
-dest_files=["res://.godot/imported/Snow_Trudging.mp3-2f88ead04e4db2dc0f8be05a5947f0f1.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Snow_Trudging.mp3"
+dest_files=["res://.godot/imported/Snow_Trudging.mp3-8ba7fc115d887f5e73cd17752ef2749f.mp3str"]
 
 [params]
 

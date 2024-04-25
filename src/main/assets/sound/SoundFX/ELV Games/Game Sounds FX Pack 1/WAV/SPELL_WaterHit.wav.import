@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bkhrut8k7c56"
-path="res://.godot/imported/SPELL_WaterHit.wav-d6ad011b3c64962b2f6be819811b352d.sample"
+path="res://.godot/imported/SPELL_WaterHit.wav-1d8ced62bc3d36f4cc0fbb0ebccb9f82.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_WaterHit.wav"
-dest_files=["res://.godot/imported/SPELL_WaterHit.wav-d6ad011b3c64962b2f6be819811b352d.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_WaterHit.wav"
+dest_files=["res://.godot/imported/SPELL_WaterHit.wav-1d8ced62bc3d36f4cc0fbb0ebccb9f82.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dkv4rsecf5rob"
-path="res://.godot/imported/SCI-FI_CPU 02.mp3-9cd87588dab7d48a8236e8abfe011543.mp3str"
+path="res://.godot/imported/SCI-FI_CPU 02.mp3-78dc08d866ae812b693aa514f2cd3ae5.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_CPU 02.mp3"
-dest_files=["res://.godot/imported/SCI-FI_CPU 02.mp3-9cd87588dab7d48a8236e8abfe011543.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_CPU 02.mp3"
+dest_files=["res://.godot/imported/SCI-FI_CPU 02.mp3-78dc08d866ae812b693aa514f2cd3ae5.mp3str"]
 
 [params]
 

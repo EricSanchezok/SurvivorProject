@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dmba0rx4crvwn"
-path="res://.godot/imported/ui_equip_metal_01.wav-cd998b6badfbc155e29535e86d2e92df.sample"
+path="res://.godot/imported/ui_equip_metal_01.wav-64144a38cc8a3cc03cddab8a023d7ba4.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_equip_metal_01.wav"
-dest_files=["res://.godot/imported/ui_equip_metal_01.wav-cd998b6badfbc155e29535e86d2e92df.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_equip_metal_01.wav"
+dest_files=["res://.godot/imported/ui_equip_metal_01.wav-64144a38cc8a3cc03cddab8a023d7ba4.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cmu1y6x704438"
-path="res://.godot/imported/ui_page_flipping_01.wav-23d04ee89ab8fa687a0148f9419f323f.sample"
+path="res://.godot/imported/ui_page_flipping_01.wav-bd509f20aaa8895ee32833b2a9248636.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_page_flipping_01.wav"
-dest_files=["res://.godot/imported/ui_page_flipping_01.wav-23d04ee89ab8fa687a0148f9419f323f.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/UI/ui_page_flipping_01.wav"
+dest_files=["res://.godot/imported/ui_page_flipping_01.wav-bd509f20aaa8895ee32833b2a9248636.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dtpk6d3cnlb6r"
-path="res://.godot/imported/PUZZLE_Game_Sound_01.wav-197f1e5abd1605518d11eec89c2ad696.sample"
+path="res://.godot/imported/PUZZLE_Game_Sound_01.wav-eb224806a4d8b4f0421bf5837afc466d.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/PUZZLE_Game_Sound_01.wav"
-dest_files=["res://.godot/imported/PUZZLE_Game_Sound_01.wav-197f1e5abd1605518d11eec89c2ad696.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/PUZZLE_Game_Sound_01.wav"
+dest_files=["res://.godot/imported/PUZZLE_Game_Sound_01.wav-eb224806a4d8b4f0421bf5837afc466d.sample"]
 
 [params]
 

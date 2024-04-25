@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cgffi5kemawej"
-path="res://.godot/imported/monster_swamp_mix_03.ogg-b0499c0d79f5dcd6a297f65e677de0aa.oggvorbisstr"
+path="res://.godot/imported/monster_swamp_mix_03.ogg-7549a9cb1a4bdce2b45c6985b098fa21.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_swamp_mix_03.ogg"
-dest_files=["res://.godot/imported/monster_swamp_mix_03.ogg-b0499c0d79f5dcd6a297f65e677de0aa.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_swamp_mix_03.ogg"
+dest_files=["res://.godot/imported/monster_swamp_mix_03.ogg-7549a9cb1a4bdce2b45c6985b098fa21.oggvorbisstr"]
 
 [params]
 

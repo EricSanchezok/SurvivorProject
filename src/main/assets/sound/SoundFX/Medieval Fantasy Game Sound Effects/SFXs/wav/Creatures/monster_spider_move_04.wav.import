@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c3vtvhmuyj73"
-path="res://.godot/imported/monster_spider_move_04.wav-ca8b5dc49330b6b0d5411298ccc75480.sample"
+path="res://.godot/imported/monster_spider_move_04.wav-eded8e165a8c661c4ed9a447dde69fae.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_spider_move_04.wav"
-dest_files=["res://.godot/imported/monster_spider_move_04.wav-ca8b5dc49330b6b0d5411298ccc75480.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_spider_move_04.wav"
+dest_files=["res://.godot/imported/monster_spider_move_04.wav-eded8e165a8c661c4ed9a447dde69fae.sample"]
 
 [params]
 

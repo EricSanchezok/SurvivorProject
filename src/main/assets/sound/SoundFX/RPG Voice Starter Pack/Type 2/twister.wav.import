@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcb6pme774tmq"
-path="res://.godot/imported/twister.wav-31a76e5fa797d226773655641912b1b7.sample"
+path="res://.godot/imported/twister.wav-d0eeb71b858d5c30a232b0d3169f044c.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 2/twister.wav"
-dest_files=["res://.godot/imported/twister.wav-31a76e5fa797d226773655641912b1b7.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 2/twister.wav"
+dest_files=["res://.godot/imported/twister.wav-d0eeb71b858d5c30a232b0d3169f044c.sample"]
 
 [params]
 

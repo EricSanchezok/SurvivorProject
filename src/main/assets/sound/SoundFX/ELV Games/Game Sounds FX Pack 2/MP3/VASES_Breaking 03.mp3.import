@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bjokpgu1mx1qj"
-path="res://.godot/imported/VASES_Breaking 03.mp3-006b556de9810f49cbb89adfdcf56854.mp3str"
+path="res://.godot/imported/VASES_Breaking 03.mp3-9d76eb48f6cdbe6cd620d28498a411c4.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/MP3/VASES_Breaking 03.mp3"
-dest_files=["res://.godot/imported/VASES_Breaking 03.mp3-006b556de9810f49cbb89adfdcf56854.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/VASES_Breaking 03.mp3"
+dest_files=["res://.godot/imported/VASES_Breaking 03.mp3-9d76eb48f6cdbe6cd620d28498a411c4.mp3str"]
 
 [params]
 

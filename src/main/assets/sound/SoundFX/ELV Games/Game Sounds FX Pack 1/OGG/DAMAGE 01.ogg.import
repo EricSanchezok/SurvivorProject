@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://doq21iu71hcdd"
-path="res://.godot/imported/DAMAGE 01.ogg-57a4086380f68bf067adee3899afb7d1.oggvorbisstr"
+path="res://.godot/imported/DAMAGE 01.ogg-1ddbf577f009fa01dafaf475c65c5980.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/DAMAGE 01.ogg"
-dest_files=["res://.godot/imported/DAMAGE 01.ogg-57a4086380f68bf067adee3899afb7d1.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/DAMAGE 01.ogg"
+dest_files=["res://.godot/imported/DAMAGE 01.ogg-1ddbf577f009fa01dafaf475c65c5980.oggvorbisstr"]
 
 [params]
 

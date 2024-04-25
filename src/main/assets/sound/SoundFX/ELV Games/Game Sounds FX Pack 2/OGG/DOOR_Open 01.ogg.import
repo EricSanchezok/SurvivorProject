@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://mb6igcttm2sf"
-path="res://.godot/imported/DOOR_Open 01.ogg-65cafee5a30766724ac1b4cc8dc13eea.oggvorbisstr"
+path="res://.godot/imported/DOOR_Open 01.ogg-e8a06b12329e8d360a6bd4102775a102.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/OGG/DOOR_Open 01.ogg"
-dest_files=["res://.godot/imported/DOOR_Open 01.ogg-65cafee5a30766724ac1b4cc8dc13eea.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/DOOR_Open 01.ogg"
+dest_files=["res://.godot/imported/DOOR_Open 01.ogg-e8a06b12329e8d360a6bd4102775a102.oggvorbisstr"]
 
 [params]
 

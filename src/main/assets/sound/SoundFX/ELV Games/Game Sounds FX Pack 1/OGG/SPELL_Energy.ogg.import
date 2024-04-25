@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ci2jmr47x4wfb"
-path="res://.godot/imported/SPELL_Energy.ogg-089ea3bf1043c5a86b49d4b3d8a3c730.oggvorbisstr"
+path="res://.godot/imported/SPELL_Energy.ogg-19b2692e2e313d193b8d17c163ddc64e.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Energy.ogg"
-dest_files=["res://.godot/imported/SPELL_Energy.ogg-089ea3bf1043c5a86b49d4b3d8a3c730.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/SPELL_Energy.ogg"
+dest_files=["res://.godot/imported/SPELL_Energy.ogg-19b2692e2e313d193b8d17c163ddc64e.oggvorbisstr"]
 
 [params]
 

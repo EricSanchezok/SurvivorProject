@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dsy2anfh3a8k2"
-path="res://.godot/imported/28 OBJZipr, Backpack, Zipper.wav-e525926ab50f3a9f560598cf6b469943.sample"
+path="res://.godot/imported/28 OBJZipr, Backpack, Zipper.wav-f69855cee1708cbc130088e32a65458b.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/backpack_free/28 OBJZipr, Backpack, Zipper.wav"
-dest_files=["res://.godot/imported/28 OBJZipr, Backpack, Zipper.wav-e525926ab50f3a9f560598cf6b469943.sample"]
+source_file="res://src/main/assets/sound/SoundFX/backpack_free/28 OBJZipr, Backpack, Zipper.wav"
+dest_files=["res://.godot/imported/28 OBJZipr, Backpack, Zipper.wav-f69855cee1708cbc130088e32a65458b.sample"]
 
 [params]
 

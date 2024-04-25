@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://xaog3ya7oiwv"
-path="res://.godot/imported/loot_wood_pickup_04.ogg-770a231182f60a779be3749f72cd3b58.oggvorbisstr"
+path="res://.godot/imported/loot_wood_pickup_04.ogg-b1ee0a5f8ea81fc3c01af5a2e23fa7d0.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/loot_wood_pickup_04.ogg"
-dest_files=["res://.godot/imported/loot_wood_pickup_04.ogg-770a231182f60a779be3749f72cd3b58.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/loot_wood_pickup_04.ogg"
+dest_files=["res://.godot/imported/loot_wood_pickup_04.ogg-b1ee0a5f8ea81fc3c01af5a2e23fa7d0.oggvorbisstr"]
 
 [params]
 

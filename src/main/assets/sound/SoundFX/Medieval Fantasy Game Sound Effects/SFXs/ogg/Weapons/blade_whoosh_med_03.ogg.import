@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bfrdbmtjy8pp1"
-path="res://.godot/imported/blade_whoosh_med_03.ogg-68f010fa959ecbe44de64dddb1017daf.oggvorbisstr"
+path="res://.godot/imported/blade_whoosh_med_03.ogg-c0a144f6118aeff6703436156ee9dc7e.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_whoosh_med_03.ogg"
-dest_files=["res://.godot/imported/blade_whoosh_med_03.ogg-68f010fa959ecbe44de64dddb1017daf.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/blade_whoosh_med_03.ogg"
+dest_files=["res://.godot/imported/blade_whoosh_med_03.ogg-c0a144f6118aeff6703436156ee9dc7e.oggvorbisstr"]
 
 [params]
 

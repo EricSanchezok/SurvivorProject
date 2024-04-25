@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cljl7ks1jadck"
-path="res://.godot/imported/torch_loop_01.ogg-04c127f65b3564ac641752c17f4a61b8.oggvorbisstr"
+path="res://.godot/imported/torch_loop_01.ogg-9d7ce23ab0912f1a33b8bd64ac73fe8f.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/torch_loop_01.ogg"
-dest_files=["res://.godot/imported/torch_loop_01.ogg-04c127f65b3564ac641752c17f4a61b8.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/torch_loop_01.ogg"
+dest_files=["res://.godot/imported/torch_loop_01.ogg-9d7ce23ab0912f1a33b8bd64ac73fe8f.oggvorbisstr"]
 
 [params]
 

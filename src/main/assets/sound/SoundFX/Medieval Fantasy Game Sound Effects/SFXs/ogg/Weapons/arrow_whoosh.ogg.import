@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dlpsamqk4dpo0"
-path="res://.godot/imported/arrow_whoosh.ogg-36199337251dd02eb72efdd55dc2b5e8.oggvorbisstr"
+path="res://.godot/imported/arrow_whoosh.ogg-a9d562a995c6927e5643bd85d61d0534.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/arrow_whoosh.ogg"
-dest_files=["res://.godot/imported/arrow_whoosh.ogg-36199337251dd02eb72efdd55dc2b5e8.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/arrow_whoosh.ogg"
+dest_files=["res://.godot/imported/arrow_whoosh.ogg-a9d562a995c6927e5643bd85d61d0534.oggvorbisstr"]
 
 [params]
 

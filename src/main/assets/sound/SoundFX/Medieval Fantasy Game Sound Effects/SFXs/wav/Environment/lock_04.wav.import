@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://camh20ufi2ua4"
-path="res://.godot/imported/lock_04.wav-069e384be46decd6c96930b76ce27b80.sample"
+path="res://.godot/imported/lock_04.wav-ad160ec34bc292f12c47e2d8c1822738.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/lock_04.wav"
-dest_files=["res://.godot/imported/lock_04.wav-069e384be46decd6c96930b76ce27b80.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/lock_04.wav"
+dest_files=["res://.godot/imported/lock_04.wav-ad160ec34bc292f12c47e2d8c1822738.sample"]
 
 [params]
 

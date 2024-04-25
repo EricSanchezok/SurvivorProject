@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cg5qu0dr5vhfm"
-path="res://.godot/imported/magic_spell_healing_08.ogg-f0328128abc5360c257911ac80908bf9.oggvorbisstr"
+path="res://.godot/imported/magic_spell_healing_08.ogg-630bf8f16e18f857d3182008fdb58de8.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_healing_08.ogg"
-dest_files=["res://.godot/imported/magic_spell_healing_08.ogg-f0328128abc5360c257911ac80908bf9.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_healing_08.ogg"
+dest_files=["res://.godot/imported/magic_spell_healing_08.ogg-630bf8f16e18f857d3182008fdb58de8.oggvorbisstr"]
 
 [params]
 

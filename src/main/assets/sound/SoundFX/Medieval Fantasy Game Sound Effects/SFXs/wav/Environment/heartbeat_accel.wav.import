@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d10xoa8b5e7u0"
-path="res://.godot/imported/heartbeat_accel.wav-44b6afe7f991355ccddcf63df6493351.sample"
+path="res://.godot/imported/heartbeat_accel.wav-e64cccf14ff99c6f55956df419f8e3ae.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/heartbeat_accel.wav"
-dest_files=["res://.godot/imported/heartbeat_accel.wav-44b6afe7f991355ccddcf63df6493351.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/heartbeat_accel.wav"
+dest_files=["res://.godot/imported/heartbeat_accel.wav-e64cccf14ff99c6f55956df419f8e3ae.sample"]
 
 [params]
 

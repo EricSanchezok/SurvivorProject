@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bt3wqslotc5mm"
-path="res://.godot/imported/DOOR_Close 01.wav-4d9fccca2c40181d784cef31d56d0346.sample"
+path="res://.godot/imported/DOOR_Close 01.wav-4d6a867ebff580dc2294817512a2371d.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/DOOR_Close 01.wav"
-dest_files=["res://.godot/imported/DOOR_Close 01.wav-4d9fccca2c40181d784cef31d56d0346.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/DOOR_Close 01.wav"
+dest_files=["res://.godot/imported/DOOR_Close 01.wav-4d6a867ebff580dc2294817512a2371d.sample"]
 
 [params]
 

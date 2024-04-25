@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dwsjk7ypdwkw"
-path="res://.godot/imported/VASES_Breaking 01.wav-9c41246c307e43b9b3c1e3758189d656.sample"
+path="res://.godot/imported/VASES_Breaking 01.wav-d81d63683ff5a4085831fa8772058a3e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 2/WAV/VASES_Breaking 01.wav"
-dest_files=["res://.godot/imported/VASES_Breaking 01.wav-9c41246c307e43b9b3c1e3758189d656.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/VASES_Breaking 01.wav"
+dest_files=["res://.godot/imported/VASES_Breaking 01.wav-d81d63683ff5a4085831fa8772058a3e.sample"]
 
 [params]
 

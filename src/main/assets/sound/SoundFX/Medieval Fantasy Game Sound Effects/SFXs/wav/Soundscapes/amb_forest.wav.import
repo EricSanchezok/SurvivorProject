@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://i08hoewum3el"
-path="res://.godot/imported/amb_forest.wav-b554885bebda167334f2d62f60d54b9f.sample"
+path="res://.godot/imported/amb_forest.wav-df7bed6a9afa0f5e9486f91743395b4e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_forest.wav"
-dest_files=["res://.godot/imported/amb_forest.wav-b554885bebda167334f2d62f60d54b9f.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Soundscapes/amb_forest.wav"
+dest_files=["res://.godot/imported/amb_forest.wav-df7bed6a9afa0f5e9486f91743395b4e.sample"]
 
 [params]
 

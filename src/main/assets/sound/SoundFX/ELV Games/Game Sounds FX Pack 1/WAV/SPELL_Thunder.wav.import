@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpjr5dtt86d3n"
-path="res://.godot/imported/SPELL_Thunder.wav-d1d9d894dcae65c68c0db9e24736a21e.sample"
+path="res://.godot/imported/SPELL_Thunder.wav-59e6947202135efdf615e33334f41124.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Thunder.wav"
-dest_files=["res://.godot/imported/SPELL_Thunder.wav-d1d9d894dcae65c68c0db9e24736a21e.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/SPELL_Thunder.wav"
+dest_files=["res://.godot/imported/SPELL_Thunder.wav-59e6947202135efdf615e33334f41124.sample"]
 
 [params]
 

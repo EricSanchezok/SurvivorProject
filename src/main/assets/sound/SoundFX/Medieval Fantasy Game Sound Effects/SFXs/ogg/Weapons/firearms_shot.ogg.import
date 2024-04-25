@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://72orjis1gd1b"
-path="res://.godot/imported/firearms_shot.ogg-9def21b747e9acf26f217e8cfa7761e5.oggvorbisstr"
+path="res://.godot/imported/firearms_shot.ogg-b5331446d13f97ce42ed255a118ecad9.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/firearms_shot.ogg"
-dest_files=["res://.godot/imported/firearms_shot.ogg-9def21b747e9acf26f217e8cfa7761e5.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/firearms_shot.ogg"
+dest_files=["res://.godot/imported/firearms_shot.ogg-b5331446d13f97ce42ed255a118ecad9.oggvorbisstr"]
 
 [params]
 

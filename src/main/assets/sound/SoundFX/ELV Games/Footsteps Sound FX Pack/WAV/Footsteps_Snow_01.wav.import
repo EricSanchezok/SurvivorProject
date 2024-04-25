@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bvdgwky56qejr"
-path="res://.godot/imported/Footsteps_Snow_01.wav-d1cfb8e46166c0affcd9707e10a4a2aa.sample"
+path="res://.godot/imported/Footsteps_Snow_01.wav-acb6afdc2f2d1e936e83e315ddbafc6e.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Snow_01.wav"
-dest_files=["res://.godot/imported/Footsteps_Snow_01.wav-d1cfb8e46166c0affcd9707e10a4a2aa.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Snow_01.wav"
+dest_files=["res://.godot/imported/Footsteps_Snow_01.wav-acb6afdc2f2d1e936e83e315ddbafc6e.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://desndrfjr4f2h"
-path="res://.godot/imported/cure.wav-397ccabb2a68069bab2c37063924ba53.sample"
+path="res://.godot/imported/cure.wav-b4306ff25f6f77763c642620a67100be.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/cure.wav"
-dest_files=["res://.godot/imported/cure.wav-397ccabb2a68069bab2c37063924ba53.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/cure.wav"
+dest_files=["res://.godot/imported/cure.wav-b4306ff25f6f77763c642620a67100be.sample"]
 
 [params]
 

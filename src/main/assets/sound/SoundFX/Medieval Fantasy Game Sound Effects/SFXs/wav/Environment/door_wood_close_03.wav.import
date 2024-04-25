@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://pwvaoib675f"
-path="res://.godot/imported/door_wood_close_03.wav-2f66d94eb47e08aca8bb7f834ce2e790.sample"
+path="res://.godot/imported/door_wood_close_03.wav-c1ef5297c2d2dbac51a999fbc0601ee5.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/door_wood_close_03.wav"
-dest_files=["res://.godot/imported/door_wood_close_03.wav-2f66d94eb47e08aca8bb7f834ce2e790.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/door_wood_close_03.wav"
+dest_files=["res://.godot/imported/door_wood_close_03.wav-c1ef5297c2d2dbac51a999fbc0601ee5.sample"]
 
 [params]
 

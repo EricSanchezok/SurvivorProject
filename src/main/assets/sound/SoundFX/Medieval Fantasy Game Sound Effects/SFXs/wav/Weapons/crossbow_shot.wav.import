@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dux8tasy4jdxl"
-path="res://.godot/imported/crossbow_shot.wav-a51c67cddabb818793b4451a6a2a0504.sample"
+path="res://.godot/imported/crossbow_shot.wav-ccb2181e5026a9d8c21bb8da1c66d88c.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/crossbow_shot.wav"
-dest_files=["res://.godot/imported/crossbow_shot.wav-a51c67cddabb818793b4451a6a2a0504.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/crossbow_shot.wav"
+dest_files=["res://.godot/imported/crossbow_shot.wav-ccb2181e5026a9d8c21bb8da1c66d88c.sample"]
 
 [params]
 

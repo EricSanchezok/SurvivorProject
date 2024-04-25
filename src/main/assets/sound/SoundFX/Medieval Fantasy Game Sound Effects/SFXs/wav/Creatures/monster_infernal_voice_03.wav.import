@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://4hakiroyusrf"
-path="res://.godot/imported/monster_infernal_voice_03.wav-4ba670528bcdb9904ab9829ed14448d6.sample"
+path="res://.godot/imported/monster_infernal_voice_03.wav-a74360ecbc423df3db051b89689b08be.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_infernal_voice_03.wav"
-dest_files=["res://.godot/imported/monster_infernal_voice_03.wav-4ba670528bcdb9904ab9829ed14448d6.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_infernal_voice_03.wav"
+dest_files=["res://.godot/imported/monster_infernal_voice_03.wav-a74360ecbc423df3db051b89689b08be.sample"]
 
 [params]
 

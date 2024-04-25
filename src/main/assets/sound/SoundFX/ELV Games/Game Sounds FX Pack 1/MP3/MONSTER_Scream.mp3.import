@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dn5ruobvnvvhr"
-path="res://.godot/imported/MONSTER_Scream.mp3-0cdb31fe7d8ffdbe2234535abc014705.mp3str"
+path="res://.godot/imported/MONSTER_Scream.mp3-bef52dc94d98905b454b3acba31a8ca5.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/MONSTER_Scream.mp3"
-dest_files=["res://.godot/imported/MONSTER_Scream.mp3-0cdb31fe7d8ffdbe2234535abc014705.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/MONSTER_Scream.mp3"
+dest_files=["res://.godot/imported/MONSTER_Scream.mp3-bef52dc94d98905b454b3acba31a8ca5.mp3str"]
 
 [params]
 

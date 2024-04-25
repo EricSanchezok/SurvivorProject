@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://20jhk3uw5pop"
-path="res://.godot/imported/DAMAGE 02.wav-0aeb4ea1bbce88d7f2447274e02572ff.sample"
+path="res://.godot/imported/DAMAGE 02.wav-530f090d2246d16ed921722349305af7.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/WAV/DAMAGE 02.wav"
-dest_files=["res://.godot/imported/DAMAGE 02.wav-0aeb4ea1bbce88d7f2447274e02572ff.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/WAV/DAMAGE 02.wav"
+dest_files=["res://.godot/imported/DAMAGE 02.wav-530f090d2246d16ed921722349305af7.sample"]
 
 [params]
 

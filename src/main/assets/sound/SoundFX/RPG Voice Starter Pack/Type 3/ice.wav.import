@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c2i48ehnrd62h"
-path="res://.godot/imported/ice.wav-417ddfcca163e3fb99efa89809cf7fa7.sample"
+path="res://.godot/imported/ice.wav-2c8f6241a000fed9d1dea65ccde737af.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/RPG Voice Starter Pack/Type 3/ice.wav"
-dest_files=["res://.godot/imported/ice.wav-417ddfcca163e3fb99efa89809cf7fa7.sample"]
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/ice.wav"
+dest_files=["res://.godot/imported/ice.wav-2c8f6241a000fed9d1dea65ccde737af.sample"]
 
 [params]
 

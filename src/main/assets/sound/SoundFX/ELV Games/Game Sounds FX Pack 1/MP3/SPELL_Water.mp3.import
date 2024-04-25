@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dyx16f6aurjfd"
-path="res://.godot/imported/SPELL_Water.mp3-7b57ae7f0a09353ff97e1af670823f85.mp3str"
+path="res://.godot/imported/SPELL_Water.mp3-b7e38df8db795dd525f2bba201aa2f9a.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_Water.mp3"
-dest_files=["res://.godot/imported/SPELL_Water.mp3-7b57ae7f0a09353ff97e1af670823f85.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_Water.mp3"
+dest_files=["res://.godot/imported/SPELL_Water.mp3-b7e38df8db795dd525f2bba201aa2f9a.mp3str"]
 
 [params]
 

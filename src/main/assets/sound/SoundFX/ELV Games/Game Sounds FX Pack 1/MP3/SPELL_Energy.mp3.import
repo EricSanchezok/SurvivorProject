@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d0lnprqb4y22g"
-path="res://.godot/imported/SPELL_Energy.mp3-b7bbaf7bf24897781089c0d4b5f332de.mp3str"
+path="res://.godot/imported/SPELL_Energy.mp3-9b9687c3940ee5fce114ebca41c8db31.mp3str"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_Energy.mp3"
-dest_files=["res://.godot/imported/SPELL_Energy.mp3-b7bbaf7bf24897781089c0d4b5f332de.mp3str"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_Energy.mp3"
+dest_files=["res://.godot/imported/SPELL_Energy.mp3-9b9687c3940ee5fce114ebca41c8db31.mp3str"]
 
 [params]
 

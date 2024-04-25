@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cnu44udfhuu84"
-path="res://.godot/imported/NormalWood_Barefeet_Walking.wav-eea238cd5e7d03acaa3c3b42e4edcc39.sample"
+path="res://.godot/imported/NormalWood_Barefeet_Walking.wav-6b230594da43745662c4116fc366ba44.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/NormalWood_Barefeet_Walking.wav"
-dest_files=["res://.godot/imported/NormalWood_Barefeet_Walking.wav-eea238cd5e7d03acaa3c3b42e4edcc39.sample"]
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/NormalWood_Barefeet_Walking.wav"
+dest_files=["res://.godot/imported/NormalWood_Barefeet_Walking.wav-6b230594da43745662c4116fc366ba44.sample"]
 
 [params]
 

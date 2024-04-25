@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cirbdnmblnafq"
-path="res://.godot/imported/blade_scrape_flesh_13.wav-75069e91bc25c8735cca3e4c82dcfde6.sample"
+path="res://.godot/imported/blade_scrape_flesh_13.wav-7b83c2d6f36c014dcdec68f278d0b4f3.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_scrape_flesh_13.wav"
-dest_files=["res://.godot/imported/blade_scrape_flesh_13.wav-75069e91bc25c8735cca3e4c82dcfde6.sample"]
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_scrape_flesh_13.wav"
+dest_files=["res://.godot/imported/blade_scrape_flesh_13.wav-7b83c2d6f36c014dcdec68f278d0b4f3.sample"]
 
 [params]
 

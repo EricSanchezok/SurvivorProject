@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b0rp8vsmiy6l2"
-path="res://.godot/imported/UI_Keypad_A 03.ogg-d6cc6ba06175852b6931284b15da55de.oggvorbisstr"
+path="res://.godot/imported/UI_Keypad_A 03.ogg-54e465d5fbf3daee71846a3626ae2624.oggvorbisstr"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/OGG/UI_Keypad_A 03.ogg"
-dest_files=["res://.godot/imported/UI_Keypad_A 03.ogg-d6cc6ba06175852b6931284b15da55de.oggvorbisstr"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/OGG/UI_Keypad_A 03.ogg"
+dest_files=["res://.godot/imported/UI_Keypad_A 03.ogg-54e465d5fbf3daee71846a3626ae2624.oggvorbisstr"]
 
 [params]
 

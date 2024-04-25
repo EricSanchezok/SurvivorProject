@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://8et718tt2qc"
-path="res://.godot/imported/UI_Swish 02.wav-8a887e502514e74a0336f4b24ac8e24b.sample"
+path="res://.godot/imported/UI_Swish 02.wav-30d112d9d8adcf2f1459bfac30aa5b67.sample"
 
 [deps]
 
-source_file="res://src/main/assets/sound/ELV Games/UI Sound FX Asset Pack/WAV/UI_Swish 02.wav"
-dest_files=["res://.godot/imported/UI_Swish 02.wav-8a887e502514e74a0336f4b24ac8e24b.sample"]
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Swish 02.wav"
+dest_files=["res://.godot/imported/UI_Swish 02.wav-30d112d9d8adcf2f1459bfac30aa5b67.sample"]
 
 [params]
 
