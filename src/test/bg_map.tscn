@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dhs3biji6ooth" path="res://src/main/component/turret_generator.tscn" id="6_1rhmu"]
 [ext_resource type="AudioStream" uid="uid://f284c0p7bk8a" path="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 3 - Fortified (Loopable).mp3" id="6_bbfy8"]
 [ext_resource type="PackedScene" uid="uid://btxc5hfxx24vb" path="res://src/main/component/enemy_generator.tscn" id="8_l45hi"]
-[ext_resource type="PackedScene" path="res://src/main/scene/role/player/a_niu.tscn" id="9_c2o64"]
+[ext_resource type="PackedScene" uid="uid://ccig8inj701xw" path="res://src/main/scene/role/player/a_niu.tscn" id="9_c2o64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d66ul"]
 size = Vector2(311, 72)

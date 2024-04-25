@@ -1,10 +1,10 @@
 extends WeaponBase
 
-var speed_rotation: float = deg_to_rad(360.0)
 var speed_projectile: float = 300.0
 
-var damage: float = 2.0
-var knockback: float = 50.0
+var origins = ["fire"]
+var classes = ["sword"]
+
 
 var aerolite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/aerolite.tscn")
 

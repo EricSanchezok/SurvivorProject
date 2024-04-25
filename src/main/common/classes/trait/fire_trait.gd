@@ -10,7 +10,7 @@ func _ready():
 
 
 func _on_player_fire_trait(fire_number: int ) -> void:
-	print(fire_number)
+	#print(fire_number)
 	new_fire_number = fire_number
 	if old_fire_number ==2 and new_fire_number == 3:
 		owner.modify_attribute("power_magic","percent",0.5)

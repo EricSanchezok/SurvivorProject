@@ -16,6 +16,7 @@ height = 44.0
 [node name="Surtr\'s Fury" instance=ExtResource("1_b4s7a")]
 script = ExtResource("2_5r0vc")
 search_radius = 150.0
+time_cooldown = null
 
 [node name="Sprite2D" parent="." index="0"]
 rotation = 0.785398

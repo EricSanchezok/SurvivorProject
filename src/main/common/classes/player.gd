@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody2D
 @export var default_weapon: String = "normal_sword"
+@onready var player_stats: PlayerStats = $PlayerStats
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 signal origins_number_changed(type, value)
 signal classes_number_changed(type, value)
