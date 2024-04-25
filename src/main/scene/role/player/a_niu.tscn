@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://ccig8inj701xw"]
+[gd_scene load_steps=12 format=3 uid="uid://bu4qkguaw7xus"]
 
-[ext_resource type="PackedScene" uid="uid://doj0nvhytxean" path="res://src/main/component/player_base.tscn" id="1_3mhwp"]
+[ext_resource type="PackedScene" uid="uid://cagwwbaubrhwh" path="res://src/main/component/player_base.tscn" id="1_3mhwp"]
 [ext_resource type="Script" path="res://src/main/scene/role/player/Scripts/a_niu.gd" id="2_abvsp"]
 [ext_resource type="Texture2D" uid="uid://kra0nkvoulr2" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Characters/32x32/Hero_30.png" id="2_amth6"]
 
