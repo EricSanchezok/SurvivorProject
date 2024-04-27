@@ -8,8 +8,6 @@ var player_stats: Node
 var abc : Attribute_Changed
 @export var origins: Array[Attribute_Changed.Origins]
 @export var classes: Array[Attribute_Changed.Classes]
-@onready var timer_cool_down: Timer = $TimerCoolDown
-@onready var searching_shape_2d: CollisionShape2D = $SearchBox/CollisionShape2D
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var base_power_physical: float = 4.0  #物理攻击力
@@ -24,8 +22,7 @@ var abc : Attribute_Changed
 @export var base_magazine: = 0  #弹匣
 @export var base_speed_fly: float = 200.0   #武器飞行速度
 @export var base_speed_rotation: float = 15.0   #旋转速度
-@export var base_penetration_rate: = 0  #穿透率
-#@export var base_penetration_rate: = 0  #穿透率
+@export var base_penetration_rate: float = 0  #穿透率
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var power_physical: float = base_power_physical #物理攻击力
@@ -63,88 +60,86 @@ func _on_attribute_changed():
 	# >>>>>>>>>>>>>>>>>>>>> 物理伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_power_physical = 0
 	var classes_power_physical = 0
-	for origin in origins:
-		origins_power_physical += abc.origins_attributes[origin] [abc.Attributes.POWER_PHYSICAL]
-	for classes in classes:
-		classes_power_physical += abc.origins_attributes[classes] [abc.Attributes.POWER_PHYSICAL]
+	for _origin in origins:
+		origins_power_physical += abc.origins_attributes[_origin] [abc.Attributes.POWER_PHYSICAL]
+	for _class in classes:
+		classes_power_physical += abc.origins_attributes[_class] [abc.Attributes.POWER_PHYSICAL]
 	power_physical += base_power_physical * (abc.player_attributes[abc.Attributes.POWER_PHYSICAL] + origins_power_physical + classes_power_physical)
 	# >>>>>>>>>>>>>>>>>>>>> 魔法伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_power_magic = 0
 	var classes_power_magic = 0
-	for origin in origins:
-		origins_power_magic += abc.origins_attributes[origin] [abc.Attributes.POWER_MAGIC]
-	for classes in classes:
-		classes_power_magic += abc.origins_attributes[classes] [abc.Attributes.POWER_MAGIC]
+	for _origin in origins:
+		origins_power_magic += abc.origins_attributes[_origin] [abc.Attributes.POWER_MAGIC]
+	for _class in classes:
+		classes_power_magic += abc.origins_attributes[_class] [abc.Attributes.POWER_MAGIC]
 	power_magic += base_power_magic * (abc.player_attributes[abc.Attributes.POWER_MAGIC] + origins_power_magic + classes_power_magic)
 	# >>>>>>>>>>>>>>>>>>>>> 攻击冷却相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_time_cooldown = 0
 	var classes_time_cooldown = 0
-	for origin in origins:
-		origins_time_cooldown += abc.origins_attributes[origin] [abc.Attributes.TIME_COOLDOWN]
-	for classes in classes:
-		classes_time_cooldown += abc.origins_attributes[classes] [abc.Attributes.TIME_COOLDOWN]
+	for _origin in origins:
+		origins_time_cooldown += abc.origins_attributes[_origin] [abc.Attributes.TIME_COOLDOWN]
+	for _class in classes:
+		classes_time_cooldown += abc.origins_attributes[_class] [abc.Attributes.TIME_COOLDOWN]
 	time_cooldown += base_time_cooldown * (abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
 	# >>>>>>>>>>>>>>>>>>>>> 攻击范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_radius_search = 0
 	var classes_radius_search = 0
-	for origin in origins:
-		origins_radius_search += abc.origins_attributes[origin] [abc.Attributes.RADIUS_SEARCH]
-	for classes in classes:
-		classes_radius_search += abc.origins_attributes[classes] [abc.Attributes.RADIUS_SEARCH]
+	for _origin in origins:
+		origins_radius_search += abc.origins_attributes[_origin] [abc.Attributes.RADIUS_SEARCH]
+	for _class in classes:
+		classes_radius_search += abc.origins_attributes[_class] [abc.Attributes.RADIUS_SEARCH]
 	radius_search += base_radius_search * (abc.player_attributes[abc.Attributes.RADIUS_SEARCH] + origins_radius_search + classes_radius_search)
 	range_explosion += base_range_explosion * (abc.player_attributes[abc.Attributes.RADIUS_SEARCH] + origins_radius_search + classes_radius_search)
 	# >>>>>>>>>>>>>>>>>>>>> 击退相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_knockback = 0
 	var classes_knockback = 0
-	for origin in origins:
-		origins_knockback += abc.origins_attributes[origin] [abc.Attributes.KNOCKBACK]
-	for classes in classes:
-		classes_knockback += abc.origins_attributes[classes] [abc.Attributes.KNOCKBACK]
+	for _origin in origins:
+		origins_knockback += abc.origins_attributes[_origin] [abc.Attributes.KNOCKBACK]
+	for _class in classes:
+		classes_knockback += abc.origins_attributes[_class] [abc.Attributes.KNOCKBACK]
 	knockback += base_knockback * (abc.player_attributes[abc.Attributes.KNOCKBACK] + origins_knockback + classes_knockback)
 	# >>>>>>>>>>>>>>>>>>>>> 暴击几率相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_critical_hit_rate = 0
 	var classes_critical_hit_rate = 0
-	for origin in origins:
-		origins_critical_hit_rate += abc.origins_attributes[origin] [abc.Attributes.CRITICAL_HIT_RATE]
-	for classes in classes:
-		classes_critical_hit_rate += abc.origins_attributes[classes] [abc.Attributes.CRITICAL_HIT_RATE]
+	for _origin in origins:
+		origins_critical_hit_rate += abc.origins_attributes[_origin] [abc.Attributes.CRITICAL_HIT_RATE]
+	for _class in classes:
+		classes_critical_hit_rate += abc.origins_attributes[_class] [abc.Attributes.CRITICAL_HIT_RATE]
 	critical_hit_rate += base_critical_hit_rate + (abc.player_attributes[abc.Attributes.CRITICAL_HIT_RATE] + origins_critical_hit_rate + classes_critical_hit_rate)
 	# >>>>>>>>>>>>>>>>>>>>> 暴击伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_critical_damage = 0
 	var classes_critical_damage = 0
-	for origin in origins:
-		origins_critical_damage += abc.origins_attributes[origin] [abc.Attributes.CRITICAL_DAMAGE]
-	for classes in classes:
-		classes_critical_damage += abc.origins_attributes[classes] [abc.Attributes.CRITICAL_DAMAGE]
+	for _origin in origins:
+		origins_critical_damage += abc.origins_attributes[_origin] [abc.Attributes.CRITICAL_DAMAGE]
+	for _class in classes:
+		classes_critical_damage += abc.origins_attributes[_class] [abc.Attributes.CRITICAL_DAMAGE]
 	critical_damage += base_critical_damage + (abc.player_attributes[abc.Attributes.CRITICAL_DAMAGE] + origins_critical_damage + classes_critical_damage)
 	# >>>>>>>>>>>>>>>>>>>>> 子弹数目相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_number_of_projectiles = 0
 	var classes_number_of_projectiles = 0
-	for origin in origins:
-		origins_number_of_projectiles += abc.origins_attributes[origin] [abc.Attributes.NUMBER_OF_PROJECTILES]
-	for classes in classes:
-		classes_number_of_projectiles += abc.origins_attributes[classes] [abc.Attributes.NUMBER_OF_PROJECTILES]
+	for _origin in origins:
+		origins_number_of_projectiles += abc.origins_attributes[_origin] [abc.Attributes.NUMBER_OF_PROJECTILES]
+	for _class in classes:
+		classes_number_of_projectiles += abc.origins_attributes[_class] [abc.Attributes.NUMBER_OF_PROJECTILES]
 	number_of_projectiles += base_number_of_projectiles + (abc.player_attributes[abc.Attributes.NUMBER_OF_PROJECTILES] + origins_number_of_projectiles + classes_number_of_projectiles)
 	magazine += base_magazine + (abc.player_attributes[abc.Attributes.NUMBER_OF_PROJECTILES] + origins_number_of_projectiles + classes_number_of_projectiles)
 	# >>>>>>>>>>>>>>>>>>>>> 飞行速度相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_speed_fly = 0
 	var classes_speed_fly = 0
-	for origin in origins:
-		origins_speed_fly += abc.origins_attributes[origin] [abc.Attributes.SPEED_FLY]
-	for classes in classes:
-		classes_speed_fly += abc.origins_attributes[classes] [abc.Attributes.SPEED_FLY]
+	for _origin in origins:
+		origins_speed_fly += abc.origins_attributes[_origin] [abc.Attributes.SPEED_FLY]
+	for _class in classes:
+		classes_speed_fly += abc.origins_attributes[_class] [abc.Attributes.SPEED_FLY]
 	speed_fly += base_speed_fly * (abc.player_attributes[abc.Attributes.SPEED_FLY] + origins_speed_fly + classes_speed_fly)
 	speed_rotation += base_speed_rotation * (abc.player_attributes[abc.Attributes.SPEED_FLY] + origins_speed_fly + classes_speed_fly)
 	# >>>>>>>>>>>>>>>>>>>>> 穿透率相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_penetration_rate = 0
 	var classes_penetration_rate = 0
-	for origin in origins:
-		origins_penetration_rate += abc.origins_attributes[origin] [abc.Attributes.PENETRATION_RATE]
-	for classes in classes:
-		classes_penetration_rate += abc.origins_attributes[classes] [abc.Attributes.PENETRATION_RATE]
+	for _origin in origins:
+		origins_penetration_rate += abc.origins_attributes[_origin] [abc.Attributes.PENETRATION_RATE]
+	for _class in classes:
+		classes_penetration_rate += abc.origins_attributes[_class] [abc.Attributes.PENETRATION_RATE]
 	penetration_rate += base_penetration_rate + (abc.player_attributes[abc.Attributes.PENETRATION_RATE] + origins_penetration_rate + classes_penetration_rate)
-
-
 
 
 func get_nearest_enemy() -> CharacterBody2D:

@@ -10,22 +10,21 @@ extends CharacterBody2D
 @onready var abc: Attribute_Changed = $Attribute_Changed
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
-#var weapon_manager 
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 signal origins_number_changed(type, value)
 signal classes_number_changed(type, value)
-#var weapons = []
 var origins_count: Array[int] 
 
-func update_origins_number(key,value):
-	origins_count[key] +=  value
-	origins_number_changed.emit(key,origins_count[key])
+func update_origins_number(type, value):
+	origins_count[type] += value
+	origins_number_changed.emit(type, origins_count[type])
 	
 var classes_count: Array[int] 
 
-func update_classes_number(key,value):
-	classes_count[key] +=  value
-	classes_number_changed.emit(key,classes_count[key])
+func update_classes_number(type, value):
+	classes_count[type] += value
+	classes_number_changed.emit(type, classes_count[type])
 
 
 enum Direction {
