@@ -193,8 +193,9 @@ func get_nearest_enemy() -> CharacterBody2D:
 	'''
 	var nearestEnemy: CharacterBody2D = null
 	var nearestDistance: float = pow(radius_search, 2)
+	var self_position = global_position if is_self else player.global_position
 	for enemy in enemies:
-		var distance = enemy.global_position.distance_squared_to(global_position)
+		var distance = enemy.global_position.distance_squared_to(self_position)
 		if distance < nearestDistance:
 			nearestEnemy = enemy
 			nearestDistance = distance
