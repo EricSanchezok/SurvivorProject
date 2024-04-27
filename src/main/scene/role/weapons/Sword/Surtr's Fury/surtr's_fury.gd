@@ -14,6 +14,7 @@ var current_time: float = 0.0
 func _ready() -> void:
 	super()
 
+
 func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:

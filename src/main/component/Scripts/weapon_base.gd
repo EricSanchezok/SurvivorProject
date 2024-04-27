@@ -9,7 +9,11 @@ var abc : Attribute_Changed
 @export var origins: Array[Attribute_Changed.Origins]
 @export var classes: Array[Attribute_Changed.Classes]
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 固有属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@export var deceleration_time: float = 0  #减速时间
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@export var base_health: float = 20  #生命值
+@export var base_health_regeneration: float = 1  #生命恢复
 @export var base_power_physical: float = 4.0  #物理攻击力
 @export var base_power_magic: float = 2.0   #魔法攻击力
 @export var base_time_cooldown: float = 1  #攻击冷却
@@ -29,10 +33,12 @@ var abc : Attribute_Changed
 @export var base_life_steal: float = 0 #吸血
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-var power_physical: float = base_power_physical 				#物理攻击力
-var power_magic: float = base_power_magic 						#魔法攻击力
-var damage: float = power_physical + power_magic 				#总攻击力
-var time_cooldown: float = base_time_cooldown:   				#攻击冷却
+var health: float = base_health  #生命值
+var health_regeneration: float = base_health_regeneration  #生命恢复
+var power_physical: float = base_power_physical  #物理攻击力
+var power_magic: float = base_power_magic   #魔法攻击力
+#var damage: float = power_physical + power_magic  #总攻击力
+var time_cooldown: float = base_time_cooldown:   #攻击冷却
 	set(v):
 		time_cooldown = v
 		$TimerCoolDown.wait_time = time_cooldown
@@ -66,6 +72,22 @@ func _on_stats_changed() -> void:
 	_on_attribute_changed()
 
 func _on_attribute_changed():
+	# >>>>>>>>>>>>>>>>>>>>> 生命相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_health = 0
+	var classes_health = 0
+	for _origin in origins:
+		origins_health += abc.origins_attributes[_origin] [abc.Attributes.HEALTH]
+	for _class in classes:
+		classes_health += abc.origins_attributes[_class] [abc.Attributes.HEALTH]
+	health += base_health * (abc.player_attributes[abc.Attributes.HEALTH] + origins_health + classes_health)
+	# >>>>>>>>>>>>>>>>>>>>> 生命恢复相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_health_regeneration = 0
+	var classes_health_regeneration = 0
+	for _origin in origins:
+		origins_health_regeneration += abc.origins_attributes[_origin] [abc.Attributes.HEALTH_REGENERATION]
+	for _class in classes:
+		classes_health_regeneration += abc.origins_attributes[_class] [abc.Attributes.HEALTH_REGENERATION]
+	health_regeneration += base_health_regeneration * (abc.player_attributes[abc.Attributes.HEALTH_REGENERATION] + origins_health_regeneration + classes_health_regeneration)
 	# >>>>>>>>>>>>>>>>>>>>> 物理伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_power_physical = 0
 	var classes_power_physical = 0
@@ -184,8 +206,7 @@ func _on_attribute_changed():
 
 
 
-
-func get_nearest_enemy() -> CharacterBody2D:
+func get_nearest_enemy(is_self: bool = false) -> CharacterBody2D:
 	'''
 	获取最近的敌人
 	
@@ -200,6 +221,7 @@ func get_nearest_enemy() -> CharacterBody2D:
 			nearestEnemy = enemy
 			nearestDistance = distance
 	return nearestEnemy
+
 	
 func get_random_enemy() -> CharacterBody2D:
 	return enemies.pick_random()
