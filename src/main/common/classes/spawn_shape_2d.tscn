@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqlojjsebjt78"]
-
-[ext_resource type="Script" path="res://src/main/common/classes/spawn_shape_2d.gd" id="1_gt5nm"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jwca"]
-
-[node name="SpawnShape2D" type="CollisionShape2D"]
-shape = SubResource("RectangleShape2D_5jwca")
-script = ExtResource("1_gt5nm")

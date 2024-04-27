@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwbyxfwqtjn4k"]
+
+[ext_resource type="PackedScene" uid="uid://d3gsjuh26y62l" path="res://src/test/base_weapons/bomb.tscn" id="1_ijxde"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Bomb/normal_bomb.gd" id="2_86k6x"]
+[ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/16X16/1BitAssets/16x16_weapons.png" id="3_4j3w4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u024i"]
+atlas = ExtResource("3_4j3w4")
+region = Rect2(293, 182, 9, 11)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5x18"]
+
+[sub_resource type="Animation" id="Animation_73267"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4uadg"]
+resource_name = "appear"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xh60v"]
+resource_name = "disappear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wh1os"]
+_data = {
+"RESET": SubResource("Animation_73267"),
+"appear": SubResource("Animation_4uadg"),
+"disappear": SubResource("Animation_xh60v")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3okhy"]
+radius = 19.0
+
+[node name="normal_bomb" instance=ExtResource("1_ijxde")]
+script = ExtResource("2_86k6x")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = 1.5708
+texture = SubResource("AtlasTexture_u024i")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CircleShape2D_p5x18")
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_wh1os")
+}
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_3okhy")

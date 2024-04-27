@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://fvbjoygre1wo"]
+
+[ext_resource type="PackedScene" uid="uid://dbmyp5d4d0j1p" path="res://src/test/base_weapons/laser.tscn" id="1_tetfj"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Laser/normal_laser.gd" id="2_r5ex6"]
+
+[node name="normal_laser" instance=ExtResource("1_tetfj")]
+script = ExtResource("2_r5ex6")

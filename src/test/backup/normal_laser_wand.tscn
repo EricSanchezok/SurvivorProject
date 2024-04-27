@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://k4drkesc6um1"]
+
+[ext_resource type="PackedScene" uid="uid://dl6oko1a1yku1" path="res://src/test/base_weapons/laser_wand.tscn" id="1_fltrl"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/LaserWand/normal_laser_wand.gd" id="2_4yesb"]
+[ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/16X16/1BitAssets/16x16_weapons.png" id="3_ggcid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wrfw"]
+atlas = ExtResource("3_ggcid")
+region = Rect2(201, 135, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kfvr"]
+radius = 22.4722
+
+[node name="normal_LaserWand" instance=ExtResource("1_fltrl")]
+script = ExtResource("2_4yesb")
+
+[node name="Graphics" parent="." index="0"]
+rotation = 2.35619
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+texture = SubResource("AtlasTexture_8wrfw")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_5kfvr")
+
+[node name="Marker2D" parent="." index="5"]
+position = Vector2(10, 0)

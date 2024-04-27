@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://cchgyna0h07kk"]
+
+[ext_resource type="Script" path="res://src/test/base_weapons/axe.gd" id="1_4d6b2"]
+[ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_x7d3g"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_vr6um"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5d4du"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ynd7"]
+
+[node name="Axe" type="Node2D"]
+z_index = 100
+z_as_relative = false
+script = ExtResource("1_4d6b2")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+
+[node name="HitBox" type="Area2D" parent="Graphics"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("2_x7d3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
+shape = SubResource("CapsuleShape2D_5d4du")
+debug_color = Color(0.835294, 0.27451, 0.682353, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_8ynd7")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_vr6um")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AttackWaitTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AreaPickUp" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPickUp"]
+debug_color = Color(0.478431, 0.588235, 0.0588235, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="AreaPickUp" to="." method="_on_area_pick_up_body_entered"]

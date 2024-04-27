@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://p48lonijxsy6"]
+
+[ext_resource type="PackedScene" uid="uid://di4di36eun22p" path="res://src/test/base_weapons/gun.tscn" id="1_xysg6"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Gun/normal_gun.gd" id="2_kbhaw"]
+[ext_resource type="Texture2D" uid="uid://btmc6o4dhje2d" path="res://src/main/assets/packs/16X16/1BitAssets/16x16_weapons.png" id="3_6k4di"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdtuw"]
+atlas = ExtResource("3_6k4di")
+region = Rect2(267, 157, 16, 16)
+
+[sub_resource type="Animation" id="Animation_b6mmc"]
+resource_name = "fire"
+length = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shoot"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2p3k"]
+_data = {
+"fire": SubResource("Animation_b6mmc")
+}
+
+[node name="normal_gun" instance=ExtResource("1_xysg6")]
+script = ExtResource("2_kbhaw")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = 2.35619
+texture = SubResource("AtlasTexture_cdtuw")
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_a2p3k")
+}
+
+[node name="Marker2D" parent="." index="3"]
+position = Vector2(5, 0)

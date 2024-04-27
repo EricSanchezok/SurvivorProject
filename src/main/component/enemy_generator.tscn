@@ -1,13 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://btxc5hfxx24vb"]
+[gd_scene load_steps=2 format=3 uid="uid://cw4pd2sww2a8k"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/enemy_generator.gd" id="1_727pa"]
-[ext_resource type="PackedScene" uid="uid://bu7130w3w7bjh" path="res://src/main/common/classes/position_generator.tscn" id="1_myi1a"]
 
-[node name="EnemyGenerator" instance=ExtResource("1_myi1a")]
+[node name="EnemyGenerator" type="Area2D"]
 script = ExtResource("1_727pa")
 
-[node name="Timer" type="Timer" parent="." index="0"]
-wait_time = 0.2
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
