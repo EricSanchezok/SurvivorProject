@@ -1,13 +1,17 @@
 class_name WeaponBase
 extends CharacterBody2D
 
-var enemies: Array = []
+
 var slot: Marker2D
 var player: CharacterBody2D
 var player_stats: Node 
 var abc : Attribute_Changed
 @export var origins: Array[Attribute_Changed.Origins]
 @export var classes: Array[Attribute_Changed.Classes]
+
+
+var enemies: Array = []
+var target: EnemyBase
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var base_power_physical: float = 4.0 					#物理攻击力
@@ -27,7 +31,7 @@ var abc : Attribute_Changed
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var power_physical: float = base_power_physical 				#物理攻击力
 var power_magic: float = base_power_magic 						#魔法攻击力
-var damage: float = power_physical + power_magic 				#总攻击力
+#var damage: float = power_physical + power_magic 				#总攻击力
 var time_cooldown: float = base_time_cooldown:   				#攻击冷却
 	set(v):
 		time_cooldown = v

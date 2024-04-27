@@ -84,9 +84,8 @@ scale_curve = SubResource("CurveTexture_rx62m")
 anim_speed_min = 0.56
 anim_speed_max = 1.27
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bespk"]
-radius = 32.0
-height = 100.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_okeuh"]
+radius = 100.0
 
 [sub_resource type="Animation" id="Animation_y2ngw"]
 length = 0.001
@@ -269,7 +268,6 @@ explosiveness = 0.13
 randomness = 0.26
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 16
 monitoring = false
@@ -277,7 +275,7 @@ script = ExtResource("3_rxj7i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_bespk")
+shape = SubResource("CircleShape2D_okeuh")
 debug_color = Color(0.968627, 0, 0.454902, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

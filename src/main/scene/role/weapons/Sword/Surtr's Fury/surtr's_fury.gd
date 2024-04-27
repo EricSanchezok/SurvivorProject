@@ -8,7 +8,6 @@ enum State {
 	ATTACK
 }
 
-var target: CharacterBody2D 
 var current_time: float = 0.0
 
 func _ready() -> void:

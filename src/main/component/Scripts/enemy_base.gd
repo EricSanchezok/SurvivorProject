@@ -127,7 +127,7 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	var damage = Damage.new()
 	damage.source = hitbox.owner
 	damage.dir = (hitbox.owner.global_position - position).normalized()
-	damage.amount = hitbox.owner.damage
+	damage.amount = hitbox.owner.power_physical + hitbox.owener.power_magic
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
 	pending_damages.append(damage)
 	#print(pending_damages.size())
