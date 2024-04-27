@@ -20,14 +20,14 @@ particles_anim_loop = false
 offsets = PackedFloat32Array(0, 0.149502, 0.269103, 0.549834, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.88, 0.79552, 0.2464, 1, 0.82, 0.45141, 0.1066, 1, 0.72, 0.17904, 0.0576, 1, 0.380392, 0.0431373, 0.0431373, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_1p5xi"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tjlbo"]
 gradient = SubResource("Gradient_et255")
 
 [sub_resource type="Curve" id="Curve_qpg5k"]
 _data = [Vector2(0, 0.915385), 0.0, 0.0, 0, 0, Vector2(0.146417, 1), 0.0, 0.0, 0, 0, Vector2(0.734568, 0.888753), -1.06372, -1.06372, 0, 0, Vector2(0.996885, 0.022521), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="CurveTexture" id="CurveTexture_l03cj"]
+[sub_resource type="CurveTexture" id="CurveTexture_0fsen"]
 curve = SubResource("Curve_qpg5k")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hpynb"]
@@ -47,8 +47,8 @@ radial_velocity_min = -5.83
 radial_velocity_max = 11.66
 gravity = Vector3(0, -98, 0)
 scale_min = 0.8
-scale_curve = SubResource("CurveTexture_l03cj")
-color_ramp = SubResource("GradientTexture1D_1p5xi")
+scale_curve = SubResource("CurveTexture_0fsen")
+color_ramp = SubResource("GradientTexture1D_tjlbo")
 anim_speed_min = 0.62
 anim_speed_max = 1.16
 
@@ -62,7 +62,7 @@ particles_anim_loop = false
 _data = [Vector2(0, 0.523227), 0.0, 0.0, 0, 0, Vector2(0.490741, 1), 0.0, 0.0, 0, 0, Vector2(0.987654, 0.555012), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_rx62m"]
+[sub_resource type="CurveTexture" id="CurveTexture_ew20a"]
 curve = SubResource("Curve_udrkm")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jn2ey"]
@@ -80,7 +80,7 @@ orbit_velocity_max = 0.3
 gravity = Vector3(0, -98, 0)
 scale_min = 0.3
 scale_max = 0.6
-scale_curve = SubResource("CurveTexture_rx62m")
+scale_curve = SubResource("CurveTexture_ew20a")
 anim_speed_min = 0.56
 anim_speed_max = 1.27
 

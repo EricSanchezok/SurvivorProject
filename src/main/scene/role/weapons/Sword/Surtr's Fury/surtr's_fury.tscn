@@ -183,6 +183,7 @@ turbulence_influence_max = 0.15
 script = ExtResource("2_5r0vc")
 origins = Array[int]([0])
 classes = Array[int]([0])
+base_penetration_rate = 1.0
 
 [node name="Sprite2D" parent="." index="0"]
 self_modulate = Color(0.509195, 0.372808, 0.252986, 1)

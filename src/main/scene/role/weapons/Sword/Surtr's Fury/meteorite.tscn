@@ -1,0 +1,272 @@
+[gd_scene load_steps=20 format=3 uid="uid://mgy4whumua2k"]
+
+[ext_resource type="PackedScene" uid="uid://x8q617q250qp" path="res://src/main/component/projectile_base.tscn" id="1_8pqkr"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/meteorite.gd" id="2_e3gr2"]
+[ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="3_88skl"]
+[ext_resource type="Texture2D" uid="uid://cd485aen8swtl" path="res://src/main/assets/texture/vfx/explosions-pack-web/spritesheets/explosion-6.png" id="3_nykee"]
+[ext_resource type="Texture2D" uid="uid://ddchj26i5nk3r" path="res://src/main/assets/texture/vfx/fire/SparkSprite-Sheet.png" id="4_p648t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_63nle"]
+radius = 30.0
+
+[sub_resource type="Animation" id="Animation_dyhe8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fire/Spark:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitBox:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4fqbo"]
+resource_name = "explode"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fire/Spark:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitBox:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a03sk"]
+_data = {
+"RESET": SubResource("Animation_dyhe8"),
+"explode": SubResource("Animation_4fqbo")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cjfol"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_85vab"]
+offsets = PackedFloat32Array(0, 0.149502, 0.269103, 0.549834, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.88, 0.79552, 0.2464, 1, 0.82, 0.45141, 0.1066, 1, 0.72, 0.17904, 0.0576, 1, 0.380392, 0.0431373, 0.0431373, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1p5xi"]
+gradient = SubResource("Gradient_85vab")
+
+[sub_resource type="Curve" id="Curve_ekmsn"]
+_data = [Vector2(0, 0.915385), 0.0, 0.0, 0, 0, Vector2(0.146417, 1), 0.0, 0.0, 0, 0, Vector2(0.734568, 0.888753), -1.06372, -1.06372, 0, 0, Vector2(0.996885, 0.022521), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_l03cj"]
+curve = SubResource("Curve_ekmsn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5qck7"]
+lifetime_randomness = 0.23
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 3.87
+direction = Vector3(0, -1, 0)
+spread = 38.309
+initial_velocity_min = 22.49
+initial_velocity_max = 54.56
+angular_velocity_min = 29.38
+angular_velocity_max = 67.18
+orbit_velocity_min = -0.3
+orbit_velocity_max = 0.3
+radial_velocity_min = -5.83
+radial_velocity_max = 11.66
+gravity = Vector3(0, -98, 0)
+scale_min = 0.8
+scale_curve = SubResource("CurveTexture_l03cj")
+color_ramp = SubResource("GradientTexture1D_1p5xi")
+anim_speed_min = 0.62
+anim_speed_max = 1.16
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_45hjd"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_cnjqc"]
+_data = [Vector2(0, 0.523227), 0.0, 0.0, 0, 0, Vector2(0.490741, 1), 0.0, 0.0, 0, 0, Vector2(0.987654, 0.555012), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_rx62m"]
+curve = SubResource("Curve_cnjqc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lunqb"]
+lifetime_randomness = 0.24
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 3.55
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+orbit_velocity_min = -0.3
+orbit_velocity_max = 0.3
+gravity = Vector3(0, -98, 0)
+scale_min = 0.3
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_rx62m")
+anim_speed_min = 0.56
+anim_speed_max = 1.27
+
+[node name="Meteorite" instance=ExtResource("1_8pqkr")]
+script = ExtResource("2_e3gr2")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_nykee")
+hframes = 8
+region_enabled = true
+region_rect = Rect2(0, 0, 384, 48)
+
+[node name="HitBox" parent="." index="1"]
+monitoring = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_63nle")
+
+[node name="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_a03sk")
+}
+
+[node name="Fire" type="GPUParticles2D" parent="." index="6"]
+material = SubResource("CanvasItemMaterial_cjfol")
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_5qck7")
+texture = ExtResource("3_88skl")
+lifetime = 0.7
+speed_scale = 0.7
+explosiveness = 0.09
+randomness = 0.27
+
+[node name="Spark" type="GPUParticles2D" parent="Fire" index="0"]
+material = SubResource("CanvasItemMaterial_45hjd")
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_lunqb")
+texture = ExtResource("4_p648t")
+lifetime = 0.7
+explosiveness = 0.13
+randomness = 0.26
+
+[connection signal="reach_target" from="." to="." method="_on_reach_target"]

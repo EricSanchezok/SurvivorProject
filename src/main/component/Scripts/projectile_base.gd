@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 var parent_weapon: WeaponBase
 var target: EnemyBase
+var target_position: Vector2
 var tracking: bool = false
 var bezier: bool = false
 
@@ -20,8 +21,14 @@ var penetration_rate: float #穿透率
 var acceleration: float = 0.0
 var deceleration: float = 0.0
 
+var current_time: float = 0.0
+
+signal reach_target
+var reached: bool = false
+
 func _ready() -> void:
-	target = parent_weapon.target
+	if not target:
+		target = parent_weapon.target
 	
 	power_physical = parent_weapon.power_physical
 	power_magic = parent_weapon.power_magic
@@ -35,18 +42,27 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	speed_fly = speed_fly + acceleration * delta - deceleration * delta
 	if tracking:
+		target_position = target.global_position
 		if bezier:
-			pass
+			var distance = position.distance_to(target_position)
+			var total_time = distance / speed_fly
+			var t = min(current_time/total_time, 1)
+			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * speed_fly * bezier_param
+			var next_point = position.bezier_interpolate(start_control_point, target_position, target_position, t)
+			look_at(next_point)
+			position = position.move_toward(next_point, speed_fly * delta)
 		else:
-			pass
+			look_at(target_position)
+			position = position.move_toward(target_position, speed_fly * delta)
 	else:
-		var direction = Vector2(cos(rotation), sin(rotation))
-		velocity = direction * speed_fly
-	
-	move_and_collide(velocity*delta)
-	
-
+		look_at(target_position)
+		position = position.move_toward(target_position, speed_fly * delta)
+		
+	if position.distance_squared_to(target_position) < pow(1, 2) and not reached:
+		reached = true
+		reach_target.emit()
 
 func _on_hit_box_hit(hurtbox: Variant) -> void:
 	if not Tools.is_success(penetration_rate):
@@ -54,3 +70,5 @@ func _on_hit_box_hit(hurtbox: Variant) -> void:
 
 func _on_destroy_timer_timeout() -> void:
 	queue_free()
+	
+

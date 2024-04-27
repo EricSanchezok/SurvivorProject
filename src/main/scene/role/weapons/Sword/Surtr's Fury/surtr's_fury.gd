@@ -1,8 +1,7 @@
 extends WeaponBase
 
 @onready var point_light_2d: PointLight2D = $PointLight2D
-var aerolite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/aerolite.tscn")
-
+var meteorite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/meteorite.tscn")
 enum State {
 	WAIT,
 	ATTACK
@@ -23,7 +22,7 @@ func tick_physics(state: State, delta: float) -> void:
 			var distance = position.distance_to(target.global_position)
 			var total_time = distance / speed_fly
 			var t = min(current_time/total_time, 1)
-			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * speed_fly * 0.5
+			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * speed_fly * 1.5
 			var next_point = position.bezier_interpolate(start_control_point, target.global_position, target.global_position, t)
 			look_at(next_point)
 			position = position.move_toward(next_point, speed_fly * delta)
@@ -53,7 +52,9 @@ func transition_state(from: State, to: State) -> void:
 			$AnimationPlayer.play("ignite")
 			$HitBox.monitoring = true
 			# 召唤陨石
-			var instance = aerolite.instantiate()
+			var instance = meteorite.instantiate()
+			instance.parent_weapon = self
+			instance.acceleration = 200.0
 			instance.target_position = get_random_enemy().global_position
 			instance.position = instance.target_position + Vector2(300, -400)
 			get_tree().root.add_child(instance)
