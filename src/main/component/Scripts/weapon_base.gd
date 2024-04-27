@@ -1,13 +1,17 @@
 class_name WeaponBase
 extends CharacterBody2D
 
-var enemies: Array = []
+
 var slot: Marker2D
 var player: CharacterBody2D
 var player_stats: Node 
 var abc : Attribute_Changed
 @export var origins: Array[Attribute_Changed.Origins]
 @export var classes: Array[Attribute_Changed.Classes]
+
+
+var enemies: Array = []
+var target: EnemyBase
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 固有属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var deceleration_time: float = 0  #减速时间
@@ -26,7 +30,7 @@ var abc : Attribute_Changed
 @export var base_number_of_projectiles: int = 1   #发射物数量
 @export var base_magazine: = 0  #弹匣
 @export var base_speed_fly: float = 200.0   #武器飞行速度
-@export var base_speed_rotation: float = 15.0   #旋转速度
+@export var base_speed_rotation: float = 360.0   #旋转速度
 @export var base_penetration_rate: float = 0  #穿透率
 @export var base_deceleration_rate: float = 0  #减速率
 @export var base_freezing_rate: float = 0 #冰冻率

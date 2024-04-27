@@ -53,9 +53,9 @@ func _ready() -> void:
 	classes_count.fill(0)
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
-	register_weapon.emit(self, default_weapon, 0)
+	register_weapon.emit(self, default_weapon, 2)
+	#register_weapon.emit(self, default_weapon, 0)
 	#register_weapon.emit(self, default_weapon, 1)
-	#register_weapon.emit(self, default_weapon, 2)
 	#register_weapon.emit(self, default_weapon, 3)
 	#register_weapon.emit(self, default_weapon, 4)
 	#register_weapon.emit(self, default_weapon, 5)
@@ -157,9 +157,9 @@ func move(delta: float) -> void:
 	var movement := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if not movement.is_zero_approx():
 		direction = Direction.LEFT if movement.x < 0 else Direction.RIGHT
-	var max_movement_speed = player_stats.base_movement_speed * player_stats.movement_speed
+	var max_movement_speed = player_stats.base_movement_speed * player_stats.movement_speed_multiple
 	velocity = movement.normalized() * max_movement_speed
-	move_and_slide()
+	move_and_collide(velocity*delta)
 	
 func get_weapon_slot(index: int) -> Marker2D:
 	'''

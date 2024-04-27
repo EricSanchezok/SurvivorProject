@@ -59,10 +59,11 @@ func tick_physics(state: State, delta: float) -> void:
 				enemy_stats.health -= damage.amount
 				velocity -= damage.dir * damage.knockback
 				pending_damages.erase(damage)
-			move_and_slide()
+			move_and_collide(velocity*delta)
 		State.RUN:
-			move_to_target()
+			move_to_target(delta)
 			pass
+			
 			
 func get_next_state(state: State) -> int:
 	if pending_damages.size() > 0:
@@ -113,7 +114,7 @@ func get_random_target() -> PlayerBase:
 		return null
 	return players[random.randi_range(0, players.size() - 1)]
 
-func move_to_target() -> void:
+func move_to_target(delta: float) -> void:
 	'''
 		移动到目标
 	
@@ -127,7 +128,7 @@ func move_to_target() -> void:
 	var dir := (target_position - pos).normalized()
 	velocity = dir * enemy_stats.speed_movement
 	direction = Direction.RIGHT if velocity.x > 0 else Direction.LEFT
-	move_and_slide()
+	move_and_collide(velocity*delta)
 	
 func die() -> void:
 	'''
@@ -144,9 +145,10 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.dir = (hitbox.owner.global_position - position).normalized()
 	damage.amount = hitbox.owner.power_physical + hitbox.owner.power_magic
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
-	add_slow_effect(hitbox.owner.deceleration_rate,hitbox.owner.deceleration_time)
+	add_slow_effect(hitbox.owner.deceleration_rate, hitbox.owner.deceleration_time)
 	damage.freezing_rate = hitbox.owner.freezing_rate
 	pending_damages.append(damage)
+	
 	#print(pending_damages.size())
 	
 	
