@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bryw5ltiiocp1"]
+[gd_scene load_steps=6 format=3 uid="uid://daty4aphomuh4"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/enemy_base.gd" id="1_lkhbt"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_yfjr8"]
@@ -41,5 +41,8 @@ script = ExtResource("4_m830w")
 
 [node name="EnemyStats" type="Node" parent="."]
 script = ExtResource("5_ia363")
+
+[node name="FreezingTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]

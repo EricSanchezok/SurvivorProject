@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgngpu7u70p6s"]
 
-[ext_resource type="Texture2D" uid="uid://bsjj8lpa2b1bp" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Environment/Dungeon Prison/Assets/Tiles.png" id="1_2ur43"]
-[ext_resource type="Texture2D" uid="uid://bvonkapp3lset" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Environment/Dungeon Prison/Assets/Props.png" id="2_3k52e"]
+[ext_resource type="Texture2D" uid="uid://bsjj8lpa2b1bp" path="res://src/main/assets/packs/32X32/Pixel Crawler - FREE - 1.8/Environment/Dungeon Prison/Assets/Tiles.png" id="1_2ur43"]
+[ext_resource type="Texture2D" uid="uid://bvonkapp3lset" path="res://src/main/assets/packs/32X32/Pixel Crawler - FREE - 1.8/Environment/Dungeon Prison/Assets/Props.png" id="2_3k52e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfvbm"]
 texture = ExtResource("1_2ur43")

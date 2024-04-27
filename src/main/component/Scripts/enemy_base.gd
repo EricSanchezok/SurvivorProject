@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var enemy_stats: EnemyStats = $EnemyStats
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var freezing_timer: Timer = $FreezingTimer
 
 enum Direction {
 	LEFT = -1,
@@ -21,6 +22,12 @@ var is_dead: bool = false
 			await  ready
 		$Graphics.scale.x = direction
 		
+class SlowEffect:  #减速效果类
+	var amount: float  # 减速的百分比
+	var duration: float  # 减速持续的时间（秒）
+
+var slow_effects: Array = []
+
 
 func _ready() -> void:
 	random.randomize()
@@ -35,7 +42,15 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
-	
+	for i in range(len(slow_effects) - 1, -1, -1):
+		var effect = slow_effects[i]
+		effect.duration -= delta
+		if effect.duration <= 0:
+			slow_effects.remove_at(i)
+	 # 应用最大减速
+	if slow_effects.size() > 0:
+		var max_slow = slow_effects[0].amount  # 直接使用数组第一个元素的减速幅度
+		enemy_stats.speed_movement = enemy_stats.base_speed_movement * (1-max_slow)
 	match state:
 		State.APPEAR, State.DIE:
 			pass
@@ -130,9 +145,23 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.dir = (hitbox.owner.global_position - position).normalized()
 	damage.amount = hitbox.owner.power_physical + hitbox.owner.power_magic
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
-	
-	
+	add_slow_effect(hitbox.owner.deceleration_rate,hitbox.owner.deceleration_time)
+	damage.freezing_rate = hitbox.owner.freezing_rate
 	pending_damages.append(damage)
 	
 	#print(pending_damages.size())
 	
+	
+func add_slow_effect(amount, duration):
+	var new_effect = SlowEffect.new()
+	new_effect.amount = amount
+	new_effect.duration = duration
+	slow_effects.append(new_effect)
+	slow_effects.sort_custom(compare_slow_effects)
+
+func compare_slow_effects(a, b):
+	if a.amount > b.amount:
+		return true
+	else:
+		return false
+

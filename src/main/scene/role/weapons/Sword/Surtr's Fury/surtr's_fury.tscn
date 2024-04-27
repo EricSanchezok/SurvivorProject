@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://75g8xonu6m5u"]
+[gd_scene load_steps=14 format=3 uid="uid://75g8xonu6m5u"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_b4s7a"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/surtr's_fury.gd" id="2_5r0vc"]
-[ext_resource type="Texture2D" uid="uid://cjexxstmaqiyv" path="res://src/main/assets/packs/16X16/16x16 RPG Item Icons/Swords/Sword_16.png" id="3_mpc5x"]
+[ext_resource type="Texture2D" uid="uid://l1a4kucapjpd" path="res://src/main/assets/packs/32X32/PixelArt_Swords/Fire/32/PixelArt_Swords_Fire_32_07.png" id="3_vmpv0"]
 [ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_cpb73"]
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="5_84ho8"]
 
@@ -164,7 +164,7 @@ curve = SubResource("Curve_dd5yb")
 lifetime_randomness = 0.18
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(6, 4, 1)
+emission_box_extents = Vector3(12, 4, 1)
 direction = Vector3(0, -1, 0)
 initial_velocity_min = 5.0
 initial_velocity_max = 15.0
@@ -188,7 +188,7 @@ base_penetration_rate = 1.0
 [node name="Sprite2D" parent="." index="0"]
 self_modulate = Color(0.509195, 0.372808, 0.252986, 1)
 rotation = 0.785398
-texture = ExtResource("3_mpc5x")
+texture = ExtResource("3_vmpv0")
 
 [node name="CollisionShape2D" parent="." index="1"]
 visible = false
@@ -208,25 +208,21 @@ visible = false
 [node name="SearchBox" parent="." index="4"]
 visible = false
 
-[node name="AnimationPlayer" parent="." index="6"]
-libraries = {
-"": SubResource("AnimationLibrary_bl42r")
-}
-
 [node name="PointLight2D" type="PointLight2D" parent="." index="8"]
-position = Vector2(4, 0)
-scale = Vector2(1.95313, 1)
-color = Color(1, 0.603922, 0.368627, 1)
+position = Vector2(12, 0)
+scale = Vector2(2.73438, 1.75781)
+color = Color(0.756863, 0.129412, 0.027451, 1)
+energy = 5.0
 shadow_enabled = true
 texture = ExtResource("5_84ho8")
 texture_scale = 0.01
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." index="9"]
 material = SubResource("CanvasItemMaterial_y6rta")
-position = Vector2(3, 0)
+position = Vector2(9, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_2pdrs")
 texture = ExtResource("4_cpb73")
-lifetime = 0.8
+lifetime = 1.1
 explosiveness = 0.21
 randomness = 0.23
