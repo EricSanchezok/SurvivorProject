@@ -1,0 +1,10 @@
+1 Hand cannon  https://en.wikipedia.org/wiki/Hand_cannon
+2 Musket https://en.wikipedia.org/wiki/Musket
+3 Arquebus  https://en.wikipedia.org/wiki/Arquebus
+4 Shotgun https://en.wikipedia.org/wiki/Shotgun
+5 Pistol  https://en.wikipedia.org/wiki/Pistol
+6 Bullet  https://en.wikipedia.org/wiki/Bullet
+7 Grenade  https://en.wikipedia.org/wiki/Grenade
+8 Bombard (weapon)  https://en.wikipedia.org/wiki/Bombard_(weapon)
+9 Round shot  https://en.wikipedia.org/wiki/Round_shot
+10 Rocket  https://en.wikipedia.org/wiki/Rocket

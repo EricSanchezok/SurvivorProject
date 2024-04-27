@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2qkx3d5hid0w"]
+
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_68vji"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Shield/Flame Shield/flame_shield.gd" id="2_hji68"]
+
+[node name="FlameShield" instance=ExtResource("1_68vji")]
+script = ExtResource("2_hji68")
