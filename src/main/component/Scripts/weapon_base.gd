@@ -30,7 +30,7 @@ var target: EnemyBase
 @export var base_number_of_projectiles: int = 1   #发射物数量
 @export var base_magazine: = 0  #弹匣
 @export var base_speed_fly: float = 200.0   #武器飞行速度
-@export var base_speed_rotation: float = 15.0   #旋转速度
+@export var base_speed_rotation: float = 360.0   #旋转速度
 @export var base_penetration_rate: float = 0  #穿透率
 @export var base_deceleration_rate: float = 0  #减速率
 @export var base_freezing_rate: float = 0 #冰冻率

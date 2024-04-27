@@ -145,7 +145,7 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.dir = (hitbox.owner.global_position - position).normalized()
 	damage.amount = hitbox.owner.power_physical + hitbox.owner.power_magic
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
-	add_slow_effect(hitbox.owner.deceleration_rate,hitbox.owner.deceleration_time)
+	add_slow_effect(hitbox.owner.deceleration_rate, hitbox.owner.deceleration_time)
 	damage.freezing_rate = hitbox.owner.freezing_rate
 	pending_damages.append(damage)
 	

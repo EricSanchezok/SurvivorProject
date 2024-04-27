@@ -157,9 +157,9 @@ func move(delta: float) -> void:
 	var movement := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if not movement.is_zero_approx():
 		direction = Direction.LEFT if movement.x < 0 else Direction.RIGHT
-	var max_movement_speed = player_stats.base_movement_speed * player_stats.movement_speed
+	var max_movement_speed = player_stats.base_movement_speed * player_stats.movement_speed_multiple
 	velocity = movement.normalized() * max_movement_speed
-	move_and_slide()
+	move_and_collide(velocity*delta)
 	
 func get_weapon_slot(index: int) -> Marker2D:
 	'''

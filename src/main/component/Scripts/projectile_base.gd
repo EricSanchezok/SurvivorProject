@@ -18,6 +18,11 @@ var critical_damage: float #暴击伤害
 var speed_fly: float #武器飞行速度
 var penetration_rate: float #穿透率
 
+var deceleration_rate: float #减速率
+var deceleration_time: float #减速时间
+var freezing_rate: float #冰冻率
+var life_steal: float #吸血
+
 var acceleration: float = 0.0
 var deceleration: float = 0.0
 
@@ -39,7 +44,10 @@ func _ready() -> void:
 	speed_fly = parent_weapon.speed_fly
 	penetration_rate = parent_weapon.penetration_rate
 	
-
+	deceleration_rate = parent_weapon.deceleration_rate
+	deceleration_time = parent_weapon.deceleration_time
+	freezing_rate = parent_weapon.freezing_rate
+	life_steal = parent_weapon.life_steal
 
 func _physics_process(delta: float) -> void:
 	speed_fly = speed_fly + acceleration * delta - deceleration * delta

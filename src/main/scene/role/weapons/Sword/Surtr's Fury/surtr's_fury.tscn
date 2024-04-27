@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://75g8xonu6m5u"]
+[gd_scene load_steps=18 format=3 uid="uid://75g8xonu6m5u"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_b4s7a"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/surtr's_fury.gd" id="2_5r0vc"]
@@ -7,137 +7,101 @@
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="5_84ho8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_coyqf"]
-radius = 5.0
-height = 44.0
+radius = 3.0
+height = 22.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3v2g"]
-radius = 5.0
-height = 44.0
+radius = 3.0
+height = 22.0
 
-[sub_resource type="Animation" id="Animation_q61ny"]
+[sub_resource type="Animation" id="Animation_iqxqy"]
+resource_name = "slake"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:process_material:scale_min")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.05, 0.02]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GPUParticles2D:process_material:scale_max")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.15, 0.05]
+}
+
+[sub_resource type="Animation" id="Animation_34jn1"]
+resource_name = "ignite"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:process_material:scale_min")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.02, 0.05]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GPUParticles2D:process_material:scale_max")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.05, 0.15]
+}
+
+[sub_resource type="Animation" id="Animation_v05n1"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/path = NodePath("GPUParticles2D:process_material:scale_min")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.0]
+"values": [0.02]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("GPUParticles2D:process_material:scale_min")
+tracks/1/path = NodePath("GPUParticles2D:process_material:scale_max")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GPUParticles2D:process_material:scale_max")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.2]
+"values": [0.05]
 }
 
-[sub_resource type="Animation" id="Animation_txr3x"]
-resource_name = "fire"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 5.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GPUParticles2D:process_material:scale_min")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GPUParticles2D:process_material:scale_max")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.5]
-}
-
-[sub_resource type="Animation" id="Animation_fjebp"]
-resource_name = "slake"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [5.0, 0.5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GPUParticles2D:process_material:scale_min")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GPUParticles2D:process_material:scale_max")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.2]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bl42r"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gk8ft"]
 _data = {
-"RESET": SubResource("Animation_q61ny"),
-"ignite": SubResource("Animation_txr3x"),
-"slake": SubResource("Animation_fjebp")
+"RESET": SubResource("Animation_v05n1"),
+"ignite": SubResource("Animation_34jn1"),
+"slake": SubResource("Animation_iqxqy")
 }
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y6rta"]
@@ -154,7 +118,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0.988235, 0.698039, 0.372549, 1, 0.85098, 
 gradient = SubResource("Gradient_n4pj3")
 
 [sub_resource type="Curve" id="Curve_dd5yb"]
-_data = [Vector2(0, 0.0305624), 0.0, 0.0, 0, 0, Vector2(0.203704, 1), 0.0, 0.0, 0, 0, Vector2(0.515432, 0.427873), -2.91333, -2.91333, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.292308), 0.0, 0.0, 0, 0, Vector2(0.203704, 1), 0.0, 0.0, 0, 0, Vector2(0.515432, 0.427873), -2.91333, -2.91333, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="CurveTexture" id="CurveTexture_k2g8h"]
@@ -164,13 +128,13 @@ curve = SubResource("Curve_dd5yb")
 lifetime_randomness = 0.18
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(12, 4, 1)
+emission_box_extents = Vector3(6, 3, 1)
 direction = Vector3(0, -1, 0)
 initial_velocity_min = 5.0
 initial_velocity_max = 15.0
 gravity = Vector3(0, -98, 0)
-scale_min = 0.1
-scale_max = 0.2
+scale_min = 0.02
+scale_max = 0.05
 scale_curve = SubResource("CurveTexture_k2g8h")
 color_ramp = SubResource("GradientTexture1D_rgxcn")
 anim_speed_min = 0.8
@@ -180,6 +144,7 @@ turbulence_noise_speed_random = 0.5
 turbulence_influence_max = 0.15
 
 [node name="Surtr\'s Fury" instance=ExtResource("1_b4s7a")]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("2_5r0vc")
 origins = Array[int]([0])
 classes = Array[int]([0])
@@ -202,24 +167,25 @@ visible = false
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_j3v2g")
 
-[node name="HurtBox" parent="." index="3"]
-visible = false
-
 [node name="SearchBox" parent="." index="4"]
 visible = false
 
+[node name="AnimationPlayer" parent="." index="6"]
+libraries = {
+"": SubResource("AnimationLibrary_gk8ft")
+}
+
 [node name="PointLight2D" type="PointLight2D" parent="." index="8"]
-position = Vector2(12, 0)
-scale = Vector2(2.73438, 1.75781)
+position = Vector2(3, 0)
+scale = Vector2(1.51367, 0.683593)
 color = Color(0.756863, 0.129412, 0.027451, 1)
-energy = 5.0
 shadow_enabled = true
 texture = ExtResource("5_84ho8")
 texture_scale = 0.01
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." index="9"]
 material = SubResource("CanvasItemMaterial_y6rta")
-position = Vector2(9, 0)
+position = Vector2(4, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_2pdrs")
 texture = ExtResource("4_cpb73")
