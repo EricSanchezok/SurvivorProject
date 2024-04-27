@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var weapon_instance: WeaponInstance = $WeaponInstance
 
-signal weapon_manager
+#signal weapon_manager
 
 var players = []
 var players_weapon = {
@@ -18,7 +18,7 @@ func _ready():
 	players = get_tree().get_nodes_in_group("player")
 	for player in players:
 		player.connect("register_weapon", _on_player_register_weapon)
-		player.weapon_manager = self
+		#player.weapon_manager = self
 		
 func player_index(player: CharacterBody2D) -> int:
 	var index = players.find(player) + 1

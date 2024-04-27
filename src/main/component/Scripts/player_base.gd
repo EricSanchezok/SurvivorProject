@@ -10,11 +10,11 @@ extends CharacterBody2D
 @onready var abc: Attribute_Changed = $Attribute_Changed
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
-var weapon_manager 
+#var weapon_manager 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 signal origins_number_changed(type, value)
 signal classes_number_changed(type, value)
-var weapons = []
+#var weapons = []
 var origins_count: Array[int] 
 
 func update_origins_number(key,value):
@@ -71,8 +71,8 @@ func _ready() -> void:
 	#register_weapon.emit(self, default_weapon, 9)
 
 
-	var index = weapon_manager.player_index(self)
-	weapons = weapon_manager.players_weapon["Player"+str(index)+"_weapon"]
+	#var index = weapon_manager.player_index(self)
+	#weapons = weapon_manager.players_weapon["Player"+str(index)+"_weapon"]
 	
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -163,7 +163,7 @@ func move(delta: float) -> void:
 	var movement := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if not movement.is_zero_approx():
 		direction = Direction.LEFT if movement.x < 0 else Direction.RIGHT
-	var max_movement_speed = player_stats.base_movement_speed * player_stats.movement_speed_multiplier
+	var max_movement_speed = player_stats.base_movement_speed * player_stats.movement_speed
 	velocity = movement.normalized() * max_movement_speed
 	move_and_slide()
 	

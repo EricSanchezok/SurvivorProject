@@ -57,7 +57,6 @@ turbulence_influence_max = 0.15
 script = ExtResource("2_5r0vc")
 origins = Array[int]([0])
 classes = Array[int]([0])
-search_radius = 150.0
 
 [node name="Sprite2D" parent="." index="0"]
 rotation = 0.785398
