@@ -21,7 +21,7 @@ var abc : Attribute_Changed
 @export var base_number_of_projectiles: int = 1   				#发射物数量
 @export var base_magazine: = 0  								#弹匣
 @export var base_speed_fly: float = 200.0   					#武器飞行速度
-@export var base_speed_rotation: float = 15.0   				#旋转速度
+@export var base_speed_rotation: float = 360.0   				#旋转速度
 @export var base_penetration_rate: float = 0  					#穿透率
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,7 +142,7 @@ func _on_attribute_changed():
 	penetration_rate += base_penetration_rate + (abc.player_attributes[abc.Attributes.PENETRATION_RATE] + origins_penetration_rate + classes_penetration_rate)
 
 
-func get_nearest_enemy() -> CharacterBody2D:
+func get_nearest_enemy(is_self: bool = false) -> CharacterBody2D:
 	'''
 	获取最近的敌人
 	
@@ -150,8 +150,9 @@ func get_nearest_enemy() -> CharacterBody2D:
 	'''
 	var nearestEnemy: CharacterBody2D = null
 	var nearestDistance: float = pow(radius_search, 2)
+	var self_position = global_position if is_self else player.global_position
 	for enemy in enemies:
-		var distance = enemy.global_position.distance_squared_to(global_position)
+		var distance = enemy.global_position.distance_squared_to(self_position)
 		if distance < nearestDistance:
 			nearestEnemy = enemy
 			nearestDistance = distance

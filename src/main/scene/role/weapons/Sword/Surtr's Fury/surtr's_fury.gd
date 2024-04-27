@@ -1,7 +1,6 @@
 extends WeaponBase
 
-var speed_projectile: float = 300.0
-
+@onready var point_light_2d: PointLight2D = $PointLight2D
 var aerolite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/aerolite.tscn")
 
 enum State {
@@ -18,23 +17,23 @@ func _ready() -> void:
 func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:
-			rotation = lerp_angle(rotation, -PI/2, speed_rotation*delta)
-			position = position.move_toward(slot.global_position, speed_projectile*delta*0.5)
+			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(speed_rotation)*delta)
+			position = position.move_toward(slot.global_position, speed_fly*delta*0.5)
 		State.ATTACK:
 			current_time += delta
 			var distance = position.distance_to(target.global_position)
-			var total_time = distance / speed_projectile
+			var total_time = distance / speed_fly
 			var t = min(current_time/total_time, 1)
-			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * speed_projectile * 1.5
+			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * speed_fly * 0.5
 			var next_point = position.bezier_interpolate(start_control_point, target.global_position, target.global_position, t)
 			look_at(next_point)
-			position = position.move_toward(next_point, speed_projectile * delta)
+			position = position.move_toward(next_point, speed_fly * delta)
 			
 
 func get_next_state(state: State) -> int:
 	match state:
 		State.WAIT:
-			target = get_nearest_enemy()
+			target = get_nearest_enemy(true)
 			if target and $TimerCoolDown.is_stopped():
 				return State.ATTACK
 		State.ATTACK:
@@ -48,9 +47,11 @@ func transition_state(from: State, to: State) -> void:
 	current_time = 0.0
 	match to:
 		State.WAIT:
+			$AnimationPlayer.play("slake")
 			$TimerCoolDown.start()
 			$HitBox.monitoring = false
 		State.ATTACK:
+			$AnimationPlayer.play("ignite")
 			$HitBox.monitoring = true
 			# 召唤陨石
 			var instance = aerolite.instantiate()
