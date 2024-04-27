@@ -2,8 +2,7 @@ extends WeaponBase
 
 var speed_projectile: float = 300.0
 
-var origins = ["fire"]
-var classes = ["sword"]
+
 
 var aerolite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/aerolite.tscn")
 
@@ -14,6 +13,10 @@ enum State {
 
 var target: CharacterBody2D 
 var current_time: float = 0.0
+
+func _ready() -> void:
+	super()
+
 
 
 func tick_physics(state: State, delta: float) -> void:

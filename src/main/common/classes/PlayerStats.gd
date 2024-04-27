@@ -3,7 +3,7 @@ extends Node
 
 signal health_changed
 signal stats_changed
-
+var abc = owner.abc
 
 
 # 基础最大生命值
@@ -32,8 +32,7 @@ signal stats_changed
 	set(v):
 		if critical_hit_rate == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("critical_hit_rate","absolute",v-critical_hit_rate)
+		abc.set_player_attribute(abc.Attributes.CRITICAL_HIT_RATE,v-critical_hit_rate)
 		critical_hit_rate = v
 		stats_changed.emit()
 # 暴击伤害
@@ -41,8 +40,7 @@ signal stats_changed
 	set(v):
 		if critical_damage == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("critical_hit_rate","absolute",v-critical_hit_rate)
+		abc.set_player_attribute(abc.Attributes.CRITICAL_DAMAGE,v-critical_damage)
 		critical_damage = v
 		stats_changed.emit()
 # 发射物数量
@@ -50,8 +48,7 @@ signal stats_changed
 	set(v):
 		if number_of_projectiles == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("number_of_projectiles","absolute",v-critical_hit_rate)
+		abc.set_player_attribute(abc.Attributes.NUMBER_OF_PROJECTILES,v-number_of_projectiles)
 		number_of_projectiles = v
 		stats_changed.emit()
 # 伤害减免率
@@ -65,102 +62,86 @@ signal stats_changed
 
 
 # 最大生命值倍率
-@export var max_health_multiplier: float = 1.0:
+@export var max_health: float = 1.0:
 	set(v):
-		if max_health_multiplier == v:
+		if max_health == v:
 			return
-		max_health_multiplier = v
+		max_health = v
 		stats_changed.emit()
 # 生命恢复倍率
-@export var health_regeneration_multiplier: float = 1.0:
+@export var health_regeneration: float = 1.0:
 	set(v):
-		if health_regeneration_multiplier == v:
+		if health_regeneration == v:
 			return
-		health_regeneration_multiplier = v
+		health_regeneration = v
 		stats_changed.emit()
 # 移动速度倍率
-@export var movement_speed_multiplier: float = 1.0:
+@export var movement_speed: float = 1.0:
 	set(v):
-		if movement_speed_multiplier == v:
+		if movement_speed == v:
 			return
-		movement_speed_multiplier = v
-		stats_changed.emit()
-# 总攻击力倍率
-@export var power_multiplier: float = 0:
-	set(v):
-		if power_multiplier == v:
-			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("power_physical","percent",v-critical_hit_rate)
-			weapon.modify_attribute("power_magic","percent",v-critical_hit_rate)
-		power_multiplier = v
+		movement_speed = v
 		stats_changed.emit()
 # 物理攻击力倍率
-@export var power_physical_multiplier: float = 0:
+@export var power_physical: float = 0:
 	set(v):
-		if power_physical_multiplier == v:
+		if power_physical == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("power_physical","percent",v-critical_hit_rate)
-		power_physical_multiplier = v
+		abc.set_player_attribute(abc.POWER_PHYSICAL,v-power_physical)
+		power_physical = v
 		stats_changed.emit()
 # 魔法攻击力倍率
-@export var power_magic_multiplier: float = 0:
+@export var power_magic: float = 0:
 	set(v):
-		if power_magic_multiplier == v:
+		if power_magic == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("power_magic","percent",v-critical_hit_rate)
-		power_magic_multiplier = v
+		abc.set_player_attribute(abc.POWER_MAGIC,v-power_magic)
+		power_magic = v
 		stats_changed.emit()
 # 攻击范围倍率
-@export var range_attack_multiplier: float = 0:
+@export var radius_search: float = 0:
 	set(v):
-		if range_attack_multiplier == v:
+		if radius_search == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("range_attack","percent",v-critical_hit_rate)
-		range_attack_multiplier = v
+		abc.set_player_attribute(abc.RANGE_ATTACK,v-radius_search)
+		radius_search = v
 		stats_changed.emit()
 # 攻击速度倍率
-@export var time_cooldown_multiplier: float = 0:
+@export var time_cooldown: float = 0:
 	set(v):
-		if time_cooldown_multiplier == v:
+		if time_cooldown == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("time_cooldown","percent",v-critical_hit_rate)
-		time_cooldown_multiplier = v
+		abc.set_player_attribute(abc.TIME_COOLDOWN,v-time_cooldown)
+		time_cooldown = v
 		stats_changed.emit()
 # 击退倍率
-@export var knockback_multiplier: float = 0:
+@export var knockback: float = 0:
 	set(v):
-		if knockback_multiplier == v:
+		if knockback == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("knockback","percent",v-critical_hit_rate)
-		knockback_multiplier = v
+		abc.set_player_attribute(abc.KNOCKBACK,v-knockback)
+		knockback = v
 		stats_changed.emit()
 # 武器飞行速度倍率
-@export var speed_fly_multiplier: float = 0:
+@export var speed_fly: float = 0:
 	set(v):
-		if speed_fly_multiplier == v:
+		if speed_fly == v:
 			return
-		for weapon in owner.weapons:
-			weapon.modify_attribute("speed_fly","percent",v-critical_hit_rate)
-		speed_fly_multiplier = v
+		abc.set_player_attribute(abc.SPEED_FLY,v-speed_fly)
+		speed_fly = v
 		stats_changed.emit()
 # 经验获取倍率
-@export var experience_gain_multiplier: float = 1.0:
+@export var experience_gain: float = 1.0:
 	set(v):
-		if experience_gain_multiplier == v:
+		if experience_gain == v:
 			return
-		experience_gain_multiplier = v
+		experience_gain = v
 		stats_changed.emit()
 
 
-@onready var health: float = base_max_health * max_health_multiplier:
+@onready var health: float = base_max_health * max_health:
 	set(v):
-		v = clampf(v, 0, base_max_health * max_health_multiplier)
+		v = clampf(v, 0, base_max_health * max_health)
 		if health == v:
 			return
 		health = v

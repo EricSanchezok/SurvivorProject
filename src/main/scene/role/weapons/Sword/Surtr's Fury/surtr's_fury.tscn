@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://75g8xonu6m5u"]
 
-[ext_resource type="PackedScene" uid="uid://bopq4yahq3nsm" path="res://src/main/component/weapon_base.tscn" id="1_b4s7a"]
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_b4s7a"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/surtr's_fury.gd" id="2_5r0vc"]
 [ext_resource type="Texture2D" uid="uid://l1a4kucapjpd" path="res://src/main/assets/packs/32X32/PixelArt_Swords/Fire/32/PixelArt_Swords_Fire_32_07.png" id="3_vmpv0"]
 [ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_cpb73"]
@@ -55,6 +55,8 @@ turbulence_influence_max = 0.15
 
 [node name="Surtr\'s Fury" instance=ExtResource("1_b4s7a")]
 script = ExtResource("2_5r0vc")
+origins = Array[int]([0])
+classes = Array[int]([0])
 search_radius = 150.0
 
 [node name="Sprite2D" parent="." index="0"]

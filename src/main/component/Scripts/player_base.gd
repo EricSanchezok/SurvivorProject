@@ -6,55 +6,25 @@ extends CharacterBody2D
 @onready var fire: Fire = $Fire
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var player_stats: PlayerStats = $PlayerStats
+@onready var abc: Attribute_Changed = $Attribute_Changed
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
-
+var weapon_manager 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 signal origins_number_changed(type, value)
 signal classes_number_changed(type, value)
 var weapons = []
-var origins_number = {
-	fire_number = 0,
-	frost_number = 0,
-	lighting_number = 0,
-	earth_number = 0,
-	poison_number = 0,
-	nature_number = 0,
-	holy_number = 0,
-	evil_number = 0,
-	psychic_number = 0,
-	tech_number = 0,
-}
+var origins_count: Array[int] 
+
 func update_origins_number(key,value):
-	origins_number[key+"_number"] = origins_number[key+"_number"]+value
-	update_origins_numbers(key)
-func update_origins_numbers(key):
-	origins_number_changed.emit(key,origins_number[key+"_number"])
-var classes_number = {
-	sword_number = 0,
-	shield_number = 0,
-	axe_number = 0,
-	spear_number = 0,
-	hammer_number = 0,
-	dagger_number = 0,
-	armor_number = 0,
-	ring_number = 0,
-	boomerang_number = 0,
-	bow_number = 0,
-	wand_number = 0,
-	laserwand_number =0,
-	scroll_number = 0,
-	gun_number = 0,
-	turret_number = 0,
-	bomb_number = 0,
-}
+	origins_count[key] +=  value
+	origins_number_changed.emit(key,origins_count[key])
+	
+var classes_count: Array[int] 
+
 func update_classes_number(key,value):
-	classes_number[key+"_number"] = classes_number[key+"_number"]+value
-	update_classes_numbers(key)
-func update_classes_numbers(key):
-	classes_number_changed.emit(key,classes_number[key+"_number"])
-
-
+	classes_count[key] +=  value
+	classes_number_changed.emit(key,classes_count[key])
 
 
 enum Direction {
@@ -82,6 +52,10 @@ var current_time: float = 0.0
 
 
 func _ready() -> void:
+	origins_count.resize(Attribute_Changed.Origins.size())
+	origins_count.fill(0)
+	classes_count.resize(Attribute_Changed.Classes.size())
+	classes_count.fill(0)
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
 	register_weapon.emit(self, default_weapon, 0)
@@ -95,7 +69,7 @@ func _ready() -> void:
 	#register_weapon.emit(self, default_weapon, 8)
 	#register_weapon.emit(self, default_weapon, 9)
 
-	var weapon_manager = get_node("/root/bg_map/WeaponsManager")
+
 	var index = weapon_manager.player_index(self)
 	weapons = weapon_manager.players_weapon["Player"+str(index)+"_weapon"]
 	

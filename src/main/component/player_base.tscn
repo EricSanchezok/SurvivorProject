@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://doj0nvhytxean"]
+[gd_scene load_steps=8 format=3 uid="uid://doj0nvhytxean"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/player_base.gd" id="1_c0py7"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="2_1gfhr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="4_d0en6"]
 [ext_resource type="Texture2D" uid="uid://32wdbpxyk7ln" path="res://icon.svg" id="4_dnj7v"]
 [ext_resource type="Script" path="res://src/main/common/classes/trait/fire.gd" id="6_u65hr"]
+[ext_resource type="Script" path="res://src/main/common/classes/attribute_changed.gd" id="7_dpwgu"]
 
 [node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
@@ -109,3 +110,6 @@ script = ExtResource("4_d0en6")
 
 [node name="Fire" type="Node" parent="."]
 script = ExtResource("6_u65hr")
+
+[node name="Attribute_Changed" type="Node" parent="."]
+script = ExtResource("7_dpwgu")

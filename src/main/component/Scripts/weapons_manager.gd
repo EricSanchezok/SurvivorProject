@@ -12,13 +12,13 @@ var players_weapon = {
 	Player4_weapon =[],
 }
 
-var weapon_origins = []
-var weapon_classes = []
+
 
 func _ready():
 	players = get_tree().get_nodes_in_group("player")
 	for player in players:
 		player.connect("register_weapon", _on_player_register_weapon)
+		player.weapon_manager = self
 		
 func player_index(player: CharacterBody2D) -> int:
 	var index = players.find(player) + 1
@@ -49,14 +49,14 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, slo
 	var player_slot = get_node(playerindex)
 	player_slot.add_child(instance)
 	players_weapon[playerindex+"_weapon"].append(instance)
-	weapon_origins = instance.origins
-	weapon_classes = instance.classes
+
 	if players_weapon[playerindex+"_weapon"].find(instance) != -1:
-		for origins in weapon_origins:
-			player.update_origins_number(origins,1)
-		for classes in weapon_classes:
-			player.update_classes_number(classes,1)
-	
+		for _origin in instance.origins:
+			player.update_origins_number(_origin,3)
+		for _class in instance.classes:
+			player.update_classes_number(_class,1)
+			
+
 
 
 
