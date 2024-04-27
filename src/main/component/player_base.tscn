@@ -11,7 +11,6 @@
 [node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 y_sort_enabled = true
-scale = Vector2(1.2, 1.2)
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_c0py7")
@@ -111,8 +110,10 @@ texture = ExtResource("4_dnj7v")
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource("4_d0en6")
 
-[node name="Fire" type="Node" parent="."]
-script = ExtResource("6_u65hr")
-
 [node name="Attribute_Changed" type="Node" parent="."]
 script = ExtResource("7_dpwgu")
+
+[node name="Traits" type="Node" parent="."]
+
+[node name="Fire" type="Node" parent="Traits"]
+script = ExtResource("6_u65hr")

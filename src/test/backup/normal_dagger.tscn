@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://ruv4nbp6d2qk"]
+
+[ext_resource type="PackedScene" uid="uid://62dwxd2wveso" path="res://src/test/base_weapons/dagger.tscn" id="1_qee4p"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Dagger/normal_dagger.gd" id="2_4ga7m"]
+[ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/32X32/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_m2obj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjhbo"]
+atlas = ExtResource("3_m2obj")
+region = Rect2(35, 17, 10, 28)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24akh"]
+radius = 5.0
+height = 28.0
+
+[node name="NormalDagger" instance=ExtResource("1_qee4p")]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("2_4ga7m")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = 1.5708
+texture = SubResource("AtlasTexture_qjhbo")
+
+[node name="HitBox" parent="Graphics" index="1"]
+rotation = 1.5708
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CapsuleShape2D_24akh")

@@ -35,6 +35,7 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
+	
 	match state:
 		State.APPEAR, State.DIE:
 			pass
@@ -86,7 +87,7 @@ func transition_state(from: State, to: State) -> void:
 			animation_player.play("die")
 		
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-func get_random_target() -> Player:
+func get_random_target() -> PlayerBase:
 	'''
 		获取随机玩家对象
 	

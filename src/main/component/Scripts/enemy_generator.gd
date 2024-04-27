@@ -11,7 +11,6 @@ func _on_timer_timeout() -> void:
 		enemy_instance.position = get_random_position()
 		get_tree().root.add_child(enemy_instance)
 		enemies_to_be_spawned[enemy] -= 1
-		#print(enemies_to_be_spawned[enemy])
 		if enemies_to_be_spawned[enemy] == 0:
 			enemies_to_be_spawned.erase(enemy)
 

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://h1dtskxkakn7"]
+
+[ext_resource type="PackedScene" uid="uid://cqd8dqmnefqj" path="res://src/test/base_weapons/bullet.tscn" id="1_avmvr"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Bullet/normal_spellblast.gd" id="2_anpnt"]
+[ext_resource type="Texture2D" uid="uid://djkqejdvpsl4w" path="res://src/main/assets/texture/vfx/Free Smoke Fx Pixel 2/Free Smoke Fx  Pixel 06.png" id="3_h0n43"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq6mn"]
+atlas = ExtResource("3_h0n43")
+region = Rect2(211, 19, 26, 26)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g0vxs"]
+radius = 13.3417
+
+[node name="normal_spellblast" instance=ExtResource("1_avmvr")]
+script = ExtResource("2_anpnt")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+texture = SubResource("AtlasTexture_jq6mn")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CircleShape2D_g0vxs")

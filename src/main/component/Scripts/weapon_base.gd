@@ -10,41 +10,41 @@ var abc : Attribute_Changed
 @export var classes: Array[Attribute_Changed.Classes]
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@export var base_power_physical: float = 4.0  #物理攻击力
-@export var base_power_magic: float = 2.0   #魔法攻击力
-@export var base_time_cooldown: float = 1  #攻击冷却
-@export var base_radius_search: float = 150.0 #攻击范围
-@export var base_range_explosion: = 50   #爆炸范围
-@export var base_knockback: float = 30.0    #击退效果
-@export var base_critical_hit_rate: float = 0.0  #暴击率
-@export var base_critical_damage: float = 0.0    #暴击伤害
-@export var base_number_of_projectiles: int = 1   #发射物数量
-@export var base_magazine: = 0  #弹匣
-@export var base_speed_fly: float = 200.0   #武器飞行速度
-@export var base_speed_rotation: float = 15.0   #旋转速度
-@export var base_penetration_rate: float = 0  #穿透率
+@export var base_power_physical: float = 4.0 					#物理攻击力
+@export var base_power_magic: float = 2.0   					#魔法攻击力
+@export var base_time_cooldown: float = 1  						#攻击冷却
+@export var base_radius_search: float = 150.0 					#攻击范围
+@export var base_range_explosion: = 50   						#爆炸范围
+@export var base_knockback: float = 30.0    					#击退效果
+@export var base_critical_hit_rate: float = 0.0 	 			#暴击率
+@export var base_critical_damage: float = 0.0    				#暴击伤害
+@export var base_number_of_projectiles: int = 1   				#发射物数量
+@export var base_magazine: = 0  								#弹匣
+@export var base_speed_fly: float = 200.0   					#武器飞行速度
+@export var base_speed_rotation: float = 15.0   				#旋转速度
+@export var base_penetration_rate: float = 0  					#穿透率
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-var power_physical: float = base_power_physical #物理攻击力
-var power_magic: float = base_power_magic #魔法攻击力
-var damage: float = power_physical + power_magic #总攻击力
-var time_cooldown: float = base_time_cooldown:   #攻击冷却
+var power_physical: float = base_power_physical 				#物理攻击力
+var power_magic: float = base_power_magic 						#魔法攻击力
+var damage: float = power_physical + power_magic 				#总攻击力
+var time_cooldown: float = base_time_cooldown:   				#攻击冷却
 	set(v):
 		time_cooldown = v
 		$TimerCoolDown.wait_time = time_cooldown
-var radius_search: float = base_radius_search:   #攻击范围
+var radius_search: float = base_radius_search:   				#攻击范围
 	set(v):
 		radius_search = v
 		$SearchBox/CollisionShape2D.shape.radius = radius_search
-var range_explosion: float = base_range_explosion  #爆炸范围
-var knockback: float = base_knockback  #击退效果
-var critical_hit_rate: float = base_critical_hit_rate #暴击率
-var critical_damage: float = base_critical_damage #暴击伤害
-var number_of_projectiles: int = base_number_of_projectiles #发射物数量
-var speed_fly: float = base_speed_fly  #武器飞行速度
-var speed_rotation: float = base_speed_rotation  #旋转速度
-var penetration_rate: float = base_penetration_rate  #穿透率
-var magazine: float  = base_magazine  #弹匣
+var range_explosion: float = base_range_explosion  				#爆炸范围
+var knockback: float = base_knockback  							#击退效果
+var critical_hit_rate: float = base_critical_hit_rate 			#暴击率
+var critical_damage: float = base_critical_damage 				#暴击伤害
+var number_of_projectiles: int = base_number_of_projectiles 	#发射物数量
+var speed_fly: float = base_speed_fly  							#武器飞行速度
+var speed_rotation: float = base_speed_rotation  				#旋转速度
+var penetration_rate: float = base_penetration_rate  			#穿透率
+var magazine: float  = base_magazine  							#弹匣
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
