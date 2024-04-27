@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdt3oem5oqw3b"
+path="res://.godot/imported/monster_swamp_mix_01.ogg-cc0ba5456c7d4762dcd4cbf026f6a706.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_swamp_mix_01.ogg"
+dest_files=["res://.godot/imported/monster_swamp_mix_01.ogg-cc0ba5456c7d4762dcd4cbf026f6a706.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

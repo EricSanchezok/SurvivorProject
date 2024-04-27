@@ -1,2 +1,11 @@
 # Godot 4+ specific ignores
 .godot/
+
+# Vscode history
+.history/
+
+# Visual Studio Code directory
+.vscode/
+
+# Music Pack
+src/main/assets/sound/Music/*

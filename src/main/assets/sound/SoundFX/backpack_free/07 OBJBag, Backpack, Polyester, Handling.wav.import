@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2b687ysbvpw"
+path="res://.godot/imported/07 OBJBag, Backpack, Polyester, Handling.wav-15244f76afc1ace0d0fe1254850f67aa.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/backpack_free/07 OBJBag, Backpack, Polyester, Handling.wav"
+dest_files=["res://.godot/imported/07 OBJBag, Backpack, Polyester, Handling.wav-15244f76afc1ace0d0fe1254850f67aa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

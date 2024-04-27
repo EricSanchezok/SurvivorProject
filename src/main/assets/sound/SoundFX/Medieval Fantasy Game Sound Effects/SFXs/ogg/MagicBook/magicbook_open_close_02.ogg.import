@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://r6qj5bpvm8bp"
+path="res://.godot/imported/magicbook_open_close_02.ogg-45d5351f191bec1928dac117bc62d855.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicBook/magicbook_open_close_02.ogg"
+dest_files=["res://.godot/imported/magicbook_open_close_02.ogg-45d5351f191bec1928dac117bc62d855.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

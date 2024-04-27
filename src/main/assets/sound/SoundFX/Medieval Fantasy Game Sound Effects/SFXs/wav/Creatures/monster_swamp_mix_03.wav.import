@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvsj4l7u0yl4r"
+path="res://.godot/imported/monster_swamp_mix_03.wav-5da2d4ed4bf25c6e9fb9cb2faa3b7ca5.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_swamp_mix_03.wav"
+dest_files=["res://.godot/imported/monster_swamp_mix_03.wav-5da2d4ed4bf25c6e9fb9cb2faa3b7ca5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

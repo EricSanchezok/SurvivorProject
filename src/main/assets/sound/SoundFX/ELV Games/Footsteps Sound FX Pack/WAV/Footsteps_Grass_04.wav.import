@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddqmqqusld0dh"
+path="res://.godot/imported/Footsteps_Grass_04.wav-c33a565eb9adb1abaea97de49186469c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/WAV/Footsteps_Grass_04.wav"
+dest_files=["res://.godot/imported/Footsteps_Grass_04.wav-c33a565eb9adb1abaea97de49186469c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

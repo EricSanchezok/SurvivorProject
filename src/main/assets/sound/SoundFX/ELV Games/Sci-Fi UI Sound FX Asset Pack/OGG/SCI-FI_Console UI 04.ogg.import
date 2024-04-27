@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qx811xaw21u0"
+path="res://.godot/imported/SCI-FI_Console UI 04.ogg-c3c89eef852d986fdfa35daedee7dae2.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_Console UI 04.ogg"
+dest_files=["res://.godot/imported/SCI-FI_Console UI 04.ogg-c3c89eef852d986fdfa35daedee7dae2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

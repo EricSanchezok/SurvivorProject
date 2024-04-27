@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d015j8dq1rb6q"
+path="res://.godot/imported/blade_sheath_sharpening_08.wav-c9d593449b3e482be7e90577e61bc73c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_sheath_sharpening_08.wav"
+dest_files=["res://.godot/imported/blade_sheath_sharpening_08.wav-c9d593449b3e482be7e90577e61bc73c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2pry470lajlo"
+path="res://.godot/imported/chains_01.ogg-ecb9947630c74d28d882ed726fd91aed.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/chains_01.ogg"
+dest_files=["res://.godot/imported/chains_01.ogg-ecb9947630c74d28d882ed726fd91aed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

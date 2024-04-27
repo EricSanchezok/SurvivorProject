@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3v6vesvpxcvc"
+path="res://.godot/imported/door_wood_close_01.ogg-8e95d3d8bbd93b96890bfc20bbf1ed1a.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/door_wood_close_01.ogg"
+dest_files=["res://.godot/imported/door_wood_close_01.ogg-8e95d3d8bbd93b96890bfc20bbf1ed1a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

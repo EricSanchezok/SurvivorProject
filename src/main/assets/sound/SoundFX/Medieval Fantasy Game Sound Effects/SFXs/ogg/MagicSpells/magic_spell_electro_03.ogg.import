@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dek03u531iggm"
+path="res://.godot/imported/magic_spell_electro_03.ogg-54814b030376b32f7ce538485936ec25.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_electro_03.ogg"
+dest_files=["res://.godot/imported/magic_spell_electro_03.ogg-54814b030376b32f7ce538485936ec25.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

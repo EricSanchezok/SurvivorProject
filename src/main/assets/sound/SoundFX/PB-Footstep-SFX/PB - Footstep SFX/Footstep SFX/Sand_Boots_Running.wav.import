@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvp21pudi0pxe"
+path="res://.godot/imported/Sand_Boots_Running.wav-3691a52d5c572aeea059e4dc2e483d3d.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Sand_Boots_Running.wav"
+dest_files=["res://.godot/imported/Sand_Boots_Running.wav-3691a52d5c572aeea059e4dc2e483d3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

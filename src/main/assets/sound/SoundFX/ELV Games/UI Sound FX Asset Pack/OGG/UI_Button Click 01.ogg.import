@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fic8ecu8kjgu"
+path="res://.godot/imported/UI_Button Click 01.ogg-acfa686aaca15e967dfc1d134a53d2e9.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/OGG/UI_Button Click 01.ogg"
+dest_files=["res://.godot/imported/UI_Button Click 01.ogg-acfa686aaca15e967dfc1d134a53d2e9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

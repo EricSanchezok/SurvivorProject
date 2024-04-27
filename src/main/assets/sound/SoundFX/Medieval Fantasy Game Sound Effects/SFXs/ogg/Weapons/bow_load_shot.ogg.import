@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1rxqekvb64a4"
+path="res://.godot/imported/bow_load_shot.ogg-f7e9716afb805976df22ebb271e4372f.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/bow_load_shot.ogg"
+dest_files=["res://.godot/imported/bow_load_shot.ogg-f7e9716afb805976df22ebb271e4372f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

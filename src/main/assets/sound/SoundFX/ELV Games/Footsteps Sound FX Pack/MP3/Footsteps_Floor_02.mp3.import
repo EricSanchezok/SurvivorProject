@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdade0ixcmfy2"
+path="res://.godot/imported/Footsteps_Floor_02.mp3-7b91da53212b99a49ce4e128c0e0cbd8.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/MP3/Footsteps_Floor_02.mp3"
+dest_files=["res://.godot/imported/Footsteps_Floor_02.mp3-7b91da53212b99a49ce4e128c0e0cbd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

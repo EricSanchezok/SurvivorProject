@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnren3bo0x8i8"
+path="res://.godot/imported/UI_Swish 01.mp3-401482f16d07cbb7c9aa0b3693c24f75.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/MP3/UI_Swish 01.mp3"
+dest_files=["res://.godot/imported/UI_Swish 01.mp3-401482f16d07cbb7c9aa0b3693c24f75.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

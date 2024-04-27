@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpp7yq5ne63rv"
+path="res://.godot/imported/TRAPS_Arrows 02.mp3-3ed447ff7ed58f59319b7d435be17d89.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/TRAPS_Arrows 02.mp3"
+dest_files=["res://.godot/imported/TRAPS_Arrows 02.mp3-3ed447ff7ed58f59319b7d435be17d89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

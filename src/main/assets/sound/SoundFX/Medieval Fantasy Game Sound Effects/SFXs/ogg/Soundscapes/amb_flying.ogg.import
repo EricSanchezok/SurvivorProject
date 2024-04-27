@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6anv08qj5w8y"
+path="res://.godot/imported/amb_flying.ogg-23fc10f6114c10ef9206cf7d38692ede.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Soundscapes/amb_flying.ogg"
+dest_files=["res://.godot/imported/amb_flying.ogg-23fc10f6114c10ef9206cf7d38692ede.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://camh20ufi2ua4"
+path="res://.godot/imported/lock_04.wav-ad160ec34bc292f12c47e2d8c1822738.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/lock_04.wav"
+dest_files=["res://.godot/imported/lock_04.wav-ad160ec34bc292f12c47e2d8c1822738.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

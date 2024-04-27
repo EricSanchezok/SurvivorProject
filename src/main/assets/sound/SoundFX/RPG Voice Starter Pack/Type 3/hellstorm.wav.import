@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bi6nyu1uvcvd8"
+path="res://.godot/imported/hellstorm.wav-13a0b35e7147af481e294d7429ade7de.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 3/hellstorm.wav"
+dest_files=["res://.godot/imported/hellstorm.wav-13a0b35e7147af481e294d7429ade7de.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cffk5ebnkdxwr"
+path="res://.godot/imported/magicbook_page_flip_02.ogg-4a0ca700040eb2f4daaaab59a5531156.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicBook/magicbook_page_flip_02.ogg"
+dest_files=["res://.godot/imported/magicbook_page_flip_02.ogg-4a0ca700040eb2f4daaaab59a5531156.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

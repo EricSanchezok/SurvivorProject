@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1bjcj1g4kpc8"
+path="res://.godot/imported/WOOD_Breaking 02.ogg-df411ca31b34af77293e2cbd473eb535.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/WOOD_Breaking 02.ogg"
+dest_files=["res://.godot/imported/WOOD_Breaking 02.ogg-df411ca31b34af77293e2cbd473eb535.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

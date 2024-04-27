@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://csp0iu8rgigmb"
+path="res://.godot/imported/magic_spell_earth_06.ogg-198d6b9ad3b126d22a4e3e62d30912ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_earth_06.ogg"
+dest_files=["res://.godot/imported/magic_spell_earth_06.ogg-198d6b9ad3b126d22a4e3e62d30912ba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

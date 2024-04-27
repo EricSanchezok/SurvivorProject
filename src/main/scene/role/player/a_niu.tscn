@@ -1,8 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bu4qkguaw7xus"]
+[gd_scene load_steps=14 format=3 uid="uid://bu4qkguaw7xus"]
 
 [ext_resource type="PackedScene" uid="uid://doj0nvhytxean" path="res://src/main/component/player_base.tscn" id="1_3mhwp"]
 [ext_resource type="Script" path="res://src/main/scene/role/player/Scripts/a_niu.gd" id="2_abvsp"]
 [ext_resource type="Texture2D" uid="uid://kra0nkvoulr2" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Characters/32x32/Hero_30.png" id="2_amth6"]
+[ext_resource type="Shader" path="res://src/main/assets/shader/outline.gdshader" id="3_lqto2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jmfcc"]
+shader = ExtResource("3_lqto2")
+shader_parameter/line_color = Color(1, 0.738334, 0.813599, 0.466667)
+shader_parameter/line_width = 0.6
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e0ej0"]
 radius = 7.0
@@ -202,8 +208,10 @@ _data = {
 script = ExtResource("2_abvsp")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
-position = Vector2(0, -8)
+material = SubResource("ShaderMaterial_jmfcc")
+position = Vector2(0, 8)
 texture = ExtResource("2_amth6")
+offset = Vector2(0, -16)
 hframes = 6
 region_enabled = true
 region_rect = Rect2(0, 0, 192, 32)

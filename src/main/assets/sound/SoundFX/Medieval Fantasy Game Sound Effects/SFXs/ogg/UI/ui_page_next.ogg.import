@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cahci70mj0612"
+path="res://.godot/imported/ui_page_next.ogg-92566dac8a07f722d4a49f0b9ea92a30.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_page_next.ogg"
+dest_files=["res://.godot/imported/ui_page_next.ogg-92566dac8a07f722d4a49f0b9ea92a30.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

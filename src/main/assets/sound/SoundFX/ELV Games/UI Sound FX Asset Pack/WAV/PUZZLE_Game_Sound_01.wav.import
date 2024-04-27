@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtpk6d3cnlb6r"
+path="res://.godot/imported/PUZZLE_Game_Sound_01.wav-eb224806a4d8b4f0421bf5837afc466d.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/PUZZLE_Game_Sound_01.wav"
+dest_files=["res://.godot/imported/PUZZLE_Game_Sound_01.wav-eb224806a4d8b4f0421bf5837afc466d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

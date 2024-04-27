@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rl254lxrpy2o"
+path="res://.godot/imported/MONSTER_Beast 01.mp3-c9403e4dee66b442e053e6091641732c.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/MONSTER_Beast 01.mp3"
+dest_files=["res://.godot/imported/MONSTER_Beast 01.mp3-c9403e4dee66b442e053e6091641732c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

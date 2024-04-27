@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbpgqgoy08coq"
+path="res://.godot/imported/ui_confirm_levelup_05.ogg-39ae11723d6e5b6e685d0ed74e379f47.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/UI/ui_confirm_levelup_05.ogg"
+dest_files=["res://.godot/imported/ui_confirm_levelup_05.ogg-39ae11723d6e5b6e685d0ed74e379f47.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

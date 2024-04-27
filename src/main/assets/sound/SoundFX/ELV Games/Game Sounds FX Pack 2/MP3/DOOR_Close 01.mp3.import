@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3h5jvmjqq605"
+path="res://.godot/imported/DOOR_Close 01.mp3-0ec958d51580cfe9c569a6101e26eda0.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/MP3/DOOR_Close 01.mp3"
+dest_files=["res://.godot/imported/DOOR_Close 01.mp3-0ec958d51580cfe9c569a6101e26eda0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

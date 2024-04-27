@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7c4r60so8j8x"
+path="res://.godot/imported/crossbow_shot.ogg-d1de9c06341e04c3f33276468cbecbab.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/crossbow_shot.ogg"
+dest_files=["res://.godot/imported/crossbow_shot.ogg-d1de9c06341e04c3f33276468cbecbab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://src/main/common/classes/spawn_shape_2d.gd" id="4_x4s3l"]
 [ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/component/weapons_manager.tscn" id="5_k0m37"]
 [ext_resource type="PackedScene" uid="uid://dhs3biji6ooth" path="res://src/main/component/turret_generator.tscn" id="6_1rhmu"]
-[ext_resource type="AudioStream" uid="uid://f284c0p7bk8a" path="res://src/main/assets/sound/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 3 - Fortified (Loopable).mp3" id="6_bbfy8"]
+[ext_resource type="AudioStream" uid="uid://f284c0p7bk8a" path="res://src/main/assets/sound/Music/Epic Medieval Music Pack/Epic Medieval Music Pack I/OST 3 - Fortified (Loopable).mp3" id="6_bbfy8"]
 [ext_resource type="PackedScene" uid="uid://btxc5hfxx24vb" path="res://src/main/component/enemy_generator.tscn" id="8_l45hi"]
 [ext_resource type="PackedScene" uid="uid://bu4qkguaw7xus" path="res://src/main/scene/role/player/a_niu.tscn" id="9_c2o64"]
 
@@ -157,7 +157,10 @@ one_shot = true
 autostart = true
 
 [node name="ANiu" parent="." instance=ExtResource("9_c2o64")]
+z_index = 0
+y_sort_enabled = false
 position = Vector2(550, -421)
+scale = Vector2(1, 1)
 collision_mask = 3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

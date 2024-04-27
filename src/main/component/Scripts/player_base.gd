@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var default_weapon: String = "surtr's_fury"
 
+@onready var camera_2d: Camera2D = $Camera2D
 @onready var fire: Fire = $Fire
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var player_stats: PlayerStats = $PlayerStats

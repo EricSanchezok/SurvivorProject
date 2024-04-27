@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0tgn4incloeg"
+path="res://.godot/imported/monster_small_A_voice_03.ogg-74391de3418557e64e972ed1f35f6201.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_small_A_voice_03.ogg"
+dest_files=["res://.godot/imported/monster_small_A_voice_03.ogg-74391de3418557e64e972ed1f35f6201.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

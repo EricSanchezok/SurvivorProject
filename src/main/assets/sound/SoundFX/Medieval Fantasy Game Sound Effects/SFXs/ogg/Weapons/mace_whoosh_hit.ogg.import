@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://imhcncji8vr"
+path="res://.godot/imported/mace_whoosh_hit.ogg-dd34facc975c0fb0332ed4af6ae25e2f.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/mace_whoosh_hit.ogg"
+dest_files=["res://.godot/imported/mace_whoosh_hit.ogg-dd34facc975c0fb0332ed4af6ae25e2f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

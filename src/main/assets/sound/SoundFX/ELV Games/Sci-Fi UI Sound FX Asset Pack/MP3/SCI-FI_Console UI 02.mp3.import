@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgaw8kc7hkd8w"
+path="res://.godot/imported/SCI-FI_Console UI 02.mp3-2ae31331026cebc14d82442776be046e.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Console UI 02.mp3"
+dest_files=["res://.godot/imported/SCI-FI_Console UI 02.mp3-2ae31331026cebc14d82442776be046e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

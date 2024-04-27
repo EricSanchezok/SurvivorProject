@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ulo4eyg3n7ci"
+path="res://.godot/imported/DAMAGE 02.ogg-4ce8c51572025c8d7e8b5e1c805b1255.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/OGG/DAMAGE 02.ogg"
+dest_files=["res://.godot/imported/DAMAGE 02.ogg-4ce8c51572025c8d7e8b5e1c805b1255.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

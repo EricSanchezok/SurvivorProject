@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b42k838r86nkx"
+path="res://.godot/imported/attack1.wav-be665724bd8fa799bb34a3f6299b4bd9.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/RPG Voice Starter Pack/Type 2/attack1.wav"
+dest_files=["res://.godot/imported/attack1.wav-be665724bd8fa799bb34a3f6299b4bd9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

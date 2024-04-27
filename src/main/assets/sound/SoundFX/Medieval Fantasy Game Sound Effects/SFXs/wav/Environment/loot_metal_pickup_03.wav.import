@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dndsd8ro1tje3"
+path="res://.godot/imported/loot_metal_pickup_03.wav-4217944e55b0b7f071e38082df3a7f03.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/loot_metal_pickup_03.wav"
+dest_files=["res://.godot/imported/loot_metal_pickup_03.wav-4217944e55b0b7f071e38082df3a7f03.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

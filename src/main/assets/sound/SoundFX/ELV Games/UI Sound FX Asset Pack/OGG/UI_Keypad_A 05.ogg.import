@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ce3dwb5tppijv"
+path="res://.godot/imported/UI_Keypad_A 05.ogg-15c8f45ce57c9062c5ac16e88b3161f1.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/OGG/UI_Keypad_A 05.ogg"
+dest_files=["res://.godot/imported/UI_Keypad_A 05.ogg-15c8f45ce57c9062c5ac16e88b3161f1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

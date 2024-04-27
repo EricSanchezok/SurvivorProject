@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ykfy5b3jthsn"
+path="res://.godot/imported/bonfire_loop_02.wav-99f8b87f5b190c5fc1e5bf71a5915ab0.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/bonfire_loop_02.wav"
+dest_files=["res://.godot/imported/bonfire_loop_02.wav-99f8b87f5b190c5fc1e5bf71a5915ab0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

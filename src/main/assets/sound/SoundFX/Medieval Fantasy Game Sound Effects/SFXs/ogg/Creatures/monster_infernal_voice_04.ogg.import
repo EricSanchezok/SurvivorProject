@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://co873dldtcm54"
+path="res://.godot/imported/monster_infernal_voice_04.ogg-d98ed15ec10f92daf59bf65a0a55c16d.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_infernal_voice_04.ogg"
+dest_files=["res://.godot/imported/monster_infernal_voice_04.ogg-d98ed15ec10f92daf59bf65a0a55c16d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

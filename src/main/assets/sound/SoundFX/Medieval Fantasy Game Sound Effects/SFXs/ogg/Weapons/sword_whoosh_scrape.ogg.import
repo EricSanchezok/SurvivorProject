@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dskftgb0of62l"
+path="res://.godot/imported/sword_whoosh_scrape.ogg-11d574fce0ea7f84bc00e5093dd05473.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/sword_whoosh_scrape.ogg"
+dest_files=["res://.godot/imported/sword_whoosh_scrape.ogg-11d574fce0ea7f84bc00e5093dd05473.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

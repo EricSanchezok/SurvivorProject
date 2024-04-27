@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dii88bxvjoclq"
+path="res://.godot/imported/SCI-FI_CPU 04.ogg-f9b0e78d5e38cf574d4707766ae08493.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/OGG/SCI-FI_CPU 04.ogg"
+dest_files=["res://.godot/imported/SCI-FI_CPU 04.ogg-f9b0e78d5e38cf574d4707766ae08493.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

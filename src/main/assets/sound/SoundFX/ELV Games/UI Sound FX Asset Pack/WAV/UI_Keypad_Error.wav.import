@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://khpv2xvge73f"
+path="res://.godot/imported/UI_Keypad_Error.wav-f7abe073638b957e8a5eb2195d8d770e.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Keypad_Error.wav"
+dest_files=["res://.godot/imported/UI_Keypad_Error.wav-f7abe073638b957e8a5eb2195d8d770e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

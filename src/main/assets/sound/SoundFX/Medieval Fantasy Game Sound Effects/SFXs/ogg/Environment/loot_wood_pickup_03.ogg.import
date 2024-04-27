@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ba45ei2p72qnn"
+path="res://.godot/imported/loot_wood_pickup_03.ogg-2ea1d469144a737a2241e1bc31eaa366.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/loot_wood_pickup_03.ogg"
+dest_files=["res://.godot/imported/loot_wood_pickup_03.ogg-2ea1d469144a737a2241e1bc31eaa366.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

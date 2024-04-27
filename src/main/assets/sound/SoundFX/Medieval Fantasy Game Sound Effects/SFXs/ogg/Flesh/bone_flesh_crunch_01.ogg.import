@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfh2rb2ttuqte"
+path="res://.godot/imported/bone_flesh_crunch_01.ogg-70d47dd8626d3b1a46687f4f1ca4a06f.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Flesh/bone_flesh_crunch_01.ogg"
+dest_files=["res://.godot/imported/bone_flesh_crunch_01.ogg-70d47dd8626d3b1a46687f4f1ca4a06f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dx73s8o1jiejy"
+path="res://.godot/imported/26 OBJZipr, Backpack, Zipper.wav-b42790ff99faba4be6ff824b7c063fdd.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/backpack_free/26 OBJZipr, Backpack, Zipper.wav"
+dest_files=["res://.godot/imported/26 OBJZipr, Backpack, Zipper.wav-b42790ff99faba4be6ff824b7c063fdd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

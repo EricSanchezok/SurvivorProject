@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dciip0w7lu18p"
+path="res://.godot/imported/axe_throw.wav-46dbcf9ba7473bc05402162ef7a6c210.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/axe_throw.wav"
+dest_files=["res://.godot/imported/axe_throw.wav-46dbcf9ba7473bc05402162ef7a6c210.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

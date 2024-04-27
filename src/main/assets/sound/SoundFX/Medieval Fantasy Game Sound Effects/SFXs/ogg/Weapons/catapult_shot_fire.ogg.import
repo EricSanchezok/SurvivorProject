@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhc0xund5uvk8"
+path="res://.godot/imported/catapult_shot_fire.ogg-98143a1c95c7bcf86a786a69aa0f93be.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Weapons/catapult_shot_fire.ogg"
+dest_files=["res://.godot/imported/catapult_shot_fire.ogg-98143a1c95c7bcf86a786a69aa0f93be.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

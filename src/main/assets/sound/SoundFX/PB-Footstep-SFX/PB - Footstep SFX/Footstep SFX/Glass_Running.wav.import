@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmpdpy0s1wkvd"
+path="res://.godot/imported/Glass_Running.wav-1f38ab5ecaf2a6c036673f06bcfd1bc5.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Glass_Running.wav"
+dest_files=["res://.godot/imported/Glass_Running.wav-1f38ab5ecaf2a6c036673f06bcfd1bc5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

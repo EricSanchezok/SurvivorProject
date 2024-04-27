@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bb1hwui2yhy2e"
+path="res://.godot/imported/Footsteps_Floor_03.ogg-87889ea09e471be168fe7c7c0dd48279.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Floor_03.ogg"
+dest_files=["res://.godot/imported/Footsteps_Floor_03.ogg-87889ea09e471be168fe7c7c0dd48279.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

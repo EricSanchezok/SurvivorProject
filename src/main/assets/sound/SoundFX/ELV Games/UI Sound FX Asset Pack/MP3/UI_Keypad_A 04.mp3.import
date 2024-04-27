@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnvcwh7nbnmu8"
+path="res://.godot/imported/UI_Keypad_A 04.mp3-1261af2009cd280999e1bf0a4d7f4259.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/MP3/UI_Keypad_A 04.mp3"
+dest_files=["res://.godot/imported/UI_Keypad_A 04.mp3-1261af2009cd280999e1bf0a4d7f4259.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnkgbi3l7hfgn"
+path="res://.godot/imported/trap_activate_08.wav-9d3b16b086aa4f42b4a673801939c6c3.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/trap_activate_08.wav"
+dest_files=["res://.godot/imported/trap_activate_08.wav-9d3b16b086aa4f42b4a673801939c6c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

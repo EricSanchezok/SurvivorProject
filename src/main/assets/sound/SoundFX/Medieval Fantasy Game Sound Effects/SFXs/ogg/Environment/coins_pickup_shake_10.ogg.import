@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2q7oosqbn7rt"
+path="res://.godot/imported/coins_pickup_shake_10.ogg-7d9080fcd86cd6716f662b76f2eb07fa.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/coins_pickup_shake_10.ogg"
+dest_files=["res://.godot/imported/coins_pickup_shake_10.ogg-7d9080fcd86cd6716f662b76f2eb07fa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

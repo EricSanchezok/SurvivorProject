@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1f3ey8w3dir0"
+path="res://.godot/imported/blade_light_hit_03.wav-d0f3b3cf10a60546b887f8ff5fd6166a.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Weapons/blade_light_hit_03.wav"
+dest_files=["res://.godot/imported/blade_light_hit_03.wav-d0f3b3cf10a60546b887f8ff5fd6166a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

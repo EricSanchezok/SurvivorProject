@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dafv7vgxensql"
+path="res://.godot/imported/MOVEMENT_Fall 02.ogg-89a32882247d9b9dea9d63a77a81191b.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/MOVEMENT_Fall 02.ogg"
+dest_files=["res://.godot/imported/MOVEMENT_Fall 02.ogg-89a32882247d9b9dea9d63a77a81191b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

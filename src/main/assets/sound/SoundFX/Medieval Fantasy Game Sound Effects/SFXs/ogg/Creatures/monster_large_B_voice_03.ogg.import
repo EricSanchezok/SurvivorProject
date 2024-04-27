@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bodfav5if3ewq"
+path="res://.godot/imported/monster_large_B_voice_03.ogg-d873a0c0ff3e0f4876b462d3924ab871.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Creatures/monster_large_B_voice_03.ogg"
+dest_files=["res://.godot/imported/monster_large_B_voice_03.ogg-d873a0c0ff3e0f4876b462d3924ab871.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

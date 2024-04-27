@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsavb1m2byvd2"
+path="res://.godot/imported/UI_Button Disable.mp3-17971eb10487130a0ac41bac11ead287.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/MP3/UI_Button Disable.mp3"
+dest_files=["res://.godot/imported/UI_Button Disable.mp3-17971eb10487130a0ac41bac11ead287.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

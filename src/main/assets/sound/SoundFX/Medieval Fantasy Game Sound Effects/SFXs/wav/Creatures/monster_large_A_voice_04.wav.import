@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ch7uht3lut3d5"
+path="res://.godot/imported/monster_large_A_voice_04.wav-9c790f5bcb80877304e61a525166a494.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Creatures/monster_large_A_voice_04.wav"
+dest_files=["res://.godot/imported/monster_large_A_voice_04.wav-9c790f5bcb80877304e61a525166a494.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

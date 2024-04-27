@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7f4lb3r3v60h"
+path="res://.godot/imported/lock_03.ogg-75037711b057ac0e747b5fa5762c0a5e.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/Environment/lock_03.ogg"
+dest_files=["res://.godot/imported/lock_03.ogg-75037711b057ac0e747b5fa5762c0a5e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

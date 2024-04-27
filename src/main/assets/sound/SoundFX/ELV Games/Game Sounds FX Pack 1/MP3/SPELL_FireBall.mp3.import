@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8tl5d3h4apqh"
+path="res://.godot/imported/SPELL_FireBall.mp3-bd04934c523d1fef9234c424c2b2d3da.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 1/MP3/SPELL_FireBall.mp3"
+dest_files=["res://.godot/imported/SPELL_FireBall.mp3-bd04934c523d1fef9234c424c2b2d3da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

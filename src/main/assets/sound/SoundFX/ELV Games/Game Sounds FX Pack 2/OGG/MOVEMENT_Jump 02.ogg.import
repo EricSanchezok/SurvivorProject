@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rub42ufyc7us"
+path="res://.godot/imported/MOVEMENT_Jump 02.ogg-73cb5b9c8378f15da95e071ce48496b4.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/OGG/MOVEMENT_Jump 02.ogg"
+dest_files=["res://.godot/imported/MOVEMENT_Jump 02.ogg-73cb5b9c8378f15da95e071ce48496b4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://duod6b2naauhj"
+path="res://.godot/imported/UI_Button Enable.wav-7eea9f7ac47dcb360e7dcb3f620b0511.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/UI Sound FX Asset Pack/WAV/UI_Button Enable.wav"
+dest_files=["res://.godot/imported/UI_Button Enable.wav-7eea9f7ac47dcb360e7dcb3f620b0511.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

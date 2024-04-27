@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbsma2f6nxmkd"
+path="res://.godot/imported/Snow_Trudging.mp3-8ba7fc115d887f5e73cd17752ef2749f.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/Snow_Trudging.mp3"
+dest_files=["res://.godot/imported/Snow_Trudging.mp3-8ba7fc115d887f5e73cd17752ef2749f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

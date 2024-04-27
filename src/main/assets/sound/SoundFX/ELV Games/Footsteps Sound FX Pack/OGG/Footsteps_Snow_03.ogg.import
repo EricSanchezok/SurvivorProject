@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bppwpk1b52gf"
+path="res://.godot/imported/Footsteps_Snow_03.ogg-a0f0537eec368090ef95950e59156acb.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Footsteps Sound FX Pack/OGG/Footsteps_Snow_03.ogg"
+dest_files=["res://.godot/imported/Footsteps_Snow_03.ogg-a0f0537eec368090ef95950e59156acb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

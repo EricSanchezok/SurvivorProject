@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbyrl6o5i2bh2"
+path="res://.godot/imported/NormalWood_Shoes_Running.wav-71779568602ec5a7566a4f0d64c13554.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/PB-Footstep-SFX/PB - Footstep SFX/Footstep SFX/NormalWood_Shoes_Running.wav"
+dest_files=["res://.godot/imported/NormalWood_Shoes_Running.wav-71779568602ec5a7566a4f0d64c13554.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgd4b7ai8mp3f"
+path="res://.godot/imported/move_slide_wood_01.wav-b515bcc04f1dbed935f85193d816101c.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/move_slide_wood_01.wav"
+dest_files=["res://.godot/imported/move_slide_wood_01.wav-b515bcc04f1dbed935f85193d816101c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

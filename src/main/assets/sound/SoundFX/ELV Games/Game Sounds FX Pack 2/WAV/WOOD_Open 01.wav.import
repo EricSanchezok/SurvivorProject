@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xp2w6txqdjyv"
+path="res://.godot/imported/WOOD_Open 01.wav-7f0e4f9735f22971659bc7d0318f4d6e.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/WOOD_Open 01.wav"
+dest_files=["res://.godot/imported/WOOD_Open 01.wav-7f0e4f9735f22971659bc7d0318f4d6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

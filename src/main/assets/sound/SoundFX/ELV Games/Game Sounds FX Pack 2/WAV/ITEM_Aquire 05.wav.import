@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b643nsanp3jo6"
+path="res://.godot/imported/ITEM_Aquire 05.wav-512f9870f9f4c9607b1c8d9787b4b518.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Game Sounds FX Pack 2/WAV/ITEM_Aquire 05.wav"
+dest_files=["res://.godot/imported/ITEM_Aquire 05.wav-512f9870f9f4c9607b1c8d9787b4b518.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

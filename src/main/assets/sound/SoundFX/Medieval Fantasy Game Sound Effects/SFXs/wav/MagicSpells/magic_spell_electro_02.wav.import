@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdigq2ag4m41q"
+path="res://.godot/imported/magic_spell_electro_02.wav-3346f9a45a3eeb39470e2ca1dab1c43d.sample"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/MagicSpells/magic_spell_electro_02.wav"
+dest_files=["res://.godot/imported/magic_spell_electro_02.wav-3346f9a45a3eeb39470e2ca1dab1c43d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

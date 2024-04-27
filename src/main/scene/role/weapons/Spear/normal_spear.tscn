@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://lpwwt65s4o2w" path="res://src/main/common/classes/base_weapons/spear.tscn" id="1_6hy7g"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Spear/normal_spear.gd" id="2_b4msc"]
-[ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_wpi7b"]
+[ext_resource type="Texture2D" uid="uid://2u16oj4x0gvb" path="res://src/main/assets/packs/32X32/Pixel Crawler - FREE - 1.8/Weapons/Wood/Wood.png" id="3_wpi7b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qgdm0"]
 atlas = ExtResource("3_wpi7b")

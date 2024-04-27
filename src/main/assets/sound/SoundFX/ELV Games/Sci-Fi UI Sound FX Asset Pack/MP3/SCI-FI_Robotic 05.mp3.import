@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://do6m88yun5brg"
+path="res://.godot/imported/SCI-FI_Robotic 05.mp3-f8cdce26c9854d83a7b95eeb257c59e8.mp3str"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/ELV Games/Sci-Fi UI Sound FX Asset Pack/MP3/SCI-FI_Robotic 05.mp3"
+dest_files=["res://.godot/imported/SCI-FI_Robotic 05.mp3-f8cdce26c9854d83a7b95eeb257c59e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfonv1egman7j"
+path="res://.godot/imported/magic_spell_water_09.ogg-bde2d72bbf070027900e3ffc92142244.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/ogg/MagicSpells/magic_spell_water_09.ogg"
+dest_files=["res://.godot/imported/magic_spell_water_09.ogg-bde2d72bbf070027900e3ffc92142244.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
