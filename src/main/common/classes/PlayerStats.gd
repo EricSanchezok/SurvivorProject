@@ -96,13 +96,21 @@ signal stats_changed
 		owner.abc.set_player_attribute(owner.abc.POWER_MAGIC,v-power_magic)
 		power_magic = v
 		stats_changed.emit()
-# 攻击范围倍率
+# 索敌范围倍率
 @export var radius_search: float = 0:
 	set(v):
 		if radius_search == v:
 			return
-		owner.abc.set_player_attribute(owner.abc.RANGE_ATTACK,v-radius_search)
+		owner.abc.set_player_attribute(owner.abc.RADIUS_SEARCH,v-radius_search)
 		radius_search = v
+		stats_changed.emit()
+# 攻击范围倍率
+@export var range_attack: float = 0:
+	set(v):
+		if range_attack == v:
+			return
+		owner.abc.set_player_attribute(owner.abc.RANGE_ATTACK,v-range_attack)
+		range_attack = v
 		stats_changed.emit()
 # 攻击速度倍率
 @export var time_cooldown: float = 0:

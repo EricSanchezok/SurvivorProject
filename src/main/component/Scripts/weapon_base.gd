@@ -10,19 +10,23 @@ var abc : Attribute_Changed
 @export var classes: Array[Attribute_Changed.Classes]
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-@export var base_power_physical: float = 4.0 					#物理攻击力
-@export var base_power_magic: float = 2.0   					#魔法攻击力
-@export var base_time_cooldown: float = 1  						#攻击冷却
-@export var base_radius_search: float = 150.0 					#攻击范围
-@export var base_range_explosion: = 50   						#爆炸范围
-@export var base_knockback: float = 30.0    					#击退效果
-@export var base_critical_hit_rate: float = 0.0 	 			#暴击率
-@export var base_critical_damage: float = 0.0    				#暴击伤害
-@export var base_number_of_projectiles: int = 1   				#发射物数量
-@export var base_magazine: = 0  								#弹匣
-@export var base_speed_fly: float = 200.0   					#武器飞行速度
-@export var base_speed_rotation: float = 15.0   				#旋转速度
-@export var base_penetration_rate: float = 0  					#穿透率
+@export var base_power_physical: float = 4.0  #物理攻击力
+@export var base_power_magic: float = 2.0   #魔法攻击力
+@export var base_time_cooldown: float = 1  #攻击冷却
+@export var base_radius_search: float = 150.0 #索敌范围
+@export var base_range_attack: float = 1  #攻击范围
+@export var base_range_explosion: = 50   #爆炸范围
+@export var base_knockback: float = 30.0    #击退效果
+@export var base_critical_hit_rate: float = 0.0  #暴击率
+@export var base_critical_damage: float = 0.0    #暴击伤害
+@export var base_number_of_projectiles: int = 1   #发射物数量
+@export var base_magazine: = 0  #弹匣
+@export var base_speed_fly: float = 200.0   #武器飞行速度
+@export var base_speed_rotation: float = 15.0   #旋转速度
+@export var base_penetration_rate: float = 0  #穿透率
+@export var base_deceleration_rate: float = 0  #减速率
+@export var base_freezing_rate: float = 0 #冰冻率
+@export var base_life_steal: float = 0 #吸血
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var power_physical: float = base_power_physical 				#物理攻击力
@@ -32,19 +36,24 @@ var time_cooldown: float = base_time_cooldown:   				#攻击冷却
 	set(v):
 		time_cooldown = v
 		$TimerCoolDown.wait_time = time_cooldown
-var radius_search: float = base_radius_search:   				#攻击范围
+var radius_search: float = base_radius_search:   #索敌范围
 	set(v):
 		radius_search = v
 		$SearchBox/CollisionShape2D.shape.radius = radius_search
-var range_explosion: float = base_range_explosion  				#爆炸范围
-var knockback: float = base_knockback  							#击退效果
-var critical_hit_rate: float = base_critical_hit_rate 			#暴击率
-var critical_damage: float = base_critical_damage 				#暴击伤害
-var number_of_projectiles: int = base_number_of_projectiles 	#发射物数量
-var speed_fly: float = base_speed_fly  							#武器飞行速度
-var speed_rotation: float = base_speed_rotation  				#旋转速度
-var penetration_rate: float = base_penetration_rate  			#穿透率
-var magazine: float  = base_magazine  							#弹匣
+var range_attack: float = base_range_attack  #攻击距离
+var range_explosion: float = base_range_explosion  #爆炸范围
+var knockback: float = base_knockback  #击退效果
+var critical_hit_rate: float = base_critical_hit_rate #暴击率
+var critical_damage: float = base_critical_damage #暴击伤害
+var number_of_projectiles: int = base_number_of_projectiles #发射物数量
+var speed_fly: float = base_speed_fly  #武器飞行速度
+var speed_rotation: float = base_speed_rotation  #旋转速度
+var penetration_rate: float = base_penetration_rate  #穿透率
+var magazine: float  = base_magazine  #弹匣
+var deceleration_rate: float = base_deceleration_rate  #减速率
+var freezing_rate: float = base_freezing_rate  #冰冻率
+var life_steal: float = base_life_steal  #吸血
+
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -81,7 +90,7 @@ func _on_attribute_changed():
 	for _class in classes:
 		classes_time_cooldown += abc.origins_attributes[_class] [abc.Attributes.TIME_COOLDOWN]
 	time_cooldown += base_time_cooldown * (abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
-	# >>>>>>>>>>>>>>>>>>>>> 攻击范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	# >>>>>>>>>>>>>>>>>>>>> 索敌范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_radius_search = 0
 	var classes_radius_search = 0
 	for _origin in origins:
@@ -89,7 +98,15 @@ func _on_attribute_changed():
 	for _class in classes:
 		classes_radius_search += abc.origins_attributes[_class] [abc.Attributes.RADIUS_SEARCH]
 	radius_search += base_radius_search * (abc.player_attributes[abc.Attributes.RADIUS_SEARCH] + origins_radius_search + classes_radius_search)
-	range_explosion += base_range_explosion * (abc.player_attributes[abc.Attributes.RADIUS_SEARCH] + origins_radius_search + classes_radius_search)
+	# >>>>>>>>>>>>>>>>>>>>> 攻击范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_range_attack = 0
+	var classes_range_attack = 0
+	for _origin in origins:
+		origins_range_attack += abc.origins_attributes[_origin] [abc.Attributes.RANGE_ATTACK]
+	for _class in classes:
+		classes_range_attack += abc.origins_attributes[_class] [abc.Attributes.RANGE_ATTACK]
+	range_attack += base_range_attack * (abc.player_attributes[abc.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
+	range_explosion += base_range_explosion + (abc.player_attributes[abc.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
 	# >>>>>>>>>>>>>>>>>>>>> 击退相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_knockback = 0
 	var classes_knockback = 0
@@ -140,6 +157,32 @@ func _on_attribute_changed():
 	for _class in classes:
 		classes_penetration_rate += abc.origins_attributes[_class] [abc.Attributes.PENETRATION_RATE]
 	penetration_rate += base_penetration_rate + (abc.player_attributes[abc.Attributes.PENETRATION_RATE] + origins_penetration_rate + classes_penetration_rate)
+	# >>>>>>>>>>>>>>>>>>>>> 减速率相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_deceleration_rate = 0
+	var classes_deceleration_rate = 0
+	for _origin in origins:
+		origins_deceleration_rate += abc.origins_attributes[_origin] [abc.Attributes.DECELERATION_RATE]
+	for _class in classes:
+		classes_deceleration_rate += abc.origins_attributes[_class] [abc.Attributes.DECELERATION_RATE]
+	deceleration_rate += base_deceleration_rate + (abc.player_attributes[abc.Attributes.DECELERATION_RATE] + origins_deceleration_rate + classes_deceleration_rate)
+	# >>>>>>>>>>>>>>>>>>>>> 冰冻率相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_freezing_rate = 0
+	var classes_freezing_rate = 0
+	for _origin in origins:
+		origins_freezing_rate += abc.origins_attributes[_origin] [abc.Attributes.FREEZING_RATE]
+	for _class in classes:
+		classes_freezing_rate += abc.origins_attributes[_class] [abc.Attributes.FREEZING_RATE]
+	freezing_rate += base_freezing_rate + (abc.player_attributes[abc.Attributes.FREEZING_RATE] + origins_freezing_rate + classes_freezing_rate)
+	# >>>>>>>>>>>>>>>>>>>>> 吸血相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_life_steal = 0
+	var classes_life_steal = 0
+	for _origin in origins:
+		origins_life_steal += abc.origins_attributes[_origin] [abc.Attributes.LIFE_STEAL]
+	for _class in classes:
+		classes_life_steal += abc.origins_attributes[_class] [abc.Attributes.LIFE_STEAL]
+	life_steal += base_freezing_rate + (abc.player_attributes[abc.Attributes.LIFE_STEAL] + origins_freezing_rate + classes_life_steal)
+
+
 
 
 func get_nearest_enemy() -> CharacterBody2D:

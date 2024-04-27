@@ -129,6 +129,8 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.dir = (hitbox.owner.global_position - position).normalized()
 	damage.amount = hitbox.owner.damage
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
+	damage.deceleration_rate = hitbox.owner.deceleration_rate
+	damage.freezing_rate = hitbox.owner.freezing_rate
 	pending_damages.append(damage)
 	#print(pending_damages.size())
 	
