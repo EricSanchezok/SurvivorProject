@@ -3,8 +3,6 @@ extends Node
 
 signal health_changed
 signal stats_changed
-var abc = owner.abc
-
 
 # 基础最大生命值
 @export var base_max_health: float = 10:
@@ -32,7 +30,7 @@ var abc = owner.abc
 	set(v):
 		if critical_hit_rate == v:
 			return
-		abc.set_player_attribute(abc.Attributes.CRITICAL_HIT_RATE,v-critical_hit_rate)
+		owner.abc.set_player_attribute(owner.abc.Attributes.CRITICAL_HIT_RATE,v-critical_hit_rate)
 		critical_hit_rate = v
 		stats_changed.emit()
 # 暴击伤害
@@ -40,7 +38,7 @@ var abc = owner.abc
 	set(v):
 		if critical_damage == v:
 			return
-		abc.set_player_attribute(abc.Attributes.CRITICAL_DAMAGE,v-critical_damage)
+		owner.abc.set_player_attribute(owner.abc.Attributes.CRITICAL_DAMAGE,v-critical_damage)
 		critical_damage = v
 		stats_changed.emit()
 # 发射物数量
@@ -48,7 +46,7 @@ var abc = owner.abc
 	set(v):
 		if number_of_projectiles == v:
 			return
-		abc.set_player_attribute(abc.Attributes.NUMBER_OF_PROJECTILES,v-number_of_projectiles)
+		owner.abc.set_player_attribute(owner.abc.Attributes.NUMBER_OF_PROJECTILES,v-number_of_projectiles)
 		number_of_projectiles = v
 		stats_changed.emit()
 # 伤害减免率
@@ -87,7 +85,7 @@ var abc = owner.abc
 	set(v):
 		if power_physical == v:
 			return
-		abc.set_player_attribute(abc.POWER_PHYSICAL,v-power_physical)
+		owner.abc.set_player_attribute(owner.abc.POWER_PHYSICAL,v-power_physical)
 		power_physical = v
 		stats_changed.emit()
 # 魔法攻击力倍率
@@ -95,7 +93,7 @@ var abc = owner.abc
 	set(v):
 		if power_magic == v:
 			return
-		abc.set_player_attribute(abc.POWER_MAGIC,v-power_magic)
+		owner.abc.set_player_attribute(owner.abc.POWER_MAGIC,v-power_magic)
 		power_magic = v
 		stats_changed.emit()
 # 攻击范围倍率
@@ -103,7 +101,7 @@ var abc = owner.abc
 	set(v):
 		if radius_search == v:
 			return
-		abc.set_player_attribute(abc.RANGE_ATTACK,v-radius_search)
+		owner.abc.set_player_attribute(owner.abc.RANGE_ATTACK,v-radius_search)
 		radius_search = v
 		stats_changed.emit()
 # 攻击速度倍率
@@ -111,7 +109,7 @@ var abc = owner.abc
 	set(v):
 		if time_cooldown == v:
 			return
-		abc.set_player_attribute(abc.TIME_COOLDOWN,v-time_cooldown)
+		owner.abc.set_player_attribute(owner.abc.TIME_COOLDOWN,v-time_cooldown)
 		time_cooldown = v
 		stats_changed.emit()
 # 击退倍率
@@ -119,7 +117,7 @@ var abc = owner.abc
 	set(v):
 		if knockback == v:
 			return
-		abc.set_player_attribute(abc.KNOCKBACK,v-knockback)
+		owner.abc.set_player_attribute(owner.abc.KNOCKBACK,v-knockback)
 		knockback = v
 		stats_changed.emit()
 # 武器飞行速度倍率
@@ -127,7 +125,7 @@ var abc = owner.abc
 	set(v):
 		if speed_fly == v:
 			return
-		abc.set_player_attribute(abc.SPEED_FLY,v-speed_fly)
+		owner.abc.set_player_attribute(owner.abc.SPEED_FLY,v-speed_fly)
 		speed_fly = v
 		stats_changed.emit()
 # 经验获取倍率
