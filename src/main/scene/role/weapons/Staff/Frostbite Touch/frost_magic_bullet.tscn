@@ -139,12 +139,15 @@ _data = {
 
 [node name="FrostMagicBullet" instance=ExtResource("1_i11t6")]
 script = ExtResource("2_ovu13")
+tracking = true
+bezier = true
 bezier_param = 5.0
+in_front = true
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3p2wc")
 hframes = 4
-frame = 3
+frame = 1
 region_enabled = true
 region_rect = Rect2(0, 0, 128, 32)
 

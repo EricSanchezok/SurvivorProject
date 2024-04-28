@@ -1,14 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://75g8xonu6m5u"]
+[gd_scene load_steps=15 format=3 uid="uid://75g8xonu6m5u"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_b4s7a"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/surtr's_fury.gd" id="2_5r0vc"]
-[ext_resource type="Texture2D" uid="uid://ci4bbwwsj564h" path="res://src/main/assets/packs/32X32/32_2 Free Weapon icons bonus/Icons/icon_32_2_14.png" id="3_12j8q"]
 [ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_cpb73"]
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="5_84ho8"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3v2g"]
-radius = 5.0
-height = 40.0
 
 [sub_resource type="Animation" id="Animation_v05n1"]
 length = 0.001
@@ -145,35 +140,16 @@ origins = Array[int]([0])
 classes = Array[int]([10])
 base_penetration_rate = 1.0
 
-[node name="Sprite2D" parent="." index="0"]
-position = Vector2(9, 0)
-rotation = 0.785398
-texture = ExtResource("3_12j8q")
-
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 visible = false
 rotation = 1.5708
 
-[node name="HitBox" parent="." index="2"]
-visible = false
-
-[node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(11, 0)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_j3v2g")
-
-[node name="HurtBox" parent="." index="3"]
-visible = false
-
-[node name="SearchBox" parent="." index="4"]
-visible = false
-
-[node name="AnimationPlayer" parent="." index="6"]
+[node name="AnimationPlayer" parent="." index="4"]
 libraries = {
 "": SubResource("AnimationLibrary_gk8ft")
 }
 
-[node name="PointLight2D" type="PointLight2D" parent="." index="8"]
+[node name="PointLight2D" type="PointLight2D" parent="." index="6"]
 position = Vector2(4, 0)
 scale = Vector2(1.51367, 0.683593)
 color = Color(0.756863, 0.129412, 0.027451, 1)
@@ -181,7 +157,7 @@ shadow_enabled = true
 texture = ExtResource("5_84ho8")
 texture_scale = 0.01
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="9"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="7"]
 material = SubResource("CanvasItemMaterial_y6rta")
 position = Vector2(13, 0)
 amount = 50

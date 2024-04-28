@@ -1,13 +1,15 @@
 class_name ProjectileBase
 extends CharacterBody2D
 
+@export var tracking: bool = false
+@export var bezier: bool = false
 @export var bezier_param: float = 1.0
+@export var in_front: bool = false
+@export var in_front_dis: int = 5
 
 var parent_weapon: WeaponBase
 var target: EnemyBase
 var target_position: Vector2
-var tracking: bool = false
-var bezier: bool = false
 
 var power_physical: float #物理攻击力
 var power_magic: float #魔法攻击力
@@ -55,7 +57,11 @@ func _physics_process(delta: float) -> void:
 		return
 	speed_fly = speed_fly + acceleration * delta - deceleration * delta
 	if tracking:
-		target_position = target.global_position
+		if not in_front:
+			target_position = target.global_position
+		else:
+			var dir_to_parent = (parent_weapon.global_position - target.global_position).normalized()
+			target_position = target.global_position + in_front_dis * dir_to_parent
 		if bezier:
 			current_time += delta
 			var distance = position.distance_to(target_position)
