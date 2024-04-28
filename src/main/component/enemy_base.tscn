@@ -40,7 +40,6 @@ script = ExtResource("4_m830w")
 
 [node name="EnemyStats" type="Node" parent="."]
 script = ExtResource("5_ia363")
-base_speed_movement = 100.0
 
 [node name="FreezingTimer" type="Timer" parent="."]
 wait_time = 2.0
