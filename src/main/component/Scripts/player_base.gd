@@ -32,10 +32,10 @@ enum Direction {
 		direction = v
 		if not is_node_ready():
 			await ready
-		$Graphics.scale.x = direction	
+		$Graphics.scale.x = direction
 		
 var pending_damage: Damage
-var slots = []	
+var slots = []
 
 var slot_height: float = -25.0
 var slot_space: float = 12.0

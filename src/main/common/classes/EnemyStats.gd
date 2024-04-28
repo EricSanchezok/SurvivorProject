@@ -13,6 +13,10 @@ signal health_changed
 @export var base_damage: float = 1.0
 # 基础击退抗性
 @export var base_knockback_resistance: float = 0.0
+#基础减速抗性
+@export var base_deceleration_resistance: float = 0.0
+#基础冰冻抗性
+@export var base_freezing_resistance: float = 0.0
 
 @onready var health: float = max_health:
 	set(v):
@@ -26,3 +30,5 @@ var health_regeneration: float = base_health_regeneration
 var speed_movement: float = base_speed_movement
 var damage: float = base_damage
 var knockback_resistance: float = base_knockback_resistance
+var deceleration_resistance: float = base_deceleration_resistance
+var freezing_resistance: float = base_freezing_resistance

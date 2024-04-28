@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://src/main/common/classes/EnemyStats.gd" id="5_ia363"]
 
 [node name="EnemyBase" type="CharacterBody2D" groups=["enemy"]]
-scale = Vector2(0.8, 0.8)
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_lkhbt")
@@ -44,6 +43,11 @@ script = ExtResource("5_ia363")
 base_speed_movement = 100.0
 
 [node name="FreezingTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="FreezingCooldownTimer" type="Timer" parent="."]
+wait_time = 4.0
 one_shot = true
 
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]
