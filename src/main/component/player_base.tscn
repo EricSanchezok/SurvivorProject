@@ -49,6 +49,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="WeaponSlots" type="Node2D" parent="."]
+visible = false
 
 [node name="weapon0" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
 

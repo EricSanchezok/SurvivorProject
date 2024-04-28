@@ -216,7 +216,6 @@ func die() -> void:
 func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	create_damage(hitbox)
 	create_effets(hitbox)
-	print("111")
 	
 	
 func create_damage(hitbox: HitBox) -> void:
