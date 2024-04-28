@@ -26,4 +26,4 @@ func do_interval_change(index_now: int, index_new: int) -> void:
 
 
 func _on_number_change(type, value):
-	count = value if type == self_type else count	
+	count = value if type == self_type else count

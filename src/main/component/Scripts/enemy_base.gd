@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var enemy_stats: EnemyStats = $EnemyStats
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var freezing_timer: Timer = $FreezingTimer
+@onready var freezing_cooldown_timer: Timer = $FreezingCooldownTimer
 
 enum Direction {
 	LEFT = -1,
@@ -48,23 +49,29 @@ func tick_physics(state: State, delta: float) -> void:
 		if effect.duration <= 0:
 			slow_effects.remove_at(i)
 	 # 应用最大减速
-	if slow_effects.size() > 0:
-		var max_slow = slow_effects[0].amount  # 直接使用数组第一个元素的减速幅度
-		enemy_stats.speed_movement = enemy_stats.base_speed_movement * (1-max_slow)
+	for damage in pending_damages:
+		enemy_stats.health -= damage.amount
+		velocity -= damage.dir * damage.knockback
+		if freezing_cooldown_timer.is_stopped():
+			if Tools.is_success(damage.freezing_rate):
+				freezing_timer.start()
+				freezing_cooldown_timer.start()
+		pending_damages.erase(damage)
+	if not freezing_timer.is_stopped():
+		velocity *= 0.95
+	move_and_collide(velocity*delta)
 	match state:
 		State.APPEAR, State.DIE:
 			pass
 		State.HURT:
-			for damage in pending_damages:
-				enemy_stats.health -= damage.amount
-				velocity -= damage.dir * damage.knockback
-				pending_damages.erase(damage)
-			move_and_collide(velocity*delta)
+			pass
 		State.RUN:
+			if slow_effects.size() > 0:
+				var max_slow = slow_effects[0].amount  # 直接使用数组第一个元素的减速幅度
+				enemy_stats.speed_movement = enemy_stats.base_speed_movement * (1-max_slow)
 			move_to_target(delta)
 			pass
-			
-			
+
 func get_next_state(state: State) -> int:
 	if pending_damages.size() > 0:
 		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
@@ -80,7 +87,8 @@ func get_next_state(state: State) -> int:
 			pass
 		State.HURT:
 			if not animation_player.is_playing():
-				return State.RUN
+				if freezing_timer.is_stopped():
+					return State.RUN
 		State.DIE:
 			pass
 
@@ -145,8 +153,8 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.dir = (hitbox.owner.global_position - position).normalized()
 	damage.amount = hitbox.owner.power_physical + hitbox.owner.power_magic
 	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
-	add_slow_effect(hitbox.owner.deceleration_rate, hitbox.owner.deceleration_time)
-	damage.freezing_rate = hitbox.owner.freezing_rate
+	add_slow_effect(hitbox.owner.deceleration_rate * (1 - enemy_stats.deceleration_resistance), hitbox.owner.deceleration_time * (1 - enemy_stats.deceleration_resistance))
+	damage.freezing_rate = hitbox.owner.freezing_rate * (1 - enemy_stats.freezing_resistance)
 	pending_damages.append(damage)
 	
 	#print(pending_damages.size())
