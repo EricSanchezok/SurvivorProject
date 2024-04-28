@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://doj0nvhytxean"]
+[gd_scene load_steps=11 format=3 uid="uid://doj0nvhytxean"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/player_base.gd" id="1_c0py7"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="2_1gfhr"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://32wdbpxyk7ln" path="res://icon.svg" id="4_dnj7v"]
 [ext_resource type="Script" path="res://src/main/common/classes/trait/fire.gd" id="6_u65hr"]
 [ext_resource type="Script" path="res://src/main/common/classes/attribute_changed.gd" id="7_dpwgu"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/trait_base.gd" id="7_utkrx"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/frost.gd" id="9_ffphx"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/poison.gd" id="10_wm6kk"]
 
 [node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
 z_index = 10
@@ -46,7 +49,6 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="WeaponSlots" type="Node2D" parent="."]
-visible = false
 
 [node name="weapon0" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
 
@@ -115,6 +117,13 @@ script = ExtResource("4_d0en6")
 script = ExtResource("7_dpwgu")
 
 [node name="Traits" type="Node" parent="."]
+script = ExtResource("7_utkrx")
 
 [node name="Fire" type="Node" parent="Traits"]
 script = ExtResource("6_u65hr")
+
+[node name="Frost" type="Node" parent="Traits"]
+script = ExtResource("9_ffphx")
+
+[node name="Poison" type="Node" parent="Traits"]
+script = ExtResource("10_wm6kk")

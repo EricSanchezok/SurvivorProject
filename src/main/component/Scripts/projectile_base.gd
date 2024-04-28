@@ -24,6 +24,9 @@ var deceleration_rate: float #减速率
 var deceleration_time: float #减速时间
 var freezing_rate: float #冰冻率
 var life_steal: float #吸血
+var poison_layers: float  #中毒层数
+var max_poison_layers: float  #最大中毒层数
+
 
 var acceleration: float = 0.0
 var deceleration: float = 0.0
@@ -51,6 +54,8 @@ func _ready() -> void:
 	deceleration_time = parent_weapon.deceleration_time
 	freezing_rate = parent_weapon.freezing_rate
 	life_steal = parent_weapon.life_steal
+	poison_layers = parent_weapon.poison_layers
+	max_poison_layers = parent_weapon.max_poison_layers
 
 func _physics_process(delta: float) -> void:
 	if stop_moveing:

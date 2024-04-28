@@ -53,7 +53,7 @@ func _ready() -> void:
 	classes_count.fill(0)
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
-	register_weapon.emit(self, default_weapon, 2)
+	#register_weapon.emit(self, default_weapon, 2)
 	#register_weapon.emit(self, default_weapon, 0)
 	#register_weapon.emit(self, default_weapon, 1)
 	#register_weapon.emit(self, default_weapon, 3)

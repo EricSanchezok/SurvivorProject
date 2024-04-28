@@ -1,13 +1,21 @@
 extends WeaponBase
 
+
 var current_health: float = health:
 	set(v):
 		v = clampf(v, 0, health)
-		if health == v:
+		if current_health == v:
 			return
-		health = v
+		current_health = v
+		$TextureProgressBar.value = current_health / health
 		
-var pending_damage: Damage
+		
+var pending_damages: Array
+
+func _ready() -> void:
+	super()
+	rotation = -PI/2
+	current_health = health
 
 enum State {
 	APPEAR,
@@ -17,7 +25,10 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
-	position = slot.global_position
+	sync_position()
+	for damage in pending_damages:
+		current_health -= damage.amount
+		pending_damages.erase(damage)
 	match state:
 		State.APPEAR:
 			pass
@@ -29,44 +40,46 @@ func tick_physics(state: State, delta: float) -> void:
 			pass
 			
 func get_next_state(state: State) -> int:
-	if pending_damage:
-		return State.HURT
+	if pending_damages.size() > 0:
+		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
 
 	match state:
 		State.APPEAR:
-			pass
+			if not $AnimationPlayer.is_playing():
+				return State.WAIT
 		State.WAIT:
-			pass
+			if current_health <= 0:
+				return State.RECOVERING
 		State.RECOVERING:
-			pass
+			if $TimerCoolDown.is_stopped():
+				return State.APPEAR
 		State.HURT:
-			pass
+			if not $AnimationPlayer.is_playing():
+				return State.WAIT
 				
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	 #print("[%s] %s => %s" % [
-	 	#Engine.get_physics_frames()	,
-	 	#State.keys()[from] if from != -1 else "<START>",
-	 	#State.keys()[to],
-	 #])
+	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
-	match from:
-		State.APPEAR:
-			pass
-		State.WAIT:
-			pass
-		State.RECOVERING:
-			pass
-		State.HURT:
-			pass
-	
 	match to:
 		State.APPEAR:
-			pass
+			$AnimationPlayer.play("appear")
 		State.WAIT:
 			pass
 		State.RECOVERING:
-			pass
+			$AnimationPlayer.play("recovering")
+			$TimerCoolDown.start()
+			current_health = health
 		State.HURT:
-			pass
+			$AnimationPlayer.play("hurt")
+
+
+
+
+func _on_hurt_box_hurt(hitbox: Variant) -> void:
+	var damage = Damage.new()
+	var enemy = hitbox.owner
+	damage.source = enemy
+	damage.amount = enemy.enemy_stats.damage
+	pending_damages.append(damage)

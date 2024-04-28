@@ -18,7 +18,7 @@ func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:
 			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(speed_rotation)*delta)
-			position = position.move_toward(slot.global_position, speed_fly*delta*0.5)
+			sync_position(speed_fly*delta*0.5)
 		State.ATTACK:
 			current_time += delta
 			var distance = position.distance_to(target.global_position)

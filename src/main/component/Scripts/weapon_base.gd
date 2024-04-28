@@ -35,6 +35,8 @@ var target: EnemyBase
 @export var base_deceleration_rate: float = 0  #减速率
 @export var base_freezing_rate: float = 0 #冰冻率
 @export var base_life_steal: float = 0 #吸血
+@export var base_poison_layers: float = 0 #中毒层数
+@export var base_max_poison_layers: float = 0 #最大中毒层数
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var health: float = base_health  #生命值
@@ -63,7 +65,8 @@ var target: EnemyBase
 @onready var deceleration_rate: float = base_deceleration_rate  #减速率
 @onready var freezing_rate: float = base_freezing_rate  #冰冻率
 @onready var life_steal: float = base_life_steal  #吸血
-
+@onready var poison_layers:float = base_poison_layers  #中毒层数
+@onready var max_poison_layers:float = base_max_poison_layers  #最大中毒层数
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _ready() -> void:
@@ -114,7 +117,7 @@ func _on_attribute_changed():
 		origins_time_cooldown += abc.origins_attributes[_origin] [abc.Attributes.TIME_COOLDOWN]
 	for _class in classes:
 		classes_time_cooldown += abc.classes_attributes[_class] [abc.Attributes.TIME_COOLDOWN]
-	time_cooldown = base_time_cooldown * (1 + abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
+	time_cooldown = base_time_cooldown / (1 + abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
 	# >>>>>>>>>>>>>>>>>>>>> 索敌范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_radius_search = 0
 	var classes_radius_search = 0
@@ -206,6 +209,23 @@ func _on_attribute_changed():
 	for _class in classes:
 		classes_life_steal += abc.classes_attributes[_class] [abc.Attributes.LIFE_STEAL]
 	life_steal = base_freezing_rate + (abc.player_attributes[abc.Attributes.LIFE_STEAL] + origins_freezing_rate + classes_life_steal)
+	# >>>>>>>>>>>>>>>>>>>>> 中毒层数相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_poison_layers = 0
+	var classes_poison_layers = 0
+	for _origin in origins:
+		origins_poison_layers += abc.origins_attributes[_origin] [abc.Attributes.POISON_LAYERS]
+	for _class in classes:
+		classes_poison_layers += abc.classes_attributes[_class] [abc.Attributes.POISON_LAYERS]
+	poison_layers = base_poison_layers + (abc.player_attributes[abc.Attributes.POISON_LAYERS] + origins_poison_layers + classes_poison_layers)
+	# >>>>>>>>>>>>>>>>>>>>> 最大中毒层数相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_max_poison_layers = 0
+	var classes_max_poison_layers = 0
+	for _origin in origins:
+		origins_max_poison_layers += abc.origins_attributes[_origin] [abc.Attributes.MAX_POISON_LAYERS]
+	for _class in classes:
+		classes_max_poison_layers += abc.classes_attributes[_class] [abc.Attributes.MAX_POISON_LAYERS]
+	max_poison_layers = base_max_poison_layers + (abc.player_attributes[abc.Attributes.MAX_POISON_LAYERS] + origins_max_poison_layers + classes_max_poison_layers)
+
 
 func get_nearest_enemy(is_self: bool = false) -> CharacterBody2D:
 	'''
@@ -245,8 +265,12 @@ func get_random_direction(base_direction: Vector2, angle_range: float) -> Vector
 	return Vector2(cos(new_angle), sin(new_angle))
 
 
-func sync_position() -> void:
-	position = slot.global_position - $CenterMarker2D.position.rotated(rotation)
+func sync_position(displacement: float = 0.0) -> void:
+	var target_position = slot.global_position - $CenterMarker2D.position.rotated(rotation)
+	if displacement == 0.0:
+		position = target_position
+	else:
+		position = position.move_toward(target_position, displacement)
 	
 func _on_search_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and not enemies.has(body):

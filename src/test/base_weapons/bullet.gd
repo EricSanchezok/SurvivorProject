@@ -8,6 +8,8 @@ var dir1: Vector2
 var dir2: Vector2
 var damage: float
 var explosion_range: float
+var poison_layers: float
+var max_poison_layers: float
 var target: CharacterBody2D = null
 var targetInitialPos: Vector2 = Vector2()
 var hit : bool = false
@@ -24,6 +26,8 @@ func get_parameters(parent: Node2D) -> void:
 	knockback = parent.knockback
 	damage = parent.damage
 	explosion_range = parent.explosion_range
+	poison_layers = parent.poison_layers
+	max_poison_layers = parent.max_poison_layers
 	
 func _on_hit_box_hit(hurtbox: Variant) -> void:
 	if not Tools.is_success(penetration_rate):

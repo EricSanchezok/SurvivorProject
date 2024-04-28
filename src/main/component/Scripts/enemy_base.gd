@@ -37,6 +37,7 @@ class effect:
 	var value: float = 0.0
 	var duration: float = 0.0
 
+var poison_timer = 0.0  # 追踪中毒效果的时间
 
 
 func _ready() -> void:
@@ -112,7 +113,11 @@ func tick_physics(state: State, delta: float) -> void:
 				if not effects_states[Effect.POISION]: # 未产生效果
 					continue
 				# 产生效果
-				pass
+				else :
+					poison_timer += delta
+					if poison_timer >= 1.0:  # 每秒应用一次中毒伤害
+						enemy_stats.health -= effects_collection[type_index][0].value
+						poison_timer = 0  # 重置计时器
 			Effect.FREEZE:
 				if not effects_states[Effect.FREEZE]: # 未产生效果
 					continue
@@ -211,6 +216,7 @@ func die() -> void:
 func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	create_damage(hitbox)
 	create_effets(hitbox)
+	print("111")
 	
 	
 func create_damage(hitbox: HitBox) -> void:
@@ -247,6 +253,19 @@ func create_effets(hitbox: HitBox) -> void:
 		$AnimationPlayer.pause()
 		freezing_cooldown_timer.start()
 		modulate = Color.hex(0x49ffff)
+	#处理中毒
+	var new_poison_layers = source_weapon.poison_layers
+	var max_poison_layers = source_weapon.max_poison_layers
+	print(new_poison_layers)
+	if new_poison_layers > 0:
+		if not effects_states[Effect.POISION]:
+			var _effect = effect.new()
+			_effect.value = new_poison_layers
+			_effect.duration = 5
+			effects_collection[Effect.POISION].append(_effect)
+		else :
+			effects_collection[Effect.POISION][0].value = min(effects_collection[Effect.POISION][0].value + new_poison_layers, max_poison_layers)
+			effects_collection[Effect.POISION][0].duration = 5
 	
 func create_damage_numbers(current_damage: Damage) -> void:
 	if current_damage.phy_amount != 0:
