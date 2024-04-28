@@ -30,9 +30,10 @@ var current_time: float = 0.0
 
 signal reach_target
 var reached: bool = false
+var stop_moveing: bool = false
 
 func _ready() -> void:
-	if not target:
+	if target == null:
 		target = parent_weapon.target
 	
 	power_physical = parent_weapon.power_physical
@@ -50,10 +51,13 @@ func _ready() -> void:
 	life_steal = parent_weapon.life_steal
 
 func _physics_process(delta: float) -> void:
+	if stop_moveing:
+		return
 	speed_fly = speed_fly + acceleration * delta - deceleration * delta
 	if tracking:
 		target_position = target.global_position
 		if bezier:
+			current_time += delta
 			var distance = position.distance_to(target_position)
 			var total_time = distance / speed_fly
 			var t = min(current_time/total_time, 1)

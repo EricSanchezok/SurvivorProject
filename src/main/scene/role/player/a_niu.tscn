@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://doj0nvhytxean" path="res://src/main/component/player_base.tscn" id="1_3mhwp"]
 [ext_resource type="Script" path="res://src/main/scene/role/player/Scripts/a_niu.gd" id="2_abvsp"]
-[ext_resource type="Texture2D" uid="uid://kra0nkvoulr2" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Characters/32x32/Hero_30.png" id="2_amth6"]
+[ext_resource type="Texture2D" uid="uid://bwa2fojwyrt4l" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Characters/32x32/Hero_01.png" id="3_3ry72"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e0ej0"]
 radius = 7.0
@@ -200,10 +200,11 @@ _data = {
 
 [node name="ANiu" instance=ExtResource("1_3mhwp")]
 script = ExtResource("2_abvsp")
+default_weapon = "frostbite_touch"
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(0, 8)
-texture = ExtResource("2_amth6")
+texture = ExtResource("3_3ry72")
 offset = Vector2(0, -16)
 hframes = 6
 region_enabled = true
