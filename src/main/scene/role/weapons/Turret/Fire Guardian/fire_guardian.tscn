@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://dk0emm2xxkkov"]
+
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_x4udp"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Turret/Fire Guardian/fire_guardian.gd" id="2_t84q7"]
+[ext_resource type="Texture2D" uid="uid://b20txaqsswvx3" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_79.png" id="3_kelxv"]
+[ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_ka24e"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c0pex"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_3lavp"]
+offsets = PackedFloat32Array(0, 0.125, 0.246622, 0.412162, 0.858108, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.988235, 0.698039, 0.372549, 1, 0.85098, 0.454902, 0.243137, 1, 0.756863, 0.129412, 0.027451, 1, 0.419608, 0.0509804, 0.00784314, 1, 0.419608, 0.0509804, 0.00784314, 0.470588)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rgxcn"]
+gradient = SubResource("Gradient_3lavp")
+
+[sub_resource type="Curve" id="Curve_hqssh"]
+_data = [Vector2(0, 0.292308), 0.0, 0.0, 0, 0, Vector2(0.203704, 1), 0.0, 0.0, 0, 0, Vector2(0.515432, 0.427873), -2.91333, -2.91333, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_k2g8h"]
+curve = SubResource("Curve_hqssh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sxvrs"]
+lifetime_randomness = 0.18
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 5.0
+initial_velocity_min = 80.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.8
+scale_curve = SubResource("CurveTexture_k2g8h")
+color_ramp = SubResource("GradientTexture1D_rgxcn")
+anim_speed_min = 0.8
+anim_speed_max = 1.0
+turbulence_enabled = true
+turbulence_noise_scale = 6.598
+turbulence_influence_max = 0.15
+
+[node name="FireGuardian" instance=ExtResource("1_x4udp")]
+script = ExtResource("2_t84q7")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+position = Vector2(8, 0)
+rotation = 0.785398
+texture = ExtResource("3_kelxv")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="6"]
+visible = false
+material = SubResource("CanvasItemMaterial_c0pex")
+position = Vector2(17, 0)
+amount = 70
+process_material = SubResource("ParticleProcessMaterial_sxvrs")
+texture = ExtResource("4_ka24e")
+lifetime = 1.1
+randomness = 0.23

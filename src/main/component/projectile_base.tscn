@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_n5vj3"]
 
 [node name="ProjectileBase" type="CharacterBody2D"]
+z_index = 29
 collision_layer = 0
 collision_mask = 0
 motion_mode = 1

@@ -39,8 +39,8 @@ var slots = []
 
 var slot_height: float = -25.0
 var slot_space: float = 12.0
-var slot_radius: float = 50.0
-var slot_speed_rotation: float = 22.0
+var slot_radius: float = 36.0
+var slot_speed_rotation: float = 60.0
 var amplitude: float = 2.0
 var frequency: float = 0.2
 var current_time: float = 0.0

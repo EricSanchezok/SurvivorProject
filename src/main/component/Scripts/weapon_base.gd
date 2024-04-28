@@ -114,7 +114,7 @@ func _on_attribute_changed():
 		origins_time_cooldown += abc.origins_attributes[_origin] [abc.Attributes.TIME_COOLDOWN]
 	for _class in classes:
 		classes_time_cooldown += abc.classes_attributes[_class] [abc.Attributes.TIME_COOLDOWN]
-	time_cooldown = base_time_cooldown * (1 + abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
+	time_cooldown = base_time_cooldown / (1 + abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
 	# >>>>>>>>>>>>>>>>>>>>> 索敌范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_radius_search = 0
 	var classes_radius_search = 0
@@ -245,8 +245,13 @@ func get_random_direction(base_direction: Vector2, angle_range: float) -> Vector
 	return Vector2(cos(new_angle), sin(new_angle))
 
 
-func sync_position() -> void:
-	position = slot.global_position - $CenterMarker2D.position.rotated(rotation)
+func sync_position(displacement: float = 0.0) -> void:
+	var target_position = slot.global_position - $CenterMarker2D.position.rotated(rotation)
+	if displacement == 0.0:
+		position = target_position
+	else:
+		position = position.move_toward(target_position, displacement)
+
 	
 func _on_search_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and not enemies.has(body):
