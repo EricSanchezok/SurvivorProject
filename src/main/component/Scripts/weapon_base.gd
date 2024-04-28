@@ -271,6 +271,7 @@ func sync_position(displacement: float = 0.0) -> void:
 		position = target_position
 	else:
 		position = position.move_toward(target_position, displacement)
+
 	
 func _on_search_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and not enemies.has(body):

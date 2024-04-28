@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2qkx3d5hid0w"]
+[gd_scene load_steps=14 format=3 uid="uid://c21hfyc6t1a1s"]
 
-[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_68vji"]
-[ext_resource type="Script" path="res://src/main/scene/role/weapons/Shield/Flame Shield/flame_shield.gd" id="2_hji68"]
-[ext_resource type="Texture2D" uid="uid://b3gq22nnyd67w" path="res://src/main/assets/packs/32X32/1 Weapon icons/Icons/icon_70.png" id="3_crohy"]
-[ext_resource type="Texture2D" uid="uid://d3140f2xn3t1j" path="res://src/main/assets/packs/32X32/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="4_syy1u"]
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_m1fnv"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Shield/Frost Shield/frost_shield.gd" id="2_a1b4s"]
+[ext_resource type="Texture2D" uid="uid://cb0fbda4cw50u" path="res://src/main/assets/packs/32X32/26 Shield icons/Icons/Icons_26_89.png" id="3_wnkeo"]
+[ext_resource type="Texture2D" uid="uid://d3140f2xn3t1j" path="res://src/main/assets/packs/32X32/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="4_oyx5d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_roj31"]
 radius = 17.0
@@ -160,22 +160,24 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0uxvo"]
-atlas = ExtResource("4_syy1u")
+atlas = ExtResource("4_oyx5d")
 region = Rect2(307, 6, 58, 4)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yqx80"]
-atlas = ExtResource("4_syy1u")
+atlas = ExtResource("4_oyx5d")
 region = Rect2(308, 71, 56, 2)
 
-[node name="FlameShield" instance=ExtResource("1_68vji")]
-rotation = -1.5708
-script = ExtResource("2_hji68")
+[node name="FrostShield" instance=ExtResource("1_m1fnv")]
+script = ExtResource("2_a1b4s")
+origins = Array[int]([1])
+classes = Array[int]([1])
 base_health_regeneration = 0.1
 base_time_cooldown = 8.0
+base_knockback = 100.0
 
 [node name="Sprite2D" parent="Graphics" index="0"]
-rotation = 0.785398
-texture = ExtResource("3_crohy")
+rotation = 1.5708
+texture = ExtResource("3_wnkeo")
 
 [node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
 rotation = 1.5708

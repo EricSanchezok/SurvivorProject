@@ -25,22 +25,28 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
+	# 同步父节点位置
 	sync_position()
+	# 恢复生命值
+	current_health = current_health + health_regeneration * delta
+	
 	for damage in pending_damages:
 		current_health -= damage.amount
 		pending_damages.erase(damage)
+		
 	match state:
 		State.APPEAR:
 			pass
 		State.WAIT:
 			pass
 		State.RECOVERING:
+			print($TimerCoolDown.time_left)
 			pass
 		State.HURT:
 			pass
 			
 func get_next_state(state: State) -> int:
-	if pending_damages.size() > 0:
+	if pending_damages.size() > 0 and state != State.RECOVERING:
 		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
 
 	match state:
@@ -60,7 +66,7 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 	match to:
 		State.APPEAR:
