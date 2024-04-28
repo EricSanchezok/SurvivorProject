@@ -33,7 +33,7 @@ var target: EnemyBase
 @export var base_speed_rotation: float = 360.0   #旋转速度
 @export var base_penetration_rate: float = 0  #穿透率
 @export var base_deceleration_rate: float = 0  #减速率
-@export var base_freezing_rate: float = 1 #冰冻率
+@export var base_freezing_rate: float = 0 #冰冻率
 @export var base_life_steal: float = 0 #吸血
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

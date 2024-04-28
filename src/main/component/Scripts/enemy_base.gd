@@ -48,7 +48,7 @@ func tick_physics(state: State, delta: float) -> void:
 		effect.duration -= delta
 		if effect.duration <= 0:
 			slow_effects.remove_at(i)
-	 # 应用最大减速
+			
 	for damage in pending_damages:
 		enemy_stats.health -= damage.amount
 		velocity -= damage.dir * damage.knockback
@@ -57,9 +57,7 @@ func tick_physics(state: State, delta: float) -> void:
 				freezing_timer.start()
 				freezing_cooldown_timer.start()
 		pending_damages.erase(damage)
-	if not freezing_timer.is_stopped():
-		velocity *= 0.95
-	move_and_collide(velocity*delta)
+
 	match state:
 		State.APPEAR, State.DIE:
 			pass
@@ -69,8 +67,15 @@ func tick_physics(state: State, delta: float) -> void:
 			if slow_effects.size() > 0:
 				var max_slow = slow_effects[0].amount  # 直接使用数组第一个元素的减速幅度
 				enemy_stats.speed_movement = enemy_stats.base_speed_movement * (1-max_slow)
-			move_to_target(delta)
-			pass
+			else:
+				enemy_stats.speed_movement = enemy_stats.base_speed_movement
+			
+			calculate_velocity_to_target()
+
+	if not freezing_timer.is_stopped():
+		velocity *= 0.95
+		
+	move_and_collide(velocity*delta)
 
 func get_next_state(state: State) -> int:
 	if pending_damages.size() > 0:
@@ -122,7 +127,7 @@ func get_random_target() -> PlayerBase:
 		return null
 	return players[random.randi_range(0, players.size() - 1)]
 
-func move_to_target(delta: float) -> void:
+func calculate_velocity_to_target() -> void:
 	'''
 		移动到目标
 	
@@ -135,8 +140,7 @@ func move_to_target(delta: float) -> void:
 	var pos := global_position
 	var dir := (target_position - pos).normalized()
 	velocity = dir * enemy_stats.speed_movement
-	direction = Direction.RIGHT if velocity.x > 0 else Direction.LEFT
-	move_and_collide(velocity*delta)
+	direction = Direction.LEFT if dir.x < 0 else Direction.RIGHT
 	
 func die() -> void:
 	'''

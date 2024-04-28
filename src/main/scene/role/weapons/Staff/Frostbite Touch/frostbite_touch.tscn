@@ -16,7 +16,10 @@ _data = {
 script = ExtResource("2_2ousu")
 origins = Array[int]([2])
 classes = Array[int]([10])
+deceleration_time = 2.0
+base_time_cooldown = 2.0
 base_penetration_rate = 1.0
+base_deceleration_rate = 0.8
 
 [node name="Sprite2D" parent="." index="0"]
 rotation = 0.785398
