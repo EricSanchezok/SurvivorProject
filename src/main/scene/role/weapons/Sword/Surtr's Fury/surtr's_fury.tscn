@@ -1,9 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://75g8xonu6m5u"]
+[gd_scene load_steps=17 format=3 uid="uid://75g8xonu6m5u"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_b4s7a"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/surtr's_fury.gd" id="2_5r0vc"]
+[ext_resource type="Texture2D" uid="uid://cxia0n0hl7dtt" path="res://src/main/assets/packs/32X32/32 Free Weapon Icons/Icons/Iicon_32_17.png" id="3_ewscq"]
 [ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_cpb73"]
 [ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="5_84ho8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m78hj"]
+radius = 6.0
+height = 38.0
 
 [sub_resource type="Animation" id="Animation_v05n1"]
 length = 0.001
@@ -138,10 +143,24 @@ turbulence_influence_max = 0.15
 script = ExtResource("2_5r0vc")
 origins = Array[int]([0])
 classes = Array[int]([10])
+base_power_physical = 4.0
+base_power_magic = 3.0
 base_penetration_rate = 1.0
 
-[node name="CollisionShape2D" parent="." index="2"]
+[node name="Sprite2D" parent="Graphics" index="0"]
+position = Vector2(11, 0)
+rotation = 0.785398
+texture = ExtResource("3_ewscq")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+position = Vector2(13, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_m78hj")
+
+[node name="SearchBox" parent="Graphics" index="3"]
 visible = false
+
+[node name="CollisionShape2D" parent="." index="2"]
 rotation = 1.5708
 
 [node name="AnimationPlayer" parent="." index="4"]
@@ -150,7 +169,7 @@ libraries = {
 }
 
 [node name="PointLight2D" type="PointLight2D" parent="." index="6"]
-position = Vector2(4, 0)
+position = Vector2(14, 0)
 scale = Vector2(1.51367, 0.683593)
 color = Color(0.756863, 0.129412, 0.027451, 1)
 shadow_enabled = true
@@ -159,7 +178,7 @@ texture_scale = 0.01
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." index="7"]
 material = SubResource("CanvasItemMaterial_y6rta")
-position = Vector2(13, 0)
+position = Vector2(14, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_2pdrs")
 texture = ExtResource("4_cpb73")

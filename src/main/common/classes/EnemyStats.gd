@@ -26,9 +26,9 @@ signal health_changed
 		health = v
 		health_changed.emit()
 
-var health_regeneration: float = base_health_regeneration
-var speed_movement: float = base_speed_movement
-var damage: float = base_damage
-var knockback_resistance: float = base_knockback_resistance
-var deceleration_resistance: float = base_deceleration_resistance
-var freezing_resistance: float = base_freezing_resistance
+@onready var health_regeneration: float = base_health_regeneration
+@onready var speed_movement: float = base_speed_movement
+@onready var damage: float = base_damage
+@onready var knockback_resistance: float = base_knockback_resistance
+@onready var deceleration_resistance: float = base_deceleration_resistance
+@onready var freezing_resistance: float = base_freezing_resistance

@@ -143,6 +143,7 @@ tracking = true
 bezier = true
 bezier_param = 5.0
 in_front = true
+in_front_dis = 10
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3p2wc")
