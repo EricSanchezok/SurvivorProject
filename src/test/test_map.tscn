@@ -1236,7 +1236,7 @@ texture = ExtResource("1_njcds")
 sources/0 = SubResource("TileSetAtlasSource_s644d")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg27j"]
-size = Vector2(1124, 772)
+size = Vector2(777, 427)
 
 [node name="TestMap" type="Node2D"]
 script = ExtResource("1_ocifa")
@@ -1253,11 +1253,11 @@ position = Vector2(50, 0)
 [node name="WeaponsManager" parent="." instance=ExtResource("4_waq6f")]
 
 [node name="EnemyGenerator" parent="." instance=ExtResource("5_74564")]
-visible = false
 
 [node name="SpawnShape2D" type="CollisionShape2D" parent="EnemyGenerator"]
-position = Vector2(11, 7)
+position = Vector2(2.5, -4.5)
 shape = SubResource("RectangleShape2D_sg27j")
 script = ExtResource("6_4d2m4")
 
 [node name="ANiu" parent="." instance=ExtResource("7_x64l5")]
+scale = Vector2(1.5, 1.5)

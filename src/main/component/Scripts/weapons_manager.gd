@@ -51,7 +51,7 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, slo
 
 	if players_weapon[playerindex+"_weapon"].find(instance) != -1:
 		for _origin in instance.origins:
-			player.update_origins_number(_origin,3)
+			player.update_origins_number(_origin,1)
 		for _class in instance.classes:
 			player.update_classes_number(_class,1)
 			

@@ -1,7 +1,8 @@
 extends WeaponBase
 
-@onready var point_light_2d: PointLight2D = $PointLight2D
 var meteorite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/meteorite.tscn")
+
+
 enum State {
 	WAIT,
 	ATTACK
