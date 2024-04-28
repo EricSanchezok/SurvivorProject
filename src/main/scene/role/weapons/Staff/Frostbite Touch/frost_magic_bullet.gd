@@ -7,7 +7,6 @@ func _ready() -> void:
 	$AnimationPlayer.play("idle")
 	scale.x = range_explosion / base_radius
 	scale.y = range_explosion / base_radius
-	#print(scale)
 	
 	
 func _on_reach_target() -> void:

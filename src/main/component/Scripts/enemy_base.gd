@@ -69,12 +69,10 @@ func tick_physics(state: State, delta: float) -> void:
 				enemy_stats.speed_movement = enemy_stats.base_speed_movement * (1-max_slow)
 			else:
 				enemy_stats.speed_movement = enemy_stats.base_speed_movement
-			
 			calculate_velocity_to_target()
 
 	if not freezing_timer.is_stopped():
 		velocity *= 0.95
-		
 	move_and_collide(velocity*delta)
 
 func get_next_state(state: State) -> int:

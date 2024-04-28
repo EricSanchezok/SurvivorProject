@@ -1,15 +1,84 @@
-[gd_scene load_steps=6 format=3 uid="uid://da27uwpu6k466"]
+[gd_scene load_steps=8 format=3 uid="uid://da27uwpu6k466"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_arfgv"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Staff/Frostbite Touch/frostbite_touch.gd" id="2_2ousu"]
 [ext_resource type="Texture2D" uid="uid://bs14w7qwkarnu" path="res://src/main/assets/packs/32X32/13 Magic wands and books/Icons/1 Wands/Icons_13_27.png" id="3_yw4af"]
+[ext_resource type="Texture2D" uid="uid://b7rax74xajnmc" path="res://src/main/assets/texture/vfx/light/WhiteLight.png" id="4_w36x1"]
 
-[sub_resource type="Animation" id="Animation_41iyh"]
-resource_name = "attack"
+[sub_resource type="Animation" id="Animation_5nrtc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2e5lo"]
+resource_name = "attack_new"
+length = 0.3
+step = 0.05
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.15),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fire"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/PointLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.1, 1.9, 1.9, 0.1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Graphics:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.436332, 0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xbl4f"]
 _data = {
-"attack": SubResource("Animation_41iyh")
+"RESET": SubResource("Animation_5nrtc"),
+"attack_new": SubResource("Animation_2e5lo")
 }
 
 [node name="FrostbiteTouch" instance=ExtResource("1_arfgv")]
@@ -17,18 +86,36 @@ script = ExtResource("2_2ousu")
 origins = Array[int]([2])
 classes = Array[int]([10])
 deceleration_time = 2.0
+base_power_physical = 0.0
+base_power_magic = 5.0
 base_time_cooldown = 2.0
+base_radius_search = 200.0
 base_penetration_rate = 1.0
 base_deceleration_rate = 0.8
 
-[node name="Sprite2D" parent="." index="0"]
+[node name="Sprite2D" parent="Graphics" index="0"]
+position = Vector2(18, 1.07288e-06)
 rotation = 0.785398
 texture = ExtResource("3_yw4af")
 
-[node name="AnimationPlayer" parent="." index="6"]
+[node name="Marker2D" type="Marker2D" parent="Graphics" index="3"]
+position = Vector2(33, 1.44248e-06)
+
+[node name="PointLight2D" type="PointLight2D" parent="Graphics" index="4"]
+visible = false
+position = Vector2(33, 1.44248e-06)
+color = Color(0.36, 0.765333, 1, 1)
+energy = 0.1
+texture = ExtResource("4_w36x1")
+texture_scale = 0.05
+
+[node name="SearchBox" parent="Graphics" index="5"]
+position = Vector2(21, 0)
+
+[node name="CenterMarker2D" parent="." index="1"]
+position = Vector2(14, 0)
+
+[node name="AnimationPlayer" parent="." index="4"]
 libraries = {
 "": SubResource("AnimationLibrary_xbl4f")
 }
-
-[node name="Marker2D" type="Marker2D" parent="." index="8"]
-position = Vector2(15, 0)

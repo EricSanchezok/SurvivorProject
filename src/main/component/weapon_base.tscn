@@ -14,33 +14,37 @@ collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_ro216")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Graphics" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
 
-[node name="HitBox" type="Area2D" parent="."]
+[node name="HitBox" type="Area2D" parent="Graphics"]
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("2_odq2c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HitBox"]
 debug_color = Color(0.970343, 0, 0.455358, 0.42)
 
-[node name="HurtBox" type="Area2D" parent="."]
+[node name="HurtBox" type="Area2D" parent="Graphics"]
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("3_obb52")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
 debug_color = Color(0, 0.643345, 0.301713, 0.42)
 
-[node name="SearchBox" type="Area2D" parent="."]
+[node name="SearchBox" type="Area2D" parent="Graphics"]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SearchBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/SearchBox"]
 shape = SubResource("CircleShape2D_erb7m")
 debug_color = Color(0.60867, 0.539673, 0, 0.42)
+
+[node name="CenterMarker2D" type="Marker2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("4_qkwuw")
@@ -50,5 +54,5 @@ script = ExtResource("4_qkwuw")
 [node name="TimerCoolDown" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="body_entered" from="SearchBox" to="." method="_on_search_box_body_entered"]
-[connection signal="body_exited" from="SearchBox" to="." method="_on_search_box_body_exited"]
+[connection signal="body_entered" from="Graphics/SearchBox" to="." method="_on_search_box_body_entered"]
+[connection signal="body_exited" from="Graphics/SearchBox" to="." method="_on_search_box_body_exited"]
