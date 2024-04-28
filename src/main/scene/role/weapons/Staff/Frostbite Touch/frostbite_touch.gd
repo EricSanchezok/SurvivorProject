@@ -4,8 +4,7 @@ var bullet = preload("res://src/main/scene/role/weapons/Staff/Frostbite Touch/fr
 
 func _ready() -> void:
 	super()
-	print(radius_search)
-	rotation = - PI / 2
+	rotation = -PI/2
 
 enum State{
 	READY

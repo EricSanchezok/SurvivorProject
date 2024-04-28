@@ -26,7 +26,7 @@ var target: EnemyBase
 @export var base_range_explosion: = 30   #爆炸范围
 @export var base_knockback: float = 30.0    #击退效果
 @export var base_critical_hit_rate: float = 0.0  #暴击率
-@export var base_critical_damage: float = 0.0    #暴击伤害
+@export var base_critical_damage: float = 2.0    #暴击伤害
 @export var base_number_of_projectiles: int = 1   #发射物数量
 @export var base_magazine: = 0  #弹匣
 @export var base_speed_fly: float = 200.0   #武器飞行速度

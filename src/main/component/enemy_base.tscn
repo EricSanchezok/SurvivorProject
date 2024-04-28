@@ -31,6 +31,8 @@ script = ExtResource("3_btl2e")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
 debug_color = Color(0, 0.643137, 0.301961, 0.419608)
 
+[node name="DamageNumberMarker2D" type="Marker2D" parent="Graphics"]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="StateMachine" type="Node" parent="."]

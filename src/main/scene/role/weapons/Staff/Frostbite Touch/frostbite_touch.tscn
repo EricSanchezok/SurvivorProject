@@ -92,6 +92,7 @@ base_time_cooldown = 2.0
 base_radius_search = 200.0
 base_penetration_rate = 1.0
 base_deceleration_rate = 0.8
+base_freezing_rate = 0.3
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(18, 1.07288e-06)

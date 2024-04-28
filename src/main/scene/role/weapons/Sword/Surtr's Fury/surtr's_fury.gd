@@ -37,22 +37,22 @@ func get_next_state(state: State) -> int:
 			if target and $TimerCoolDown.is_stopped():
 				return State.ATTACK
 		State.ATTACK:
-			if not target or target.is_dead or position.distance_squared_to(target.global_position) < pow(1.0, 2):
+			if not target or target.is_dead or position.distance_squared_to(target.global_position) < pow(5.0, 2):
 				return State.WAIT
 				
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	#print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 	current_time = 0.0
 	match to:
 		State.WAIT:
 			$AnimationPlayer.play("slake")
 			$TimerCoolDown.start()
-			$HitBox.monitoring = false
+			$Graphics/HitBox.monitoring = false
 		State.ATTACK:
 			$AnimationPlayer.play("ignite")
-			$HitBox.monitoring = true
+			$Graphics/HitBox.monitoring = true
 			# 召唤陨石
 			var instance = meteorite.instantiate()
 			instance.parent_weapon = self
