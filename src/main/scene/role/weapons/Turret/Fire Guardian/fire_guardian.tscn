@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk0emm2xxkkov"]
+[gd_scene load_steps=12 format=3 uid="uid://dk0emm2xxkkov"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_x4udp"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Turret/Fire Guardian/fire_guardian.gd" id="2_t84q7"]
 [ext_resource type="Texture2D" uid="uid://b20txaqsswvx3" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_79.png" id="3_kelxv"]
 [ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_ka24e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qc4h0"]
+radius = 25.0
+height = 88.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c0pex"]
 particles_animation = true
@@ -29,12 +33,13 @@ curve = SubResource("Curve_hqssh")
 lifetime_randomness = 0.18
 particle_flag_disable_z = true
 emission_shape = 1
-emission_sphere_radius = 5.0
-initial_velocity_min = 80.0
-initial_velocity_max = 150.0
+emission_sphere_radius = 2.0
+spread = 20.0
+initial_velocity_min = 300.0
+initial_velocity_max = 300.0
 gravity = Vector3(0, 0, 0)
-scale_min = 0.5
-scale_max = 0.8
+scale_min = 0.8
+scale_max = 1.2
 scale_curve = SubResource("CurveTexture_k2g8h")
 color_ramp = SubResource("GradientTexture1D_rgxcn")
 anim_speed_min = 0.8
@@ -47,16 +52,32 @@ turbulence_influence_max = 0.15
 script = ExtResource("2_t84q7")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
-position = Vector2(8, 0)
+position = Vector2(4, 0)
 rotation = 0.785398
 texture = ExtResource("3_kelxv")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="6"]
+[node name="HitBox" parent="Graphics" index="1"]
 visible = false
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+position = Vector2(56, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qc4h0")
+
+[node name="SearchBox" parent="Graphics" index="3"]
+visible = false
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="6"]
 material = SubResource("CanvasItemMaterial_c0pex")
-position = Vector2(17, 0)
-amount = 70
+position = Vector2(24, -1)
+amount = 100
 process_material = SubResource("ParticleProcessMaterial_sxvrs")
 texture = ExtResource("4_ka24e")
 lifetime = 1.1
 randomness = 0.23
+
+[node name="HitBoxTimer" type="Timer" parent="." index="7"]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="HitBoxTimer" to="." method="_on_hit_box_timer_timeout"]
