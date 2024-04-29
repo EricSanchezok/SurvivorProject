@@ -1,5 +1,6 @@
 class_name ProjectileBase
 extends CharacterBody2D
+var initial_rotation: float
 
 @export var tracking: bool = false
 @export var bezier: bool = false
@@ -20,10 +21,12 @@ var reached: bool = false
 var stop_moveing: bool = false
 var current_time: float = 0.0
 
+
 func _ready() -> void:
 	if target == null:
 		target = parent_weapon.target
 	weapon_stats = parent_weapon.weapon_stats
+	$Graphics.rotation = initial_rotation
 
 
 func _physics_process(delta: float) -> void:
@@ -42,18 +45,19 @@ func _physics_process(delta: float) -> void:
 			var distance = position.distance_to(target_position)
 			var total_time = distance / weapon_stats.speed_fly
 			var t = min(current_time/total_time, 1)
-			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * weapon_stats.speed_fly * bezier_param
+			var start_control_point = position + Vector2(cos($Graphics.rotation), sin($Graphics.rotation)) * weapon_stats.speed_fly * bezier_param
 			var next_point = position.bezier_interpolate(start_control_point, target_position, target_position, t)
-			look_at(next_point)
+			$Graphics.look_at(next_point)
 			position = position.move_toward(next_point, weapon_stats.speed_fly * delta)
 		else:
-			look_at(target_position)
+			$Graphics.look_at(target_position)
 			position = position.move_toward(target_position, weapon_stats.speed_fly * delta)
 	else:
-		look_at(target_position)
+		$Graphics.look_at(target_position)
 		position = position.move_toward(target_position, weapon_stats.speed_fly * delta)
 		
-	if position.distance_squared_to(target_position) < pow(1, 2) and not reached:
+		
+	if position.distance_squared_to(target_position) < pow(3, 2) and not reached:
 		reached = true
 		reach_target.emit()
 

@@ -44,6 +44,6 @@ func fire() -> void:
 		instance.parent_weapon = self
 		instance.tracking = true
 		
-		instance.rotation = get_random_direction((target.global_position-position).normalized(), 180).angle()
+		instance.initial_rotation = get_random_direction((target.global_position-position).normalized(), 180).angle()
 		instance.position = $Graphics/Marker2D.global_position
 		get_tree().root.add_child(instance)

@@ -1,0 +1,165 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0kjyqopi1wgy"]
+
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_8o5mg"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Dagger/Snowfield Blade/snowfield_blade.gd" id="2_hynvm"]
+[ext_resource type="Texture2D" uid="uid://c1qgg2fnw2gc5" path="res://src/main/assets/packs/32X32/2 Weapon icons #2/Icons/icon_2_28.png" id="3_4567v"]
+[ext_resource type="Texture2D" uid="uid://1ava8dmdib6f" path="res://src/main/assets/packs/16X16/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/238.png" id="4_71nkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5du5a"]
+radius = 13.0
+height = 38.0
+
+[sub_resource type="Animation" id="Animation_h37mu"]
+resource_name = "MOVE"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2, 0.4, 0.55, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:start_move")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphics/HitBox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_f4dcr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:start_move")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphics/HitBox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vnipt"]
+_data = {
+"RESET": SubResource("Animation_f4dcr"),
+"move": SubResource("Animation_h37mu")
+}
+
+[node name="SnowfieldBlade" instance=ExtResource("1_8o5mg")]
+script = ExtResource("2_hynvm")
+thrust_distance = 40.0
+reminder_threshold = 0.7
+furthest_distance_coefficient = 1.6
+start_move = false
+
+[node name="WeaponStats" parent="." index="0"]
+origins = Array[int]([1])
+classes = Array[int]([5])
+base_power_physical = 0.2
+base_power_magic = 0.4
+base_time_cooldown = 1.5
+base_radius_search = 120.0
+base_knockback = 20.0
+base_speed_fly = 120.0
+base_speed_rotation = 720.0
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+position = Vector2(5, 0)
+rotation = 0.785398
+texture = ExtResource("3_4567v")
+
+[node name="HitBox" parent="Graphics" index="1"]
+monitoring = false
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+position = Vector2(5, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5du5a")
+
+[node name="SearchBox" parent="Graphics" index="3"]
+visible = false
+
+[node name="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_vnipt")
+}
+
+[node name="distance_reminder" type="Sprite2D" parent="." index="7"]
+visible = false
+position = Vector2(0, -25)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_71nkg")

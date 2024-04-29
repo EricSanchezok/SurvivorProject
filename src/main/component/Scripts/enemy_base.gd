@@ -130,13 +130,13 @@ func tick_physics(state: State, delta: float) -> void:
 func get_next_state(state: State) -> int:
 	if effects_states[Effect.FREEZE]:
 		return StateMachine.KEEP_CURRENT
+
+	if enemy_stats.current_health == 0:
+		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
 		
 	if pending_damages.size() > 0:
 		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
 
-	if enemy_stats.current_health == 0:
-		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
-	
 	match state:
 		State.APPEAR:
 			if not animation_player.is_playing():

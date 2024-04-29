@@ -200,7 +200,7 @@ _data = {
 
 [node name="ANiu" instance=ExtResource("1_3mhwp")]
 script = ExtResource("2_abvsp")
-default_weapon = "frostbite_touch"
+default_weapon = "snowfield_blade"
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(0, 8)
@@ -213,10 +213,10 @@ region_rect = Rect2(0, 0, 192, 32)
 [node name="CollisionShape2D" parent="Graphics/HurtBox" index="0"]
 shape = SubResource("CapsuleShape2D_e0ej0")
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CapsuleShape2D_47p0o")
 
-[node name="AnimationPlayer" parent="." index="3"]
+[node name="AnimationPlayer" parent="." index="4"]
 libraries = {
 "": SubResource("AnimationLibrary_5djc4")
 }

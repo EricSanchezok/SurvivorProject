@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m0lwtgjbokff"
-path="res://.godot/imported/f386b1fa331133a6c5b05bc8b25dac5c-32bits-16.png-c652376aec5682454e64f5c150746500.ctex"
+uid="uid://b1c5cems83a8a"
+path="res://.godot/imported/Lightning_1_256-sheet.png-049a504114ee00b44a21ce255dac035f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/main/scene/role/weapons/Gun/SkyBlast Cannon/f386b1fa331133a6c5b05bc8b25dac5c-32bits-16.png"
-dest_files=["res://.godot/imported/f386b1fa331133a6c5b05bc8b25dac5c-32bits-16.png-c652376aec5682454e64f5c150746500.ctex"]
+source_file="res://src/main/assets/texture/vfx/LightningFreePack/256/Lightning_1_256-sheet.png"
+dest_files=["res://.godot/imported/Lightning_1_256-sheet.png-049a504114ee00b44a21ce255dac035f.ctex"]
 
 [params]
 

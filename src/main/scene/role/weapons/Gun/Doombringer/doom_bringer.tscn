@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://bawsqaaeo5t56"]
+
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_vujib"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Gun/Doombringer/doom_bringer.gd" id="2_ijukr"]
+[ext_resource type="Texture2D" uid="uid://uqvy8wa4uqwo" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_75.png" id="3_xuyuj"]
+[ext_resource type="PackedScene" uid="uid://bf3g130ar4w62" path="res://src/main/scene/ui/reload_progress_bar.tscn" id="4_rxed1"]
+
+[sub_resource type="Animation" id="Animation_58yqv"]
+resource_name = "attack"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 4), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.02),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"find_and_fire"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_r8pm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vc7d"]
+_data = {
+"RESET": SubResource("Animation_r8pm0"),
+"attack": SubResource("Animation_58yqv")
+}
+
+[node name="Doombringer" instance=ExtResource("1_vujib")]
+script = ExtResource("2_ijukr")
+
+[node name="WeaponStats" parent="." index="0"]
+origins = Array[int]([0])
+classes = Array[int]([13])
+base_power_magic = 2.0
+base_time_cooldown = 5.0
+base_radius_search = 300.0
+base_knockback = 80.0
+base_critical_hit_rate = 0.5
+base_magazine = 10
+base_speed_fly = 100.0
+base_penetration_rate = 1.0
+
+[node name="Graphics" parent="." index="1"]
+rotation = -1.5708
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+position = Vector2(9, 0)
+rotation = 0.785398
+texture = ExtResource("3_xuyuj")
+
+[node name="SearchBox" parent="Graphics" index="3"]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="Graphics" index="4"]
+position = Vector2(32, 0)
+
+[node name="CenterMarker2D" parent="." index="2"]
+position = Vector2(7, 0)
+
+[node name="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_5vc7d")
+}
+
+[node name="ReloadProgressBar" parent="." index="7" instance=ExtResource("4_rxed1")]
+position = Vector2(0, 15)

@@ -22,7 +22,7 @@ signal update_attribute
 @export var base_critical_hit_rate: float = 0.0  #暴击率
 @export var base_critical_damage: float = 2.0    #暴击伤害
 @export var base_number_of_projectiles: int = 1   #发射物数量
-@export var base_magazine: = 0  #弹匣
+@export var base_magazine: = 1  #弹匣
 @export var base_speed_fly: float = 200.0   #武器飞行速度
 @export var base_speed_rotation: float = 360.0   #旋转速度
 @export var base_penetration_rate: float = 0  #穿透率

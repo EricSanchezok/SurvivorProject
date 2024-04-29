@@ -7,6 +7,8 @@ extends WeaponBase
 @onready var base_scale_min = gpu_particles_2d.process_material.scale_min
 @onready var base_scale_max = gpu_particles_2d.process_material.scale_max
 
+var rand_dir: int = 1
+var change_seconds: float = 2.0
 
 enum State{
 	WAIT,
@@ -16,9 +18,15 @@ enum State{
 func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:
-			pass
+			change_seconds -= delta
+			$Graphics.rotation += deg_to_rad(weapon_stats.speed_rotation) * delta * 0.05 * rand_dir
+			if change_seconds <= 0.0:
+				if Tools.is_success(0.003):
+					rand_dir *= -1
+					change_seconds = 2.0
+				
 		State.ATTACK:
-			towards_target(target, deg_to_rad(weapon_stats.speed_rotation*delta), true)
+			towards_target(target, deg_to_rad(weapon_stats.speed_rotation)*delta, true)
 
 func get_next_state(state: State) -> int:
 	match state:
@@ -33,7 +41,7 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 	match to:
 		State.WAIT:
 			hit_box_timer.stop()
