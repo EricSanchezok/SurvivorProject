@@ -141,11 +141,10 @@ turbulence_influence_max = 0.15
 
 [node name="Surtr\'s Fury" instance=ExtResource("1_b4s7a")]
 script = ExtResource("2_5r0vc")
+
+[node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([0])
-classes = Array[int]([10])
-base_power_physical = 4.0
-base_power_magic = 3.0
-base_penetration_rate = 1.0
+classes = Array[int]([0])
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(11, 0)
@@ -160,13 +159,13 @@ shape = SubResource("CapsuleShape2D_m78hj")
 [node name="SearchBox" parent="Graphics" index="3"]
 visible = false
 
-[node name="CenterMarker2D" parent="." index="1"]
+[node name="CenterMarker2D" parent="." index="2"]
 position = Vector2(10, 0)
 
-[node name="CollisionShape2D" parent="." index="2"]
+[node name="CollisionShape2D" parent="." index="3"]
 rotation = 1.5708
 
-[node name="AnimationPlayer" parent="." index="4"]
+[node name="AnimationPlayer" parent="." index="5"]
 libraries = {
 "": SubResource("AnimationLibrary_gk8ft")
 }

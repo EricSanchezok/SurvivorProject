@@ -83,16 +83,10 @@ _data = {
 
 [node name="FrostbiteTouch" instance=ExtResource("1_arfgv")]
 script = ExtResource("2_2ousu")
-origins = Array[int]([2])
+
+[node name="WeaponStats" parent="." index="0"]
+origins = Array[int]([1])
 classes = Array[int]([10])
-deceleration_time = 2.0
-base_power_physical = 0.0
-base_power_magic = 5.0
-base_time_cooldown = 2.0
-base_radius_search = 200.0
-base_penetration_rate = 1.0
-base_deceleration_rate = 0.8
-base_freezing_rate = 0.3
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(18, 1.07288e-06)
@@ -113,10 +107,10 @@ texture_scale = 0.05
 [node name="SearchBox" parent="Graphics" index="5"]
 position = Vector2(21, 0)
 
-[node name="CenterMarker2D" parent="." index="1"]
+[node name="CenterMarker2D" parent="." index="2"]
 position = Vector2(14, 0)
 
-[node name="AnimationPlayer" parent="." index="4"]
+[node name="AnimationPlayer" parent="." index="5"]
 libraries = {
 "": SubResource("AnimationLibrary_xbl4f")
 }

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn23km7rk18nk"]
+[gd_scene load_steps=7 format=3 uid="uid://dn23km7rk18nk"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/weapon_base.gd" id="1_ro216"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_odq2c"]
+[ext_resource type="Script" path="res://src/main/common/classes/WeaponStats.gd" id="2_ss53b"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_obb52"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_qkwuw"]
 
@@ -13,6 +14,9 @@ collision_layer = 0
 collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_ro216")
+
+[node name="WeaponStats" type="Node" parent="."]
+script = ExtResource("2_ss53b")
 
 [node name="Graphics" type="Node2D" parent="."]
 

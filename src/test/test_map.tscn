@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://1yhgg4r2dlpv"]
+[gd_scene load_steps=13 format=3 uid="uid://1yhgg4r2dlpv"]
 
 [ext_resource type="Texture2D" uid="uid://df62a4xx6547k" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Tilesets (16x16)/RA_Jungle.png" id="1_njcds"]
 [ext_resource type="Script" path="res://src/test/test_map.gd" id="1_ocifa"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://btxc5hfxx24vb" path="res://src/main/component/enemy_generator.tscn" id="5_74564"]
 [ext_resource type="Script" path="res://src/main/common/classes/spawn_shape_2d.gd" id="6_4d2m4"]
 [ext_resource type="PackedScene" uid="uid://bu4qkguaw7xus" path="res://src/main/scene/role/player/a_niu.tscn" id="7_x64l5"]
+[ext_resource type="Script" path="res://src/main/common/classes/position_generator.gd" id="8_cwdrq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s644d"]
 texture = ExtResource("1_njcds")
@@ -1238,6 +1239,9 @@ sources/0 = SubResource("TileSetAtlasSource_s644d")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg27j"]
 size = Vector2(777, 427)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtgpt"]
+radius = 135.831
+
 [node name="TestMap" type="Node2D"]
 script = ExtResource("1_ocifa")
 
@@ -1253,10 +1257,18 @@ position = Vector2(50, 0)
 [node name="WeaponsManager" parent="." instance=ExtResource("4_waq6f")]
 
 [node name="EnemyGenerator" parent="." instance=ExtResource("5_74564")]
+visible = false
 
 [node name="SpawnShape2D" type="CollisionShape2D" parent="EnemyGenerator"]
 position = Vector2(2.5, -4.5)
 shape = SubResource("RectangleShape2D_sg27j")
+script = ExtResource("6_4d2m4")
+
+[node name="TurretAreas" type="Area2D" parent="." groups=["TurretAreas"]]
+script = ExtResource("8_cwdrq")
+
+[node name="SpawnShape2D" type="CollisionShape2D" parent="TurretAreas"]
+shape = SubResource("CircleShape2D_xtgpt")
 script = ExtResource("6_4d2m4")
 
 [node name="ANiu" parent="." instance=ExtResource("7_x64l5")]

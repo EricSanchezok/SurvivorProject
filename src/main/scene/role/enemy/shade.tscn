@@ -202,4 +202,3 @@ libraries = {
 
 [node name="EnemyStats" parent="." index="4"]
 max_health = 100.0
-base_speed_movement = 50.0
