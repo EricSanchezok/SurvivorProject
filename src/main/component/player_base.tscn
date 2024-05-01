@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://doj0nvhytxean"]
+[gd_scene load_steps=9 format=3 uid="uid://doj0nvhytxean"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/player_base.gd" id="1_c0py7"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="2_1gfhr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://32wdbpxyk7ln" path="res://icon.svg" id="4_dnj7v"]
 [ext_resource type="Script" path="res://src/main/common/classes/trait/fire.gd" id="6_u65hr"]
 [ext_resource type="Script" path="res://src/main/common/classes/attribute_changed.gd" id="7_dpwgu"]
+[ext_resource type="PackedScene" uid="uid://c4yufgahca7q6" path="res://src/main/scene/ui/shop_screen.tscn" id="8_tjrvw"]
 
 [node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
 z_index = 10
@@ -117,3 +118,7 @@ script = ExtResource("7_dpwgu")
 
 [node name="Fire" type="Node" parent="Traits"]
 script = ExtResource("6_u65hr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("8_tjrvw")]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://27gthvyt5gcq"]
+
+[ext_resource type="Texture2D" uid="uid://dixlc2rmodb4v" path="res://src/main/assets/texture/role/Card/CardBackGround.png" id="1_o7qte"]
+
+[node name="EquipmentArea" type="Control"]
+custom_minimum_size = Vector2(45, 63)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 45.0
+offset_bottom = 63.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.164706, 0.462745, 0.568627, 0.376471)
+custom_minimum_size = Vector2(45, 63)
+offset_right = 45.0
+offset_bottom = 63.0
+texture = ExtResource("1_o7qte")
+expand_mode = 1
+stretch_mode = 5

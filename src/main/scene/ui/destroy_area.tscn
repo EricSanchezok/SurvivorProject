@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv66wrqma2aob"]
+
+[ext_resource type="Script" path="res://src/main/scene/ui/Scripts/destroy_area.gd" id="1_orhag"]
+[ext_resource type="Texture2D" uid="uid://dixlc2rmodb4v" path="res://src/main/assets/texture/role/Card/CardBackGround.png" id="1_qyl0e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmhvd"]
+radius = 19.0
+height = 60.0
+
+[node name="DestroyArea" type="Control"]
+custom_minimum_size = Vector2(45, 63)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_orhag")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.63, 0.22596, 0.1638, 0.47451)
+custom_minimum_size = Vector2(45, 63)
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 63.0
+texture = ExtResource("1_qyl0e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(22, 31)
+shape = SubResource("CapsuleShape2D_bmhvd")

@@ -1,0 +1,185 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4yufgahca7q6"]
+
+[ext_resource type="PackedScene" uid="uid://dwy48kklpg6tr" path="res://src/main/common/classes/ui/weapon_card.tscn" id="1_iwxcn"]
+[ext_resource type="Script" path="res://src/main/scene/ui/Scripts/shop_screen.gd" id="1_pbipd"]
+[ext_resource type="Texture2D" uid="uid://dixlc2rmodb4v" path="res://src/main/assets/texture/role/Card/CardBackGround.png" id="2_ufwi0"]
+[ext_resource type="Texture2D" uid="uid://byj4goebhxjah" path="res://src/main/assets/packs/16X16/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/94.png" id="3_kejpe"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="5_m2vk7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6hit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lsmbc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7i7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64njr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilo1i"]
+
+[node name="ShopScreen" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_pbipd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Up" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Up"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 63.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 24
+
+[node name="RefreshButton" type="Button" parent="VBoxContainer/Up/MarginContainer"]
+z_index = 100
+custom_minimum_size = Vector2(45, 63)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e6hit")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lsmbc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_s7i7b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_64njr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ilo1i")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Up/MarginContainer/RefreshButton"]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufwi0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/Up/MarginContainer/RefreshButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.5
+offset_top = -16.5
+offset_right = 16.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_kejpe")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Up"]
+custom_minimum_size = Vector2(300, 58)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_right = 120.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 15
+
+[node name="ShopCards" type="PanelContainer" parent="VBoxContainer/Up/MarginContainer2"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+
+[node name="ShopMarker2D" type="Marker2D" parent="VBoxContainer/Up"]
+position = Vector2(440, 50)
+
+[node name="Mid" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Down" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Down"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Down/MarginContainer"]
+layout_mode = 2
+
+[node name="WeaponCard" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 280.0
+offset_right = 109.0
+offset_bottom = 343.0
+
+[node name="WeaponCard2" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 282.0
+offset_right = 163.0
+offset_bottom = 345.0
+
+[node name="WeaponCard3" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 282.0
+offset_right = 215.0
+offset_bottom = 345.0
+
+[node name="WeaponCard4" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 282.0
+offset_right = 268.0
+offset_bottom = 345.0
+
+[node name="WeaponCard5" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 280.0
+offset_right = 321.0
+offset_bottom = 343.0
+
+[node name="WeaponCard6" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 283.0
+offset_right = 375.0
+offset_bottom = 346.0
+
+[node name="WeaponCard7" parent="." instance=ExtResource("1_iwxcn")]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 283.0
+offset_right = 428.0
+offset_bottom = 346.0
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("5_m2vk7")

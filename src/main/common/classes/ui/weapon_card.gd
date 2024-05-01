@@ -3,15 +3,37 @@ extends Button
 
 @onready var shadow: TextureRect = $Shadow
 @onready var card_texture: TextureRect = $CardTexture
+@onready var state_machine: StateMachine = $StateMachine
+@onready var destroy_shape_cast_2d: ShapeCast2D = $DestroyShapeCast2D
 
-var angle_x_max: float = deg_to_rad(6)
-var angle_y_max: float = deg_to_rad(6)
+var angle_x_max: float = deg_to_rad(0)
+var angle_y_max: float = deg_to_rad(0)
 var max_offset_shadow: int = 10
 
 var tween_rot: Tween
 var tween_hover: Tween
 var tween_destroy: Tween
 var tween_handle: Tween
+
+signal apply_to_purchase(card: WeaponCard)
+signal apply_to_exchange(card: WeaponCard)
+signal apply_to_destroy(card: WeaponCard, now_position: Vector2)
+
+var purchased: bool = false
+var start_exchange: bool = false
+var to_inventory: bool = false
+var to_equipment: bool = false
+var adsorption_position: Vector2
+
+
+
+
+enum State{
+	INSHOP,
+	INVENTORY,
+	EQUIPMENT,
+	EXCHANGE,
+}
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 移动时旋转相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var spring: float = 400.0
@@ -27,23 +49,12 @@ var velocity: Vector2
 var following_mouse: bool = false
 
 
-var purchased: bool = false
-var storage_area: Array
-
-var equipped: bool = false
-var equip_area: Array
-
-
 func _ready() -> void:
 	# 唯一化 card_texture 的材质
 	var materialTemp = card_texture.material.duplicate()
 	card_texture.material = materialTemp
 	
-func _process(delta: float) -> void:
-	rotate_velocity(delta)
-	follow_mouse(delta)
-	handle_shadow(delta)
-	
+
 func rotate_velocity(delta: float) -> void:
 	if not following_mouse: return
 	var center_pos: Vector2 = global_position - (size/2.0)
@@ -72,17 +83,14 @@ func handle_mouse_click(event: InputEvent) -> void:
 	if not event is InputEventMouseButton: return
 	if event.button_index != MOUSE_BUTTON_LEFT: return
 	
-	if event.is_pressed():
-		following_mouse = true
+	if event.is_pressed(): # 按下鼠标时
 		z_index = 100
-	else:
-		# drop card
-		following_mouse = false
+		if state_machine.current_state != State.INSHOP:
+			following_mouse = true
+		
+	else: # 松开鼠标时
 		z_index = 0
-		if tween_handle and tween_handle.is_running():
-			tween_handle.kill()
-		tween_handle = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-		tween_handle.tween_property(self, "rotation", 0.0, 0.3)
+		following_mouse = false
 		
 		# 重置缩放
 		if tween_hover and tween_hover.is_running():
@@ -90,18 +98,26 @@ func handle_mouse_click(event: InputEvent) -> void:
 		tween_hover = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
 		tween_hover.tween_property(self, "scale", Vector2.ONE, 0.55)
 		
-		# 如果松开鼠标时在装备区域
-		if storage_area.size() > 0:
-			purchased = true
-			var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-			tween.tween_property(self, "position", storage_area[0].center_position()-size/2.0, 0.3)
+		if state_machine.current_state != State.INSHOP:
 			
-			await tween.finished
+			 # 重置旋转
+			if tween_handle and tween_handle.is_running():
+				tween_handle.kill()
+			tween_handle = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+			tween_handle.tween_property(self, "rotation", 0.0, 0.3)
 			
-		if purchased and storage_area.size() == 0:
-			destroy()
-	
+			if destroy_shape_cast_2d.is_colliding(): # 卖出该卡
+				apply_to_destroy.emit(self)
+				return
+				
+			apply_to_exchange.emit(self, global_position)
 
+
+			
+
+		
+		
+		
 func _gui_input(event: InputEvent) -> void:
 	
 	handle_mouse_click(event)
@@ -109,6 +125,7 @@ func _gui_input(event: InputEvent) -> void:
 	if following_mouse: return
 	if not event is InputEventMouseMotion: return
 	
+	# 伪 3D 效果器
 	var mouse_pos: Vector2 = get_local_mouse_position()
 	var diff: Vector2 = (position + size) - mouse_pos
 	
@@ -122,18 +139,80 @@ func _gui_input(event: InputEvent) -> void:
 	card_texture.material.set_shader_parameter("y_rot", rot_x)
 	
 
+func tick_physics(state: State, delta: float) -> void:
+
+	match state:
+		State.INSHOP:
+			pass
+		State.INVENTORY:
+			rotate_velocity(delta)
+			follow_mouse(delta)
+			handle_shadow(delta)
+		State.EQUIPMENT:
+			rotate_velocity(delta)
+			follow_mouse(delta)
+			handle_shadow(delta)
+		State.EXCHANGE:
+			pass
+
+func get_next_state(state: State) -> int:
+	
+	
+	match state:
+		State.INSHOP:
+			if purchased:
+				return State.INVENTORY
+		State.INVENTORY:
+			if start_exchange:
+				return State.EXCHANGE
+		State.EQUIPMENT:
+			if start_exchange:
+				return State.EXCHANGE
+		State.EXCHANGE:
+			if to_inventory:
+				start_exchange = false
+				to_inventory = false
+				return State.INVENTORY
+			if to_equipment:
+				start_exchange = false
+				to_equipment = false
+				return State.EQUIPMENT
+				
+				
+
+	return StateMachine.KEEP_CURRENT
+	
+func transition_state(from: State, to: State) -> void:	
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	match to:
+		State.INSHOP:
+			pass
+		State.INVENTORY:
+			adsorption_position = global_position
+		State.EQUIPMENT:
+			pass
+		State.EXCHANGE:
+			pass
+			
+func back() -> void:
+	# 回到吸附位置
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(self, "position", adsorption_position, 0.3)
+			
 func destroy() -> void:
 	card_texture.use_parent_material = true
 	if tween_destroy and tween_destroy.is_running():
 		tween_destroy.kill()
 	tween_destroy = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-	tween_destroy.tween_property(material, "shader_parameter/dissolve_value", 0.0, 1.0).from(1.0)
-	tween_destroy.parallel().tween_property(shadow, "self_modulate:a", 0.0, 1.0)
+	tween_destroy.tween_property(material, "shader_parameter/dissolve_value", 0.0, 0.5).from(1.0)
+	tween_destroy.parallel().tween_property(shadow, "self_modulate:a", 0.0, 0.5)
+	tween_destroy.parallel().tween_property(card_texture, "modulate:a", 0.0, 0.5)
 	
 	await tween_destroy.finished
 	queue_free()
 
 func _on_mouse_entered() -> void:
+	# print("i am in")
 	if tween_hover and tween_hover.is_running():
 		tween_hover.kill()
 	tween_hover = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
@@ -141,6 +220,7 @@ func _on_mouse_entered() -> void:
 
 
 func _on_mouse_exited() -> void:
+	# print("i am out")
 	# 重置旋转
 	if tween_rot and tween_rot.is_running():
 		tween_rot.kill()
@@ -155,12 +235,8 @@ func _on_mouse_exited() -> void:
 	tween_hover.tween_property(self, "scale", Vector2.ONE, 0.55)
 
 
+func _on_pressed() -> void:
+	if state_machine.current_state == State.INSHOP: # 只有在商店状态时才允许申请购买
+		apply_to_purchase.emit(self)
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.owner.type == "slot":
-		storage_area.append(area.owner)
 
-
-func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area.owner.type == "slot":
-		storage_area.erase(area.owner)

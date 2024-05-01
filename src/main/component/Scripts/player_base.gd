@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var player_stats: PlayerStats = $PlayerStats
 @onready var abc: Attribute_Changed = $Attribute_Changed
+@onready var shop_screen: Control = $CanvasLayer/ShopScreen
+
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
 
@@ -44,6 +46,30 @@ var slot_speed_rotation: float = 60.0
 var amplitude: float = 2.0
 var frequency: float = 0.2
 var current_time: float = 0.0
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shop"):
+		if not shop_screen.visible:
+			camera_2d.position_smoothing_enabled = false
+			var tween = create_tween()
+			tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.0, 0.3)
+			tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.0, 0.3)
+			tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.0, 0.3)
+			tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.0, 0.3)
+			await tween.finished
+			camera_2d.position_smoothing_enabled = true
+			shop_screen.show_screen()
+		else:
+			shop_screen.hide_screen()
+			recover_from_shop_screen()
+		
+func recover_from_shop_screen() -> void:
+		var tween = create_tween()
+		tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.2, 0.3)
+	
 
 
 func _ready() -> void:

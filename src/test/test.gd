@@ -3,22 +3,19 @@ extends Node2D
 var enemy: EnemyBase
 
 func _ready() -> void:
-	print(get_random_direction(Vector2(0, 0), 30).angle()*180/3.1415)
+	# 椭圆的长轴和短轴长度
+	var a = 420.0
+	var b = 150.0
 
-func get_random_direction(base_direction: Vector2, angle_range: float) -> Vector2:
-	'''
-	获取随机方向
+	# 你要计算的x坐标
+	var x_coords = [a/3, 2*a/3, a]
+	# 输出结果
+	for x in x_coords:
+		print("For x =", x, ", y =", calculate_y_on_ellipse(x, a, b))
 
-	:param base_direction: 基准方向
-	:param angle_range: 角度范围
-
-	:return: 随机方向
-	'''
-	var base_angle = base_direction.angle()
-	
-	var half_angle_range = angle_range * 0.5
-	var random_angle = randf_range(-half_angle_range, half_angle_range)
-	
-	var new_angle = base_angle + deg_to_rad(random_angle)
-
-	return Vector2(cos(new_angle), sin(new_angle))
+# 计算椭圆上的y坐标
+func calculate_y_on_ellipse(x, a, b):
+	var y_squared = b * b * (1 - (x * x) / (a * a))
+	if y_squared < 0:
+		return "No real solution"  # 在数学上不可能，除非有计算误差或数据错误
+	return sqrt(y_squared)
