@@ -185,7 +185,7 @@ expand_mode = 1
 stretch_mode = 5
 flip_h = true
 
-[node name="Name" type="Label" parent="CardTexture"]
+[node name="WeaponName" type="Label" parent="CardTexture"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 5.0
@@ -195,7 +195,7 @@ theme_override_font_sizes/font_size = 6
 text = "Doombringer"
 vertical_alignment = 2
 
-[node name="Price" type="Label" parent="CardTexture"]
+[node name="WeaponPrice" type="Label" parent="CardTexture"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 15.0
@@ -205,7 +205,7 @@ theme_override_font_sizes/font_size = 6
 text = "176"
 vertical_alignment = 1
 
-[node name="Class" type="Label" parent="CardTexture"]
+[node name="WeaponClass" type="Label" parent="CardTexture"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 45.0
@@ -217,7 +217,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Origin" type="Label" parent="CardTexture"]
+[node name="WeaponOrigin" type="Label" parent="CardTexture"]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 45.0

@@ -5,6 +5,21 @@
 [ext_resource type="Texture2D" uid="uid://uqvy8wa4uqwo" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_75.png" id="3_xuyuj"]
 [ext_resource type="PackedScene" uid="uid://bf3g130ar4w62" path="res://src/main/scene/ui/reload_progress_bar.tscn" id="4_rxed1"]
 
+[sub_resource type="Animation" id="Animation_r8pm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_58yqv"]
 resource_name = "attack"
 length = 0.2
@@ -36,21 +51,6 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_r8pm0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Graphics:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vc7d"]
 _data = {
 "RESET": SubResource("Animation_r8pm0"),
@@ -62,7 +62,7 @@ script = ExtResource("2_ijukr")
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([0])
-classes = Array[int]([13])
+classes = Array[int]([8])
 base_power_magic = 2.0
 base_time_cooldown = 5.0
 base_radius_search = 300.0

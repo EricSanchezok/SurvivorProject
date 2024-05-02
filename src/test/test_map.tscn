@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://1yhgg4r2dlpv"]
+[gd_scene load_steps=12 format=3 uid="uid://1yhgg4r2dlpv"]
 
 [ext_resource type="Texture2D" uid="uid://df62a4xx6547k" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Tilesets (16x16)/RA_Jungle.png" id="1_njcds"]
 [ext_resource type="Script" path="res://src/test/test_map.gd" id="1_ocifa"]
 [ext_resource type="PackedScene" uid="uid://ccyxj7ay8qs5j" path="res://src/test/test_fire.tscn" id="2_vighx"]
-[ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/component/weapons_manager.tscn" id="4_waq6f"]
 [ext_resource type="PackedScene" uid="uid://btxc5hfxx24vb" path="res://src/main/component/enemy_generator.tscn" id="5_74564"]
 [ext_resource type="Script" path="res://src/main/common/classes/spawn_shape_2d.gd" id="6_4d2m4"]
 [ext_resource type="PackedScene" uid="uid://bu4qkguaw7xus" path="res://src/main/scene/role/player/a_niu.tscn" id="7_x64l5"]
@@ -1254,8 +1253,6 @@ layer_0/tile_data = PackedInt32Array(-1572902, 65536, 32, -1507366, 65536, 32, -
 visible = false
 position = Vector2(50, 0)
 
-[node name="WeaponsManager" parent="." instance=ExtResource("4_waq6f")]
-
 [node name="EnemyGenerator" parent="." instance=ExtResource("5_74564")]
 visible = false
 
@@ -1264,10 +1261,10 @@ position = Vector2(2.5, -4.5)
 shape = SubResource("RectangleShape2D_sg27j")
 script = ExtResource("6_4d2m4")
 
-[node name="TurretAreas" type="Area2D" parent="." groups=["TurretAreas"]]
+[node name="StationAreas" type="Area2D" parent="." groups=["StationAreas"]]
 script = ExtResource("8_cwdrq")
 
-[node name="SpawnShape2D" type="CollisionShape2D" parent="TurretAreas"]
+[node name="SpawnShape2D" type="CollisionShape2D" parent="StationAreas"]
 shape = SubResource("CircleShape2D_xtgpt")
 script = ExtResource("6_4d2m4")
 

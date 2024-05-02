@@ -2,7 +2,6 @@ extends WeaponBase
 
 var meteorite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/meteorite.tscn")
 
-
 enum State {
 	WAIT,
 	ATTACK
@@ -12,7 +11,6 @@ var current_time: float = 0.0
 
 func _ready() -> void:
 	super()
-
 
 func tick_physics(state: State, delta: float) -> void:
 	match state:

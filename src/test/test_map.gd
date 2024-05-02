@@ -6,8 +6,14 @@ extends Node2D
 }
 
 
+
+
 func _ready() -> void:
-	# var combat_progress = CombatProgressGenerator.create_combat_progress(20, 1, 4)
-	 #CombatProgressGenerator.print_combat_progress(combat_progress)
+	var players = get_tree().get_nodes_in_group("player")
+	var station_areas = get_tree().get_first_node_in_group("station_area")
+
+	WeaponsManager.level_initialization(self, players, station_areas)
+
+
+	
 	$EnemyGenerator.register_enemy(enemies["shade"], 20)
-	pass

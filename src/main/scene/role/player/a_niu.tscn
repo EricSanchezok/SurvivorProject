@@ -200,7 +200,6 @@ _data = {
 
 [node name="ANiu" instance=ExtResource("1_3mhwp")]
 script = ExtResource("2_abvsp")
-default_weapon = "snowfield_blade"
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(0, 8)

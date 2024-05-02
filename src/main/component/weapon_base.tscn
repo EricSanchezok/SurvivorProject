@@ -1,10 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn23km7rk18nk"]
+[gd_scene load_steps=9 format=3 uid="uid://dn23km7rk18nk"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/weapon_base.gd" id="1_ro216"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_odq2c"]
 [ext_resource type="Script" path="res://src/main/common/classes/WeaponStats.gd" id="2_ss53b"]
+[ext_resource type="Shader" path="res://src/main/assets/shader/outline.gdshader" id="3_n002w"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="3_obb52"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="4_qkwuw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1wgnu"]
+shader = ExtResource("3_n002w")
+shader_parameter/line_color = Color(1, 1, 1, 0)
+shader_parameter/line_width = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_erb7m"]
 radius = 100.0
@@ -21,6 +27,7 @@ script = ExtResource("2_ss53b")
 [node name="Graphics" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+material = SubResource("ShaderMaterial_1wgnu")
 
 [node name="HitBox" type="Area2D" parent="Graphics"]
 collision_layer = 0

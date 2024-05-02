@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=3 uid="uid://doj0nvhytxean"]
+
+[ext_resource type="Script" path="res://src/main/component/Scripts/player_base.gd" id="1_c0py7"]
+[ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="2_1gfhr"]
+[ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="3_2r57c"]
+[ext_resource type="Script" path="res://src/main/common/classes/PlayerStats.gd" id="4_d0en6"]
+[ext_resource type="Texture2D" uid="uid://32wdbpxyk7ln" path="res://icon.svg" id="4_dnj7v"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/fire.gd" id="6_u65hr"]
+[ext_resource type="Script" path="res://src/main/common/classes/attribute_changed.gd" id="7_dpwgu"]
+[ext_resource type="PackedScene" uid="uid://c4yufgahca7q6" path="res://src/main/scene/ui/shop_screen.tscn" id="8_tjrvw"]
+
+[node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
+z_index = 10
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_c0py7")
+
+[node name="PlayerStats" type="Node" parent="."]
+script = ExtResource("4_d0en6")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+script = ExtResource("4_d0en6")
+
+[node name="HurtBox" type="Area2D" parent="Graphics"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("2_1gfhr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/HurtBox"]
+debug_color = Color(0, 0.643137, 0.301961, 0.419608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_2r57c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="InvincibleTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="WeaponSlots" type="Node2D" parent="."]
+visible = false
+
+[node name="weapon0" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon0"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon1" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon1"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon2" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon2"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon3" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon3"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon4" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon4"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon5" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon5"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon6" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon6"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon7" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon7"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon8" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon8"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="weapon9" type="Marker2D" parent="WeaponSlots" groups=["weapon_slot"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponSlots/weapon9"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_dnj7v")
+
+[node name="Attribute_Changed" type="Node" parent="."]
+script = ExtResource("7_dpwgu")
+
+[node name="Traits" type="Node" parent="."]
+
+[node name="Fire" type="Node" parent="Traits"]
+script = ExtResource("6_u65hr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("8_tjrvw")]

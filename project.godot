@@ -18,10 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 Game="*res://src/main/common/autoload/game.tscn"
-Tools="*res://src/main/common/autoload/tools.gd"
-CombatProgressGenerator="*res://src/main/common/autoload/combat_progress_generator.gd"
-CombatRouteManager="*res://src/main/common/autoload/combat_route_manager.gd"
+Tools="*res://src/main/common/autoload/Scripts/tools.gd"
+CombatProgressGenerator="*res://src/main/common/autoload/Scripts/combat_progress_generator.gd"
+CombatRouteManager="*res://src/main/common/autoload/Scripts/combat_route_manager.gd"
 LevelProgressManager="*res://src/main/common/autoload/level_progress_manager.tscn"
+WeaponsManager="*res://src/main/common/autoload/weapons_manager.tscn"
 
 [display]
 
@@ -34,7 +35,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg", "res://addons/trail_2d/plugin.cfg")
+enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg", "res://addons/excel_reader/plugin.cfg", "res://addons/trail_2d/plugin.cfg")
 
 [input]
 

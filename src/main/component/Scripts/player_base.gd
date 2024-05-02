@@ -1,7 +1,7 @@
 class_name PlayerBase
 extends CharacterBody2D
 
-@export var default_weapon: String = "surtr's_fury"
+@export var default_weapon: String = "Doom Bringer"
 
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
@@ -11,6 +11,7 @@ extends CharacterBody2D
 
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
+signal unregister_weapon(player: CharacterBody2D, slot_index: int)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 signal origins_number_changed(type, value)
@@ -79,7 +80,8 @@ func _ready() -> void:
 	classes_count.fill(0)
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
-	register_weapon.emit(self, default_weapon, 2)
+	await WeaponsManager.init_finish
+	register_weapon.emit(self, "Doom Bringer", 2)
 	#register_weapon.emit(self, default_weapon, 0)
 	#register_weapon.emit(self, default_weapon, 1)
 	#register_weapon.emit(self, default_weapon, 3)

@@ -4,9 +4,9 @@ extends Node
 signal attribute_changed
 
 # 定义origins和classes
-enum Origins { FIRE, FROST, LIGHTING, EARTH, POISON, NATURE, HOLY, EVIL, PSYCHIC, TECH }
+enum Origins {FIRE, FROST, LIGHTING, EARTH, TOXIN, NATURE, DIVINITY, DEMON}
 
-enum Classes { SWORD, SHIELD, AXE, SPEAR, HAMMER, DAGGER, ARMOR, RING, BOOMERANG, BOW, STAFF, WAND, SCROLL, GUN, TURRET, BOMB }
+enum Classes {SWORD, SHIELD, AXE, SPEAR, DAGGER, BOW, STAFF, SCROLL, FIREARM, STATION, BOOK}
 
 
 # 定义属性
@@ -72,3 +72,69 @@ func set_classes_attribute(classes: int, attribute: int, value):
 func set_player_attribute(attribute: int, value):
 	player_attributes[attribute] += value
 	attribute_changed.emit()
+
+func enum_to_string(enum_value, enum_type = null):
+	if enum_type == null:
+		return "Invalid enum type"
+
+	if enum_type == Origins:
+		match enum_value:
+			Origins.FIRE: return "FIRE"
+			Origins.FROST: return "FROST"
+			Origins.LIGHTING: return "LIGHTING"
+			Origins.EARTH: return "EARTH"
+			Origins.TOXIN: return "TOXIN"
+			Origins.NATURE: return "NATURE"
+			Origins.DIVINITY: return "DIVINITY"
+			Origins.DEMON: return "DEMON"
+			_:
+				return "Unknown enum value"
+
+	if enum_type == Classes:
+		match enum_value:
+			Classes.SWORD: return "SWORD"
+			Classes.SHIELD: return "SHIELD"
+			Classes.AXE: return "AXE"
+			Classes.SPEAR: return "SPEAR"
+			Classes.DAGGER: return "DAGGER"
+			Classes.BOW: return "BOW"
+			Classes.STAFF: return "STAFF"
+			Classes.SCROLL: return "SCROLL"
+			Classes.FIREARM: return "FIREARM"
+			Classes.STATION: return "STATION"
+			Classes.BOOK: return "BOOK"
+			_:
+				return "Unknown enum value"
+
+func string_to_enum(string_value, enum_type = null):
+	if enum_type == null:
+		return "Invalid enum type"
+
+	if enum_type == Origins:
+		match string_value:
+			"FIRE": return Origins.FIRE
+			"FROST": return Origins.FROST
+			"LIGHTING": return Origins.LIGHTING
+			"EARTH": return Origins.EARTH
+			"TOXIN": return Origins.TOXIN
+			"NATURE": return Origins.NATURE
+			"DIVINITY": return Origins.DIVINITY
+			"DEMON": return Origins.DEMON
+			_:
+				return "Unknown enum value"
+
+	if enum_type == Classes:
+		match string_value:
+			"SWORD": return Classes.SWORD
+			"SHIELD": return Classes.SHIELD
+			"AXE": return Classes.AXE
+			"SPEAR": return Classes.SPEAR
+			"DAGGER": return Classes.DAGGER
+			"BOW": return Classes.BOW
+			"STAFF": return Classes.STAFF
+			"SCROLL": return Classes.SCROLL
+			"FIREARM": return Classes.FIREARM
+			"STATION": return Classes.STATION
+			"BOOK": return Classes.BOOK
+			_:
+				return "Unknown enum value"

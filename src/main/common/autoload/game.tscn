@@ -1,7 +1,7 @@
 [gd_scene load_steps=230 format=3 uid="uid://cjtl76o2osd63"]
 
-[ext_resource type="Script" path="res://src/main/common/autoload/pause_screen.gd" id="1_0ec10"]
-[ext_resource type="Script" path="res://src/main/common/autoload/game.gd" id="1_o6wew"]
+[ext_resource type="Script" path="res://src/main/common/autoload/Scripts/pause_screen.gd" id="1_0ec10"]
+[ext_resource type="Script" path="res://src/main/common/autoload/Scripts/game.gd" id="1_o6wew"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="2_uc0um"]
 [ext_resource type="Texture2D" uid="uid://cq4jbyjhevigr" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/0.png" id="3_jas26"]
 [ext_resource type="Texture2D" uid="uid://cybkvi102r3mm" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Disappear/1.png" id="4_frnpo"]
@@ -195,7 +195,7 @@
 [ext_resource type="Texture2D" uid="uid://cpimtpc8aquls" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/5.png" id="183_00l57"]
 [ext_resource type="Texture2D" uid="uid://c137hd88ypcmv" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Category Icons/Top Pouch/Open/6.png" id="184_dbaba"]
 [ext_resource type="Texture2D" uid="uid://by5lwfvrnkoqe" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Side Tabs/Animated Tabs/Without icons/Tabs/5.png" id="185_t1vgs"]
-[ext_resource type="Script" path="res://src/main/common/autoload/combat_progress_screen.gd" id="186_y1uxy"]
+[ext_resource type="Script" path="res://src/main/common/autoload/Scripts/combat_progress_screen.gd" id="186_y1uxy"]
 [ext_resource type="FontFile" uid="uid://clk0dq2382af2" path="res://src/main/assets/font/DungeonFont.ttf" id="187_52cgn"]
 [ext_resource type="Texture2D" uid="uid://dn611yvcgst6n" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/1 - PNG/Red/Categories/2 - World Map/Sprites/Decorations/0.png" id="188_d3qqh"]
 [ext_resource type="Texture2D" uid="uid://euikwcq275pa" path="res://src/main/assets/packs/16X16/Fantasy RPG icon pack (by Franuka)/Individual icons (32x32)/137.png" id="189_8eg1p"]

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b28ns6gi33uuu" path="res://src/main/assets/packs/32X32/Pixel Crawler - Fairy Forest 1.7/Assets/Shadown.png" id="2_l08rd"]
 [ext_resource type="Texture2D" uid="uid://coi7hrjfw3xyx" path="res://src/main/assets/packs/32X32/Pixel Crawler - Fairy Forest 1.7/Assets/Props.png" id="3_ipv6t"]
 [ext_resource type="PackedScene" uid="uid://bu4qkguaw7xus" path="res://src/main/scene/role/player/a_niu.tscn" id="4_1nqo7"]
-[ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/component/weapons_manager.tscn" id="6_0dqqp"]
+[ext_resource type="PackedScene" uid="uid://bgcods5co5qya" path="res://src/main/common/autoload/weapons_manager.tscn" id="6_0dqqp"]
 [ext_resource type="Texture2D" uid="uid://bvonkapp3lset" path="res://src/main/assets/packs/32X32/Pixel Crawler - FREE - 1.8/Environment/Dungeon Prison/Assets/Props.png" id="6_sxpuh"]
 [ext_resource type="Texture2D" uid="uid://yi56l4dbygcq" path="res://src/main/assets/packs/Ui/Pocket Inventory Series #8 BackPack v1.0/empty.png" id="7_bs7sf"]
 [ext_resource type="Texture2D" uid="uid://bsjj8lpa2b1bp" path="res://src/main/assets/packs/32X32/Pixel Crawler - FREE - 1.8/Environment/Dungeon Prison/Assets/Tiles.png" id="7_kkalu"]

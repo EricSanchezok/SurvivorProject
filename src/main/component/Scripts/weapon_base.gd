@@ -3,17 +3,32 @@ extends CharacterBody2D
 
 
 var slot: Marker2D
+var slot_index: int
 var player: CharacterBody2D
 var player_stats: Node 
 
-@onready var weapon_stats: WeaponStats = $WeaponStats
 var enemies: Array = []
 var target: EnemyBase
 
+@onready var weapon_icon: Sprite2D = $Graphics/Sprite2D # 武器图标
+@onready var weapon_stats: WeaponStats = $WeaponStats
+@onready var weapon_level: int = 1: # 武器等级
+	set(v):
+		weapon_level = v
+		match weapon_level:
+			1:
+				weapon_icon.material.set_shader_parameter("line_color", Color.WHITE)
+			2:
+				weapon_icon.material.set_shader_parameter("line_color", Color.BLUE)
+			3:
+				weapon_icon.material.set_shader_parameter("line_color", Color.RED)
+	
+
 
 func _ready() -> void:
-	pass
-
+	# 唯一化 weapon_icon 的材质
+	var materialTemp = weapon_icon.material.duplicate()
+	weapon_icon.material = materialTemp
 
 func get_nearest_enemy(is_self: bool = false) -> CharacterBody2D:
 	'''
@@ -63,8 +78,8 @@ func sync_position(displacement: float=0.0) -> void:
 	else:
 		position = position.move_toward(target_position, displacement)
 
-func towards_target(target: EnemyBase, angular_displacement: float=0.0, is_graphics: bool=false) -> void:
-	var target_direction = target.global_position - position
+func towards_target(_target: EnemyBase, angular_displacement: float=0.0, is_graphics: bool=false) -> void:
+	var target_direction = _target.global_position - position
 	var angle = target_direction.angle()
 	if is_graphics:
 		$Graphics.rotation = lerp_angle($Graphics.rotation, angle, angular_displacement)
