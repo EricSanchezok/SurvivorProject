@@ -60,7 +60,7 @@ script = ExtResource("1_kivfy")
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("2_vahyo")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 12
 text = "5
 "
 

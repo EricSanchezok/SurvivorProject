@@ -12,8 +12,8 @@ enum State{
 
 func tick_physics(state: State, delta: float) -> void:
 	sync_position()
-	if enemies.size() > 0 and $TimerCoolDown.is_stopped():
-		target = get_random_enemy()
+	target = get_random_enemy()
+	if target and $TimerCoolDown.is_stopped():
 		$TimerCoolDown.start()
 		$AnimationPlayer.play("attack_new")
 		
@@ -39,10 +39,11 @@ func transition_state(from: State, to: State) -> void:
 
 
 func fire() -> void:
-	var instance = bullet.instantiate()
-	instance.parent_weapon = self
-	instance.tracking = true
-	
-	instance.rotation = get_random_direction((target.global_position-position).normalized(), 180).angle()
-	instance.position = $Graphics/Marker2D.global_position
-	get_tree().root.add_child(instance)
+	if target != null:
+		var instance = bullet.instantiate()
+		instance.parent_weapon = self
+		instance.tracking = true
+		
+		instance.rotation = get_random_direction((target.global_position-position).normalized(), 180).angle()
+		instance.position = $Graphics/Marker2D.global_position
+		get_tree().root.add_child(instance)

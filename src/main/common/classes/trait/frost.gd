@@ -39,4 +39,3 @@ func do_interval_change(index_now: int, index_new: int) -> void:
 				else: # from 4 to 3
 					owner.abc.set_origins_attribute(owner.abc.Origins.FROST, owner.abc.Attributes.DECELERATION_RATE, -0.2)
 					owner.abc.set_origins_attribute(owner.abc.Origins.FROSTs, owner.abc.Attributes.FREEZING_RATE, -0.4)
-

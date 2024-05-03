@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://csj6s61xvsa0u"]
+
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Special Effect/Lighting Chian/lightning_chain.gd" id="1_gjv1v"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Special Effect/Lighting Chian/lighting_chain_line2d.gd" id="1_nnc5v"]
+[ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_opkww"]
+
+[sub_resource type="Curve" id="Curve_w4hfk"]
+_data = [Vector2(0.00864553, 0.20124), 0.0, 0.0, 0, 0, Vector2(0.501441, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.20124), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Environment" id="Environment_cuqv3"]
+background_mode = 3
+glow_enabled = true
+glow_levels/1 = 16.0
+glow_levels/2 = 16.0
+glow_levels/3 = 16.0
+glow_levels/4 = 16.0
+glow_levels/5 = 16.0
+glow_levels/6 = 16.0
+glow_levels/7 = 16.0
+glow_intensity = 0.5
+glow_strength = 2.0
+glow_bloom = 1.0
+glow_blend_mode = 0
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 4.0
+glow_hdr_luminance_cap = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtudn"]
+radius = 5.09902
+
+[node name="lightning_chain" type="CharacterBody2D"]
+script = ExtResource("1_gjv1v")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 5.0
+width_curve = SubResource("Curve_w4hfk")
+default_color = Color(0.533333, 0.74902, 1, 1)
+script = ExtResource("1_nnc5v")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Line2D"]
+environment = SubResource("Environment_cuqv3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("2_opkww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_jtudn")

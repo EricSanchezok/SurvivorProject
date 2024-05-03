@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5acbxedvmkbl"
-path="res://.godot/imported/Fire+Sparks19.png-7a2436e226b194cdaee95847b2e3fc10.ctex"
+uid="uid://m1w3t6b1ub2e"
+path="res://.godot/imported/Fire+Sparks14.png-35f3afbfba6a905c1a887e1f2540210e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/main/assets/texture/vfx/Particle FX 1.0/Fire+Sparks/Fire+Sparks19.png"
-dest_files=["res://.godot/imported/Fire+Sparks19.png-7a2436e226b194cdaee95847b2e3fc10.ctex"]
+source_file="res://src/main/assets/texture/vfx/explosions-pack-web/Sprites/Fire+Sparks/Fire+Sparks14.png"
+dest_files=["res://.godot/imported/Fire+Sparks14.png-35f3afbfba6a905c1a887e1f2540210e.ctex"]
 
 [params]
 

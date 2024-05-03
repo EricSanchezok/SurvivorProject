@@ -45,11 +45,8 @@ func _ready() -> void:
 	for i in range(Effect.size()):
 		effects_collection.append([])
 		effects_states.append(false)
-	
 	target = get_random_target()
 
-	
-	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 enum State {
 	APPEAR,
@@ -60,10 +57,9 @@ enum State {
 
 
 func tick_physics(state: State, delta: float) -> void:
-	#var info: String
-	#for e_state in effects_states:
-		#info += str(e_state) + " "
-	#print(info)
+	if is_dead:
+		return
+	
 	# >>>>>>>>>>>>>>>>>>>> 更新效果持续时间 >>>>>>>>>>>>>>>>>>>>
 	for type_index in range(effects_collection.size()):
 		for _effect in effects_collection[type_index]:
@@ -89,7 +85,7 @@ func tick_physics(state: State, delta: float) -> void:
 	
 	# >>>>>>>>>>>>>>>>>>>> 结算攻击伤害 >>>>>>>>>>>>>>>>>>>>
 	for damage in pending_damages:
-		enemy_stats.health -= damage.phy_amount + damage.mag_amount
+		enemy_stats.current_health -= damage.phy_amount + damage.mag_amount
 		velocity -= damage.direction * damage.knockback
 		create_damage_numbers(damage)
 		pending_damages.erase(damage)
@@ -141,11 +137,12 @@ func get_next_state(state: State) -> int:
 	if effects_states[Effect.FREEZE]:
 		return StateMachine.KEEP_CURRENT
 		
+	if enemy_stats.current_health == 0:
+		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
+	
 	if pending_damages.size() > 0:
 		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
 
-	if enemy_stats.health == 0:
-		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
 	
 	match state:
 		State.APPEAR:
@@ -176,6 +173,7 @@ func transition_state(from: State, to: State) -> void:
 		State.HURT:
 			animation_player.play("hurt")
 		State.DIE:
+			is_dead = true
 			animation_player.play("die")
 		
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -209,7 +207,6 @@ func die() -> void:
 	'''
 		死亡
 	'''
-	is_dead = true
 	await not animation_player.is_playing()
 	queue_free()
 
@@ -221,29 +218,30 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 func create_damage(hitbox: HitBox) -> void:
 	var damage = Damage.new()
 	var source_weapon: CharacterBody2D = hitbox.owner
+	#print(source_weapon.weapon_stats.power_physical)
 	damage.source = source_weapon
 	damage.direction = (source_weapon.global_position - position).normalized()
 	
-	damage.is_critical = Tools.is_success(source_weapon.critical_hit_rate)
-
-	damage.phy_amount = source_weapon.power_physical if not damage.is_critical else source_weapon.power_physical * source_weapon.critical_damage
-	damage.mag_amount = source_weapon.power_magic if not damage.is_critical else source_weapon.power_physical * source_weapon.critical_damage
-	damage.knockback = hitbox.owner.knockback * (1 - enemy_stats.knockback_resistance)
+	damage.is_critical = Tools.is_success(source_weapon.weapon_stats.critical_hit_rate)
+	
+	damage.phy_amount = source_weapon.weapon_stats.power_physical if not damage.is_critical else source_weapon.weapon_stats.power_physical * source_weapon.weapon_stats.critical_damage
+	damage.mag_amount = source_weapon.weapon_stats.power_magic if not damage.is_critical else source_weapon.weapon_stats.power_magic * source_weapon.weapon_stats.critical_damage
+	damage.knockback = source_weapon.weapon_stats.knockback * (1 - enemy_stats.knockback_resistance)
 	
 	pending_damages.append(damage)
 	
 func create_effets(hitbox: HitBox) -> void:
 	var source_weapon: CharacterBody2D = hitbox.owner
 	# 处理减速
-	var deceleration_rate = source_weapon.deceleration_rate * (1 - enemy_stats.deceleration_resistance)
+	var deceleration_rate = source_weapon.weapon_stats.deceleration_rate * (1 - enemy_stats.deceleration_resistance)
 	if deceleration_rate != 0.0:
 		var _effect = effect.new()
 		_effect.value = deceleration_rate
-		_effect.duration = source_weapon.deceleration_time * (1 - enemy_stats.deceleration_resistance)
+		_effect.duration = source_weapon.weapon_stats.deceleration_time * (1 - enemy_stats.deceleration_resistance)
 		effects_collection[Effect.SLOW].append(_effect)
 		effects_collection[Effect.SLOW].sort_custom(compare_slow_effects)
 	# 处理冻结
-	var is_freeze = false if not freezing_cooldown_timer.is_stopped() else Tools.is_success(source_weapon.freezing_rate)
+	var is_freeze = false if not freezing_cooldown_timer.is_stopped() else Tools.is_success(source_weapon.weapon_stats.freezing_rate)
 	if is_freeze:
 		var _effect = effect.new()
 		_effect.value = 0.95
@@ -253,9 +251,8 @@ func create_effets(hitbox: HitBox) -> void:
 		freezing_cooldown_timer.start()
 		modulate = Color.hex(0x49ffff)
 	#处理中毒
-	var new_poison_layers = source_weapon.poison_layers
-	var max_poison_layers = source_weapon.max_poison_layers
-	print(new_poison_layers)
+	var new_poison_layers = source_weapon.weapon_stats.poison_layers
+	var max_poison_layers = source_weapon.weapon_stats.max_poison_layers
 	if new_poison_layers > 0:
 		if not effects_states[Effect.POISION]:
 			var _effect = effect.new()
@@ -264,8 +261,7 @@ func create_effets(hitbox: HitBox) -> void:
 			effects_collection[Effect.POISION].append(_effect)
 		else :
 			effects_collection[Effect.POISION][0].value = min(effects_collection[Effect.POISION][0].value + new_poison_layers, max_poison_layers)
-			effects_collection[Effect.POISION][0].duration = 5
-	
+
 func create_damage_numbers(current_damage: Damage) -> void:
 	if current_damage.phy_amount != 0:
 		var damage_number = DAMAGE_NUMBERS.instantiate()
@@ -296,3 +292,5 @@ func compare_slow_effects(a, b):
 	else:
 		return false
 
+func trigger_hit_effect() -> void:
+	pass

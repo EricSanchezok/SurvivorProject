@@ -8,8 +8,8 @@ enum State {
 func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:
-			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(speed_rotation)*delta)
-			position = position.move_toward(slot.global_position, speed_fly*delta*0.5)
+			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+			position = position.move_toward(slot.global_position, weapon_stats.speed_fly*delta*0.5)
 		State.ATTACK:
 			pass
 			

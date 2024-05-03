@@ -130,6 +130,8 @@ func transition_state(from: State, to: State) -> void:
 		State.RUN:
 			$AnimationPlayer.play("run")
 		State.HURT:
+			if player_stats.health_shield > 0:
+				player_stats.health_shield -=pending_damage.amount
 			player_stats.health -= pending_damage.amount
 			pending_damage = null
 			print(player_stats.health)

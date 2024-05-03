@@ -8,11 +8,3 @@ script = ExtResource("1_kjwhk")
 
 [node name="WeaponInstance" type="Node" parent="."]
 script = ExtResource("2_mjpgg")
-
-[node name="Player1" type="Node2D" parent="."]
-
-[node name="Player2" type="Node2D" parent="."]
-
-[node name="Player3" type="Node2D" parent="."]
-
-[node name="Player4" type="Node2D" parent="."]

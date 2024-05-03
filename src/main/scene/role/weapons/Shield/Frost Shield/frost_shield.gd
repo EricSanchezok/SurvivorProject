@@ -1,13 +1,13 @@
 extends WeaponBase
 
 
-var current_health: float = health:
+var current_health: float:
 	set(v):
-		v = clampf(v, 0, health)
+		v = clampf(v, 0, weapon_stats.health)
 		if current_health == v:
 			return
 		current_health = v
-		$TextureProgressBar.value = current_health / health
+		$TextureProgressBar.value = current_health / weapon_stats.health
 		
 		
 var pending_damages: Array
@@ -15,7 +15,7 @@ var pending_damages: Array
 func _ready() -> void:
 	super()
 	rotation = -PI/2
-	current_health = health
+	current_health = weapon_stats.health
 
 enum State {
 	APPEAR,
@@ -28,7 +28,7 @@ func tick_physics(state: State, delta: float) -> void:
 	# 同步父节点位置
 	sync_position()
 	# 恢复生命值
-	current_health = current_health + health_regeneration * delta
+	current_health = current_health + weapon_stats.health_regeneration * delta
 	
 	for damage in pending_damages:
 		current_health -= damage.amount
@@ -76,7 +76,7 @@ func transition_state(from: State, to: State) -> void:
 		State.RECOVERING:
 			$AnimationPlayer.play("recovering")
 			$TimerCoolDown.start()
-			current_health = health
+			current_health = weapon_stats.health
 		State.HURT:
 			$AnimationPlayer.play("hurt")
 
@@ -89,3 +89,7 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 	damage.source = enemy
 	damage.amount = enemy.enemy_stats.damage
 	pending_damages.append(damage)
+
+
+func _on_weapon_stats_update_attribute() -> void:
+	scale = Vector2(weapon_stats.range_attack, weapon_stats.range_attack)

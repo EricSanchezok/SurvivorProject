@@ -17,17 +17,17 @@ func _ready() -> void:
 func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:
-			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(speed_rotation)*delta)
-			sync_position(speed_fly*delta*0.5)
+			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+			sync_position(weapon_stats.speed_fly*delta*0.5)
 		State.ATTACK:
 			current_time += delta
 			var distance = position.distance_to(target.global_position)
-			var total_time = distance / speed_fly
+			var total_time = distance / weapon_stats.speed_fly
 			var t = min(current_time/total_time, 1)
-			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * speed_fly * 1.5
+			var start_control_point = position + Vector2(cos(rotation), sin(rotation)) * weapon_stats.speed_fly * 1.5
 			var next_point = position.bezier_interpolate(start_control_point, target.global_position, target.global_position, t)
 			look_at(next_point)
-			position = position.move_toward(next_point, speed_fly * delta)
+			position = position.move_toward(next_point, weapon_stats.speed_fly * delta)
 			
 
 func get_next_state(state: State) -> int:

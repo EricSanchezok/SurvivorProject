@@ -4,20 +4,17 @@ extends Node2D
 
 #signal weapon_manager
 
-var players = []
-var players_weapon = {
-	Player1_weapon =[],
-	Player2_weapon =[],
-	Player3_weapon =[],
-	Player4_weapon =[],
-}
-
+@onready var players: Array = get_tree().get_nodes_in_group("player")
+var players_weapons_all = {}
+var players_weapons_equipped = {}
+@onready var turret_areas: PositionGenerator = get_tree().get_first_node_in_group("TurretAreas")
 
 
 func _ready():
-	players = get_tree().get_nodes_in_group("player")
 	for player in players:
 		player.connect("register_weapon", _on_player_register_weapon)
+		players_weapons_equipped[player] = [] # 初始化玩家武器字典
+		
 		
 func player_index(player: CharacterBody2D) -> int:
 	var index = players.find(player) + 1
@@ -33,28 +30,31 @@ func _on_player_register_weapon(player: CharacterBody2D, weaponName: String, slo
 	:param weapon_slot: 武器槽
 	'''
 	# print("player:", player, "weapon_name:", weaponName, "weapon_slot:", weapon_slot)
-	var slot = player.get_weapon_slot(slot_index) # 获取武器槽实例
+	var slot = player.get_weapon_slot(slot_index) # 获取在玩家节点下的武器槽实例
 	var instance = weapon_instance.instance_weapon(weaponName) # 实例化武器
 	
 	# 设置武器实例属性
 	instance.slot = slot
 	instance.player = player
 	instance.player_stats = player.player_stats
-	instance.position = slot.global_position
 	
-	# 添加武器实例到对应的玩家槽(玩家槽在当前节点中)
-	var index = players.find(player) + 1
-	var playerindex = "Player"+ str(index)
-	var player_slot = get_node(playerindex)
-	player_slot.add_child(instance)
-	players_weapon[playerindex+"_weapon"].append(instance)
-
-	if players_weapon[playerindex+"_weapon"].find(instance) != -1:
-		for _origin in instance.origins:
+	var weapon_stats = instance.get_node("WeaponStats") # 这时候weapon还未ready，所以需要get_node来获取
+	if weapon_stats.classes.has(Attribute_Changed.Classes.TURRET):
+		instance.position = turret_areas.get_random_position()
+	else:
+		instance.position = slot.global_position
+	
+	if instance not in players_weapons_equipped[player]:
+		for _origin in weapon_stats.origins:
 			player.update_origins_number(_origin,1)
-		for _class in instance.classes:
-			player.update_classes_number(_class,1)
-			
+		for _class in weapon_stats.classes:
+			player.update_classes_number(_class,1)	
+	
+	players_weapons_equipped[player].append(instance)
+	add_child(instance)
+	
+
+
 
 
 

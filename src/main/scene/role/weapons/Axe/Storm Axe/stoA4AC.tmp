@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://chm681arooxa4"]
+
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_5mae2"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Axe/Storm Axe/storm_axe.gd" id="2_37bpn"]
+[ext_resource type="Texture2D" uid="uid://3bfqs623ilh" path="res://src/main/assets/packs/32X32/2 Weapon icons #2/Icons/icon_2_48.png" id="3_xq8xv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smmos"]
+radius = 23.7697
+
+[node name="Storm Axe" instance=ExtResource("1_5mae2")]
+script = ExtResource("2_37bpn")
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = 0.785398
+texture = ExtResource("3_xq8xv")
+
+[node name="AreaPickUp" type="Area2D" parent="." index="7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPickUp" index="0"]
+shape = SubResource("CircleShape2D_smmos")

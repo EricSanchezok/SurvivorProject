@@ -1,10 +1,8 @@
 class_name EnemyStats
 extends Node
 
-signal health_changed
-
 # 最大生命值
-@export var max_health: float = 10
+@export var base_health: float = 10
 # 生命恢复
 @export var base_health_regeneration: float = 0.0
 # 移动速度
@@ -18,13 +16,13 @@ signal health_changed
 #基础冰冻抗性
 @export var base_freezing_resistance: float = 0.0
 
-@onready var health: float = max_health:
+@onready var current_health: float = base_health:
 	set(v):
-		v = clampf(v, 0, max_health)
-		if health == v:
+		v = clampf(v, 0, base_health)
+		if current_health == v:
 			return
-		health = v
-		health_changed.emit()
+		current_health = v
+		$"../TextureProgressBar".value = current_health / base_health
 
 @onready var health_regeneration: float = base_health_regeneration
 @onready var speed_movement: float = base_speed_movement
