@@ -116,10 +116,10 @@ func transition_state(from: State, to: State) -> void:
 			$AnimationPlayer.play("disappear")
 		State.CLEAN:
 			if in_shop_cards.size() > 0:
-				if tween_refresh and tween_refresh.is_running():
-					tween_refresh.kill()
-				tween_refresh = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-				tween_refresh.tween_property(self, "sine_offset_mult", 0.0, 1.0)
+				#if tween_refresh and tween_refresh.is_running():
+					#tween_refresh.kill()
+				#tween_refresh = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+				#tween_refresh.tween_property(self, "sine_offset_mult", 0.0, 1.0)
 			
 				for card in in_shop_cards:
 					card.destroy()
@@ -129,25 +129,28 @@ func transition_state(from: State, to: State) -> void:
 				return	
 			tween_refresh = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 			for i in range(number_of_cards_drawn):
-				var instance: Button = card_scene.instantiate()
-				instance.global_position = refresh_button.global_position
-				$Cards.add_child(instance)
+				var weapon_pool_item = WeaponsManager.draw_weapon(3)
+				var card_instance: WeaponCard = card_scene.instantiate()
+				card_instance.global_position = refresh_button.global_position
+				card_instance.player = owner
+				card_instance.init_card(weapon_pool_item)
+				$Cards.add_child(card_instance)
 				
-				instance.connect("apply_to_purchase",_on_apply_to_purchase)
-				instance.connect("apply_to_exchange", _on_apply_to_exchange)
-				instance.connect("apply_to_destroy", _on_apply_to_destroy)
+				card_instance.connect("apply_to_purchase",_on_apply_to_purchase)
+				card_instance.connect("apply_to_exchange", _on_apply_to_exchange)
+				card_instance.connect("apply_to_destroy", _on_apply_to_destroy)
 				
-				var final_pos = get_shop_card_position(i, instance.size)
+				var final_pos = get_shop_card_position(i, card_instance.size)
 				var rot_radians: float = lerp_angle(rot_max, -rot_max, float(i)/float(number_of_cards_drawn-1))
 	
 				var speed: float = 900.0
-				var distance: float = final_pos.distance_to(instance.global_position)
+				var distance: float = final_pos.distance_to(card_instance.global_position)
 				var time: float = distance / speed
 				
-				tween_refresh.parallel().tween_property(instance, "position", final_pos, time)
-				tween_refresh.parallel().tween_property(instance, "rotation", rot_radians, time)
+				tween_refresh.parallel().tween_property(card_instance, "position", final_pos, time)
+				tween_refresh.parallel().tween_property(card_instance, "rotation", rot_radians, time)
 				
-				in_shop_cards.append(instance)
+				in_shop_cards.append(card_instance)
 				
 
 
@@ -319,9 +322,9 @@ func _on_apply_to_exchange(card: WeaponCard, now_position: Vector2) -> void:
 	
 	if target_index == -1 or (target_type == card_state and target_index == current_index):
 		card.back()
-		print("没有进行任何操作，回到吸附位置")
+		# print("没有进行任何操作，回到吸附位置")
 		return
-	print("目标类型： ", target_type, ", index: ", target_index, ", min_distance: ", min_distance)
+	# print("目标类型： ", target_type, ", index: ", target_index, ", min_distance: ", min_distance)
 	var target_position = get_inventory_position_from_index(target_index) if target_type == card.State.INVENTORY else equipment_positions[target_index]
 
 	var target_card = in_inventory_cards[target_index] if target_type == card.State.INVENTORY else in_equipment_cards[target_index]
@@ -347,8 +350,12 @@ func _on_apply_to_exchange(card: WeaponCard, now_position: Vector2) -> void:
 	if target_card != null:
 		target_card.to_inventory = true if card_state == card.State.INVENTORY else false
 		target_card.to_equipment = true if card_state == card.State.EQUIPMENT else false
-	card.to_inventory = true if target_type == card.State.INVENTORY else false
-	card.to_equipment = true if target_type == card.State.EQUIPMENT else false
+
+	if target_type == card.State.INVENTORY:
+		card.to_inventory = true
+	elif target_type == card.State.EQUIPMENT:
+		card.to_equipment = true
+		card.slot = target_index # 设置装备槽位
 
 func _on_apply_to_destroy(card: WeaponCard) -> void:
 	var card_state = card.state_machine.current_state

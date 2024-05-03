@@ -1,5 +1,6 @@
 extends WeaponBase
 
+@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
 var current_health: float:
 	set(v):
@@ -7,14 +8,14 @@ var current_health: float:
 		if current_health == v:
 			return
 		current_health = v
-		$TextureProgressBar.value = current_health / weapon_stats.health
+		texture_progress_bar.value = current_health / weapon_stats.health
 		
 		
 var pending_damages: Array
 
 func _ready() -> void:
 	super()
-	rotation = -PI/2
+	sync_direction(-PI/2)
 	current_health = weapon_stats.health
 
 enum State {
@@ -25,10 +26,9 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
+	parent_update()
 	# 同步父节点位置
-	sync_position()
-	# 恢复生命值
-	current_health = current_health + weapon_stats.health_regeneration * delta
+	sync_slot_position()
 	
 	for damage in pending_damages:
 		current_health -= damage.amount
@@ -38,12 +38,15 @@ func tick_physics(state: State, delta: float) -> void:
 		State.APPEAR:
 			pass
 		State.WAIT:
-			pass
+			# 恢复生命值
+			if current_health > 0.0:
+				current_health = current_health + weapon_stats.health_regeneration * delta
 		State.RECOVERING:
-			print($TimerCoolDown.time_left)
 			pass
 		State.HURT:
-			pass
+			# 恢复生命值
+			if current_health > 0.0:
+				current_health = current_health + weapon_stats.health_regeneration * delta
 			
 func get_next_state(state: State) -> int:
 	if pending_damages.size() > 0 and state != State.RECOVERING:
@@ -66,19 +69,22 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 	match to:
 		State.APPEAR:
 			$AnimationPlayer.play("appear")
+			hurt_box.monitorable = false
 		State.WAIT:
-			pass
+			hurt_box.monitorable = true
 		State.RECOVERING:
 			$AnimationPlayer.play("recovering")
 			$TimerCoolDown.start()
 			current_health = weapon_stats.health
+			hurt_box.monitorable = false
 		State.HURT:
 			$AnimationPlayer.play("hurt")
+			hurt_box.monitorable = false
 
 
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://dk0emm2xxkkov"]
 
-[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_x4udp"]
-[ext_resource type="Script" path="res://src/main/scene/role/weapons/Turret/Fire Guardian/fire_guardian.gd" id="2_t84q7"]
-[ext_resource type="Texture2D" uid="uid://3jbpr35i3s6u" path="res://src/main/assets/texture/vfx/MagicCircle/MagicCircleSprite.png" id="3_dvsns"]
-[ext_resource type="Texture2D" uid="uid://b20txaqsswvx3" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_79.png" id="3_kelxv"]
-[ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="4_ka24e"]
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_b68hd"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Station/Fire Guardian/fire_guardian.gd" id="2_mp585"]
+[ext_resource type="Texture2D" uid="uid://3jbpr35i3s6u" path="res://src/main/assets/texture/vfx/MagicCircle/MagicCircleSprite.png" id="3_tcdan"]
+[ext_resource type="Texture2D" uid="uid://b20txaqsswvx3" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_79.png" id="4_myep2"]
+[ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="5_luic5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qc4h0"]
 radius = 25.0
@@ -49,12 +49,12 @@ turbulence_enabled = true
 turbulence_noise_scale = 6.598
 turbulence_influence_max = 0.15
 
-[node name="FireGuardian" instance=ExtResource("1_x4udp")]
-script = ExtResource("2_t84q7")
+[node name="FireGuardian" instance=ExtResource("1_b68hd")]
+script = ExtResource("2_mp585")
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([0])
-classes = Array[int]([14])
+classes = Array[int]([9])
 base_power_physical = 0.0
 base_power_magic = 0.5
 base_knockback = 5.0
@@ -62,12 +62,12 @@ base_critical_hit_rate = 0.2
 base_critical_damage = 1.6
 
 [node name="Circle" type="Sprite2D" parent="." index="1"]
-texture = ExtResource("3_dvsns")
+texture = ExtResource("3_tcdan")
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(4, 0)
 rotation = 0.785398
-texture = ExtResource("3_kelxv")
+texture = ExtResource("4_myep2")
 
 [node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
 position = Vector2(56, 0)
@@ -83,7 +83,7 @@ position = Vector2(24, -1)
 emitting = false
 amount = 100
 process_material = SubResource("ParticleProcessMaterial_sxvrs")
-texture = ExtResource("4_ka24e")
+texture = ExtResource("5_luic5")
 lifetime = 1.1
 randomness = 0.23
 

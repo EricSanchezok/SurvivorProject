@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var player_stats: PlayerStats = $PlayerStats
-@onready var abc: Attribute_Changed = $Attribute_Changed
+@onready var abm: AttributesManager = $AttributesManager
 @onready var shop_screen: Control = $CanvasLayer/ShopScreen
 
 
@@ -74,14 +74,14 @@ func recover_from_shop_screen() -> void:
 
 
 func _ready() -> void:
-	origins_count.resize(Attribute_Changed.Origins.size())
+	origins_count.resize(AttributesManager.Origins.size())
 	origins_count.fill(0)
-	classes_count.resize(Attribute_Changed.Classes.size())
+	classes_count.resize(AttributesManager.Classes.size())
 	classes_count.fill(0)
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
 	await WeaponsManager.init_finish
-	register_weapon.emit(self, "Doom Bringer", 2)
+	#register_weapon.emit(self, "Doom Bringer", 2)
 	#register_weapon.emit(self, default_weapon, 0)
 	#register_weapon.emit(self, default_weapon, 1)
 	#register_weapon.emit(self, default_weapon, 3)

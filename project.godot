@@ -22,7 +22,7 @@ Tools="*res://src/main/common/autoload/Scripts/tools.gd"
 CombatProgressGenerator="*res://src/main/common/autoload/Scripts/combat_progress_generator.gd"
 CombatRouteManager="*res://src/main/common/autoload/Scripts/combat_route_manager.gd"
 LevelProgressManager="*res://src/main/common/autoload/level_progress_manager.tscn"
-WeaponsManager="*res://src/main/common/autoload/weapons_manager.tscn"
+WeaponsManager="*res://src/main/common/autoload/Scripts/weapons_manager.gd"
 
 [display]
 

@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var weapon_data_base: Array = [] # 武器基础数据库
 
@@ -12,8 +12,8 @@ class WeaponPoolItem:
 	var star_rating: int = 1
 	var current_quantity: int = 0
 	var max_quantity: int = -1
-	var weapon_class: Attribute_Changed.Classes
-	var weapon_origin: Attribute_Changed.Origins
+	var weapon_class: String
+	var weapon_origin: String
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 关卡初始化变量 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var activated_level: Node2D # 当前激活的关卡
@@ -27,6 +27,7 @@ signal init_finish # 初始化完成
 func _ready():
 	# 加载武器基础数据
 	load_weapon_data_base("res://src/main/WeaponDataBase.xlsx")
+	
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func level_initialization(level: Node2D, players: Array, station_areas: PositionGenerator) -> void:
@@ -51,7 +52,6 @@ func level_initialization(level: Node2D, players: Array, station_areas: Position
 		player.connect("register_weapon", _on_player_register_weapon)
 		player.connect("unregister_weapon", _on_player_unregister_weapon)
 		players_weapons[player] = []
-
 	init_finish.emit()
 
 func draw_weapon(player_level: int) -> WeaponPoolItem:
@@ -61,8 +61,22 @@ func draw_weapon(player_level: int) -> WeaponPoolItem:
 		star_probs = {1: 1.0}
 	elif player_level == 3:
 		star_probs = {1: 0.75, 2: 0.25}
-	elif player_level >= 4:
+	elif player_level == 4:
 		star_probs = {1: 0.55, 2: 0.30, 3: 0.15}
+	elif player_level == 5:
+		star_probs = {1: 0.45, 2: 0.33, 3: 0.20, 4: 0.02}
+	elif player_level == 6:
+		star_probs = {1: 0.30, 2: 0.40, 3: 0.25, 4: 0.05}
+	elif player_level == 7:
+		star_probs = {1: 0.19, 2: 0.30, 3: 0.40, 4: 0.10, 5: 0.01}
+	elif player_level == 8:
+		star_probs = {1: 0.18, 2: 0.25, 3: 0.32, 4: 0.22, 5: 0.3}
+	elif player_level == 9:
+		star_probs = {1: 0.10, 2: 0.20, 3: 0.25, 4: 0.35, 5: 0.10}
+	elif player_level == 10:
+		star_probs = {1: 0.05, 2: 0.10, 3: 0.20, 4: 0.40, 5: 0.25}
+	elif player_level == 11:
+		star_probs = {1: 0.01, 2: 0.02, 3: 0.12, 4: 0.50, 5: 0.35}
 
 	# 过滤可抽取的武器
 	var available_weapons = []
@@ -257,13 +271,13 @@ func _on_player_register_weapon(player: CharacterBody2D, weapon_name: String, sl
 	:param slot_index: 武器槽索引
 	:return: None
 	'''
-	print("玩家：", player, " 注册武器：", weapon_name, " 武器槽索引：", slot_index)
+	# print("玩家：", player, " 注册武器：", weapon_name, " 武器槽索引：", slot_index)
 	var resource_path = ""
 	for weapon_data in weapon_data_base:
 		if weapon_data["weapon_name"] == weapon_name:
 			resource_path = weapon_data["resource_path"]
 			break
-	print("resource_path: ", resource_path)
+	# print("resource_path: ", resource_path)
 	var slot = player.get_weapon_slot(slot_index) # 获取在玩家节点下的武器槽实例
 	var instance = load(resource_path).instantiate() # 加载武器资源
 	
@@ -274,7 +288,7 @@ func _on_player_register_weapon(player: CharacterBody2D, weapon_name: String, sl
 	instance.player_stats = player.player_stats
 	
 	var weapon_stats = instance.get_node("WeaponStats") # 这时候weapon还未ready，所以需要get_node来获取
-	if weapon_stats.classes.has(Attribute_Changed.Classes.STATION):
+	if weapon_stats.classes.has(AttributesManager.Classes.STATION):
 		instance.position = activated_station_areas.get_random_position()
 	else:
 		instance.position = slot.global_position
@@ -296,6 +310,7 @@ func _on_player_unregister_weapon(player: CharacterBody2D, slot_index: int) -> v
 	:param slot_index: 武器槽索引
 	:return: None
 	'''
+	print("注销武器：", player, " 武器槽索引：", slot_index)
 	for weapon in players_weapons[player]:
 		if weapon.slot_index == slot_index:
 			var weapon_stats = weapon.get_node("WeaponStats")
@@ -304,10 +319,9 @@ func _on_player_unregister_weapon(player: CharacterBody2D, slot_index: int) -> v
 
 			if weapon not in players_weapons[player]:
 				for _origin in weapon_stats.origins:
-					player.update_origins_number(_origin,1)
+					player.update_origins_number(_origin,-1)
 				for _class in weapon_stats.classes:
-					player.update_classes_number(_class,1)	
-			
+					player.update_classes_number(_class,-1)	
 			weapon.queue_free()
 
 			break

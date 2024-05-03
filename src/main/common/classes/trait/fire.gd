@@ -2,7 +2,7 @@ extends TraitBase
 
 func _ready() -> void:
 	thresholds = [3, 5, 7, 9]
-	self_type = Attribute_Changed.Origins.FIRE
+	self_type = AttributesManager.Origins.FIRE
 
 		
 func do_interval_change(index_now: int, index_new: int) -> void:

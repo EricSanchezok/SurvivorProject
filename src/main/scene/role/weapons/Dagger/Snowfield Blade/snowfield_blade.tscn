@@ -153,7 +153,10 @@ shape = SubResource("CapsuleShape2D_5du5a")
 [node name="SearchBox" parent="Graphics" index="3"]
 visible = false
 
-[node name="AnimationPlayer" parent="." index="5"]
+[node name="ReloadProgressBar" parent="." index="4"]
+position = Vector2(0, 16)
+
+[node name="AnimationPlayer" parent="." index="6"]
 libraries = {
 "": SubResource("AnimationLibrary_vnipt")
 }

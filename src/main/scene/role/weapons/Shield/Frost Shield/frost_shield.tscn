@@ -13,6 +13,14 @@ height = 34.0
 radius = 17.0
 height = 34.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uxvo"]
+atlas = ExtResource("4_oyx5d")
+region = Rect2(307, 6, 58, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqx80"]
+atlas = ExtResource("4_oyx5d")
+region = Rect2(308, 71, 56, 2)
+
 [sub_resource type="Animation" id="Animation_rjs6y"]
 length = 0.001
 tracks/0/type = "value"
@@ -30,26 +38,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath("TextureProgressBar:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Graphics/HurtBox:monitorable")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_o3mn8"]
@@ -71,14 +67,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath("TextureProgressBar:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_gkbbp"]
@@ -96,30 +92,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1.1, 1.1), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Graphics/HurtBox:monitorable")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_2fa0v"]
@@ -141,14 +113,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath("TextureProgressBar:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_38umb"]
@@ -159,23 +131,18 @@ _data = {
 "recovering": SubResource("Animation_2fa0v")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0uxvo"]
-atlas = ExtResource("4_oyx5d")
-region = Rect2(307, 6, 58, 4)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yqx80"]
-atlas = ExtResource("4_oyx5d")
-region = Rect2(308, 71, 56, 2)
-
 [node name="FrostShield" instance=ExtResource("1_m1fnv")]
 script = ExtResource("2_a1b4s")
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([1])
 classes = Array[int]([1])
+base_health = 8.0
 base_health_regeneration = 0.2
-base_power_physical = 4.0
-base_power_magic = 4.0
+base_power_magic = 2.0
+base_time_cooldown = 4.0
+base_knockback = 100.0
+base_critical_hit_rate = 0.5
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 rotation = 1.5708
@@ -197,23 +164,25 @@ visible = false
 monitoring = false
 monitorable = false
 
-[node name="AnimationPlayer" parent="." index="5"]
-libraries = {
-"": SubResource("AnimationLibrary_38umb")
-}
+[node name="ReloadProgressBar" parent="." index="4"]
+position = Vector2(0, 23)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." index="6"]
-offset_left = 23.0
-offset_top = -29.0
-offset_right = 81.0
-offset_bottom = 11.0
-rotation = 1.5708
+offset_left = -29.0
+offset_top = -25.0
+offset_right = 29.0
+offset_bottom = 15.0
 max_value = 1.0
 step = 0.01
 value = 1.0
 texture_under = SubResource("AtlasTexture_0uxvo")
 texture_progress = SubResource("AtlasTexture_yqx80")
 texture_progress_offset = Vector2(1, 1)
+
+[node name="AnimationPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_38umb")
+}
 
 [connection signal="update_attribute" from="WeaponStats" to="." method="_on_weapon_stats_update_attribute"]
 [connection signal="hurt" from="Graphics/HurtBox" to="." method="_on_hurt_box_hurt"]

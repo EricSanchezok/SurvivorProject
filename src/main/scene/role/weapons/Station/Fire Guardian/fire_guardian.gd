@@ -1,6 +1,5 @@
 extends WeaponBase
 
-@onready var hit_box: HitBox = $Graphics/HitBox
 @onready var hit_box_timer: Timer = $HitBoxTimer
 @onready var gpu_particles_2d: GPUParticles2D = $Graphics/GPUParticles2D
 @onready var base_particles_amount = gpu_particles_2d.amount
@@ -26,7 +25,7 @@ func tick_physics(state: State, delta: float) -> void:
 					change_seconds = 2.0
 				
 		State.ATTACK:
-			towards_target(target, deg_to_rad(weapon_stats.speed_rotation)*delta, true)
+			towards_target(target.global_position, deg_to_rad(weapon_stats.speed_rotation)*delta)
 
 func get_next_state(state: State) -> int:
 	match state:

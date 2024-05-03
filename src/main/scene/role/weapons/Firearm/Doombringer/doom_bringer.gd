@@ -1,7 +1,6 @@
 extends WeaponBase
 
-var bullet = preload("res://src/main/scene/role/weapons/Gun/Doombringer/destruction_shell.tscn")
-@onready var reload_progress_bar: Marker2D = $ReloadProgressBar
+var bullet = preload("res://src/main/scene/role/weapons/Firearm/Doombringer/destruction_shell.tscn")
 
 func _ready() -> void:
 	super()
@@ -14,10 +13,11 @@ enum State {
 var fire_count: int = 0
 
 func tick_physics(state: State, delta: float) -> void:
-	sync_position()
+	parent_update()
+	sync_slot_position()
 	match state:
 		State.WAIT:
-			reload_progress_bar.value = (weapon_stats.time_cooldown - $TimerCoolDown.time_left) / weapon_stats.time_cooldown
+			pass
 		State.ATTACK:
 			pass
 			

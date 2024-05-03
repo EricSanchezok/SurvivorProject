@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5axoaucpi34r"]
 
 [ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_jvl1k"]
-[ext_resource type="Script" path="res://src/main/scene/role/weapons/Turret/Storm Sentry/storm_sentry.gd" id="2_hao1n"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Station/Storm Sentry/storm_sentry.gd" id="2_hao1n"]
 [ext_resource type="Texture2D" uid="uid://ivya8nj6rehp" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_68.png" id="2_uhlu3"]
 
 [node name="StormSentry" instance=ExtResource("1_jvl1k")]

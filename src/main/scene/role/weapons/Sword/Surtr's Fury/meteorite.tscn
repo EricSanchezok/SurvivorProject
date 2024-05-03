@@ -1,10 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://mgy4whumua2k"]
+[gd_scene load_steps=20 format=3 uid="uid://mgy4whumua2k"]
 
 [ext_resource type="PackedScene" uid="uid://x8q617q250qp" path="res://src/main/component/projectile_base.tscn" id="1_8pqkr"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Surtr's Fury/meteorite.gd" id="2_e3gr2"]
 [ext_resource type="Texture2D" uid="uid://oriifwtf67yl" path="res://src/main/assets/texture/vfx/fire/FireSprite-Sheet.png" id="3_88skl"]
 [ext_resource type="Texture2D" uid="uid://cd485aen8swtl" path="res://src/main/assets/texture/vfx/explosions-pack-web/spritesheets/explosion-6.png" id="3_nykee"]
 [ext_resource type="Texture2D" uid="uid://ddchj26i5nk3r" path="res://src/main/assets/texture/vfx/fire/SparkSprite-Sheet.png" id="4_p648t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42enu"]
+radius = 21.0238
 
 [sub_resource type="Animation" id="Animation_dyhe8"]
 length = 0.001
@@ -242,6 +245,9 @@ region_rect = Rect2(0, 0, 384, 48)
 
 [node name="HitBox" parent="Graphics" index="1"]
 monitoring = false
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CircleShape2D_42enu")
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {

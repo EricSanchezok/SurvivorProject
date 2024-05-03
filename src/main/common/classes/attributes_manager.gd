@@ -1,13 +1,11 @@
-class_name Attribute_Changed
+class_name AttributesManager
 extends Node
 
 signal attribute_changed
 
 # 定义origins和classes
 enum Origins {FIRE, FROST, LIGHTING, EARTH, TOXIN, NATURE, DIVINITY, DEMON}
-
-enum Classes {SWORD, SHIELD, AXE, SPEAR, DAGGER, BOW, STAFF, SCROLL, FIREARM, STATION, BOOK}
-
+enum Classes {SWORD, SHIELD, AXE, SPEAR, DAGGER, BOW, STAFF, SCROLL, FIREARM, STATION, BOOK, BOOMERANG}
 
 # 定义属性
 enum Attributes {
@@ -29,15 +27,11 @@ enum Attributes {
 	LIFE_STEAL,
 }
 
-
-
 # 创建二维数组
 var origins_attributes = Array()
 var classes_attributes = Array()
-
 # 创建一维数组
 var player_attributes = []
-
 
 func _ready():
 	# 初始化 origins 的属性

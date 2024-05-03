@@ -10,96 +10,6 @@
 radius = 6.0
 height = 38.0
 
-[sub_resource type="Animation" id="Animation_v05n1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GPUParticles2D:process_material:scale_min")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.02]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GPUParticles2D:process_material:scale_max")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.05]
-}
-
-[sub_resource type="Animation" id="Animation_34jn1"]
-resource_name = "ignite"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GPUParticles2D:process_material:scale_min")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.02, 0.05]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GPUParticles2D:process_material:scale_max")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.05, 0.15]
-}
-
-[sub_resource type="Animation" id="Animation_iqxqy"]
-resource_name = "slake"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GPUParticles2D:process_material:scale_min")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.05, 0.02]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GPUParticles2D:process_material:scale_max")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.15, 0.05]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_gk8ft"]
-_data = {
-"RESET": SubResource("Animation_v05n1"),
-"ignite": SubResource("Animation_34jn1"),
-"slake": SubResource("Animation_iqxqy")
-}
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y6rta"]
 particles_animation = true
 particles_anim_h_frames = 8
@@ -139,12 +49,104 @@ turbulence_enabled = true
 turbulence_noise_speed_random = 0.5
 turbulence_influence_max = 0.15
 
+[sub_resource type="Animation" id="Animation_v05n1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/GPUParticles2D:process_material:scale_min")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.02]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/GPUParticles2D:process_material:scale_max")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.05]
+}
+
+[sub_resource type="Animation" id="Animation_34jn1"]
+resource_name = "ignite"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/GPUParticles2D:process_material:scale_min")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.02, 0.05]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/GPUParticles2D:process_material:scale_max")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.05, 0.15]
+}
+
+[sub_resource type="Animation" id="Animation_iqxqy"]
+resource_name = "slake"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/GPUParticles2D:process_material:scale_min")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.05, 0.02]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/GPUParticles2D:process_material:scale_max")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.15, 0.05]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gk8ft"]
+_data = {
+"RESET": SubResource("Animation_v05n1"),
+"ignite": SubResource("Animation_34jn1"),
+"slake": SubResource("Animation_iqxqy")
+}
+
 [node name="Surtr\'s Fury" instance=ExtResource("1_b4s7a")]
 script = ExtResource("2_5r0vc")
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([0])
 classes = Array[int]([0])
+base_speed_fly = 100.0
+base_penetration_rate = 1.0
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(11, 0)
@@ -159,26 +161,7 @@ shape = SubResource("CapsuleShape2D_m78hj")
 [node name="SearchBox" parent="Graphics" index="3"]
 visible = false
 
-[node name="CenterMarker2D" parent="." index="2"]
-position = Vector2(10, 0)
-
-[node name="CollisionShape2D" parent="." index="3"]
-rotation = 1.5708
-
-[node name="AnimationPlayer" parent="." index="5"]
-libraries = {
-"": SubResource("AnimationLibrary_gk8ft")
-}
-
-[node name="PointLight2D" type="PointLight2D" parent="." index="6"]
-position = Vector2(14, 0)
-scale = Vector2(1.51367, 0.683593)
-color = Color(0.756863, 0.129412, 0.027451, 1)
-shadow_enabled = true
-texture = ExtResource("5_84ho8")
-texture_scale = 0.01
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="7"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Graphics" index="4"]
 material = SubResource("CanvasItemMaterial_y6rta")
 position = Vector2(14, 0)
 amount = 50
@@ -187,3 +170,25 @@ texture = ExtResource("4_cpb73")
 lifetime = 1.1
 explosiveness = 0.21
 randomness = 0.23
+
+[node name="PointLight2D" type="PointLight2D" parent="Graphics" index="5"]
+position = Vector2(14, 0)
+scale = Vector2(1.51367, 0.683593)
+color = Color(0.756863, 0.129412, 0.027451, 1)
+shadow_enabled = true
+texture = ExtResource("5_84ho8")
+texture_scale = 0.01
+
+[node name="CenterMarker2D" parent="." index="2"]
+position = Vector2(10, 0)
+
+[node name="CollisionShape2D" parent="." index="3"]
+rotation = 1.5708
+
+[node name="ReloadProgressBar" parent="." index="4"]
+position = Vector2(0, 13)
+
+[node name="AnimationPlayer" parent="." index="6"]
+libraries = {
+"": SubResource("AnimationLibrary_gk8ft")
+}

@@ -2,7 +2,7 @@ class_name TraitBase
 extends Node
 
 var thresholds: Array 
-var self_type: Attribute_Changed.Origins
+var self_type: AttributesManager.Origins
 var count: int = 0:
 	set(v):
 		var interval_index_now = find_interval_index(count)

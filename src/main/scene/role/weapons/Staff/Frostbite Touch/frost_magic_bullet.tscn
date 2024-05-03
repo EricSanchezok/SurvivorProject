@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhvum4pamj2f6"]
+[gd_scene load_steps=10 format=3 uid="uid://dhvum4pamj2f6"]
 
 [ext_resource type="PackedScene" uid="uid://x8q617q250qp" path="res://src/main/component/projectile_base.tscn" id="1_i11t6"]
 [ext_resource type="Script" path="res://src/main/scene/role/weapons/Staff/Frostbite Touch/frost_magic_bullet.gd" id="2_ovu13"]
 [ext_resource type="Texture2D" uid="uid://b7knoaexs17g5" path="res://src/main/assets/texture/role/Frostbite Touch/FrostMagicBullet-Sheet.png" id="3_3p2wc"]
 [ext_resource type="Texture2D" uid="uid://bnfpw4x3sea32" path="res://src/main/assets/texture/role/Frostbite Touch/FrostExplode-Sheet.png" id="4_jtm20"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7q8mn"]
+radius = 26.0768
 
 [sub_resource type="Animation" id="Animation_hjbq0"]
 length = 0.001
@@ -139,6 +142,9 @@ region_rect = Rect2(0, 0, 128, 32)
 
 [node name="HitBox" parent="Graphics" index="1"]
 monitoring = false
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CircleShape2D_7q8mn")
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {

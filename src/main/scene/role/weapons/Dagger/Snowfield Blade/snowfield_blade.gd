@@ -4,8 +4,6 @@ extends WeaponBase
 @onready var distance_reminder: Sprite2D = $distance_reminder
 @onready var base_reminder_scale = distance_reminder.scale
 
-
-
 @export var thrust_distance: float = 30
 @export var reminder_threshold: float = 0.5
 @export var furthest_distance_coefficient: float = 2.0
@@ -43,18 +41,21 @@ func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.WAIT:
 			$Graphics.rotation = lerp_angle($Graphics.rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
-			sync_position()
+			sync_slot_position()
 		State.MOVE:
 			if start_move:
 				if not back:
+					if not target:
+						target = get_nearest_enemy(false)
 					position = target.global_position + random_position
 				else:
-					sync_position()
+					sync_slot_position()
 			else:
 				if not back:
-					sync_position()
+					sync_slot_position()
 				else:
-					$Graphics.rotation = lerp_angle($Graphics.rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+					sync_direction(-PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+					# $Graphics.rotation = lerp_angle($Graphics.rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
 					
 		State.ATTACK:
 			var target_position = target.global_position + target_direction * thrust_distance

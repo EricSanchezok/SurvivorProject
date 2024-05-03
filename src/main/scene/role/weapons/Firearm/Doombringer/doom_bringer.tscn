@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bawsqaaeo5t56"]
+[gd_scene load_steps=7 format=3 uid="uid://bawsqaaeo5t56"]
 
-[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_vujib"]
-[ext_resource type="Script" path="res://src/main/scene/role/weapons/Gun/Doombringer/doom_bringer.gd" id="2_ijukr"]
-[ext_resource type="Texture2D" uid="uid://uqvy8wa4uqwo" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_75.png" id="3_xuyuj"]
-[ext_resource type="PackedScene" uid="uid://bf3g130ar4w62" path="res://src/main/scene/ui/reload_progress_bar.tscn" id="4_rxed1"]
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_tudpb"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Firearm/Doombringer/doom_bringer.gd" id="2_fe6jc"]
+[ext_resource type="Texture2D" uid="uid://uqvy8wa4uqwo" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_75.png" id="3_vs7js"]
 
 [sub_resource type="Animation" id="Animation_r8pm0"]
 length = 0.001
@@ -57,8 +56,8 @@ _data = {
 "attack": SubResource("Animation_58yqv")
 }
 
-[node name="Doombringer" instance=ExtResource("1_vujib")]
-script = ExtResource("2_ijukr")
+[node name="Doombringer" instance=ExtResource("1_tudpb")]
+script = ExtResource("2_fe6jc")
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([0])
@@ -78,7 +77,7 @@ rotation = -1.5708
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(9, 0)
 rotation = 0.785398
-texture = ExtResource("3_xuyuj")
+texture = ExtResource("3_vs7js")
 
 [node name="SearchBox" parent="Graphics" index="3"]
 visible = false
@@ -89,10 +88,10 @@ position = Vector2(32, 0)
 [node name="CenterMarker2D" parent="." index="2"]
 position = Vector2(7, 0)
 
-[node name="AnimationPlayer" parent="." index="5"]
+[node name="ReloadProgressBar" parent="." index="4"]
+position = Vector2(0, 14)
+
+[node name="AnimationPlayer" parent="." index="6"]
 libraries = {
 "": SubResource("AnimationLibrary_5vc7d")
 }
-
-[node name="ReloadProgressBar" parent="." index="7" instance=ExtResource("4_rxed1")]
-position = Vector2(0, 15)

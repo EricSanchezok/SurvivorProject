@@ -1,9 +1,9 @@
 class_name WeaponStats
 extends Node
 
-var abc : Attribute_Changed
-@export var origins: Array[Attribute_Changed.Origins]
-@export var classes: Array[Attribute_Changed.Classes]
+var abm : AttributesManager
+@export var origins: Array[AttributesManager.Origins]
+@export var classes: Array[AttributesManager.Classes]
 
 signal update_attribute
 
@@ -39,11 +39,13 @@ signal update_attribute
 @onready var time_cooldown: float = base_time_cooldown:   #攻击冷却
 	set(v):
 		time_cooldown = v
-		$"../TimerCoolDown".wait_time = time_cooldown
+		if has_node("../TimerCoolDown"):
+			$"../TimerCoolDown".wait_time = time_cooldown
 @onready var radius_search: float = base_radius_search:   #索敌范围
 	set(v):
 		radius_search = v
-		$"../Graphics/SearchBox/CollisionShape2D".shape.radius = radius_search
+		if has_node("../Graphics/SearchBox/CollisionShape2D"):
+			$"../Graphics/SearchBox/CollisionShape2D".shape.radius = radius_search
 @onready var range_attack: float = base_range_attack  #攻击距离
 @onready var range_explosion: float = base_range_explosion  #爆炸范围
 @onready var knockback: float = base_knockback  #击退效果
@@ -62,142 +64,169 @@ signal update_attribute
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _ready() -> void:
 	await owner.ready
-	abc = owner.player.abc
+	abm = owner.player.abm
 	_on_attribute_changed()
-	abc.connect("attribute_changed",_on_attribute_changed)
+	abm.connect("attribute_changed",_on_attribute_changed)
+
+func sync_parameters(weapon_stats: WeaponStats) -> void:
+	'''
+	同步武器属性
 	
+	:param weapon_stats: 武器属性
+	:return: None
+	'''
+	health = weapon_stats.health
+	health_regeneration = weapon_stats.health_regeneration
+	power_physical = weapon_stats.power_physical
+	power_magic = weapon_stats.power_magic
+	time_cooldown = weapon_stats.time_cooldown
+	radius_search = weapon_stats.radius_search
+	range_attack = weapon_stats.range_attack
+	range_explosion = weapon_stats.range_explosion
+	knockback = weapon_stats.knockback
+	critical_hit_rate = weapon_stats.critical_hit_rate
+	critical_damage = weapon_stats.critical_damage
+	number_of_projectiles = weapon_stats.number_of_projectiles
+	speed_fly = weapon_stats.speed_fly
+	speed_rotation = weapon_stats.speed_rotation
+	penetration_rate = weapon_stats.penetration_rate
+	magazine = weapon_stats.magazine
+	deceleration_rate = weapon_stats.deceleration_rate
+	freezing_rate = weapon_stats.freezing_rate
+	life_steal = weapon_stats.life_steal
+
 
 func _on_attribute_changed():
 	# >>>>>>>>>>>>>>>>>>>>> 生命相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_health = 0
 	var classes_health = 0
 	for _origin in origins:
-		origins_health += abc.origins_attributes[_origin] [abc.Attributes.HEALTH]
+		origins_health += abm.origins_attributes[_origin] [abm.Attributes.HEALTH]
 	for _class in classes:
-		classes_health += abc.classes_attributes[_class] [abc.Attributes.HEALTH]
-	health = base_health * (1 + abc.player_attributes[abc.Attributes.HEALTH] + origins_health + classes_health)
+		classes_health += abm.classes_attributes[_class] [abm.Attributes.HEALTH]
+	health = base_health * (1 + abm.player_attributes[abm.Attributes.HEALTH] + origins_health + classes_health)
 	# >>>>>>>>>>>>>>>>>>>>> 生命恢复相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_health_regeneration = 0
 	var classes_health_regeneration = 0
 	for _origin in origins:
-		origins_health_regeneration += abc.origins_attributes[_origin] [abc.Attributes.HEALTH_REGENERATION]
+		origins_health_regeneration += abm.origins_attributes[_origin] [abm.Attributes.HEALTH_REGENERATION]
 	for _class in classes:
-		classes_health_regeneration += abc.classes_attributes[_class] [abc.Attributes.HEALTH_REGENERATION]
-	health_regeneration = base_health_regeneration * (1 + abc.player_attributes[abc.Attributes.HEALTH_REGENERATION] + origins_health_regeneration + classes_health_regeneration)
+		classes_health_regeneration += abm.classes_attributes[_class] [abm.Attributes.HEALTH_REGENERATION]
+	health_regeneration = base_health_regeneration * (1 + abm.player_attributes[abm.Attributes.HEALTH_REGENERATION] + origins_health_regeneration + classes_health_regeneration)
 	# >>>>>>>>>>>>>>>>>>>>> 物理伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_power_physical = 0
 	var classes_power_physical = 0
 	for _origin in origins:
-		origins_power_physical += abc.origins_attributes[_origin] [abc.Attributes.POWER_PHYSICAL]
+		origins_power_physical += abm.origins_attributes[_origin] [abm.Attributes.POWER_PHYSICAL]
 	for _class in classes:
-		classes_power_physical += abc.classes_attributes[_class] [abc.Attributes.POWER_PHYSICAL]
-	power_physical = base_power_physical * (1 + abc.player_attributes[abc.Attributes.POWER_PHYSICAL] + origins_power_physical + classes_power_physical)
+		classes_power_physical += abm.classes_attributes[_class] [abm.Attributes.POWER_PHYSICAL]
+	power_physical = base_power_physical * (1 + abm.player_attributes[abm.Attributes.POWER_PHYSICAL] + origins_power_physical + classes_power_physical)
 	# >>>>>>>>>>>>>>>>>>>>> 魔法伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_power_magic = 0
 	var classes_power_magic = 0
 	for _origin in origins:
-		origins_power_magic += abc.origins_attributes[_origin] [abc.Attributes.POWER_MAGIC]
+		origins_power_magic += abm.origins_attributes[_origin] [abm.Attributes.POWER_MAGIC]
 	for _class in classes:
-		classes_power_magic += abc.classes_attributes[_class] [abc.Attributes.POWER_MAGIC]
-	power_magic = base_power_magic * (1 + abc.player_attributes[abc.Attributes.POWER_MAGIC] + origins_power_magic + classes_power_magic)
+		classes_power_magic += abm.classes_attributes[_class] [abm.Attributes.POWER_MAGIC]
+	power_magic = base_power_magic * (1 + abm.player_attributes[abm.Attributes.POWER_MAGIC] + origins_power_magic + classes_power_magic)
 	# >>>>>>>>>>>>>>>>>>>>> 攻击冷却相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_time_cooldown = 0
 	var classes_time_cooldown = 0
 	for _origin in origins:
-		origins_time_cooldown += abc.origins_attributes[_origin] [abc.Attributes.TIME_COOLDOWN]
+		origins_time_cooldown += abm.origins_attributes[_origin] [abm.Attributes.TIME_COOLDOWN]
 	for _class in classes:
-		classes_time_cooldown += abc.classes_attributes[_class] [abc.Attributes.TIME_COOLDOWN]
-	time_cooldown = base_time_cooldown / (1 + abc.player_attributes[abc.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
+		classes_time_cooldown += abm.classes_attributes[_class] [abm.Attributes.TIME_COOLDOWN]
+	time_cooldown = base_time_cooldown / (1 + abm.player_attributes[abm.Attributes.TIME_COOLDOWN] + origins_time_cooldown + classes_time_cooldown)
 	# >>>>>>>>>>>>>>>>>>>>> 索敌范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_radius_search = 0
 	var classes_radius_search = 0
 	for _origin in origins:
-		origins_radius_search += abc.origins_attributes[_origin] [abc.Attributes.RADIUS_SEARCH]
+		origins_radius_search += abm.origins_attributes[_origin] [abm.Attributes.RADIUS_SEARCH]
 	for _class in classes:
-		classes_radius_search += abc.classes_attributes[_class] [abc.Attributes.RADIUS_SEARCH]
-	radius_search = base_radius_search * (1 + abc.player_attributes[abc.Attributes.RADIUS_SEARCH] + origins_radius_search + classes_radius_search)
+		classes_radius_search += abm.classes_attributes[_class] [abm.Attributes.RADIUS_SEARCH]
+	radius_search = base_radius_search * (1 + abm.player_attributes[abm.Attributes.RADIUS_SEARCH] + origins_radius_search + classes_radius_search)
 	# >>>>>>>>>>>>>>>>>>>>> 攻击范围相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_range_attack = 0
 	var classes_range_attack = 0
 	for _origin in origins:
-		origins_range_attack += abc.origins_attributes[_origin] [abc.Attributes.RANGE_ATTACK]
+		origins_range_attack += abm.origins_attributes[_origin] [abm.Attributes.RANGE_ATTACK]
 	for _class in classes:
-		classes_range_attack += abc.classes_attributes[_class] [abc.Attributes.RANGE_ATTACK]
-	range_attack = base_range_attack * (1 + abc.player_attributes[abc.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
-	range_explosion = base_range_explosion + (1 + abc.player_attributes[abc.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
+		classes_range_attack += abm.classes_attributes[_class] [abm.Attributes.RANGE_ATTACK]
+	range_attack = base_range_attack * (1 + abm.player_attributes[abm.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
+	range_explosion = base_range_explosion + (1 + abm.player_attributes[abm.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
 	# >>>>>>>>>>>>>>>>>>>>> 击退相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_knockback = 0
 	var classes_knockback = 0
 	for _origin in origins:
-		origins_knockback += abc.origins_attributes[_origin] [abc.Attributes.KNOCKBACK]
+		origins_knockback += abm.origins_attributes[_origin] [abm.Attributes.KNOCKBACK]
 	for _class in classes:
-		classes_knockback += abc.classes_attributes[_class] [abc.Attributes.KNOCKBACK]
-	knockback = base_knockback * (1 + abc.player_attributes[abc.Attributes.KNOCKBACK] + origins_knockback + classes_knockback)
+		classes_knockback += abm.classes_attributes[_class] [abm.Attributes.KNOCKBACK]
+	knockback = base_knockback * (1 + abm.player_attributes[abm.Attributes.KNOCKBACK] + origins_knockback + classes_knockback)
 	# >>>>>>>>>>>>>>>>>>>>> 暴击几率相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_critical_hit_rate = 0
 	var classes_critical_hit_rate = 0
 	for _origin in origins:
-		origins_critical_hit_rate += abc.origins_attributes[_origin] [abc.Attributes.CRITICAL_HIT_RATE]
+		origins_critical_hit_rate += abm.origins_attributes[_origin] [abm.Attributes.CRITICAL_HIT_RATE]
 	for _class in classes:
-		classes_critical_hit_rate += abc.classes_attributes[_class] [abc.Attributes.CRITICAL_HIT_RATE]
-	critical_hit_rate = base_critical_hit_rate + (abc.player_attributes[abc.Attributes.CRITICAL_HIT_RATE] + origins_critical_hit_rate + classes_critical_hit_rate)
+		classes_critical_hit_rate += abm.classes_attributes[_class] [abm.Attributes.CRITICAL_HIT_RATE]
+	critical_hit_rate = base_critical_hit_rate + (abm.player_attributes[abm.Attributes.CRITICAL_HIT_RATE] + origins_critical_hit_rate + classes_critical_hit_rate)
 	# >>>>>>>>>>>>>>>>>>>>> 暴击伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_critical_damage = 0
 	var classes_critical_damage = 0
 	for _origin in origins:
-		origins_critical_damage += abc.origins_attributes[_origin] [abc.Attributes.CRITICAL_DAMAGE]
+		origins_critical_damage += abm.origins_attributes[_origin] [abm.Attributes.CRITICAL_DAMAGE]
 	for _class in classes:
-		classes_critical_damage += abc.classes_attributes[_class] [abc.Attributes.CRITICAL_DAMAGE]
-	critical_damage = base_critical_damage + (abc.player_attributes[abc.Attributes.CRITICAL_DAMAGE] + origins_critical_damage + classes_critical_damage)
+		classes_critical_damage += abm.classes_attributes[_class] [abm.Attributes.CRITICAL_DAMAGE]
+	critical_damage = base_critical_damage + (abm.player_attributes[abm.Attributes.CRITICAL_DAMAGE] + origins_critical_damage + classes_critical_damage)
 	# >>>>>>>>>>>>>>>>>>>>> 子弹数目相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_number_of_projectiles = 0
 	var classes_number_of_projectiles = 0
 	for _origin in origins:
-		origins_number_of_projectiles += abc.origins_attributes[_origin] [abc.Attributes.NUMBER_OF_PROJECTILES]
+		origins_number_of_projectiles += abm.origins_attributes[_origin] [abm.Attributes.NUMBER_OF_PROJECTILES]
 	for _class in classes:
-		classes_number_of_projectiles += abc.classes_attributes[_class] [abc.Attributes.NUMBER_OF_PROJECTILES]
-	number_of_projectiles = base_number_of_projectiles + (abc.player_attributes[abc.Attributes.NUMBER_OF_PROJECTILES] + origins_number_of_projectiles + classes_number_of_projectiles)
-	magazine = base_magazine + (abc.player_attributes[abc.Attributes.NUMBER_OF_PROJECTILES] + origins_number_of_projectiles + classes_number_of_projectiles)
+		classes_number_of_projectiles += abm.classes_attributes[_class] [abm.Attributes.NUMBER_OF_PROJECTILES]
+	number_of_projectiles = base_number_of_projectiles + (abm.player_attributes[abm.Attributes.NUMBER_OF_PROJECTILES] + origins_number_of_projectiles + classes_number_of_projectiles)
+	magazine = base_magazine + (abm.player_attributes[abm.Attributes.NUMBER_OF_PROJECTILES] + origins_number_of_projectiles + classes_number_of_projectiles)
 	# >>>>>>>>>>>>>>>>>>>>> 飞行速度相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_speed_fly = 0
 	var classes_speed_fly = 0
 	for _origin in origins:
-		origins_speed_fly += abc.origins_attributes[_origin] [abc.Attributes.SPEED_FLY]
+		origins_speed_fly += abm.origins_attributes[_origin] [abm.Attributes.SPEED_FLY]
 	for _class in classes:
-		classes_speed_fly += abc.classes_attributes[_class] [abc.Attributes.SPEED_FLY]
-	speed_fly += base_speed_fly * (1 + abc.player_attributes[abc.Attributes.SPEED_FLY] + origins_speed_fly + classes_speed_fly)
-	speed_rotation = base_speed_rotation * (1 + abc.player_attributes[abc.Attributes.SPEED_FLY] + origins_speed_fly + classes_speed_fly)
+		classes_speed_fly += abm.classes_attributes[_class] [abm.Attributes.SPEED_FLY]
+	speed_fly += base_speed_fly * (1 + abm.player_attributes[abm.Attributes.SPEED_FLY] + origins_speed_fly + classes_speed_fly)
+	speed_rotation = base_speed_rotation * (1 + abm.player_attributes[abm.Attributes.SPEED_FLY] + origins_speed_fly + classes_speed_fly)
 	# >>>>>>>>>>>>>>>>>>>>> 穿透率相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_penetration_rate = 0
 	var classes_penetration_rate = 0
 	for _origin in origins:
-		origins_penetration_rate += abc.origins_attributes[_origin] [abc.Attributes.PENETRATION_RATE]
+		origins_penetration_rate += abm.origins_attributes[_origin] [abm.Attributes.PENETRATION_RATE]
 	for _class in classes:
-		classes_penetration_rate += abc.classes_attributes[_class] [abc.Attributes.PENETRATION_RATE]
-	penetration_rate = base_penetration_rate + (abc.player_attributes[abc.Attributes.PENETRATION_RATE] + origins_penetration_rate + classes_penetration_rate)
+		classes_penetration_rate += abm.classes_attributes[_class] [abm.Attributes.PENETRATION_RATE]
+	penetration_rate = base_penetration_rate + (abm.player_attributes[abm.Attributes.PENETRATION_RATE] + origins_penetration_rate + classes_penetration_rate)
 	# >>>>>>>>>>>>>>>>>>>>> 减速率相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_deceleration_rate = 0
 	var classes_deceleration_rate = 0
 	for _origin in origins:
-		origins_deceleration_rate += abc.origins_attributes[_origin] [abc.Attributes.DECELERATION_RATE]
+		origins_deceleration_rate += abm.origins_attributes[_origin] [abm.Attributes.DECELERATION_RATE]
 	for _class in classes:
-		classes_deceleration_rate += abc.classes_attributes[_class] [abc.Attributes.DECELERATION_RATE]
-	deceleration_rate = base_deceleration_rate + (abc.player_attributes[abc.Attributes.DECELERATION_RATE] + origins_deceleration_rate + classes_deceleration_rate)
+		classes_deceleration_rate += abm.classes_attributes[_class] [abm.Attributes.DECELERATION_RATE]
+	deceleration_rate = base_deceleration_rate + (abm.player_attributes[abm.Attributes.DECELERATION_RATE] + origins_deceleration_rate + classes_deceleration_rate)
 	# >>>>>>>>>>>>>>>>>>>>> 冰冻率相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_freezing_rate = 0
 	var classes_freezing_rate = 0
 	for _origin in origins:
-		origins_freezing_rate += abc.origins_attributes[_origin] [abc.Attributes.FREEZING_RATE]
+		origins_freezing_rate += abm.origins_attributes[_origin] [abm.Attributes.FREEZING_RATE]
 	for _class in classes:
-		classes_freezing_rate += abc.classes_attributes[_class] [abc.Attributes.FREEZING_RATE]
-	freezing_rate = base_freezing_rate + (abc.player_attributes[abc.Attributes.FREEZING_RATE] + origins_freezing_rate + classes_freezing_rate)
+		classes_freezing_rate += abm.classes_attributes[_class] [abm.Attributes.FREEZING_RATE]
+	freezing_rate = base_freezing_rate + (abm.player_attributes[abm.Attributes.FREEZING_RATE] + origins_freezing_rate + classes_freezing_rate)
 	# >>>>>>>>>>>>>>>>>>>>> 吸血相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_life_steal = 0
 	var classes_life_steal = 0
 	for _origin in origins:
-		origins_life_steal += abc.origins_attributes[_origin] [abc.Attributes.LIFE_STEAL]
+		origins_life_steal += abm.origins_attributes[_origin] [abm.Attributes.LIFE_STEAL]
 	for _class in classes:
-		classes_life_steal += abc.classes_attributes[_class] [abc.Attributes.LIFE_STEAL]
-	life_steal = base_freezing_rate + (abc.player_attributes[abc.Attributes.LIFE_STEAL] + origins_freezing_rate + classes_life_steal)
+		classes_life_steal += abm.classes_attributes[_class] [abm.Attributes.LIFE_STEAL]
+	life_steal = base_freezing_rate + (abm.player_attributes[abm.Attributes.LIFE_STEAL] + origins_freezing_rate + classes_life_steal)
 
 	update_attribute.emit() # 属性更新信号，用于通知当前武器内部的其他节点更新属性

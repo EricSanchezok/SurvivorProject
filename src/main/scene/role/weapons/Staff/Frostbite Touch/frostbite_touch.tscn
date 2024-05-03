@@ -72,7 +72,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.0872665, 0.436332, 0.0]
+"values": [-1.5708, -1.65806, -1.13446, -1.5708]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xbl4f"]
@@ -87,6 +87,11 @@ script = ExtResource("2_2ousu")
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([1])
 classes = Array[int]([10])
+base_radius_search = 200.0
+base_speed_fly = 50.0
+base_penetration_rate = 1.0
+base_deceleration_rate = 0.4
+base_freezing_rate = 0.1
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 position = Vector2(18, 1.07288e-06)
@@ -108,9 +113,12 @@ texture_scale = 0.05
 position = Vector2(21, 0)
 
 [node name="CenterMarker2D" parent="." index="2"]
-position = Vector2(14, 0)
+position = Vector2(0, -14)
 
-[node name="AnimationPlayer" parent="." index="5"]
+[node name="ReloadProgressBar" parent="." index="4"]
+position = Vector2(0, 9)
+
+[node name="AnimationPlayer" parent="." index="6"]
 libraries = {
 "": SubResource("AnimationLibrary_xbl4f")
 }

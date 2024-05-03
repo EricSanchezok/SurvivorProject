@@ -7,21 +7,18 @@ extends Button
 @onready var destroy_shape_cast_2d: ShapeCast2D = $DestroyShapeCast2D
 
 
-
 @onready var weapon_icon: TextureRect = $CardTexture/WeaponIcon
-
 @onready var weapon_name: Label = $CardTexture/WeaponName
 @onready var weapon_price: Label = $CardTexture/WeaponPrice
 @onready var weapon_class: Label = $CardTexture/WeaponClass
 @onready var weapon_origin: Label = $CardTexture/WeaponOrigin
 
-
-@export var weapon: PackedScene
-
-
 signal apply_to_purchase(card: WeaponCard)
 signal apply_to_exchange(card: WeaponCard)
 signal apply_to_destroy(card: WeaponCard, now_position: Vector2)
+
+var player: PlayerBase
+var slot: int
 
 var purchased: bool = false
 var start_exchange: bool = false
@@ -56,6 +53,14 @@ func _ready() -> void:
 	# 唯一化 card_texture 的材质
 	var materialTemp = card_texture.material.duplicate()
 	card_texture.material = materialTemp
+
+func init_card(weapon: WeaponsManager.WeaponPoolItem) -> void:
+	await ready
+	weapon_icon.texture = load(weapon.icon_path)
+	weapon_name.text = weapon.weapon_name
+	weapon_price.text = str(weapon.price)
+	weapon_class.text = weapon.weapon_class
+	weapon_origin.text = weapon.weapon_origin
 
 	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -110,6 +115,18 @@ func get_next_state(state: State) -> int:
 	
 func transition_state(from: State, to: State) -> void:	
 	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	match from:
+		State.INSHOP:
+			pass
+		State.INVENTORY:
+			pass
+		State.EQUIPMENT:
+			print("unregister_weapon")
+			player.unregister_weapon.emit(player, slot)
+		State.EXCHANGE:
+			pass
+	
+	
 	match to:
 		State.INSHOP:
 			pass
@@ -117,6 +134,7 @@ func transition_state(from: State, to: State) -> void:
 			adsorption_position = global_position
 		State.EQUIPMENT:
 			adsorption_position = global_position
+			player.register_weapon.emit(player, weapon_name.text, slot)
 		State.EXCHANGE:
 			pass
 
@@ -191,6 +209,8 @@ func destroy() -> void:
 	tween_destroy.parallel().tween_property(shadow, "self_modulate:a", 0.0, 0.5)
 	# tween_destroy.parallel().tween_property(card_texture, "modulate:a", 0.0, 0.5)
 	
+	if state_machine.current_state == State.EQUIPMENT:
+		player.unregister_weapon.emit(player, slot)
 	await tween_destroy.finished
 	queue_free()
 

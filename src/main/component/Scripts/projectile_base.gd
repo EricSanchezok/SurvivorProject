@@ -11,7 +11,7 @@ var initial_rotation: float
 var parent_weapon: WeaponBase
 var target: EnemyBase
 var target_position: Vector2
-var weapon_stats: WeaponStats
+var weapon_stats: WeaponStats = WeaponStats.new()
 
 var acceleration: float = 0.0
 var deceleration: float = 0.0
@@ -25,7 +25,9 @@ var current_time: float = 0.0
 func _ready() -> void:
 	if target == null:
 		target = parent_weapon.target
-	weapon_stats = parent_weapon.weapon_stats
+	weapon_stats.sync_parameters(parent_weapon.weapon_stats)
+	weapon_stats.knockback *= 3
+	weapon_stats.speed_fly *= 2
 	$Graphics.rotation = initial_rotation
 
 
@@ -63,6 +65,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_hit_box_hit(hurtbox: Variant) -> void:
 	if not Tools.is_success(weapon_stats.penetration_rate):
+		print("消失： ", weapon_stats.penetration_rate)
 		queue_free()
 
 func _on_destroy_timer_timeout() -> void:

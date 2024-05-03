@@ -4,21 +4,22 @@ var bullet = preload("res://src/main/scene/role/weapons/Staff/Frostbite Touch/fr
 
 func _ready() -> void:
 	super()
-	rotation = -PI/2
+	sync_direction(-PI/2)
 
 enum State{
 	READY
 }
 
 func tick_physics(state: State, delta: float) -> void:
-	sync_position()
+	parent_update()
+	sync_slot_position()
 	target = get_random_enemy()
 	if target and $TimerCoolDown.is_stopped():
 		$TimerCoolDown.start()
 		$AnimationPlayer.play("attack_new")
 		
 		var dir = target.global_position - position
-		scale.y = -1 if dir.x < 0 else 1
+		$Graphics.scale.y = -1 if dir.x < 0 else 1
 		
 	match state:
 		State.READY:
