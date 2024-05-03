@@ -154,3 +154,7 @@ func _on_search_box_body_entered(body: Node2D) -> void:
 func _on_search_box_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy") and enemies.has(body):
 		enemies.erase(body)
+
+func trigger_hit_effect() -> void:
+	pass
+

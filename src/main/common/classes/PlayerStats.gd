@@ -10,6 +10,12 @@ signal stats_changed
 		if base_max_health == v:
 			return
 		base_max_health = v
+# 生命护盾
+@export var base_health_shield: float = 0:
+	set(v):
+		if base_health_shield == v:
+			return
+		base_health_shield = v
 # 基础生命恢复
 @export var base_health_regeneration: float = 0.0:
 	set(v):
@@ -59,6 +65,12 @@ signal stats_changed
 			return
 		owner.abc.set_player_attribute(owner.abc.HEALTH,v-max_health_multiple)
 		max_health_multiple = v
+# 生命护盾倍率
+@export var health_shield_multiple: float = 1.0:
+	set(v):
+		if health_shield_multiple == v:
+			return
+		health_shield_multiple = v
 # 生命恢复倍率
 @export var health_regeneration_multiple: float = 1.0:
 	set(v):
@@ -128,6 +140,13 @@ signal stats_changed
 		if experience_gain_multiple == v:
 			return
 		experience_gain_multiple = v
+
+@onready var health_shield: float = base_health_shield * health_shield_multiple:
+	set(v):
+		v = clampf(v, 0, base_health_shield * health_shield_multiple)
+		if health_shield == v:
+			return
+		health_shield = v
 
 
 @onready var health: float = base_max_health * max_health_multiple:

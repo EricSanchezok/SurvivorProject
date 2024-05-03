@@ -37,6 +37,7 @@ class effect:
 	var value: float = 0.0
 	var duration: float = 0.0
 
+var poison_timer = 0.0  # 追踪中毒效果的时间
 
 func _ready() -> void:
 	random.randomize()
@@ -107,7 +108,11 @@ func tick_physics(state: State, delta: float) -> void:
 				if not effects_states[Effect.POISION]: # 未产生效果
 					continue
 				# 产生效果
-				pass
+				else :
+					poison_timer += delta
+					if poison_timer >= 1.0:  # 每秒应用一次中毒伤害
+						enemy_stats.health -= effects_collection[type_index][0].value
+						poison_timer = 0  # 重置计时器
 			Effect.FREEZE:
 				if not effects_states[Effect.FREEZE]: # 未产生效果
 					continue
@@ -134,6 +139,9 @@ func get_next_state(state: State) -> int:
 	if enemy_stats.current_health == 0:
 		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
 		
+	if enemy_stats.current_health == 0:
+		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
+	
 	if pending_damages.size() > 0:
 		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
 
@@ -211,12 +219,17 @@ func _on_hurt_box_hurt(hitbox: Variant) -> void:
 func create_damage(hitbox: HitBox) -> void:
 	var damage = Damage.new()
 	var source_weapon: CharacterBody2D = hitbox.owner
+	#print(source_weapon.weapon_stats.power_physical)
 	damage.source = source_weapon
 	damage.direction = (source_weapon.global_position - position).normalized()
 	
 	damage.is_critical = Tools.is_success(source_weapon.weapon_stats.critical_hit_rate)
 	
 
+	damage.phy_amount = source_weapon.weapon_stats.power_physical if not damage.is_critical else source_weapon.weapon_stats.power_physical * source_weapon.weapon_stats.critical_damage
+	damage.mag_amount = source_weapon.weapon_stats.power_magic if not damage.is_critical else source_weapon.weapon_stats.power_magic * source_weapon.weapon_stats.critical_damage
+	damage.knockback = source_weapon.weapon_stats.knockback * (1 - enemy_stats.knockback_resistance)
+	
 	damage.phy_amount = source_weapon.weapon_stats.power_physical if not damage.is_critical else source_weapon.weapon_stats.power_physical * source_weapon.weapon_stats.critical_damage
 	damage.mag_amount = source_weapon.weapon_stats.power_magic if not damage.is_critical else source_weapon.weapon_stats.power_magic * source_weapon.weapon_stats.critical_damage
 	damage.knockback = source_weapon.weapon_stats.knockback * (1 - enemy_stats.knockback_resistance)
@@ -243,7 +256,18 @@ func create_effets(hitbox: HitBox) -> void:
 		$AnimationPlayer.pause()
 		freezing_cooldown_timer.start()
 		modulate = Color.hex(0x49ffff)
-	
+	#处理中毒
+	var new_poison_layers = source_weapon.weapon_stats.poison_layers
+	var max_poison_layers = source_weapon.weapon_stats.max_poison_layers
+	if new_poison_layers > 0:
+		if not effects_states[Effect.POISION]:
+			var _effect = effect.new()
+			_effect.value = new_poison_layers
+			_effect.duration = 5
+			effects_collection[Effect.POISION].append(_effect)
+		else :
+			effects_collection[Effect.POISION][0].value = min(effects_collection[Effect.POISION][0].value + new_poison_layers, max_poison_layers)
+
 func create_damage_numbers(current_damage: Damage) -> void:
 	if current_damage.phy_amount != 0:
 		var damage_number = DAMAGE_NUMBERS.instantiate()
@@ -274,3 +298,5 @@ func compare_slow_effects(a, b):
 	else:
 		return false
 
+func trigger_hit_effect() -> void:
+	pass
