@@ -27,15 +27,18 @@ func _on_area_pick_up_body_entered(body: Node2D) -> void:
 func tick_physics(state: State, delta: float) -> void:
 	match state:
 		State.APPEAR:
-			position = slot.global_position
-			rotation = lerp_angle(rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+			sync_slot_position()
+			# rotation = lerp_angle(rotation, -PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+			sync_direction(-PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
+			
 		State.WAIT:
-			position = slot.global_position
+			sync_slot_position()
 		State.CHARGE:
 			pass
 		State.ATTACK:
 			var dir := (targetPos - position).normalized()
-			rotation = lerp_angle(rotation, dir.angle(), weapon_stats.speed_rotation)
+			# rotation = lerp_angle(rotation, dir.angle(), weapon_stats.speed_rotation)
+			sync_direction(dir.angle(), deg_to_rad(weapon_stats.speed_rotation)*delta)
 			position = position.move_toward(targetPos, weapon_stats.speed_fly*delta)
 		State.LANDING:
 			pass

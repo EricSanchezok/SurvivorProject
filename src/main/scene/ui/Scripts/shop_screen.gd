@@ -410,7 +410,7 @@ func draw_card() -> void:
 	
 	tween_draw = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 
-	var weapon_pool_item = WeaponsManager.draw_weapon(3)
+	var weapon_pool_item = WeaponsManager.draw_weapon(8)
 
 	var card_instance: WeaponCard = card_scene.instantiate()
 	card_instance.global_position = refresh_button.global_position

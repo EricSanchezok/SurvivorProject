@@ -65,7 +65,10 @@ func _physics_process(delta: float) -> void:
 	if position.distance_squared_to(target_position) < pow(3, 2) and not reached:
 		reached = true
 		reach_target.emit()
-
+		
+func trigger_hit_effect() -> void:
+	pass
+	
 func _on_hit_box_hit(hurtbox: Variant) -> void:
 	if not Tools.is_success(weapon_stats.penetration_rate):
 		print("消失： ", weapon_stats.penetration_rate)
@@ -73,5 +76,7 @@ func _on_hit_box_hit(hurtbox: Variant) -> void:
 
 func _on_destroy_timer_timeout() -> void:
 	queue_free()
+	
+
 	
 

@@ -114,7 +114,7 @@ func draw_weapon(player_level: int) -> WeaponPoolItem:
 	elif player_level == 7:
 		star_probs = {1: 0.19, 2: 0.30, 3: 0.40, 4: 0.10, 5: 0.01}
 	elif player_level == 8:
-		star_probs = {1: 0.18, 2: 0.25, 3: 0.32, 4: 0.22, 5: 0.3}
+		star_probs = {1: 0.18, 2: 0.25, 3: 0.32, 4: 0.22, 5: 0.03}
 	elif player_level == 9:
 		star_probs = {1: 0.10, 2: 0.20, 3: 0.25, 4: 0.35, 5: 0.10}
 	elif player_level == 10:
@@ -145,7 +145,7 @@ func draw_weapon(player_level: int) -> WeaponPoolItem:
 		if rand < cumulative_probs[i]:
 			var chosen_weapon = available_weapons[i]
 			chosen_weapon.current_quantity -= 1 # 减少当前数量
-			# print_weapon_pool_counter()
+			print_weapon_pool_counter()
 			return chosen_weapon
 
 	
@@ -168,7 +168,7 @@ func recycle_weapon(weapon_pool_item: WeaponPoolItem, number: int) -> void:
 			item.current_quantity += number
 			break
 
-	# print_weapon_pool_counter()
+	print_weapon_pool_counter()
 
 
 func create_weapon_pool() -> void:

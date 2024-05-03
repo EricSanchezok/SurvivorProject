@@ -30,6 +30,11 @@ signal update_attribute
 @export var base_freezing_rate: float = 0 #冰冻率
 @export var base_life_steal: float = 0 #吸血
 
+@export var base_poison_layers: float = 0 #中毒层数
+@export var base_max_poison_layers: float = 0 #最大中毒层数
+@export var base_number_of_lighting_chain: float = 0 #闪电链数目
+@export var base_power_lighting_chain: float = 0 #闪电链伤害
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 当前属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @onready var health: float = base_health  #生命值
 @onready var health_regeneration: float = base_health_regeneration  #生命恢复
@@ -59,6 +64,11 @@ signal update_attribute
 @onready var deceleration_rate: float = base_deceleration_rate  #减速率
 @onready var freezing_rate: float = base_freezing_rate  #冰冻率
 @onready var life_steal: float = base_life_steal  #吸血
+
+@onready var poison_layers:float = base_poison_layers  #中毒层数
+@onready var max_poison_layers:float = base_max_poison_layers  #最大中毒层数
+@onready var number_of_lighting_chain:float = base_number_of_lighting_chain  #闪电链数目
+@onready var power_lighting_chain:float = base_power_lighting_chain  #闪电链伤害
 
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 属性更新 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -229,4 +239,36 @@ func _on_attribute_changed():
 		classes_life_steal += abm.classes_attributes[_class] [abm.Attributes.LIFE_STEAL]
 	life_steal = base_freezing_rate + (abm.player_attributes[abm.Attributes.LIFE_STEAL] + origins_freezing_rate + classes_life_steal)
 
+
+	# >>>>>>>>>>>>>>>>>>>>> 中毒层数相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_poison_layers = 0
+	var classes_poison_layers = 0
+	for _origin in origins:
+		origins_poison_layers += abm.origins_attributes[_origin] [abm.Attributes.POISON_LAYERS]
+	for _class in classes:
+		classes_poison_layers += abm.classes_attributes[_class] [abm.Attributes.POISON_LAYERS]
+	poison_layers = base_poison_layers + (abm.player_attributes[abm.Attributes.POISON_LAYERS] + origins_poison_layers + classes_poison_layers)
+	# >>>>>>>>>>>>>>>>>>>>> 最大中毒层数相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_max_poison_layers = 0
+	var classes_max_poison_layers = 0
+	for _origin in origins:
+		origins_max_poison_layers += abm.origins_attributes[_origin] [abm.Attributes.MAX_POISON_LAYERS]
+	for _class in classes:
+		classes_max_poison_layers += abm.classes_attributes[_class] [abm.Attributes.MAX_POISON_LAYERS]
+	max_poison_layers = base_max_poison_layers + (abm.player_attributes[abm.Attributes.MAX_POISON_LAYERS] + origins_max_poison_layers + classes_max_poison_layers)
+	# >>>>>>>>>>>>>>>>>>>>> 闪电链数目相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_number_of_lighting_chain = 0
+	var classes_number_of_lighting_chain = 0
+	for _origin in origins:
+		origins_number_of_lighting_chain += abm.origins_attributes[_origin] [abm.Attributes.NUMBER_OF_LIGHTING_CHAIN]
+	for _class in classes:
+		classes_number_of_lighting_chain += abm.classes_attributes[_class] [abm.Attributes.NUMBER_OF_LIGHTING_CHAIN]
+	number_of_lighting_chain = base_number_of_lighting_chain + (abm.player_attributes[abm.Attributes.NUMBER_OF_LIGHTING_CHAIN] + origins_number_of_lighting_chain + classes_number_of_lighting_chain)
+	# >>>>>>>>>>>>>>>>>>>>> 闪电链伤害相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	var origins_power_lighting_chain = 0
+	var classes_power_lighting_chain = 0
+	for _origin in origins:
+		origins_power_lighting_chain += abm.origins_attributes[_origin] [abm.Attributes.POWER_LIGHTING_CHAIN]
+	for _class in classes:
+		classes_power_lighting_chain += abm.classes_attributes[_class] [abm.Attributes.POWER_LIGHTING_CHAIN]
 	update_attribute.emit() # 属性更新信号，用于通知当前武器内部的其他节点更新属性
