@@ -167,30 +167,8 @@ radius = 23.7697
 script = ExtResource("2_37bpn")
 
 [node name="WeaponStats" parent="." index="0"]
-origins = Array[int]([])
-classes = Array[int]([])
-deceleration_time = 0.0
-base_health = 20.0
-base_health_regeneration = 1.0
-base_power_physical = 2.0
-base_power_magic = 0.0
-base_time_cooldown = 1.0
-base_radius_search = 100.0
-base_range_attack = 1.0
-base_range_explosion = 30
-base_knockback = 30.0
-base_critical_hit_rate = 0.0
-base_critical_damage = 2.0
-base_number_of_projectiles = 1
-base_magazine = 1
-base_speed_fly = 200.0
-base_speed_rotation = 360.0
-base_penetration_rate = 0.0
-base_deceleration_rate = 0.0
-base_freezing_rate = 0.0
-base_life_steal = 0.0
-base_poison_layers = 0.0
-base_max_poison_layers = 0.0
+origins = Array[int]([2])
+classes = Array[int]([2])
 base_number_of_lighting_chain = 3.0
 base_power_lighting_chain = 0.5
 

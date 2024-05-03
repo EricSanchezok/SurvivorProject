@@ -58,6 +58,9 @@ func _ready() -> void:
 	equipment_areas = $Equipment.get_children()
 	equipment_positions.resize(10)
 	caculate_equipment_positions()
+
+	# 绑定 计数更新 事件
+	owner.connect("attribute_count_changed",_on_update_attributes_count)
 	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -135,7 +138,7 @@ func get_next_state(state: State) -> int:
 	
 	
 func transition_state(from: State, to: State) -> void:	
-	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 
 	match from:
@@ -234,7 +237,7 @@ func hide_screen() -> void:
 	:return: None
 	'''
 	start_hide = true
-	
+
 func get_shop_card_position(index: int, card_size: Vector2) -> Vector2:
 	'''
 	根据索引获取商店卡片的位置
@@ -328,7 +331,6 @@ func update_mouse_filters():
 			if card.mouse_filter != MOUSE_FILTER_STOP:
 				card.mouse_filter = MOUSE_FILTER_STOP
 				
-
 func calculate_y_on_ellipse(x, a, b):
 	'''
 	计算椭圆上的y坐标
@@ -530,11 +532,17 @@ func _on_refresh_button_pressed() -> void:
 	draw_flag = true
 	locked_shop = false
 	
-	
 func _on_apply_to_purchase(card: WeaponCard) -> void:
 	purchase_list.append(card)
 	
 func _on_apply_to_exchange(card: WeaponCard, now_position: Vector2) -> void:
+	'''
+	卡片交换
+
+	:param card: 要交换的卡片
+	:param now_position: 当前位置
+	:return: None
+	'''
 	var card_state = card.state_machine.current_state
 	
 	var current_index = in_inventory_cards.find(card) if card_state == card.State.INVENTORY else in_equipment_cards.find(card)
@@ -602,6 +610,12 @@ func _on_apply_to_exchange(card: WeaponCard, now_position: Vector2) -> void:
 		card.slot_index = target_index # 设置装备槽位
 
 func _on_apply_to_destroy(card: WeaponCard) -> void:
+	'''
+	销毁卡片
+
+	:param card: 要销毁的卡片
+	:return: None
+	'''
 	var card_state = card.state_machine.current_state
 	if card_state == card.State.INVENTORY:
 		var index = in_inventory_cards.find(card)
@@ -611,3 +625,18 @@ func _on_apply_to_destroy(card: WeaponCard) -> void:
 		in_equipment_cards[index] = null
 	
 	card.destroy()
+
+func _on_update_attributes_count() -> void:
+	var origins_count = owner.origins_count
+	var classes_count = owner.classes_count
+
+	var count_dict = {}
+	for i in range(origins_count.size()):
+		if origins_count[i] > 0:
+			count_dict[owner.abm.enum_to_string(i, AttributesManager.Origins)] = origins_count[i]
+	for i in range(classes_count.size()):
+		if classes_count[i] > 0:
+			count_dict[owner.abm.enum_to_string(i, AttributesManager.Classes)] = classes_count[i]
+	
+	print(count_dict)
+

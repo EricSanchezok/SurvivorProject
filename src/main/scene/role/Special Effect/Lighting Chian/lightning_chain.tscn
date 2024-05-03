@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://csj6s61xvsa0u"]
 
-[ext_resource type="Script" path="res://src/main/scene/role/weapons/Special Effect/Lighting Chian/lightning_chain.gd" id="1_gjv1v"]
-[ext_resource type="Script" path="res://src/main/scene/role/weapons/Special Effect/Lighting Chian/lighting_chain_line2d.gd" id="1_nnc5v"]
+[ext_resource type="Script" path="res://src/main/scene/role/Special Effect/Lighting Chian/lightning_chain.gd" id="1_gjv1v"]
+[ext_resource type="Script" path="res://src/main/scene/role/Special Effect/Lighting Chian/lighting_chain_line2d.gd" id="1_nnc5v"]
 [ext_resource type="Script" path="res://src/main/common/classes/HitBox.gd" id="2_opkww"]
 
 [sub_resource type="Curve" id="Curve_w4hfk"]

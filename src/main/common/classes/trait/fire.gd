@@ -1,10 +1,11 @@
+class_name FireTrait
 extends TraitBase
 
 func _ready() -> void:
+	super()
 	thresholds = [3, 5, 7, 9]
 	self_type = AttributesManager.Origins.FIRE
 
-		
 func do_interval_change(index_now: int, index_new: int) -> void:
 	var start_index = min(index_now, index_new)
 	var end_index = max(index_now, index_new)

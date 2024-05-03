@@ -1,8 +1,10 @@
+class_name FrostTrait
 extends TraitBase
 
 func _ready() -> void:
+	super()
 	thresholds = [2, 4, 6, 8]
-	self_type = Attribute_Changed.Origins.FROST
+	self_type = AttributesManager.Origins.FROST
 
 		
 func do_interval_change(index_now: int, index_new: int) -> void:

@@ -128,7 +128,7 @@ start_move = false
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([1])
-classes = Array[int]([5])
+classes = Array[int]([4])
 base_power_physical = 0.2
 base_power_magic = 0.4
 base_time_cooldown = 1.5

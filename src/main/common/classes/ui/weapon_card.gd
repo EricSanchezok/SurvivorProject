@@ -44,7 +44,8 @@ var weapon_level: int = 1:
 		weapon_pool_item.level = weapon_level
 		$CardTexture/LevelAbove/Label.text = str(weapon_level)
 		$CardTexture/LevelBelow/Label.text = str(weapon_level)
-		WeaponsManager.upgrade_weapon(player, slot_index, weapon_level)
+		if weapon_level != 1:
+			WeaponsManager.upgrade_weapon(player, slot_index, weapon_level)
 		if weapon_level == 3:
 			$AnimationPlayer.play("level_3")
 

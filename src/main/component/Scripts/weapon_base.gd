@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var hit_box: HitBox = $Graphics/HitBox
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 
+var id: int
 var slot: Marker2D
 var slot_index: int
 var player: CharacterBody2D
@@ -25,20 +26,43 @@ var weapon_level: int = 1: # 武器等级
 				weapon_icon.material.set_shader_parameter("line_color", Color.BLUE)
 			3:
 				weapon_icon.material.set_shader_parameter("line_color", Color.RED)
-	
-
-
+				
 func _ready() -> void:
 	# 唯一化 weapon_icon 的材质
 	var materialTemp = weapon_icon.material.duplicate()
 	weapon_icon.material = materialTemp
 	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func init_weapon(_player: CharacterBody2D, _weapon_pool_item: WeaponsManager.WeaponPoolItem, _slot_index: int) -> void:
+	id = _weapon_pool_item.id
+	weapon_level = _weapon_pool_item.level
+
+	slot = _player.get_weapon_slot(_slot_index) # 获取在玩家节点下的武器槽实例
+	slot_index = _slot_index
+	player = _player
+	player_stats = _player.player_stats
+
+	print("WeaponBase.init_weapon: ", id, weapon_level, slot, slot_index, player, player_stats)
+
+	
+
 func parent_update() -> void:
 	'''
 	父节点的 _process 函数
 	'''
 	update_reload_progress_bar()
+
+func update_reload_progress_bar() -> void:
+	reload_progress_bar.value = (weapon_stats.time_cooldown - $TimerCoolDown.time_left) / weapon_stats.time_cooldown
+
+func equals(other: WeaponBase) -> bool:
+	'''
+	判断是否相等
+
+	:param other: 另一个武器
+	:return: 是否相等
+	'''
+	return id == other.id
 
 func get_nearest_enemy(is_self: bool = false) -> CharacterBody2D:
 	'''
@@ -142,9 +166,8 @@ func get_random_position_on_circle(radius: float) -> Vector2:
 	return Vector2(cos(angle), sin(angle)) * radius
 	
 
-func update_reload_progress_bar() -> void:
-	reload_progress_bar.value = (weapon_stats.time_cooldown - $TimerCoolDown.time_left) / weapon_stats.time_cooldown
-	
+
+
 	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 回调函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _on_search_box_body_entered(body: Node2D) -> void:
