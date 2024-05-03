@@ -1,13 +1,15 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwy48kklpg6tr"]
+[gd_scene load_steps=24 format=3 uid="uid://dwy48kklpg6tr"]
 
 [ext_resource type="Shader" path="res://src/main/assets/shader/dissolve.gdshader" id="1_akbum"]
 [ext_resource type="Theme" uid="uid://dum4ct87pjet4" path="res://src/main/assets/theme/default_theme.tres" id="1_b8bt2"]
 [ext_resource type="Script" path="res://src/main/common/classes/ui/weapon_card.gd" id="2_8v2k2"]
 [ext_resource type="Texture2D" uid="uid://t15m3at4skvj" path="res://src/main/assets/texture/role/Card/WeaponCard.png" id="2_bk36k"]
 [ext_resource type="Shader" path="res://src/main/assets/shader/fake_3D.gdshader" id="2_wujj2"]
+[ext_resource type="Texture2D" uid="uid://dmbyx6wgg5hvg" path="res://src/main/assets/texture/vfx/Particle FX 1.0/Fire+Sparks-SpriteSheet.png" id="5_h1g2u"]
 [ext_resource type="Texture2D" uid="uid://uqvy8wa4uqwo" path="res://src/main/assets/packs/32X32/5 Weapon icons #5/Icons/Icon_5_75.png" id="6_i0lsp"]
-[ext_resource type="Texture2D" uid="uid://dxqwgcdwo37u5" path="res://src/main/assets/packs/16X16/Fantasy RPG icon pack (by Franuka)/Individual icons (16x16)/141.png" id="7_w6mb7"]
+[ext_resource type="Texture2D" uid="uid://dixlc2rmodb4v" path="res://src/main/assets/texture/role/Card/CardBackGround.png" id="7_gd1ua"]
 [ext_resource type="Script" path="res://src/main/common/classes/StateMachine.gd" id="8_bbs87"]
+[ext_resource type="Texture2D" uid="uid://dgjk24habpqtb" path="res://src/main/assets/texture/role/Card/CardFrame.png" id="8_ekymm"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_i18xi"]
 frequency = 0.0074
@@ -45,6 +47,68 @@ shader_parameter/inset = 0.0
 radius = 16.0
 height = 45.0
 
+[sub_resource type="Animation" id="Animation_wmjlj"]
+resource_name = "level_3"
+length = 1.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_aerir"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x8sd2"]
+_data = {
+"RESET": SubResource("Animation_aerir"),
+"level_3": SubResource("Animation_wmjlj")
+}
+
 [node name="WeaponCard" type="Button"]
 material = SubResource("ShaderMaterial_4ckko")
 offset_right = 45.0
@@ -74,6 +138,18 @@ mouse_filter = 2
 texture = ExtResource("2_bk36k")
 expand_mode = 1
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(20, -28)
+scale = Vector2(1.6, 1.9)
+texture = ExtResource("5_h1g2u")
+hframes = 4
+vframes = 5
+frame = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 384, 480)
+
 [node name="CardTexture" type="TextureRect" parent="." groups=["WeaponCard"]]
 show_behind_parent = true
 material = SubResource("ShaderMaterial_jtsb8")
@@ -84,8 +160,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_bk36k")
+texture = ExtResource("7_gd1ua")
 expand_mode = 1
+
+[node name="ForeTexture" type="TextureRect" parent="CardTexture"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ekymm")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="WeaponIcon" type="TextureRect" parent="CardTexture"]
 layout_mode = 0
@@ -103,40 +190,19 @@ offset_right = 16.0
 offset_bottom = 7.0
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="CardTexture/LevelAbove"]
-custom_minimum_size = Vector2(4, 4)
-layout_mode = 2
-offset_top = 1.0
-offset_right = 4.0
-offset_bottom = 5.0
-size_flags_horizontal = 3
-texture = ExtResource("7_w6mb7")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="CardTexture/LevelAbove"]
-custom_minimum_size = Vector2(4, 4)
-layout_mode = 0
-offset_left = 5.0
-offset_top = 1.0
-offset_right = 9.0
-offset_bottom = 5.0
-size_flags_horizontal = 3
-texture = ExtResource("7_w6mb7")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect3" type="TextureRect" parent="CardTexture/LevelAbove"]
-custom_minimum_size = Vector2(4, 4)
-layout_mode = 0
-offset_left = 10.0
-offset_top = 1.0
-offset_right = 14.0
-offset_bottom = 5.0
-size_flags_horizontal = 3
-texture = ExtResource("7_w6mb7")
-expand_mode = 1
-stretch_mode = 5
+[node name="Label" type="Label" parent="CardTexture/LevelAbove"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="LevelBelow" type="Control" parent="CardTexture"]
 layout_mode = 3
@@ -147,43 +213,19 @@ offset_right = 44.0
 offset_bottom = 63.0
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="CardTexture/LevelBelow"]
-custom_minimum_size = Vector2(4, 4)
-layout_mode = 0
-offset_top = 1.0
-offset_right = 4.0
-offset_bottom = 5.0
-size_flags_horizontal = 3
-texture = ExtResource("7_w6mb7")
-expand_mode = 1
-stretch_mode = 5
-flip_h = true
-
-[node name="TextureRect2" type="TextureRect" parent="CardTexture/LevelBelow"]
-custom_minimum_size = Vector2(4, 4)
-layout_mode = 0
-offset_left = 5.0
-offset_top = 1.0
-offset_right = 9.0
-offset_bottom = 5.0
-size_flags_horizontal = 3
-texture = ExtResource("7_w6mb7")
-expand_mode = 1
-stretch_mode = 5
-flip_h = true
-
-[node name="TextureRect3" type="TextureRect" parent="CardTexture/LevelBelow"]
-custom_minimum_size = Vector2(4, 4)
-layout_mode = 0
-offset_left = 10.0
-offset_top = 1.0
-offset_right = 14.0
-offset_bottom = 5.0
-size_flags_horizontal = 3
-texture = ExtResource("7_w6mb7")
-expand_mode = 1
-stretch_mode = 5
-flip_h = true
+[node name="Label" type="Label" parent="CardTexture/LevelBelow"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="WeaponName" type="Label" parent="CardTexture"]
 layout_mode = 0
@@ -215,7 +257,6 @@ theme_override_font_sizes/font_size = 6
 text = "GUN"
 horizontal_alignment = 1
 vertical_alignment = 1
-uppercase = true
 
 [node name="WeaponOrigin" type="Label" parent="CardTexture"]
 layout_mode = 0
@@ -227,7 +268,6 @@ theme_override_font_sizes/font_size = 6
 text = "FIRE"
 horizontal_alignment = 1
 vertical_alignment = 1
-uppercase = true
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("8_bbs87")
@@ -240,6 +280,12 @@ target_position = Vector2(0, 0)
 collision_mask = 32
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x8sd2")
+}
+speed_scale = 2.0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -7,13 +7,31 @@ class WeaponPoolItem:
 	var weapon_name = ""
 	var resource_path = ""
 	var icon_path = ""
-	var level: int = 0
+	var level: int = 1
 	var price: int = 10
 	var star_rating: int = 1
 	var current_quantity: int = 0
 	var max_quantity: int = -1
 	var weapon_class: String
 	var weapon_origin: String
+	
+	func clone():
+		var new_item = WeaponPoolItem.new()
+		new_item.id = id
+		new_item.weapon_name = weapon_name
+		new_item.resource_path = resource_path
+		new_item.icon_path = icon_path
+		new_item.level = level
+		new_item.price = price
+		new_item.star_rating = star_rating
+		new_item.current_quantity = current_quantity
+		new_item.max_quantity = max_quantity
+		new_item.weapon_class = weapon_class
+		new_item.weapon_origin = weapon_origin
+		return new_item
+
+	func equals(other: WeaponPoolItem) -> bool:
+		return id == other.id and level == other.level
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 关卡初始化变量 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var activated_level: Node2D # 当前激活的关卡
@@ -30,6 +48,23 @@ func _ready():
 	
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func upgrade_weapon(player: PlayerBase, slot_index: int, level: int) -> void:
+	'''
+	升级武器
+
+	:param player: 玩家
+	:param slot_index: 武器槽索引
+	:param level: 升级等级
+	:return: None
+	'''
+	
+	# print("升级武器")
+	for weapon in players_weapons[player]:
+		# print("weapon_slot_index: ", weapon.slot_index, "    ", slot_index)
+		if weapon.slot_index == slot_index:
+			weapon.weapon_level = level
+			break
+
 func level_initialization(level: Node2D, players: Array, station_areas: PositionGenerator) -> void:
 	'''
 	关卡初始化
@@ -55,6 +90,15 @@ func level_initialization(level: Node2D, players: Array, station_areas: Position
 	init_finish.emit()
 
 func draw_weapon(player_level: int) -> WeaponPoolItem:
+	'''
+	抽取武器
+
+	:param player_level: 玩家等级
+	:return: 抽取的武器
+	'''
+
+	# print("抽取武器")
+
 	# 根据玩家等级确定星级概率
 	var star_probs = {}
 	if player_level == 1 or player_level == 2:
@@ -75,7 +119,7 @@ func draw_weapon(player_level: int) -> WeaponPoolItem:
 		star_probs = {1: 0.10, 2: 0.20, 3: 0.25, 4: 0.35, 5: 0.10}
 	elif player_level == 10:
 		star_probs = {1: 0.05, 2: 0.10, 3: 0.20, 4: 0.40, 5: 0.25}
-	elif player_level == 11:
+	elif player_level >= 11:
 		star_probs = {1: 0.01, 2: 0.02, 3: 0.12, 4: 0.50, 5: 0.35}
 
 	# 过滤可抽取的武器
@@ -101,10 +145,30 @@ func draw_weapon(player_level: int) -> WeaponPoolItem:
 		if rand < cumulative_probs[i]:
 			var chosen_weapon = available_weapons[i]
 			chosen_weapon.current_quantity -= 1 # 减少当前数量
+			# print_weapon_pool_counter()
 			return chosen_weapon
+
+	
 
 	return null
 
+func recycle_weapon(weapon_pool_item: WeaponPoolItem, number: int) -> void:
+	'''
+	回收武器
+
+	:param weapon_pool_item: 需要回收的武器
+	:param number: 回收数量
+	:return: None
+	'''
+
+	# print("回收武器")
+
+	for item in weapon_pool:
+		if item.id == weapon_pool_item.id:
+			item.current_quantity += number
+			break
+
+	# print_weapon_pool_counter()
 
 
 func create_weapon_pool() -> void:
@@ -117,7 +181,6 @@ func create_weapon_pool() -> void:
 		weapon_pool_item.weapon_name = weapon_data["weapon_name"]
 		weapon_pool_item.resource_path = weapon_data["resource_path"]
 		weapon_pool_item.icon_path = weapon_data["icon_path"]
-		weapon_pool_item.level = weapon_data["level"]
 		weapon_pool_item.price = weapon_data["price"]
 
 		var details = allocate_weapon_details(weapon_pool_item.price)
@@ -209,9 +272,20 @@ func print_weapon_pool() -> void:
 
 	:return: None
 	'''
+	print(">>>>>>>>>>>>>>>>>>>武器池信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 	for weapon_pool_item in weapon_pool:
-		print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+		print(">>>>>>>>>>>>>>>>>")
 		print_weapon_pool_item(weapon_pool_item)
+
+func print_weapon_pool_counter() -> void:
+	'''
+	打印武器池中的武器数量
+
+	:return: None
+	'''
+	print(">>>>>>>>>>>>>>>>>>>武器池数量>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+	for weapon_pool_item in weapon_pool:
+		print(weapon_pool_item.weapon_name, "    数量：", weapon_pool_item.current_quantity)
 
 func find_most_similar_tscn(filenames, folder_name):
 	'''
@@ -262,7 +336,7 @@ func levenshtein(a: String, b: String) -> int:
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 回调函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-func _on_player_register_weapon(player: CharacterBody2D, weapon_name: String, slot_index: int) -> void:
+func _on_player_register_weapon(player: CharacterBody2D, weapon_pool_item: WeaponPoolItem, slot_index: int) -> void:
 	'''
 	注册武器
 	
@@ -272,20 +346,16 @@ func _on_player_register_weapon(player: CharacterBody2D, weapon_name: String, sl
 	:return: None
 	'''
 	# print("玩家：", player, " 注册武器：", weapon_name, " 武器槽索引：", slot_index)
-	var resource_path = ""
-	for weapon_data in weapon_data_base:
-		if weapon_data["weapon_name"] == weapon_name:
-			resource_path = weapon_data["resource_path"]
-			break
-	# print("resource_path: ", resource_path)
 	var slot = player.get_weapon_slot(slot_index) # 获取在玩家节点下的武器槽实例
-	var instance = load(resource_path).instantiate() # 加载武器资源
-	
+	var instance = load(weapon_pool_item.resource_path).instantiate() # 加载武器资源
+	# print_weapon_pool_item(weapon_pool_item)
 	# 设置武器实例属性
 	instance.slot = slot
 	instance.slot_index = slot_index
 	instance.player = player
 	instance.player_stats = player.player_stats
+
+	instance.weapon_level = weapon_pool_item.level
 	
 	var weapon_stats = instance.get_node("WeaponStats") # 这时候weapon还未ready，所以需要get_node来获取
 	if weapon_stats.classes.has(AttributesManager.Classes.STATION):
@@ -310,7 +380,7 @@ func _on_player_unregister_weapon(player: CharacterBody2D, slot_index: int) -> v
 	:param slot_index: 武器槽索引
 	:return: None
 	'''
-	print("注销武器：", player, " 武器槽索引：", slot_index)
+	# print("注销武器：", player, " 武器槽索引：", slot_index)
 	for weapon in players_weapons[player]:
 		if weapon.slot_index == slot_index:
 			var weapon_stats = weapon.get_node("WeaponStats")

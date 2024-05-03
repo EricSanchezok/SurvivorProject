@@ -87,6 +87,9 @@ texture = ExtResource("5_luic5")
 lifetime = 1.1
 randomness = 0.23
 
+[node name="ReloadProgressBar" parent="." index="5"]
+position = Vector2(0, 24)
+
 [node name="HitBoxTimer" type="Timer" parent="." index="7"]
 wait_time = 0.1
 

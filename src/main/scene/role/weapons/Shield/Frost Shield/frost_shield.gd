@@ -69,16 +69,20 @@ func get_next_state(state: State) -> int:
 	return StateMachine.KEEP_CURRENT
 	
 func transition_state(from: State, to: State) -> void:	
-	print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
+	# print("[%s] %s => %s" % [Engine.get_physics_frames(),State.keys()[from] if from != -1 else "<START>",State.keys()[to],]) 
 
 	match to:
 		State.APPEAR:
 			$AnimationPlayer.play("appear")
+			var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+			tween.parallel().tween_property($TextureProgressBar, "self_modulate:a", 1.0, 0.3).from(0.0)
 			hurt_box.monitorable = false
 		State.WAIT:
 			hurt_box.monitorable = true
 		State.RECOVERING:
 			$AnimationPlayer.play("recovering")
+			var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+			tween.parallel().tween_property($TextureProgressBar, "self_modulate:a", 0.0, 0.3).from(1.0)
 			$TimerCoolDown.start()
 			current_health = weapon_stats.health
 			hurt_box.monitorable = false

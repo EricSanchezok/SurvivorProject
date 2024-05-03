@@ -9,6 +9,7 @@ var initial_rotation: float
 @export var in_front_dis: int = 5
 
 var parent_weapon: WeaponBase
+var parent_weapon_position: Vector2
 var target: EnemyBase
 var target_position: Vector2
 var weapon_stats: WeaponStats = WeaponStats.new()
@@ -36,12 +37,14 @@ func _physics_process(delta: float) -> void:
 		return
 	weapon_stats.speed_fly = weapon_stats.speed_fly + acceleration * delta - deceleration * delta
 	if tracking:
-		if target != null:
-			if not in_front:
-				target_position = target.global_position
-			else:
-				var dir_to_parent = (parent_weapon.global_position - target.global_position).normalized()
-				target_position = target.global_position + in_front_dis * dir_to_parent
+		if is_instance_valid(target):
+			if not target.is_dead:
+				if not in_front:
+					target_position = target.global_position
+				else:
+					if is_instance_valid(parent_weapon): parent_weapon_position = parent_weapon.global_position
+					var dir_to_parent = (parent_weapon_position - target.global_position).normalized()
+					target_position = target.global_position + in_front_dis * dir_to_parent
 		if bezier:
 			current_time += delta
 			var distance = position.distance_to(target_position)

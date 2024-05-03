@@ -8,17 +8,45 @@ extends Button
 
 
 @onready var weapon_icon: TextureRect = $CardTexture/WeaponIcon
-@onready var weapon_name: Label = $CardTexture/WeaponName
-@onready var weapon_price: Label = $CardTexture/WeaponPrice
-@onready var weapon_class: Label = $CardTexture/WeaponClass
-@onready var weapon_origin: Label = $CardTexture/WeaponOrigin
+
 
 signal apply_to_purchase(card: WeaponCard)
 signal apply_to_exchange(card: WeaponCard)
 signal apply_to_destroy(card: WeaponCard, now_position: Vector2)
 
 var player: PlayerBase
-var slot: int
+var slot_index: int
+var weapon_pool_item: WeaponsManager.WeaponPoolItem
+
+var weapon_name: String = "":
+	set(v):
+		weapon_name = v
+		$CardTexture/WeaponName.text = weapon_name
+
+var weapon_price: int = 0:
+	set(v):
+		weapon_price = v
+		$CardTexture/WeaponPrice.text = str(weapon_price)
+
+var weapon_class: String = "":
+	set(v):
+		weapon_class = v
+		$CardTexture/WeaponClass.text = weapon_class
+
+var weapon_origin: String = "":
+	set(v):
+		weapon_origin = v
+		$CardTexture/WeaponOrigin.text = weapon_origin
+
+var weapon_level: int = 1:
+	set(v):
+		weapon_level = v
+		weapon_pool_item.level = weapon_level
+		$CardTexture/LevelAbove/Label.text = str(weapon_level)
+		$CardTexture/LevelBelow/Label.text = str(weapon_level)
+		WeaponsManager.upgrade_weapon(player, slot_index, weapon_level)
+		if weapon_level == 3:
+			$AnimationPlayer.play("level_3")
 
 var purchased: bool = false
 var start_exchange: bool = false
@@ -56,11 +84,13 @@ func _ready() -> void:
 
 func init_card(weapon: WeaponsManager.WeaponPoolItem) -> void:
 	await ready
+	weapon_pool_item = weapon.clone()
 	weapon_icon.texture = load(weapon.icon_path)
-	weapon_name.text = weapon.weapon_name
-	weapon_price.text = str(weapon.price)
-	weapon_class.text = weapon.weapon_class
-	weapon_origin.text = weapon.weapon_origin
+	weapon_name = weapon.weapon_name
+	weapon_price = weapon.price
+	weapon_class = weapon.weapon_class
+	weapon_origin = weapon.weapon_origin
+	weapon_level = weapon.level
 
 	
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -121,8 +151,7 @@ func transition_state(from: State, to: State) -> void:
 		State.INVENTORY:
 			pass
 		State.EQUIPMENT:
-			print("unregister_weapon")
-			player.unregister_weapon.emit(player, slot)
+			player.unregister_weapon.emit(player, slot_index)
 		State.EXCHANGE:
 			pass
 	
@@ -134,7 +163,7 @@ func transition_state(from: State, to: State) -> void:
 			adsorption_position = global_position
 		State.EQUIPMENT:
 			adsorption_position = global_position
-			player.register_weapon.emit(player, weapon_name.text, slot)
+			player.register_weapon.emit(player, weapon_pool_item, slot_index)
 		State.EXCHANGE:
 			pass
 
@@ -201,18 +230,28 @@ func back() -> void:
 	tween.tween_property(self, "position", adsorption_position, 0.3)
 			
 func destroy() -> void:
+	# 回收武器
+	WeaponsManager.recycle_weapon(weapon_pool_item, (weapon_level-1)*3)
+
+	if state_machine.current_state == State.EQUIPMENT: # 如果是在装备栏中销毁武器，则需要注销该武器
+		player.unregister_weapon.emit(player, slot_index)
+
+	# 动画效果
 	card_texture.use_parent_material = true
 	if tween_destroy and tween_destroy.is_running():
 		tween_destroy.kill()
 	tween_destroy = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 	tween_destroy.tween_property(material, "shader_parameter/dissolve_value", 0.0, 0.5).from(1.0)
 	tween_destroy.parallel().tween_property(shadow, "self_modulate:a", 0.0, 0.5)
-	# tween_destroy.parallel().tween_property(card_texture, "modulate:a", 0.0, 0.5)
+	tween_destroy.parallel().tween_property(card_texture, "modulate:a", 0.0, 0.5)
 	
-	if state_machine.current_state == State.EQUIPMENT:
-		player.unregister_weapon.emit(player, slot)
 	await tween_destroy.finished
 	queue_free()
+
+
+func equals(other_card: WeaponCard) -> bool:
+	if other_card == null: return false
+	return weapon_pool_item.equals(other_card.weapon_pool_item)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 回调函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func _gui_input(event: InputEvent) -> void:

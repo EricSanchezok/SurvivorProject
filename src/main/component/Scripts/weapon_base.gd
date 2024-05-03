@@ -15,13 +15,12 @@ var target: EnemyBase
 
 @onready var weapon_icon: Sprite2D = $Graphics/Sprite2D # 武器图标
 @onready var weapon_stats: WeaponStats = $WeaponStats
-@onready var weapon_level: int = 1: # 武器等级
+var weapon_level: int = 1: # 武器等级
 	set(v):
 		# 设置武器等级
 		weapon_level = v
+		await ready
 		match weapon_level:
-			1:
-				weapon_icon.material.set_shader_parameter("line_color", Color.WHITE)
 			2:
 				weapon_icon.material.set_shader_parameter("line_color", Color.BLUE)
 			3:
