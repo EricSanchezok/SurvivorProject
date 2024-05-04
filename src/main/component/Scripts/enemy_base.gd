@@ -85,6 +85,9 @@ func tick_physics(state: State, delta: float) -> void:
 	# >>>>>>>>>>>>>>>>>>>> 结算攻击伤害 >>>>>>>>>>>>>>>>>>>>
 	for damage in pending_damages:
 		enemy_stats.current_health -= damage.phy_amount + damage.mag_amount
+		if enemy_stats.current_health == 0:
+			var fatal_damage = damage
+			fatal_damage.source.kills += 1
 		velocity -= damage.direction * damage.knockback
 		create_damage_numbers(damage)
 		pending_damages.erase(damage)
@@ -138,10 +141,7 @@ func get_next_state(state: State) -> int:
 
 	if enemy_stats.current_health == 0:
 		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
-		
-	if enemy_stats.current_health == 0:
-		return StateMachine.KEEP_CURRENT if state == State.DIE else State.DIE
-	
+
 	if pending_damages.size() > 0:
 		return StateMachine.KEEP_CURRENT if state == State.HURT else State.HURT
 

@@ -11,7 +11,6 @@ var next_target: EnemyBase
 func _ready() -> void:
 	weapon_stats = parent_weapon.weapon_stats.duplicate()
 	weapon_stats.power_lighting_chain = parent_weapon.weapon_stats.power_lighting_chain
-	weapon_stats.power_physical = parent_weapon.weapon_stats.power_physical * weapon_stats.power_lighting_chain
 	weapon_stats.power_magic = parent_weapon.weapon_stats.power_magic * weapon_stats.power_lighting_chain
 
 

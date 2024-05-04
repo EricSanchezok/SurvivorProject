@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var player_stats: PlayerStats = $PlayerStats
 @onready var abm: AttributesManager = $AttributesManager
 @onready var shop_screen: Control = $CanvasLayer/ShopScreen
+@onready var nature_trait: NatureTrait = $Traits/NatureTrait
 
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
