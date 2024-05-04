@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccsnbyyotvpcu"]
+
+[ext_resource type="Script" path="res://src/main/scene/role/Npc/Scripts/npc_base.gd" id="1_g4mv8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57vof"]
+
+[node name="NpcBase" type="CharacterBody2D"]
+script = ExtResource("1_g4mv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_57vof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

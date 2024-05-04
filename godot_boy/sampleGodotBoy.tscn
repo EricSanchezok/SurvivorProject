@@ -1,0 +1,244 @@
+[gd_scene load_steps=4 format=3 uid="uid://4vqwkyesp6ee"]
+
+[ext_resource type="Texture2D" uid="uid://cknqmyn5v81ng" path="res://icon.svg" id="1_x02r1"]
+
+[sub_resource type="GDScript" id="GDScript_ncy5f"]
+script/source = "extends Node
+
+@export var texture:Node
+@export var path:String
+@export var saveString:String = \"user://test.sav\"
+
+
+@export_file(\"*.gb\",\"*.gbc\") var rom
+
+var godotBoy = GodotBoy.new()
+
+@onready var buttons = {
+	%Up:GodotBoy.UP,
+	%Left:GodotBoy.LEFT,
+	%Right:GodotBoy.RIGHT,
+	%Down:GodotBoy.DOWN,
+	%A:GodotBoy.A,
+	%B:GodotBoy.B,
+	%Select:GodotBoy.SELECT,
+	%Start:GodotBoy.START,
+}
+
+
+func _ready():
+	#load the rom as a PackedByteArray
+	var rom = FileAccess.open(rom,FileAccess.READ)
+	var romBuffer = rom.get_buffer(rom.get_length())
+	godotBoy.load_rom_buffer(romBuffer)
+	
+	#if a ram file exist, load that as a PackedByteArray
+	var ram = FileAccess.open(saveString,FileAccess.READ)
+	if ram != null:
+		var ramBuffer = ram.get_buffer(ram.get_length())
+		godotBoy.load_ram_buffer(ramBuffer)
+
+	#sets up screen updating, pushes the update to the main thread
+	godotBoy.screen_update.connect(func(data):call_deferred(\"_on_screen_update\",data))
+	
+	#setup audio
+	%speaker.play() #must be playing
+	godotBoy.push_audio_buffer.connect(func(data):call_deferred(\"_on_audio_update\",data))
+	
+	#set up buttons (you probably want input events for this)
+	for b in buttons:
+		var i = buttons[b]
+		b.button_down.connect(func():
+			godotBoy.key_down(i)
+		)
+		b.button_up.connect(func():
+			godotBoy.key_up(i)
+		)
+	
+func _process(delta):
+	godotBoy.delta_cycle_with_screen_update(delta)
+	
+	#save if changed
+	if godotBoy.check_and_reset_ram_updated():
+		var ram = FileAccess.open(saveString,FileAccess.WRITE)
+		ram.store_buffer(godotBoy.get_ram_buffer())
+
+func _on_screen_update(data):
+	texture[path] = data
+
+func _on_audio_update(data):
+	%speaker.get_stream_playback().push_buffer(data)
+	pass
+"
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_i5w68"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -893.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="godotBoy" type="Node" parent="." node_paths=PackedStringArray("texture")]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 3
+script = SubResource("GDScript_ncy5f")
+texture = NodePath("../VBoxContainer/TextureRect")
+path = "texture"
+rom = "res://addons/godot_boy/gbStudioSample.gb"
+
+[node name="speaker" type="AudioStreamPlayer" parent="godotBoy"]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamGenerator_i5w68")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_x02r1")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="dpad" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Up" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "↑"
+
+[node name="Control2" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad"]
+layout_mode = 2
+
+[node name="Left" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "←"
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Right" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "→"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Down" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "↓"
+
+[node name="Control2" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/dpad/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -33.0
+offset_right = 21.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/Control2/GridContainer"]
+layout_mode = 2
+
+[node name="A" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/Control2/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "A"
+
+[node name="B" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/Control2/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "B
+"
+
+[node name="Control2" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer/Control2/GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Select" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select"
+
+[node name="Start" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start"
+
+[node name="Control2" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3

@@ -12,17 +12,19 @@ signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: 
 signal unregister_weapon(player: CharacterBody2D, slot_index: int)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# signal origins_number_changed(type, value)
-# signal classes_number_changed(type, value)
+signal origins_number_changed(type, value)
+signal classes_number_changed(type, value)
 signal attribute_count_changed()
 var origins_count: Array[int] 
 func update_origins_number(type, value):
 	origins_count[type] += value
 	attribute_count_changed.emit()
+	origins_number_changed.emit(type, value)
 var classes_count: Array[int] 
 func update_classes_number(type, value):
 	classes_count[type] += value
 	attribute_count_changed.emit()
+	classes_number_changed.emit(type, value)
 
 enum Direction {
 	LEFT = -1,
@@ -35,6 +37,9 @@ enum Direction {
 		if not is_node_ready():
 			await ready
 		$Graphics.scale.x = direction
+		
+		
+var interacting_with: Array[Interactable]
 		
 var pending_damage: Damage
 var slots = []
@@ -62,6 +67,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			shop_screen.hide_screen()
 			recover_from_shop_screen()
+			
+	if event.is_action_pressed("interact") and interacting_with:
+		interacting_with.back().interact()
 		
 func _ready() -> void:
 	origins_count.resize(AttributesManager.Origins.size())
@@ -144,12 +152,21 @@ func transition_state(from: State, to: State) -> void:
 			
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func register_interactable(v: Interactable) -> void:
+	if v in interacting_with:
+		return
+	interacting_with.append(v)
+	
+func unregister_interactable(v: Interactable) -> void:
+	interacting_with.erase(v)
+
+
 func recover_from_shop_screen() -> void:
 		var tween = create_tween()
-		tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.2, 0.3)
-		tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.2, 0.3)
-		tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.2, 0.3)
-		tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.1, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.1, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.1, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.1, 0.3)
 
 func stand() -> void:
 	'''
