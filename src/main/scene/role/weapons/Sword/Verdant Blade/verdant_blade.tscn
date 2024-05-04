@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4d2s474tkuba"]
+
+[ext_resource type="PackedScene" uid="uid://dn23km7rk18nk" path="res://src/main/component/weapon_base.tscn" id="1_avrel"]
+[ext_resource type="Script" path="res://src/main/scene/role/weapons/Sword/Verdant Blade/verdant_blade.gd" id="2_n2rtf"]
+[ext_resource type="Texture2D" uid="uid://da0d6sv8i2lpf" path="res://src/main/assets/packs/32X32/1 Weapon icons/Icons/icon_09.png" id="3_pis14"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rha2o"]
+radius = 20.6155
+
+[node name="verdant_blade" instance=ExtResource("1_avrel")]
+script = ExtResource("2_n2rtf")
+
+[node name="WeaponStats" parent="." index="0"]
+origins = Array[int]([5])
+classes = Array[int]([0])
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+rotation = 0.785398
+texture = ExtResource("3_pis14")
+
+[node name="CollisionShape2D" parent="Graphics/HitBox" index="0"]
+shape = SubResource("CircleShape2D_rha2o")

@@ -169,8 +169,6 @@ script = ExtResource("2_37bpn")
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([2])
 classes = Array[int]([2])
-base_number_of_lighting_chain = 3.0
-base_power_lighting_chain = 0.5
 
 [node name="Sprite2D" parent="Graphics" index="0"]
 rotation = 0.785398

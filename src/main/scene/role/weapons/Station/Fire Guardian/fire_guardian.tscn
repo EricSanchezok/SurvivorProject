@@ -53,7 +53,7 @@ turbulence_influence_max = 0.15
 script = ExtResource("2_mp585")
 
 [node name="WeaponStats" parent="." index="0"]
-origins = Array[int]([0])
+origins = Array[int]([5])
 classes = Array[int]([9])
 base_power_physical = 0.0
 base_power_magic = 0.5

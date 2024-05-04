@@ -13,6 +13,10 @@ var player_stats: Node
 
 var enemies: Array = []
 var target: EnemyBase
+var kills: int:
+	set(v):
+		set_kills(v,kills)
+		kills = v
 
 @onready var weapon_icon: Sprite2D = $Graphics/Sprite2D # 武器图标
 @onready var weapon_stats: WeaponStats = $WeaponStats
@@ -42,7 +46,7 @@ func init_weapon(_player: CharacterBody2D, _weapon_pool_item: WeaponsManager.Wea
 	player = _player
 	player_stats = _player.player_stats
 
-	print("WeaponBase.init_weapon: ", id, weapon_level, slot, slot_index, player, player_stats)
+	#print("WeaponBase.init_weapon: ", id, weapon_level, slot, slot_index, player, player_stats)
 
 	
 
@@ -181,3 +185,5 @@ func _on_search_box_body_exited(body: Node2D) -> void:
 func trigger_hit_effect() -> void:
 	pass
 
+func set_kills(value: int,kills: int) -> void:
+	pass

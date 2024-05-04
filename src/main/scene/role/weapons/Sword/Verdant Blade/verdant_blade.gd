@@ -1,18 +1,23 @@
 extends WeaponBase
 
-var meteorite = preload("res://src/main/scene/role/weapons/Sword/Surtr's Fury/meteorite.tscn")
-
 enum State {
 	WAIT,
 	ATTACK
 }
 
 var current_time: float = 0.0
+var thresholds: Array = [5,10,20,50,100]
+var nature_kills: int = 0:
+	set(v):
+		player.nature_trait.nature_kills += 1
+		nature_kills = v
+
 
 func _ready() -> void:
 	super()
 
 func tick_physics(state: State, delta: float) -> void:
+	parent_update()
 	match state:
 		State.WAIT:
 			sync_direction(-PI/2, deg_to_rad(weapon_stats.speed_rotation)*delta)
@@ -56,13 +61,12 @@ func transition_state(from: State, to: State) -> void:
 			$TimerCoolDown.start()
 			$Graphics/HitBox.monitoring = false
 		State.ATTACK:
-			print()
 			$AnimationPlayer.play("ignite")
 			$Graphics/HitBox.monitoring = true
-			# 召唤陨石
-			var instance = meteorite.instantiate()
-			instance.parent_weapon = self
-			instance.acceleration = 200.0
-			instance.target_position = get_random_enemy().global_position
-			instance.position = instance.target_position + Vector2(300, -400)
-			get_tree().root.add_child(instance)
+
+func set_kills(value: int,kills: int) -> void:
+	if weapon_stats.is_grow_naturally == 1:
+		nature_kills += 1
+
+
+

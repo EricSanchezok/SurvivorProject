@@ -6,23 +6,25 @@ extends CharacterBody2D
 @onready var player_stats: PlayerStats = $PlayerStats
 @onready var abm: AttributesManager = $AttributesManager
 @onready var shop_screen: Control = $CanvasLayer/ShopScreen
+@onready var nature_trait: NatureTrait = $Traits/NatureTrait
 
 
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
 signal unregister_weapon(player: CharacterBody2D, slot_index: int)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# signal origins_number_changed(type, value)
-# signal classes_number_changed(type, value)
-signal attribute_count_changed()
+signal origins_number_changed(type, value)
+signal classes_number_changed(type, value)
+signal attribute_count_changed(type, value)
 var origins_count: Array[int] 
 func update_origins_number(type, value):
 	origins_count[type] += value
-	attribute_count_changed.emit()
+	origins_number_changed.emit(type, value)
+	#attribute_count_changed.emit(type, value)
 var classes_count: Array[int] 
 func update_classes_number(type, value):
 	classes_count[type] += value
-	attribute_count_changed.emit()
+	#attribute_count_changed.emit(type, value)
 
 enum Direction {
 	LEFT = -1,

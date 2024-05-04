@@ -143,7 +143,7 @@ _data = {
 script = ExtResource("2_5r0vc")
 
 [node name="WeaponStats" parent="." index="0"]
-origins = Array[int]([0])
+origins = Array[int]([5])
 classes = Array[int]([0])
 base_speed_fly = 100.0
 base_penetration_rate = 1.0

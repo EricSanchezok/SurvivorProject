@@ -6,7 +6,8 @@ var abm : AttributesManager
 @export var classes: Array[AttributesManager.Classes]
 
 signal update_attribute
-
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 开关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@export var is_grow_naturally: float = 0 #自然武器能否成长
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 固有属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @export var deceleration_time: float = 0  #减速时间
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 基础属性 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -163,7 +164,7 @@ func _on_attribute_changed():
 	for _class in classes:
 		classes_range_attack += abm.classes_attributes[_class] [abm.Attributes.RANGE_ATTACK]
 	range_attack = base_range_attack * (1 + abm.player_attributes[abm.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
-	range_explosion = base_range_explosion + (1 + abm.player_attributes[abm.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
+	range_explosion = base_range_explosion * (1 + abm.player_attributes[abm.Attributes.RANGE_ATTACK] + origins_range_attack + classes_range_attack)
 	# >>>>>>>>>>>>>>>>>>>>> 击退相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_knockback = 0
 	var classes_knockback = 0
@@ -238,8 +239,6 @@ func _on_attribute_changed():
 	for _class in classes:
 		classes_life_steal += abm.classes_attributes[_class] [abm.Attributes.LIFE_STEAL]
 	life_steal = base_freezing_rate + (abm.player_attributes[abm.Attributes.LIFE_STEAL] + origins_freezing_rate + classes_life_steal)
-
-
 	# >>>>>>>>>>>>>>>>>>>>> 中毒层数相关 >>>>>>>>>>>>>>>>>>>>>>>>
 	var origins_poison_layers = 0
 	var classes_poison_layers = 0
@@ -271,4 +270,13 @@ func _on_attribute_changed():
 		origins_power_lighting_chain += abm.origins_attributes[_origin] [abm.Attributes.POWER_LIGHTING_CHAIN]
 	for _class in classes:
 		classes_power_lighting_chain += abm.classes_attributes[_class] [abm.Attributes.POWER_LIGHTING_CHAIN]
+	# >>>>>>>>>>>>>>>>>>>>> 自然武器成长相关 >>>>>>>>>>>>>>>>>>>>>>>>
+	if origins.has(5):
+		is_grow_naturally = abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.IS_GROW_NATURALLY]
+		health +=  base_health * (1+abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.GROWTH_NATURAL])
+		power_physical +=  base_power_physical * (1+abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.GROWTH_NATURAL])
+		power_magic +=  base_power_magic * (1+abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.GROWTH_NATURAL])
+		radius_search += base_radius_search * (1+abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.GROWTH_NATURAL])
+		range_explosion += base_range_explosion * (1+abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.GROWTH_NATURAL])
+		knockback += base_knockback * (1+abm.origins_attributes[abm.Origins.NATURE] [abm.Attributes.GROWTH_NATURAL])
 	update_attribute.emit() # 属性更新信号，用于通知当前武器内部的其他节点更新属性

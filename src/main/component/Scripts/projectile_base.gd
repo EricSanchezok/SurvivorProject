@@ -8,11 +8,16 @@ var initial_rotation: float
 @export var in_front: bool = false
 @export var in_front_dis: int = 5
 
+
 var parent_weapon: WeaponBase
 var parent_weapon_position: Vector2
 var target: EnemyBase
 var target_position: Vector2
 var weapon_stats: WeaponStats = WeaponStats.new()
+var kills: int:
+	set(v):
+		parent_weapon.kills += 1
+		kills = v
 
 var acceleration: float = 0.0
 var deceleration: float = 0.0
