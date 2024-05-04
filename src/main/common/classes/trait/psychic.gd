@@ -1,8 +1,9 @@
 extends TraitBase
 
 func _ready() -> void:
+	super()
 	thresholds = [2, 4, 6, 8]
-	self_type = Attribute_Changed.Origins.PSYCHIC
+	# self_type = AttributesManager.Origins.PSYCHIC
 
 func do_interval_change(index_now: int, index_new: int) -> void:
 	var start_index = min(index_now, index_new)

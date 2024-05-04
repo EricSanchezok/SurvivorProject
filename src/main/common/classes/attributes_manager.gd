@@ -55,14 +55,11 @@ func _ready():
 	for attribute in range(len(Attributes)):
 		player_attributes.append(0)  # 初始化为 0
 		
-
-
 # 函数来设置属性值
 func set_origins_attribute(origins: int, attribute: int, value):
 	origins_attributes[origins][attribute] += value
 	attribute_changed.emit()
 	
-
 func set_classes_attribute(classes: int, attribute: int, value):
 	classes_attributes[classes][attribute] += value
 	attribute_changed.emit()

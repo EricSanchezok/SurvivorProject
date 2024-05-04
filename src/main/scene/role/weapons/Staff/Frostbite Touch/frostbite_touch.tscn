@@ -86,7 +86,7 @@ script = ExtResource("2_2ousu")
 
 [node name="WeaponStats" parent="." index="0"]
 origins = Array[int]([1])
-classes = Array[int]([10])
+classes = Array[int]([6])
 base_radius_search = 200.0
 base_speed_fly = 50.0
 base_penetration_rate = 1.0

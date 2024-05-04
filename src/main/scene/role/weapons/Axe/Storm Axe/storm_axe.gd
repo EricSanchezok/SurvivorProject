@@ -1,7 +1,7 @@
 extends WeaponBase
 
 var next_enemies: Array = []
-var lightning_chain_scene = preload("res://src/main/scene/role/weapons/Special Effect/Lighting Chian/lightning_chain.tscn")
+var lightning_chain_scene = preload("res://src/main/scene/role/Special Effect/Lighting Chian/lightning_chain.tscn")
 
 enum State {
 	APPEAR,

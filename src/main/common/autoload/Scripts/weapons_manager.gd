@@ -58,9 +58,7 @@ func upgrade_weapon(player: PlayerBase, slot_index: int, level: int) -> void:
 	:return: None
 	'''
 	
-	# print("升级武器")
 	for weapon in players_weapons[player]:
-		# print("weapon_slot_index: ", weapon.slot_index, "    ", slot_index)
 		if weapon.slot_index == slot_index:
 			weapon.weapon_level = level
 			break
@@ -145,7 +143,7 @@ func draw_weapon(player_level: int) -> WeaponPoolItem:
 		if rand < cumulative_probs[i]:
 			var chosen_weapon = available_weapons[i]
 			chosen_weapon.current_quantity -= 1 # 减少当前数量
-			print_weapon_pool_counter()
+			# print_weapon_pool_counter()
 			return chosen_weapon
 
 	
@@ -168,7 +166,7 @@ func recycle_weapon(weapon_pool_item: WeaponPoolItem, number: int) -> void:
 			item.current_quantity += number
 			break
 
-	print_weapon_pool_counter()
+	# print_weapon_pool_counter()
 
 
 func create_weapon_pool() -> void:
@@ -345,29 +343,21 @@ func _on_player_register_weapon(player: CharacterBody2D, weapon_pool_item: Weapo
 	:param slot_index: 武器槽索引
 	:return: None
 	'''
-	# print("玩家：", player, " 注册武器：", weapon_name, " 武器槽索引：", slot_index)
-	var slot = player.get_weapon_slot(slot_index) # 获取在玩家节点下的武器槽实例
-	var instance = load(weapon_pool_item.resource_path).instantiate() # 加载武器资源
-	# print_weapon_pool_item(weapon_pool_item)
-	# 设置武器实例属性
-	instance.slot = slot
-	instance.slot_index = slot_index
-	instance.player = player
-	instance.player_stats = player.player_stats
+	var instance = load(weapon_pool_item.resource_path).instantiate()
+	instance.init_weapon(player, weapon_pool_item, slot_index)
 
-	instance.weapon_level = weapon_pool_item.level
 	
 	var weapon_stats = instance.get_node("WeaponStats") # 这时候weapon还未ready，所以需要get_node来获取
 	if weapon_stats.classes.has(AttributesManager.Classes.STATION):
 		instance.position = activated_station_areas.get_random_position()
 	else:
-		instance.position = slot.global_position
-	
-	if instance not in players_weapons[player]:
+		instance.position = player.get_weapon_slot(slot_index).global_position
+
+	if is_weapon_unique(player, instance):
 		for _origin in weapon_stats.origins:
-			player.update_origins_number(_origin,1)
+			player.update_origins_number(_origin, 1)
 		for _class in weapon_stats.classes:
-			player.update_classes_number(_class,1)	
+			player.update_classes_number(_class, 1)	
 	
 	players_weapons[player].append(instance)
 	activated_level.add_child(instance)
@@ -387,11 +377,25 @@ func _on_player_unregister_weapon(player: CharacterBody2D, slot_index: int) -> v
 			
 			players_weapons[player].erase(weapon)
 
-			if weapon not in players_weapons[player]:
+			if is_weapon_unique(player, weapon):
 				for _origin in weapon_stats.origins:
-					player.update_origins_number(_origin,-1)
+					player.update_origins_number(_origin, -1)
 				for _class in weapon_stats.classes:
-					player.update_classes_number(_class,-1)	
+					player.update_classes_number(_class, -1)	
 			weapon.queue_free()
 
 			break
+
+
+func is_weapon_unique(player: CharacterBody2D, weapon: WeaponBase) -> bool:
+	'''
+	判断武器是否唯一
+
+	:param player: 玩家
+	:param weapon: 武器
+	:return: 是否唯一
+	'''
+	for _weapon in players_weapons[player]:
+		if weapon.equals(_weapon):
+			return false
+	return true

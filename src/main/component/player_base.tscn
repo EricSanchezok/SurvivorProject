@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://doj0nvhytxean"]
+[gd_scene load_steps=12 format=3 uid="uid://doj0nvhytxean"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/player_base.gd" id="1_c0py7"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="2_1gfhr"]
@@ -7,7 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://32wdbpxyk7ln" path="res://icon.svg" id="4_dnj7v"]
 [ext_resource type="Script" path="res://src/main/common/classes/attributes_manager.gd" id="6_fa7sp"]
 [ext_resource type="Script" path="res://src/main/common/classes/trait/fire.gd" id="6_u65hr"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/earth.gd" id="7_jisxu"]
 [ext_resource type="PackedScene" uid="uid://c4yufgahca7q6" path="res://src/main/scene/ui/shop_screen.tscn" id="8_tjrvw"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/frost.gd" id="9_xxsx1"]
+[ext_resource type="Script" path="res://src/main/common/classes/trait/toxin.gd" id="10_8pkfe"]
 
 [node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
 z_index = 10
@@ -116,8 +119,17 @@ script = ExtResource("6_fa7sp")
 
 [node name="Traits" type="Node" parent="."]
 
-[node name="Fire" type="Node" parent="Traits"]
+[node name="EarthTrait" type="Node" parent="Traits"]
+script = ExtResource("7_jisxu")
+
+[node name="FireTrait" type="Node" parent="Traits"]
 script = ExtResource("6_u65hr")
+
+[node name="FrostTrait" type="Node" parent="Traits"]
+script = ExtResource("9_xxsx1")
+
+[node name="ToxinTrait" type="Node" parent="Traits"]
+script = ExtResource("10_8pkfe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

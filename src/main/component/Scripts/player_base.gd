@@ -1,8 +1,6 @@
 class_name PlayerBase
 extends CharacterBody2D
 
-@export var default_weapon: String = "Doom Bringer"
-
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var hurt_box: HurtBox = $Graphics/HurtBox
 @onready var player_stats: PlayerStats = $PlayerStats
@@ -14,16 +12,17 @@ signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: 
 signal unregister_weapon(player: CharacterBody2D, slot_index: int)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-signal origins_number_changed(type, value)
-signal classes_number_changed(type, value)
+# signal origins_number_changed(type, value)
+# signal classes_number_changed(type, value)
+signal attribute_count_changed()
 var origins_count: Array[int] 
 func update_origins_number(type, value):
 	origins_count[type] += value
-	origins_number_changed.emit(type, origins_count[type])
+	attribute_count_changed.emit()
 var classes_count: Array[int] 
 func update_classes_number(type, value):
 	classes_count[type] += value
-	classes_number_changed.emit(type, classes_count[type])
+	attribute_count_changed.emit()
 
 enum Direction {
 	LEFT = -1,
@@ -64,15 +63,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			shop_screen.hide_screen()
 			recover_from_shop_screen()
 		
-func recover_from_shop_screen() -> void:
-		var tween = create_tween()
-		tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.2, 0.3)
-		tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.2, 0.3)
-		tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.2, 0.3)
-		tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.2, 0.3)
-	
-
-
 func _ready() -> void:
 	origins_count.resize(AttributesManager.Origins.size())
 	origins_count.fill(0)
@@ -80,21 +70,6 @@ func _ready() -> void:
 	classes_count.fill(0)
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
-	await WeaponsManager.init_finish
-	#register_weapon.emit(self, "Doom Bringer", 2)
-	#register_weapon.emit(self, default_weapon, 0)
-	#register_weapon.emit(self, default_weapon, 1)
-	#register_weapon.emit(self, default_weapon, 3)
-	#register_weapon.emit(self, default_weapon, 4)
-	#register_weapon.emit(self, default_weapon, 5)
-	#register_weapon.emit(self, default_weapon, 6)
-	#register_weapon.emit(self, default_weapon, 7)
-	#register_weapon.emit(self, default_weapon, 8)
-	#register_weapon.emit(self, default_weapon, 9)
-
-
-	#var index = weapon_manager.player_index(self)
-	#weapons = weapon_manager.players_weapon["Player"+str(index)+"_weapon"]
 	
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -169,6 +144,13 @@ func transition_state(from: State, to: State) -> void:
 			
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 功能函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func recover_from_shop_screen() -> void:
+		var tween = create_tween()
+		tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.2, 0.3)
+		tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.2, 0.3)
+
 func stand() -> void:
 	'''
 		站立状态下，不做任何事情
