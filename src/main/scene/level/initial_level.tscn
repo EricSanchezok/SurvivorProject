@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://ejq2a7otacyq"]
+[gd_scene load_steps=21 format=3 uid="uid://ejq2a7otacyq"]
 
 [ext_resource type="Script" path="res://src/main/scene/level/Scripts/initial_level.gd" id="1_mce47"]
 [ext_resource type="Texture2D" uid="uid://cgjitpyjeq426" path="res://src/main/assets/packs/16X16/Rogue Adventure World 2.6.0/Tilesets (32x32)/RA_Jungle.png" id="2_nrnwu"]
+[ext_resource type="Script" path="res://src/main/common/classes/EntryPoint.gd" id="3_hsvvo"]
 [ext_resource type="PackedScene" uid="uid://bu4qkguaw7xus" path="res://src/main/scene/role/player/a_niu.tscn" id="4_r7kjc"]
 [ext_resource type="Texture2D" uid="uid://cldlob424s33p" path="res://src/main/assets/packs/32X32/bonfire/1.png" id="4_ukvoa"]
 [ext_resource type="Texture2D" uid="uid://pdvxvdrpomvc" path="res://src/main/assets/packs/32X32/bonfire/2.png" id="5_esfbu"]
@@ -15,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cpumsu1a2sd7e" path="res://src/main/assets/sound/SoundFX/Medieval Fantasy Game Sound Effects/SFXs/wav/Environment/bonfire_loop_03.wav" id="13_nhyqo"]
 [ext_resource type="PackedScene" uid="uid://bj0arml0edvfr" path="res://src/main/scene/role/Npc/smith_wang.tscn" id="14_4mtfr"]
 [ext_resource type="PackedScene" uid="uid://bhfu2m7c783ux" path="res://src/main/scene/role/Npc/mira_link.tscn" id="15_vffv7"]
+[ext_resource type="Script" path="res://src/main/common/classes/multiplayer_spawner.gd" id="17_ptiq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ws6pj"]
 texture = ExtResource("2_nrnwu")
@@ -3916,6 +3918,10 @@ layer_1/tile_data = PackedInt32Array()
 layer_2/name = "Structure"
 layer_2/tile_data = PackedInt32Array(327685, 2, 1, 393221, 2, 2, 458757, 2, 3, 327686, 65538, 1, 393222, 65538, 2, 458758, 65538, 3, 524294, 65538, 4, 327687, 131074, 1, 393223, 131074, 2, 458759, 131074, 3, 524295, 131074, 4, 327688, 196610, 1, 393224, 196610, 2, 458760, 196610, 3, 458770, 524290, 0, 524306, 524290, 1, 589842, 524290, 2, 655378, 524290, 3, 458771, 589826, 0, 524307, 589826, 1, 589843, 589826, 2, 655379, 589826, 3, 720915, 589826, 4, 458772, 655362, 0, 524308, 655362, 1, 589844, 655362, 2, 655380, 655362, 3, 720916, 655362, 4, 458773, 720898, 0, 524309, 720898, 1, 589845, 720898, 2, 655381, 720898, 3)
 
+[node name="EntryPoint" type="Marker2D" parent="."]
+position = Vector2(472, 211)
+script = ExtResource("3_hsvvo")
+
 [node name="Fire" type="AnimatedSprite2D" parent="."]
 position = Vector2(407, 228)
 scale = Vector2(0.12, 0.12)
@@ -3928,9 +3934,10 @@ texture = ExtResource("12_ysmf4")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Fire"]
 position = Vector2(0, 150)
 stream = ExtResource("13_nhyqo")
+volume_db = -3.0
 autoplay = true
 max_distance = 120.0
-attenuation = 1.68179
+attenuation = 0.812252
 bus = &"AmbienceBus Bus"
 
 [node name="SmithWang" parent="." instance=ExtResource("14_4mtfr")]
@@ -3938,8 +3945,16 @@ position = Vector2(364, 143)
 
 [node name="MiraLink" parent="." instance=ExtResource("15_vffv7")]
 position = Vector2(555, 207)
+collision_layer = 1
+collision_mask = 1
 
 [node name="ANiu" parent="." instance=ExtResource("4_r7kjc")]
-position = Vector2(380, 272)
+position = Vector2(501, 232)
+
+[node name="Spawner" type="MultiplayerSpawner" parent="." node_paths=PackedStringArray("spawn_marker_2d")]
+spawn_path = NodePath("..")
+script = ExtResource("17_ptiq8")
+playerScene = ExtResource("4_r7kjc")
+spawn_marker_2d = NodePath("../EntryPoint")
 
 [connection signal="finished" from="Fire/AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

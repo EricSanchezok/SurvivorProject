@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://dho44tkxub8fs"]
+
+[ext_resource type="Script" path="res://src/main/scene/ui/Scripts/main_screen.gd" id="1_s1px5"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s1px5")
+path = "res://src/main/scene/level/initial_level.tscn"
+
+[node name="MainTitleControl" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TitleVbox" type="VBoxContainer" parent="MainTitleControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -41.5
+offset_right = 35.5
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="StartGame" type="Button" parent="MainTitleControl/TitleVbox"]
+custom_minimum_size = Vector2(60, 24)
+layout_mode = 2
+text = "StartGame"
+
+[node name="Settings" type="Button" parent="MainTitleControl/TitleVbox"]
+custom_minimum_size = Vector2(60, 24)
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainTitleControl/TitleVbox"]
+custom_minimum_size = Vector2(60, 24)
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MainTitleControl/TitleVbox/StartGame" to="." method="_on_start_game_pressed"]

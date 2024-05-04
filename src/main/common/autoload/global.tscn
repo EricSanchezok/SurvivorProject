@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbmp2v7kc0uc8"]
+
+[ext_resource type="Script" path="res://src/main/common/autoload/Scripts/global.gd" id="1_8mllr"]
+[ext_resource type="PackedScene" uid="uid://d21sk242hwcd1" path="res://src/main/scene/ui/online_mode_screen.tscn" id="2_b35fk"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_8mllr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OnlineModeScreen" parent="CanvasLayer" instance=ExtResource("2_b35fk")]

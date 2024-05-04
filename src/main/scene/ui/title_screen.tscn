@@ -21,6 +21,7 @@ theme = ExtResource("1_acq8e")
 script = ExtResource("1_0ch6y")
 
 [node name="MainTitleControl" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,6 +145,7 @@ text = "Back
 "
 
 [node name="HostSettings" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -256,6 +258,7 @@ grow_vertical = 0
 text = "Back"
 
 [node name="Lobbies" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -175,8 +175,6 @@ _data = {
 }
 
 [node name="SmithWang" instance=ExtResource("1_bo742")]
-collision_layer = 2
-collision_mask = 3
 script = ExtResource("2_824s2")
 
 [node name="BackGround" type="Node2D" parent="." index="0"]

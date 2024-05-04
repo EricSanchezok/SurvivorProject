@@ -212,10 +212,10 @@ region_rect = Rect2(0, 0, 192, 32)
 [node name="CollisionShape2D" parent="Graphics/HurtBox" index="0"]
 shape = SubResource("CapsuleShape2D_e0ej0")
 
-[node name="CollisionShape2D" parent="." index="2"]
+[node name="CollisionShape2D" parent="." index="5"]
 shape = SubResource("CapsuleShape2D_47p0o")
 
-[node name="AnimationPlayer" parent="." index="4"]
+[node name="AnimationPlayer" parent="." index="7"]
 libraries = {
 "": SubResource("AnimationLibrary_5djc4")
 }

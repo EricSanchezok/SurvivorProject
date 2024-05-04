@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://doj0nvhytxean"]
+[gd_scene load_steps=13 format=3 uid="uid://doj0nvhytxean"]
 
 [ext_resource type="Script" path="res://src/main/component/Scripts/player_base.gd" id="1_c0py7"]
 [ext_resource type="Script" path="res://src/main/common/classes/HurtBox.gd" id="2_1gfhr"]
@@ -12,6 +12,14 @@
 [ext_resource type="Script" path="res://src/main/common/classes/trait/frost.gd" id="9_xxsx1"]
 [ext_resource type="Script" path="res://src/main/common/classes/trait/toxin.gd" id="10_8pkfe"]
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_qmr2h"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
 [node name="PlayerBase" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 y_sort_enabled = true
@@ -21,6 +29,20 @@ script = ExtResource("1_c0py7")
 
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource("4_d0en6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("8_tjrvw")]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_qmr2h")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
 
 [node name="Graphics" type="Node2D" parent="."]
 
@@ -45,15 +67,6 @@ script = ExtResource("3_2r57c")
 [node name="InvincibleTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.1
-drag_top_margin = 0.1
-drag_right_margin = 0.1
-drag_bottom_margin = 0.1
 
 [node name="WeaponSlots" type="Node2D" parent="."]
 visible = false
@@ -134,7 +147,3 @@ script = ExtResource("9_xxsx1")
 
 [node name="ToxinTrait" type="Node" parent="Traits"]
 script = ExtResource("10_8pkfe")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ShopScreen" parent="CanvasLayer" instance=ExtResource("8_tjrvw")]

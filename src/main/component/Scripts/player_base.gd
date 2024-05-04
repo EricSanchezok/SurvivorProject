@@ -11,6 +11,8 @@ extends CharacterBody2D
 signal register_weapon(player: CharacterBody2D, weaponName: String, slot_index: int)
 signal unregister_weapon(player: CharacterBody2D, slot_index: int)
 
+signal esc_pressed
+
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 羁绊相关 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 signal origins_number_changed(type, value)
 signal classes_number_changed(type, value)
@@ -52,26 +54,9 @@ var amplitude: float = 2.0
 var frequency: float = 0.2
 var current_time: float = 0.0
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("shop"):
-		if not shop_screen.visible:
-			camera_2d.position_smoothing_enabled = false
-			var tween = create_tween()
-			tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.0, 0.3)
-			tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.0, 0.3)
-			tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.0, 0.3)
-			tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.0, 0.3)
-			await tween.finished
-			camera_2d.position_smoothing_enabled = true
-			shop_screen.show_screen()
-		else:
-			shop_screen.hide_screen()
-			recover_from_shop_screen()
-			
-	if event.is_action_pressed("interact") and interacting_with:
-		interacting_with.back().interact()
-		
 func _ready() -> void:
+	camera_2d.enabled = is_multiplayer_authority()
+	
 	origins_count.resize(AttributesManager.Origins.size())
 	origins_count.fill(0)
 	classes_count.resize(AttributesManager.Classes.size())
@@ -79,7 +64,6 @@ func _ready() -> void:
 	slots = get_tree().get_nodes_in_group("weapon_slot")
 	init_slots()
 	
-
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 状态机 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 enum State {
 	IDLE,
@@ -89,9 +73,12 @@ enum State {
 }
 
 func tick_physics(state: State, delta: float) -> void:
+	if not is_multiplayer_authority():
+		return
+	
 	move_slots(delta)
 	# 受到伤害闪烁效果
-	$Graphics.modulate.a = (sin(Time.get_ticks_msec() / 20) * 0.5 + 0.5) if $InvincibleTimer.time_left > 0.0 else 1.0
+	$Graphics.modulate.a = (sin(Time.get_ticks_msec() / 20.0) * 0.5 + 0.5) if $InvincibleTimer.time_left > 0.0 else 1.0
 	match state:
 		State.IDLE, State.DIE:
 			stand()
@@ -155,10 +142,16 @@ func transition_state(from: State, to: State) -> void:
 func register_interactable(v: Interactable) -> void:
 	if v in interacting_with:
 		return
+	
+	for _v in interacting_with:
+		_v.unhighlight()
+	v.highlight()
 	interacting_with.append(v)
+
 	
 func unregister_interactable(v: Interactable) -> void:
 	interacting_with.erase(v)
+	v.unhighlight()
 
 
 func recover_from_shop_screen() -> void:
@@ -226,3 +219,28 @@ func move_slots(delta) -> void:
 			sin(deg_to_rad(72 * (i - 5) + slot_speed_rotation*current_time)) * slot_radius,
 		)
 	current_time += delta
+	
+	
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 回调函数 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shop"):
+		if not shop_screen.visible:
+			camera_2d.position_smoothing_enabled = false
+			var tween = create_tween()
+			tween.parallel().tween_property(camera_2d, "drag_left_margin", 0.0, 0.3)
+			tween.parallel().tween_property(camera_2d, "drag_top_margin", 0.0, 0.3)
+			tween.parallel().tween_property(camera_2d, "drag_right_margin", 0.0, 0.3)
+			tween.parallel().tween_property(camera_2d, "drag_bottom_margin", 0.0, 0.3)
+			await tween.finished
+			camera_2d.position_smoothing_enabled = true
+			shop_screen.show_screen()
+		else:
+			shop_screen.hide_screen()
+			recover_from_shop_screen()
+			
+	if event.is_action_pressed("interact") and interacting_with:
+		interacting_with.back().interact(self)
+
+	if event.is_action_pressed("esc"):
+		# print("哦耶，我按下了ESC")
+		esc_pressed.emit()

@@ -1,0 +1,209 @@
+[gd_scene load_steps=3 format=3 uid="uid://d21sk242hwcd1"]
+
+[ext_resource type="Theme" uid="uid://dum4ct87pjet4" path="res://src/main/assets/theme/default_theme.tres" id="1_a5sc1"]
+[ext_resource type="Script" path="res://src/main/scene/ui/Scripts/online_mode_screen.gd" id="1_bfko0"]
+
+[node name="OnlineModeScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_a5sc1")
+script = ExtResource("1_bfko0")
+
+[node name="HostOrJoinVbox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 60)
+theme_override_constants/separation = 20
+
+[node name="HostGame" type="Button" parent="HostOrJoinVbox"]
+custom_minimum_size = Vector2(60, 24)
+layout_mode = 2
+text = "HostGame"
+
+[node name="JoinGame" type="Button" parent="HostOrJoinVbox"]
+custom_minimum_size = Vector2(60, 24)
+layout_mode = 2
+text = "JoinGame"
+
+[node name="HostSettings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HostSettings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 100.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="HostNameHbox" type="HBoxContainer" parent="HostSettings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="HostSettings/VBoxContainer/HostNameHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Host Name"
+
+[node name="TextEdit" type="TextEdit" parent="HostSettings/VBoxContainer/HostNameHbox"]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="MaxPlayersHbox" type="HBoxContainer" parent="HostSettings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="HostSettings/VBoxContainer/MaxPlayersHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Max Players"
+
+[node name="TabBar" type="TabBar" parent="HostSettings/VBoxContainer/MaxPlayersHbox"]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_horizontal = 6
+tab_alignment = 1
+
+[node name="CheckPassWordHbox" type="HBoxContainer" parent="HostSettings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="HostSettings/VBoxContainer/CheckPassWordHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use Password"
+
+[node name="CheckButton" type="CheckButton" parent="HostSettings/VBoxContainer/CheckPassWordHbox"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="PassWordHbox" type="HBoxContainer" parent="HostSettings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="HostSettings/VBoxContainer/PassWordHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "PassWord"
+
+[node name="TextEdit" type="TextEdit" parent="HostSettings/VBoxContainer/PassWordHbox"]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="StartAsHost" type="Button" parent="HostSettings"]
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -120.0
+offset_right = 30.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Create Lobby"
+
+[node name="Lobbies" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Lobbies"]
+custom_minimum_size = Vector2(300, 240)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -140.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="VBoxContainer" parent="Lobbies/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Lobbies/ScrollContainer/ItemList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Not Found"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Lobbies"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = -60.0
+offset_right = 47.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+
+[node name="Refresh" type="Button" parent="Lobbies/HBoxContainer"]
+custom_minimum_size = Vector2(60, 24)
+layout_mode = 2
+text = "Refresh"
+
+[connection signal="pressed" from="HostOrJoinVbox/HostGame" to="." method="_on_host_game_pressed"]
+[connection signal="pressed" from="HostOrJoinVbox/JoinGame" to="." method="_on_join_game_pressed"]
+[connection signal="toggled" from="HostSettings/VBoxContainer/CheckPassWordHbox/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="HostSettings/StartAsHost" to="." method="_on_start_as_host_pressed"]
+[connection signal="pressed" from="Lobbies/HBoxContainer/Refresh" to="." method="_on_refresh_pressed"]
