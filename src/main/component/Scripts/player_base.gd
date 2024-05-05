@@ -56,6 +56,8 @@ var frequency: float = 0.2
 var current_time: float = 0.0
 
 func _ready() -> void:
+	print(name, " is ready")
+	print("is_multiplayer_authority: ", is_multiplayer_authority())
 	camera_2d.enabled = is_multiplayer_authority()
 	
 	origins_count.resize(AttributesManager.Origins.size())

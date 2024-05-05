@@ -3948,9 +3948,6 @@ position = Vector2(555, 207)
 collision_layer = 1
 collision_mask = 1
 
-[node name="ANiu" parent="." instance=ExtResource("4_r7kjc")]
-position = Vector2(501, 232)
-
 [node name="Spawner" type="MultiplayerSpawner" parent="." node_paths=PackedStringArray("spawn_marker_2d")]
 spawn_path = NodePath("..")
 script = ExtResource("17_ptiq8")

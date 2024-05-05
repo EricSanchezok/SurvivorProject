@@ -17,17 +17,6 @@ enum State {
 
 var current_state = State.HOST_OR_JOIN
 
-func init_control() -> void:
-	hide()
-	scale = Vector2.ZERO
-	$HostSettings.hide()
-	$Lobbies.hide()
-	for i in range(4):
-		tab_bar.add_tab(str(4-i))
-	lobby_name.text = Global.steam_username + "'s Lobby"
-	
-	password_hbox.hide()
-
 const PACKET_READ_LIMIT: int = 32
 
 var lobby_data
@@ -40,7 +29,8 @@ var steam_username: String = ""
 
 var lobby_button_list: Array = []
 
-var peer = SteamMultiplayerPeer.new()
+# var peer: SteamMultiplayerPeer = SteamMultiplayerPeer.new()
+# var OPTIONS_ARRAY: Array = []
 
 func _ready() -> void:
 	await owner.ready
@@ -69,6 +59,7 @@ func _ready() -> void:
 	check_command_line()
 	
 	init_control()
+
 	
 func _process(delta: float) -> void:
 	# If the player is connected, read packets
@@ -109,6 +100,8 @@ func create_lobby() -> void:
 	if lobby_id == 0:
 		print("Creating a lobby...")
 		Steam.createLobby(Steam.LOBBY_TYPE_PUBLIC, 4-tab_bar.current_tab)
+		# peer.create_host(0, OPTIONS_ARRAY)
+		# multiplayer.multiplayer_peer = peer
 		
 func get_lobbies() -> void:
 	# 清除之前的大厅按钮
@@ -426,6 +419,17 @@ func _on_p2p_session_connect_fail(steam_id: int, session_error: int) -> void:
 		print("WARNING: Session failure with %s: unknown error %s" % [steam_id, session_error])
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 显示控件 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func init_control() -> void:
+	hide()
+	scale = Vector2.ZERO
+	$HostSettings.hide()
+	$Lobbies.hide()
+	for i in range(4):
+		tab_bar.add_tab(str(4-i))
+	lobby_name.text = Global.steam_username + "'s Lobby"
+	
+	password_hbox.hide()
+
 
 func show_screen() -> void:
 	show()
