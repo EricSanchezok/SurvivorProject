@@ -40,6 +40,8 @@ var steam_username: String = ""
 
 var lobby_button_list: Array = []
 
+var peer = SteamMultiplayerPeer.new()
+
 func _ready() -> void:
 	await owner.ready
 

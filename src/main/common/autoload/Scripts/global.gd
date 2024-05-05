@@ -34,12 +34,10 @@ func initialize_steam() -> void:
 	steam_id = Steam.getSteamID()
 	steam_username = Steam.getPersonaName()
 
-
 func change_scene(path: String, entry_point: String="EntryPoint") -> void:
 	var tree := get_tree()
 	tree.change_scene_to_file(path)
 	await tree.process_frame
-	
 	
 func show_online_mode_screen() -> void:
 	$CanvasLayer/OnlineModeScreen.show_screen()
